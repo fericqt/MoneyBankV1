@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D6DB72A7-AA58-4EFC-A82C-13C167638229}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MoneyBankV1</RootNamespace>
+    <AssemblyName>MoneyBankV1</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>MoneyBankV1.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\GLOBAL DLL\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\GLOBAL DLL\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\GLOBAL DLL\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\GLOBAL DLL\MySql.Data.Entity.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ucManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucManagement.Designer.cs">
+      <DependentUpon>ucManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucReports.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucReports.Designer.cs">
+      <DependentUpon>ucReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucTransactionList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucTransactionList.Designer.cs">
+      <DependentUpon>ucTransactionList.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ucManagement.resx">
+      <DependentUpon>ucManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucReports.resx">
+      <DependentUpon>ucReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucTransactionList.resx">
+      <DependentUpon>ucTransactionList.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\FerPROJ.DBHelper\FerPROJ.DBHelper\FerPROJ.DBHelper.csproj">
+      <Project>{0f742b57-7fa9-4a45-acd4-ea690d69cc70}</Project>
+      <Name>FerPROJ.DBHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\FerPROJ.Design\FerPROJ.Design\FerPROJ.Design.csproj">
+      <Project>{3379010b-3fec-4afc-8db5-8ed0fcbd69bc}</Project>
+      <Name>FerPROJ.Design</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MoneyBank.Base\MoneyBank.Base.csproj">
+      <Project>{157deb56-30e7-41c9-b0cb-5fa5f3011357}</Project>
+      <Name>MoneyBank.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MoneyBank.DTO\MoneyBank.DTO.csproj">
+      <Project>{300ef561-43a4-4c30-99e3-c2844c23dca4}</Project>
+      <Name>MoneyBank.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MoneyBank.EntityData\MoneyBank.EntityData.csproj">
+      <Project>{6e709345-2691-435b-b62f-d441f0225700}</Project>
+      <Name>MoneyBank.EntityData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MoneyBank.Entity\MoneyBank.Entity.csproj">
+      <Project>{60e2b3b0-8758-4168-ab35-ac0483869e01}</Project>
+      <Name>MoneyBank.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MoneyBank.Forms\MoneyBank.Forms.csproj">
+      <Project>{e65e1c66-d18b-4862-b0f5-7fa5105f97a1}</Project>
+      <Name>MoneyBank.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MoneyBank.Reports\MoneyBank.Reports.csproj">
+      <Project>{5c0eb1f5-e16d-4642-b894-d526b015fe23}</Project>
+      <Name>MoneyBank.Reports</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

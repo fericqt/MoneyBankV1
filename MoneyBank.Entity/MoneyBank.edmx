@@ -1,0 +1,771 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="moneybankEntity.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tblbank">
+          <Key>
+            <PropertyRef Name="IdTrack" />
+          </Key>
+          <Property Name="IdTrack" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DateReference" Type="datetime" Precision="0" />
+          <Property Name="BankName" Type="varchar" MaxLength="50" />
+          <Property Name="BankSwiftcode" Type="varchar" MaxLength="20" />
+          <Property Name="BankLocation" Type="varchar" MaxLength="50" />
+          <Property Name="BankProvider" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblexpense">
+          <Key>
+            <PropertyRef Name="ExpenseTransNo" />
+          </Key>
+          <Property Name="DateReference" Type="datetime" Precision="0" />
+          <Property Name="UserID" Type="varchar" MaxLength="255" />
+          <Property Name="ExpenseTransNo" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="BankAccountNo" Type="varchar" MaxLength="20" />
+          <Property Name="TotalExpenseAmount" Type="decimal" Precision="15" Scale="2" />
+        </EntityType>
+        <EntityType Name="tblexpensedetails">
+          <Key>
+            <PropertyRef Name="IdTrack" />
+          </Key>
+          <Property Name="IdTrack" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DateReference" Type="datetime" Precision="0" />
+          <Property Name="ExpenseTransNo" Type="varchar" MaxLength="100" />
+          <Property Name="ExpenseName" Type="varchar" MaxLength="50" />
+          <Property Name="ExpenseAmount" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="ExpenseQuantity" Type="int" />
+          <Property Name="Remarks" Type="varchar" MaxLength="255" />
+          <Property Name="ExpenseTotal" Type="decimal" Precision="15" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblexpensetype">
+          <Key>
+            <PropertyRef Name="IdTrack" />
+          </Key>
+          <Property Name="IdTrack" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DateReference" Type="datetime" Precision="0" />
+          <Property Name="ExpenseNo" Type="varchar" MaxLength="30" />
+          <Property Name="ExpenseName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbllogs">
+          <Key>
+            <PropertyRef Name="IdTrack" />
+          </Key>
+          <Property Name="IdTrack" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DateReference" Type="datetime" Precision="0" />
+          <Property Name="LogsTransNo" Type="varchar" MaxLength="100" />
+          <Property Name="LogAction" Type="varchar" MaxLength="255" />
+          <Property Name="UserID" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tblreceive">
+          <Key>
+            <PropertyRef Name="ReceiveTransNo" />
+          </Key>
+          <Property Name="DateReference" Type="datetime" Precision="0" />
+          <Property Name="ReceiveTransNo" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="UserID" Type="varchar" MaxLength="255" />
+          <Property Name="BankAccountNo" Type="varchar" MaxLength="20" />
+          <Property Name="TotalReceiveAmount" Type="decimal" Precision="15" Scale="2" />
+        </EntityType>
+        <EntityType Name="tblreceivedetails">
+          <Key>
+            <PropertyRef Name="IdTrack" />
+          </Key>
+          <Property Name="IdTrack" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DateReference" Type="datetime" Precision="0" />
+          <Property Name="ReceiveTransNo" Type="varchar" MaxLength="100" />
+          <Property Name="ReceiveItemName" Type="varchar" MaxLength="50" />
+          <Property Name="ReceiveAmount" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="ReceiveQuantity" Type="int" />
+          <Property Name="Remarks" Type="varchar" MaxLength="255" />
+          <Property Name="ReceiveAmountTotal" Type="decimal" Precision="15" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblreceivetype">
+          <Key>
+            <PropertyRef Name="IdTrack" />
+          </Key>
+          <Property Name="IdTrack" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DateReference" Type="datetime" Precision="0" />
+          <Property Name="ReceiveNo" Type="varchar" MaxLength="30" />
+          <Property Name="ReceiveType" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblreconcile">
+          <Key>
+            <PropertyRef Name="IdTrack" />
+          </Key>
+          <Property Name="IdTrack" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DateReference" Type="datetime" Precision="0" />
+          <Property Name="ReconcileTransNo" Type="varchar" MaxLength="100" />
+          <Property Name="UserID" Type="varchar" MaxLength="100" />
+          <Property Name="BankAccountNo" Type="varchar" MaxLength="20" />
+          <Property Name="AddedAmount" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="DeductedAmount" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="BalanceAmount" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="BeginingBalance" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="EndingBalance" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="Remarks" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="tbltransactions">
+          <Key>
+            <PropertyRef Name="IdTrack" />
+          </Key>
+          <Property Name="IdTrack" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TransNo" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="ReferenceTransNo" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="BankAccountNo" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="245" Nullable="false" />
+          <Property Name="Added" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="Deducted" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="OldBalance" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="NewBalance" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="Remarks" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="DateReference" Type="datetime" Precision="0" Nullable="false" />
+          <Property Name="UserID" Type="varchar" MaxLength="45" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbluser">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="DateReference" Type="datetime" Precision="0" />
+          <Property Name="Username" Type="varchar" MaxLength="50" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+          <Property Name="UserID" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="DateLastLogin" Type="datetime" Precision="0" />
+          <Property Name="UserLevel" Type="varchar" MaxLength="45" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbluserbank">
+          <Key>
+            <PropertyRef Name="IdTrack" />
+          </Key>
+          <Property Name="IdTrack" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DateReference" Type="datetime" Precision="0" />
+          <Property Name="UserID" Type="varchar" MaxLength="255" />
+          <Property Name="BankName" Type="varchar" MaxLength="50" />
+          <Property Name="BankAccountNo" Type="varchar" MaxLength="20" />
+          <Property Name="BankType" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbluserbankaccount">
+          <Key>
+            <PropertyRef Name="IdTrack" />
+          </Key>
+          <Property Name="IdTrack" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DateReference" Type="datetime" Precision="0" />
+          <Property Name="UserID" Type="varchar" MaxLength="255" />
+          <Property Name="BankAccountNo" Type="varchar" MaxLength="50" />
+          <Property Name="CurrentBalance" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="AmountAdded" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="AmountDeducted" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="RemainingBalance" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="DateUpdated" Type="datetime" Precision="0" />
+          <Property Name="BankName" Type="varchar" MaxLength="45" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbluserinformation">
+          <Key>
+            <PropertyRef Name="IdTrack" />
+          </Key>
+          <Property Name="IdTrack" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DateReference" Type="datetime" Precision="0" />
+          <Property Name="UserID" Type="varchar" MaxLength="255" />
+          <Property Name="Firstname" Type="varchar" MaxLength="50" />
+          <Property Name="Middlename" Type="varchar" MaxLength="50" />
+          <Property Name="Lastname" Type="varchar" MaxLength="50" />
+          <Property Name="Relationship" Type="varchar" MaxLength="45" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_tblexpensedetails_1">
+          <End Role="tblexpense" Type="Self.tblexpense" Multiplicity="0..1" />
+          <End Role="tblexpensedetails" Type="Self.tblexpensedetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblexpense">
+              <PropertyRef Name="ExpenseTransNo" />
+            </Principal>
+            <Dependent Role="tblexpensedetails">
+              <PropertyRef Name="ExpenseTransNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblreceivedetails_1">
+          <End Role="tblreceive" Type="Self.tblreceive" Multiplicity="0..1" />
+          <End Role="tblreceivedetails" Type="Self.tblreceivedetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblreceive">
+              <PropertyRef Name="ReceiveTransNo" />
+            </Principal>
+            <Dependent Role="tblreceivedetails">
+              <PropertyRef Name="ReceiveTransNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbluserbank_1">
+          <End Role="tbluser" Type="Self.tbluser" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbluserbank" Type="Self.tbluserbank" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbluser">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="tbluserbank">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbluserbankaccount_1">
+          <End Role="tbluser" Type="Self.tbluser" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbluserbankaccount" Type="Self.tbluserbankaccount" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbluser">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="tbluserbankaccount">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbluserinformation_1">
+          <End Role="tbluser" Type="Self.tbluser" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbluserinformation" Type="Self.tbluserinformation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbluser">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="tbluserinformation">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="moneybankEntityStoreContainer">
+          <EntitySet Name="tblbank" EntityType="Self.tblbank" Schema="moneybank" store:Type="Tables" />
+          <EntitySet Name="tblexpense" EntityType="Self.tblexpense" Schema="moneybank" store:Type="Tables" />
+          <EntitySet Name="tblexpensedetails" EntityType="Self.tblexpensedetails" Schema="moneybank" store:Type="Tables" />
+          <EntitySet Name="tblexpensetype" EntityType="Self.tblexpensetype" Schema="moneybank" store:Type="Tables" />
+          <EntitySet Name="tbllogs" EntityType="Self.tbllogs" Schema="moneybank" store:Type="Tables" />
+          <EntitySet Name="tblreceive" EntityType="Self.tblreceive" Schema="moneybank" store:Type="Tables" />
+          <EntitySet Name="tblreceivedetails" EntityType="Self.tblreceivedetails" Schema="moneybank" store:Type="Tables" />
+          <EntitySet Name="tblreceivetype" EntityType="Self.tblreceivetype" Schema="moneybank" store:Type="Tables" />
+          <EntitySet Name="tblreconcile" EntityType="Self.tblreconcile" Schema="moneybank" store:Type="Tables" />
+          <EntitySet Name="tbltransactions" EntityType="Self.tbltransactions" Schema="moneybank" store:Type="Tables" />
+          <EntitySet Name="tbluser" EntityType="Self.tbluser" Schema="moneybank" store:Type="Tables" />
+          <EntitySet Name="tbluserbank" EntityType="Self.tbluserbank" Schema="moneybank" store:Type="Tables" />
+          <EntitySet Name="tbluserbankaccount" EntityType="Self.tbluserbankaccount" Schema="moneybank" store:Type="Tables" />
+          <EntitySet Name="tbluserinformation" EntityType="Self.tbluserinformation" Schema="moneybank" store:Type="Tables" />
+          <AssociationSet Name="FK_tblexpensedetails_1" Association="Self.FK_tblexpensedetails_1">
+            <End Role="tblexpense" EntitySet="tblexpense" />
+            <End Role="tblexpensedetails" EntitySet="tblexpensedetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblreceivedetails_1" Association="Self.FK_tblreceivedetails_1">
+            <End Role="tblreceive" EntitySet="tblreceive" />
+            <End Role="tblreceivedetails" EntitySet="tblreceivedetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbluserbank_1" Association="Self.FK_tbluserbank_1">
+            <End Role="tbluser" EntitySet="tbluser" />
+            <End Role="tbluserbank" EntitySet="tbluserbank" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbluserbankaccount_1" Association="Self.FK_tbluserbankaccount_1">
+            <End Role="tbluser" EntitySet="tbluser" />
+            <End Role="tbluserbankaccount" EntitySet="tbluserbankaccount" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbluserinformation_1" Association="Self.FK_tbluserinformation_1">
+            <End Role="tbluser" EntitySet="tbluser" />
+            <End Role="tbluserinformation" EntitySet="tbluserinformation" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="moneybankEntity" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tblbank">
+          <Key>
+            <PropertyRef Name="IdTrack" />
+          </Key>
+          <Property Name="IdTrack" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateReference" Type="DateTime" />
+          <Property Name="BankName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BankSwiftcode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="BankLocation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BankProvider" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tblexpense">
+          <Key>
+            <PropertyRef Name="ExpenseTransNo" />
+          </Key>
+          <Property Name="DateReference" Type="DateTime" />
+          <Property Name="UserID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ExpenseTransNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BankAccountNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TotalExpenseAmount" Type="Decimal" />
+          <NavigationProperty Name="tblexpensedetails" Relationship="Self.FK_tblexpensedetails_1" FromRole="tblexpense" ToRole="tblexpensedetails" />
+        </EntityType>
+        <EntityType Name="tblexpensedetail">
+          <Key>
+            <PropertyRef Name="IdTrack" />
+          </Key>
+          <Property Name="IdTrack" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateReference" Type="DateTime" />
+          <Property Name="ExpenseTransNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ExpenseName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ExpenseAmount" Type="Decimal" />
+          <Property Name="ExpenseQuantity" Type="Int32" />
+          <Property Name="Remarks" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ExpenseTotal" Type="Decimal" Nullable="false" />
+          <NavigationProperty Name="tblexpense" Relationship="Self.FK_tblexpensedetails_1" FromRole="tblexpensedetails" ToRole="tblexpense" />
+        </EntityType>
+        <EntityType Name="tblexpensetype">
+          <Key>
+            <PropertyRef Name="IdTrack" />
+          </Key>
+          <Property Name="IdTrack" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateReference" Type="DateTime" />
+          <Property Name="ExpenseNo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="ExpenseName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbllog">
+          <Key>
+            <PropertyRef Name="IdTrack" />
+          </Key>
+          <Property Name="IdTrack" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateReference" Type="DateTime" />
+          <Property Name="LogsTransNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="LogAction" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="UserID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tblreceive">
+          <Key>
+            <PropertyRef Name="ReceiveTransNo" />
+          </Key>
+          <Property Name="DateReference" Type="DateTime" />
+          <Property Name="ReceiveTransNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UserID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="BankAccountNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TotalReceiveAmount" Type="Decimal" />
+          <NavigationProperty Name="tblreceivedetails" Relationship="Self.FK_tblreceivedetails_1" FromRole="tblreceive" ToRole="tblreceivedetails" />
+        </EntityType>
+        <EntityType Name="tblreceivedetail">
+          <Key>
+            <PropertyRef Name="IdTrack" />
+          </Key>
+          <Property Name="IdTrack" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateReference" Type="DateTime" />
+          <Property Name="ReceiveTransNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ReceiveItemName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ReceiveAmount" Type="Decimal" />
+          <Property Name="ReceiveQuantity" Type="Int32" />
+          <Property Name="Remarks" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ReceiveAmountTotal" Type="Decimal" Nullable="false" />
+          <NavigationProperty Name="tblreceive" Relationship="Self.FK_tblreceivedetails_1" FromRole="tblreceivedetails" ToRole="tblreceive" />
+        </EntityType>
+        <EntityType Name="tblreceivetype">
+          <Key>
+            <PropertyRef Name="IdTrack" />
+          </Key>
+          <Property Name="IdTrack" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateReference" Type="DateTime" />
+          <Property Name="ReceiveNo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="ReceiveType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tblreconcile">
+          <Key>
+            <PropertyRef Name="IdTrack" />
+          </Key>
+          <Property Name="IdTrack" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateReference" Type="DateTime" />
+          <Property Name="ReconcileTransNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="UserID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="BankAccountNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="AddedAmount" Type="Decimal" />
+          <Property Name="DeductedAmount" Type="Decimal" />
+          <Property Name="BalanceAmount" Type="Decimal" />
+          <Property Name="BeginingBalance" Type="Decimal" />
+          <Property Name="EndingBalance" Type="Decimal" />
+          <Property Name="Remarks" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbltransaction">
+          <Key>
+            <PropertyRef Name="IdTrack" />
+          </Key>
+          <Property Name="IdTrack" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TransNo" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ReferenceTransNo" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BankAccountNo" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="245" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Added" Type="Decimal" Nullable="false" />
+          <Property Name="Deducted" Type="Decimal" Nullable="false" />
+          <Property Name="OldBalance" Type="Decimal" Nullable="false" />
+          <Property Name="NewBalance" Type="Decimal" Nullable="false" />
+          <Property Name="Remarks" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DateReference" Type="DateTime" Nullable="false" />
+          <Property Name="UserID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbluser">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="DateReference" Type="DateTime" />
+          <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UserID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DateLastLogin" Type="DateTime" />
+          <Property Name="UserLevel" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tbluserbanks" Relationship="Self.FK_tbluserbank_1" FromRole="tbluser" ToRole="tbluserbank" />
+          <NavigationProperty Name="tbluserbankaccounts" Relationship="Self.FK_tbluserbankaccount_1" FromRole="tbluser" ToRole="tbluserbankaccount" />
+          <NavigationProperty Name="tbluserinformations" Relationship="Self.FK_tbluserinformation_1" FromRole="tbluser" ToRole="tbluserinformation" />
+        </EntityType>
+        <EntityType Name="tbluserbank">
+          <Key>
+            <PropertyRef Name="IdTrack" />
+          </Key>
+          <Property Name="IdTrack" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateReference" Type="DateTime" />
+          <Property Name="UserID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="BankName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BankAccountNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="BankType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tbluser" Relationship="Self.FK_tbluserbank_1" FromRole="tbluserbank" ToRole="tbluser" />
+        </EntityType>
+        <EntityType Name="tbluserbankaccount">
+          <Key>
+            <PropertyRef Name="IdTrack" />
+          </Key>
+          <Property Name="IdTrack" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateReference" Type="DateTime" />
+          <Property Name="UserID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="BankAccountNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CurrentBalance" Type="Decimal" />
+          <Property Name="AmountAdded" Type="Decimal" />
+          <Property Name="AmountDeducted" Type="Decimal" />
+          <Property Name="RemainingBalance" Type="Decimal" />
+          <Property Name="DateUpdated" Type="DateTime" />
+          <Property Name="BankName" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tbluser" Relationship="Self.FK_tbluserbankaccount_1" FromRole="tbluserbankaccount" ToRole="tbluser" />
+        </EntityType>
+        <EntityType Name="tbluserinformation">
+          <Key>
+            <PropertyRef Name="IdTrack" />
+          </Key>
+          <Property Name="IdTrack" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateReference" Type="DateTime" />
+          <Property Name="UserID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Firstname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Middlename" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Relationship" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tbluser" Relationship="Self.FK_tbluserinformation_1" FromRole="tbluserinformation" ToRole="tbluser" />
+        </EntityType>
+        <Association Name="FK_tblexpensedetails_1">
+          <End Role="tblexpense" Type="Self.tblexpense" Multiplicity="0..1" />
+          <End Role="tblexpensedetails" Type="Self.tblexpensedetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblexpense">
+              <PropertyRef Name="ExpenseTransNo" />
+            </Principal>
+            <Dependent Role="tblexpensedetails">
+              <PropertyRef Name="ExpenseTransNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblreceivedetails_1">
+          <End Role="tblreceive" Type="Self.tblreceive" Multiplicity="0..1" />
+          <End Role="tblreceivedetails" Type="Self.tblreceivedetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblreceive">
+              <PropertyRef Name="ReceiveTransNo" />
+            </Principal>
+            <Dependent Role="tblreceivedetails">
+              <PropertyRef Name="ReceiveTransNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbluserbank_1">
+          <End Role="tbluser" Type="Self.tbluser" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbluserbank" Type="Self.tbluserbank" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbluser">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="tbluserbank">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbluserbankaccount_1">
+          <End Role="tbluser" Type="Self.tbluser" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbluserbankaccount" Type="Self.tbluserbankaccount" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbluser">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="tbluserbankaccount">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbluserinformation_1">
+          <End Role="tbluser" Type="Self.tbluser" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbluserinformation" Type="Self.tbluserinformation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbluser">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="tbluserinformation">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="moneybankEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tblbanks" EntityType="Self.tblbank" />
+          <EntitySet Name="tblexpenses" EntityType="Self.tblexpense" />
+          <EntitySet Name="tblexpensedetails" EntityType="Self.tblexpensedetail" />
+          <EntitySet Name="tblexpensetypes" EntityType="Self.tblexpensetype" />
+          <EntitySet Name="tbllogs" EntityType="Self.tbllog" />
+          <EntitySet Name="tblreceives" EntityType="Self.tblreceive" />
+          <EntitySet Name="tblreceivedetails" EntityType="Self.tblreceivedetail" />
+          <EntitySet Name="tblreceivetypes" EntityType="Self.tblreceivetype" />
+          <EntitySet Name="tblreconciles" EntityType="Self.tblreconcile" />
+          <EntitySet Name="tbltransactions" EntityType="Self.tbltransaction" />
+          <EntitySet Name="tblusers" EntityType="Self.tbluser" />
+          <EntitySet Name="tbluserbanks" EntityType="Self.tbluserbank" />
+          <EntitySet Name="tbluserbankaccounts" EntityType="Self.tbluserbankaccount" />
+          <EntitySet Name="tbluserinformations" EntityType="Self.tbluserinformation" />
+          <AssociationSet Name="FK_tblexpensedetails_1" Association="Self.FK_tblexpensedetails_1">
+            <End Role="tblexpense" EntitySet="tblexpenses" />
+            <End Role="tblexpensedetails" EntitySet="tblexpensedetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblreceivedetails_1" Association="Self.FK_tblreceivedetails_1">
+            <End Role="tblreceive" EntitySet="tblreceives" />
+            <End Role="tblreceivedetails" EntitySet="tblreceivedetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbluserbank_1" Association="Self.FK_tbluserbank_1">
+            <End Role="tbluser" EntitySet="tblusers" />
+            <End Role="tbluserbank" EntitySet="tbluserbanks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbluserbankaccount_1" Association="Self.FK_tbluserbankaccount_1">
+            <End Role="tbluser" EntitySet="tblusers" />
+            <End Role="tbluserbankaccount" EntitySet="tbluserbankaccounts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbluserinformation_1" Association="Self.FK_tbluserinformation_1">
+            <End Role="tbluser" EntitySet="tblusers" />
+            <End Role="tbluserinformation" EntitySet="tbluserinformations" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="moneybankEntityStoreContainer" CdmEntityContainer="moneybankEntities">
+          <EntitySetMapping Name="tblbanks">
+            <EntityTypeMapping TypeName="moneybankEntity.tblbank">
+              <MappingFragment StoreEntitySet="tblbank">
+                <ScalarProperty Name="IdTrack" ColumnName="IdTrack" />
+                <ScalarProperty Name="DateReference" ColumnName="DateReference" />
+                <ScalarProperty Name="BankName" ColumnName="BankName" />
+                <ScalarProperty Name="BankSwiftcode" ColumnName="BankSwiftcode" />
+                <ScalarProperty Name="BankLocation" ColumnName="BankLocation" />
+                <ScalarProperty Name="BankProvider" ColumnName="BankProvider" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblexpenses">
+            <EntityTypeMapping TypeName="moneybankEntity.tblexpense">
+              <MappingFragment StoreEntitySet="tblexpense">
+                <ScalarProperty Name="DateReference" ColumnName="DateReference" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="ExpenseTransNo" ColumnName="ExpenseTransNo" />
+                <ScalarProperty Name="BankAccountNo" ColumnName="BankAccountNo" />
+                <ScalarProperty Name="TotalExpenseAmount" ColumnName="TotalExpenseAmount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblexpensedetails">
+            <EntityTypeMapping TypeName="moneybankEntity.tblexpensedetail">
+              <MappingFragment StoreEntitySet="tblexpensedetails">
+                <ScalarProperty Name="IdTrack" ColumnName="IdTrack" />
+                <ScalarProperty Name="DateReference" ColumnName="DateReference" />
+                <ScalarProperty Name="ExpenseTransNo" ColumnName="ExpenseTransNo" />
+                <ScalarProperty Name="ExpenseName" ColumnName="ExpenseName" />
+                <ScalarProperty Name="ExpenseAmount" ColumnName="ExpenseAmount" />
+                <ScalarProperty Name="ExpenseQuantity" ColumnName="ExpenseQuantity" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="ExpenseTotal" ColumnName="ExpenseTotal" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblexpensetypes">
+            <EntityTypeMapping TypeName="moneybankEntity.tblexpensetype">
+              <MappingFragment StoreEntitySet="tblexpensetype">
+                <ScalarProperty Name="IdTrack" ColumnName="IdTrack" />
+                <ScalarProperty Name="DateReference" ColumnName="DateReference" />
+                <ScalarProperty Name="ExpenseNo" ColumnName="ExpenseNo" />
+                <ScalarProperty Name="ExpenseName" ColumnName="ExpenseName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbllogs">
+            <EntityTypeMapping TypeName="moneybankEntity.tbllog">
+              <MappingFragment StoreEntitySet="tbllogs">
+                <ScalarProperty Name="IdTrack" ColumnName="IdTrack" />
+                <ScalarProperty Name="DateReference" ColumnName="DateReference" />
+                <ScalarProperty Name="LogsTransNo" ColumnName="LogsTransNo" />
+                <ScalarProperty Name="LogAction" ColumnName="LogAction" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblreceives">
+            <EntityTypeMapping TypeName="moneybankEntity.tblreceive">
+              <MappingFragment StoreEntitySet="tblreceive">
+                <ScalarProperty Name="DateReference" ColumnName="DateReference" />
+                <ScalarProperty Name="ReceiveTransNo" ColumnName="ReceiveTransNo" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="BankAccountNo" ColumnName="BankAccountNo" />
+                <ScalarProperty Name="TotalReceiveAmount" ColumnName="TotalReceiveAmount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblreceivedetails">
+            <EntityTypeMapping TypeName="moneybankEntity.tblreceivedetail">
+              <MappingFragment StoreEntitySet="tblreceivedetails">
+                <ScalarProperty Name="IdTrack" ColumnName="IdTrack" />
+                <ScalarProperty Name="DateReference" ColumnName="DateReference" />
+                <ScalarProperty Name="ReceiveTransNo" ColumnName="ReceiveTransNo" />
+                <ScalarProperty Name="ReceiveItemName" ColumnName="ReceiveItemName" />
+                <ScalarProperty Name="ReceiveAmount" ColumnName="ReceiveAmount" />
+                <ScalarProperty Name="ReceiveQuantity" ColumnName="ReceiveQuantity" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="ReceiveAmountTotal" ColumnName="ReceiveAmountTotal" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblreceivetypes">
+            <EntityTypeMapping TypeName="moneybankEntity.tblreceivetype">
+              <MappingFragment StoreEntitySet="tblreceivetype">
+                <ScalarProperty Name="IdTrack" ColumnName="IdTrack" />
+                <ScalarProperty Name="DateReference" ColumnName="DateReference" />
+                <ScalarProperty Name="ReceiveNo" ColumnName="ReceiveNo" />
+                <ScalarProperty Name="ReceiveType" ColumnName="ReceiveType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblreconciles">
+            <EntityTypeMapping TypeName="moneybankEntity.tblreconcile">
+              <MappingFragment StoreEntitySet="tblreconcile">
+                <ScalarProperty Name="IdTrack" ColumnName="IdTrack" />
+                <ScalarProperty Name="DateReference" ColumnName="DateReference" />
+                <ScalarProperty Name="ReconcileTransNo" ColumnName="ReconcileTransNo" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="BankAccountNo" ColumnName="BankAccountNo" />
+                <ScalarProperty Name="AddedAmount" ColumnName="AddedAmount" />
+                <ScalarProperty Name="DeductedAmount" ColumnName="DeductedAmount" />
+                <ScalarProperty Name="BalanceAmount" ColumnName="BalanceAmount" />
+                <ScalarProperty Name="BeginingBalance" ColumnName="BeginingBalance" />
+                <ScalarProperty Name="EndingBalance" ColumnName="EndingBalance" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbltransactions">
+            <EntityTypeMapping TypeName="moneybankEntity.tbltransaction">
+              <MappingFragment StoreEntitySet="tbltransactions">
+                <ScalarProperty Name="IdTrack" ColumnName="IdTrack" />
+                <ScalarProperty Name="TransNo" ColumnName="TransNo" />
+                <ScalarProperty Name="ReferenceTransNo" ColumnName="ReferenceTransNo" />
+                <ScalarProperty Name="BankAccountNo" ColumnName="BankAccountNo" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Added" ColumnName="Added" />
+                <ScalarProperty Name="Deducted" ColumnName="Deducted" />
+                <ScalarProperty Name="OldBalance" ColumnName="OldBalance" />
+                <ScalarProperty Name="NewBalance" ColumnName="NewBalance" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="DateReference" ColumnName="DateReference" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblusers">
+            <EntityTypeMapping TypeName="moneybankEntity.tbluser">
+              <MappingFragment StoreEntitySet="tbluser">
+                <ScalarProperty Name="DateReference" ColumnName="DateReference" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="DateLastLogin" ColumnName="DateLastLogin" />
+                <ScalarProperty Name="UserLevel" ColumnName="UserLevel" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbluserbanks">
+            <EntityTypeMapping TypeName="moneybankEntity.tbluserbank">
+              <MappingFragment StoreEntitySet="tbluserbank">
+                <ScalarProperty Name="IdTrack" ColumnName="IdTrack" />
+                <ScalarProperty Name="DateReference" ColumnName="DateReference" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="BankName" ColumnName="BankName" />
+                <ScalarProperty Name="BankAccountNo" ColumnName="BankAccountNo" />
+                <ScalarProperty Name="BankType" ColumnName="BankType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbluserbankaccounts">
+            <EntityTypeMapping TypeName="moneybankEntity.tbluserbankaccount">
+              <MappingFragment StoreEntitySet="tbluserbankaccount">
+                <ScalarProperty Name="IdTrack" ColumnName="IdTrack" />
+                <ScalarProperty Name="DateReference" ColumnName="DateReference" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="BankAccountNo" ColumnName="BankAccountNo" />
+                <ScalarProperty Name="CurrentBalance" ColumnName="CurrentBalance" />
+                <ScalarProperty Name="AmountAdded" ColumnName="AmountAdded" />
+                <ScalarProperty Name="AmountDeducted" ColumnName="AmountDeducted" />
+                <ScalarProperty Name="RemainingBalance" ColumnName="RemainingBalance" />
+                <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+                <ScalarProperty Name="BankName" ColumnName="BankName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbluserinformations">
+            <EntityTypeMapping TypeName="moneybankEntity.tbluserinformation">
+              <MappingFragment StoreEntitySet="tbluserinformation">
+                <ScalarProperty Name="IdTrack" ColumnName="IdTrack" />
+                <ScalarProperty Name="DateReference" ColumnName="DateReference" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+                <ScalarProperty Name="Middlename" ColumnName="Middlename" />
+                <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+                <ScalarProperty Name="Relationship" ColumnName="Relationship" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
