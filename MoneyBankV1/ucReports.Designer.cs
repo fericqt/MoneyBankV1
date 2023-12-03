@@ -63,7 +63,9 @@ namespace MoneyBankV2 {
             // reportListBox
             // 
             this.reportListBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportListBox.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reportListBox.FormattingEnabled = true;
+            this.reportListBox.ItemHeight = 23;
             this.reportListBox.Location = new System.Drawing.Point(0, 0);
             this.reportListBox.Name = "reportListBox";
             this.reportListBox.Size = new System.Drawing.Size(226, 408);

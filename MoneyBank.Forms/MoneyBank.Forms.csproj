@@ -105,6 +105,12 @@
     <Compile Include="ManageBank.Designer.cs">
       <DependentUpon>ManageBank.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageBankTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageBankTransfer.Designer.cs">
+      <DependentUpon>ManageBankTransfer.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManageExpense.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +211,10 @@
       <Project>{60e2b3b0-8758-4168-ab35-ac0483869e01}</Project>
       <Name>MoneyBank.Entity</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MoneyBank.Reports\MoneyBank.Reports.csproj">
+      <Project>{5c0eb1f5-e16d-4642-b894-d526b015fe23}</Project>
+      <Name>MoneyBank.Reports</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FrmBanks.resx">
@@ -227,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManageBank.resx">
       <DependentUpon>ManageBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageBankTransfer.resx">
+      <DependentUpon>ManageBankTransfer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageExpense.resx">
       <DependentUpon>ManageExpense.cs</DependentUpon>
@@ -268,6 +281,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\DataSources\MoneyBank.DTO.BankDTO.datasource" />
+    <None Include="Properties\DataSources\MoneyBank.DTO.BankTransferDTO.datasource" />
     <None Include="Properties\DataSources\MoneyBank.DTO.ExpenseDetailDTO.datasource" />
     <None Include="Properties\DataSources\MoneyBank.DTO.ExpenseDTO.datasource" />
     <None Include="Properties\DataSources\MoneyBank.DTO.ExpenseTypeDTO.datasource" />

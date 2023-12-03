@@ -3,6 +3,7 @@ using MoneyBank.Base.Forms;
 using MoneyBank.DTO;
 using MoneyBank.Entity;
 using MoneyBank.EntityData;
+using MoneyBank.Reports;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,6 +26,7 @@ namespace MoneyBank.Forms {
                     using (var data = new ReceiveData()) {
                         myDTO.ReceiveTransNo = data.GetNewID();
                     }
+                    LoadBank();
                     break;
                 case FormMode.Update:
                     using (var data = new ReceiveData()) {
@@ -56,6 +58,7 @@ namespace MoneyBank.Forms {
         protected override bool OnSaveData() {
             using (var data = new ReceiveData()) {
                 data.SaveDTO(myDTO);
+                new TransactionReport().PreviewReport(TransactionReport.ReportList.ReceiveTransaction, myDTO.ReceiveTransNo);
                 return true;
             }
         }
@@ -75,7 +78,7 @@ namespace MoneyBank.Forms {
         }
         private void LoadBank() {
             using (var data = new UserData()) {
-                data.LoadBankById(cmbBank, myDTO.UserId);
+                data.LoadComboBox(cmbBank, myDTO.UserId);
             }
         }
     }

@@ -40,14 +40,30 @@
       <HintPath>..\packages\CrystalReports.Shared.13.0.4003\lib\net40\CrystalDecisions.Shared.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\GLOBAL DLL\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\GLOBAL DLL\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.12\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\GLOBAL DLL\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\GLOBAL DLL\MySql.Data.Entity.EF6.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,9 +72,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="RPT Criteria\ManageReportFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPT Criteria\ManageReportFilter.Designer.cs">
+      <DependentUpon>ManageReportFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT Model\BankTransactionModel.cs" />
     <Compile Include="RPT Model\ReceiveDetailModel.cs" />
     <Compile Include="RPT Model\ReceiveModel.cs" />
     <Compile Include="RPT Model\UserModel.cs" />
+    <Compile Include="RPT\crBank.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crBank.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\crBankTransaction.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crBankTransaction.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="RPT\crListOfUsers.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -76,6 +111,17 @@
     <Compile Include="TransactionReport.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="RPT Criteria\ManageReportFilter.resx">
+      <DependentUpon>ManageReportFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\crBank.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crBank.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\crBankTransaction.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crBankTransaction.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="RPT\crListOfUsers.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crListOfUsers.cs</LastGenOutput>
@@ -96,6 +142,18 @@
     <ProjectReference Include="..\..\FerPROJ.Design\FerPROJ.Design\FerPROJ.Design.csproj">
       <Project>{3379010B-3FEC-4AFC-8DB5-8ED0FCBD69BC}</Project>
       <Name>FerPROJ.Design</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MoneyBank.Base\MoneyBank.Base.csproj">
+      <Project>{157DEB56-30E7-41C9-B0CB-5FA5F3011357}</Project>
+      <Name>MoneyBank.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MoneyBank.EntityData\MoneyBank.EntityData.csproj">
+      <Project>{6e709345-2691-435b-b62f-d441f0225700}</Project>
+      <Name>MoneyBank.EntityData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MoneyBank.Entity\MoneyBank.Entity.csproj">
+      <Project>{60e2b3b0-8758-4168-ab35-ac0483869e01}</Project>
+      <Name>MoneyBank.Entity</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,6 +1,7 @@
 ﻿using FerPROJ.Design.Class;
 using MoneyBank.Base.Forms;
 using MoneyBank.EntityData;
+using MoneyBank.Reports;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,6 +39,11 @@ namespace MoneyBank.Forms {
                 }
             }
             return false;
+        }
+        protected override void ViewItem() {
+            if (CDGVSetting.GetSelectedValue(dgvReceive, receiveTransNoDataGridViewTextBoxColumn.Index, out string sout)) {
+                new TransactionReport().PreviewReport(TransactionReport.ReportList.ReceiveTransaction, sout);
+            }
         }
     }
 }

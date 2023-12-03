@@ -91,7 +91,7 @@ namespace MoneyBank.EntityData {
                         Remarks = $"RefTrans: {myDTO.ExpenseTransNo}, Desc: {sbDesc.ToString()}",
                         UserId = myDTO.UserId
                     };
-                    new TransactionData(_ts).SaveDTO(transItem);
+                    new TransactionData(_ts,_conn).SaveDTO(transItem);
                     //
                     tblBankAcc.AmountAdded = 0;
                     tblBankAcc.DateUpdated = DateTime.Now;

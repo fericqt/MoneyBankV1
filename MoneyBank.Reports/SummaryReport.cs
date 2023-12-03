@@ -1,25 +1,27 @@
 ﻿using CrystalDecisions.CrystalReports.Engine;
 using FerPROJ.DBHelper.CRUD;
 using FerPROJ.Design.Class;
+using FerPROJ.Design.Forms;
 using MoneyBank.Reports.RPT;
+using MoneyBank.Reports.RPT_Criteria;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MoneyBank.Reports
-{
-    public class SummaryReport
-    {
+namespace MoneyBank.Reports {
+    public class SummaryReport {
         private delegate ReportDocument MyFunction();
         private Dictionary<ReportList, MyFunction> reportFunctions;
         public SummaryReport() {
             reportFunctions = new Dictionary<ReportList, MyFunction>();
             reportFunctions.Add(ReportList.UserList, UserList);
+            reportFunctions.Add(ReportList.BankTransactionByBank, BankTransactionByBank);
         }
         public enum ReportList {
             UserList,
+            BankTransactionByBank
         }
         public void PreviewReport(ReportList reportType) {
             ReportDocument report = GetReport(reportType);
@@ -31,6 +33,7 @@ namespace MoneyBank.Reports
         private ReportDocument GetReport(ReportList reportType) {
             var result = reportFunctions[reportType];
             ReportDocument rpt1 = result();
+            FrmSplasherReport.ShowSplash();
             return rpt1;
         }
         private ReportDocument UserList() {
@@ -39,5 +42,21 @@ namespace MoneyBank.Reports
             rpt.SetDataSource(new Conn().GetDataTable(sQuery));
             return rpt;
         }
+        private ReportDocument BankTransactionByBank() {
+            using (var frm = new ManageReportFilter()) {
+                frm.ShowDialog();
+                if (frm.CurrentFormResult) {
+                    string sQuery = $"SELECT * FROM tbltransactions tblt INNER JOIN tbluserbank tblu ON tblt.BankAccountNo = tblu.BankAccountNo " +
+                                    $"INNER JOIN tbluserbankaccount tblub ON tblub.BankAccountNo = tblu.BankAccountNo " +
+                                    $"INNER JOIN tbluser tbl ON tbl.UserID = tblu.UserID AND tblt.BankAccountNo = '{frm.Manage_BankAccountNo}'";
+
+                    var rpt = new crBankTransaction();
+                    rpt.SetDataSource(new Conn().GetDataTable(sQuery));
+                    return rpt;
+                }
+            }
+            return null;
+        }
+
     }
 }

@@ -16,7 +16,14 @@ namespace MoneyBankV2 {
             InitializeComponent();
         }
         protected override void LoadComponents() {
+            reportListBox.Items.Add("****USER INFORMATIONS****");
+            reportListBox.Items.Add(" ");
             reportListBox.Items.Add("Registered Users");
+            reportListBox.Items.Add(" ");
+            reportListBox.Items.Add("****ACCOUNTING INFORMATIONS****");
+            reportListBox.Items.Add(" ");
+            reportListBox.Items.Add("Registered Banks");
+            reportListBox.Items.Add("Bank Transaction By Account");
         }
 
         private void reportListBox_MouseDoubleClick(object sender, MouseEventArgs e) {
@@ -26,6 +33,9 @@ namespace MoneyBankV2 {
             switch (reportListBox.SelectedItem.ToString()) {
                 case "Registered Users":
                     new SummaryReport().PreviewReport(SummaryReport.ReportList.UserList);
+                    break;
+                case "Bank Transaction By Account":
+                    new SummaryReport().PreviewReport(SummaryReport.ReportList.BankTransactionByBank);
                     break;
             }
         }

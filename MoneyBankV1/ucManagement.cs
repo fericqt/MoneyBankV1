@@ -39,5 +39,8 @@ namespace MoneyBankV2 {
             new FormLayer.ListForm().ListReceive();
         }
 
+        private void btnBankTransfer_Click(object sender, EventArgs e) {
+            new FormLayer.ManageForm().ManageBankTransfer();
+        }
     }
 }

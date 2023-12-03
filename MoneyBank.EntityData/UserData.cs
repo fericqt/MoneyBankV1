@@ -12,10 +12,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MoneyBank.EntityData
-{
-    public class UserData : BaseDBEntity<moneybankEntities, Conn, UserDTO, string>, IEntityData<tbluser, string>
-    {
+namespace MoneyBank.EntityData {
+    public class UserData : BaseDBEntity<moneybankEntities, Conn, UserDTO, string>, IEntityData<tbluser, string> {
         public UserData() {
         }
 
@@ -25,22 +23,25 @@ namespace MoneyBank.EntityData
         public UserData(Conn conn) : base(conn) {
         }
 
+        public UserData(moneybankEntities ts, Conn conn) : base(ts, conn) {
+        }
+
         public IEnumerable<tbluser> GetAll() {
             throw new NotImplementedException();
         }
 
         public tbluser GetById(string id) {
-            throw new NotImplementedException();
+            return _ts.tblusers.FirstOrDefault(c => c.UserID == id);
         }
 
         public string GetNewID() {
             return _conn.GetNewStringID("UID", _tableName);
         }
-        public void LoadBankById(ComboBox cmb, string id) {
-            _conn.FillComboBox(cmb, "BankName", "BankAccountNo", $"SELECT * FROM tbluserbank WHERE UserID = '{id}'");
-        }
         public void LoadComboBox(ComboBox cmb) {
-            throw new NotImplementedException();
+            _conn.FillComboBox(cmb, "UserID", $"SELECT * FROM tbluser");
+        }
+        public void LoadComboBox(ComboBox cmb, string id) {
+            _conn.FillComboBox(cmb, "BankName", "BankAccountNo", $"SELECT * FROM tbluserbank WHERE UserID = '{id}'");
         }
 
         public void LoadComboBox(CComboBox cmb) {
@@ -65,10 +66,22 @@ namespace MoneyBank.EntityData
 
         protected override void DeleteData(string id) {
             var tblu = GetById(id);
-            var tblt = new TransactionData(_ts).GetByUserId(id);
-            _ts.tblusers.Remove(tblu);
-            _ts.tbltransactions.Remove(tblt);
-            _ts.SaveChanges();
+            var tblt = new TransactionData(_ts).GetAll(id);
+            //
+            using (var trans = _ts.Database.BeginTransaction()) {
+                try {
+                    _ts.tblusers.Remove(tblu);
+                    _ts.tbluserbankaccounts.RemoveRange(tblu.tbluserbankaccounts);
+                    _ts.tbluserbanks.RemoveRange(tblu.tbluserbanks);
+                    _ts.tbluserinformations.RemoveRange(tblu.tbluserinformations);
+                    _ts.tbltransactions.RemoveRange(tblt);
+                    _ts.SaveChanges();
+                    trans.Commit();
+                } catch (Exception) {
+                    trans.Rollback();
+                    throw;
+                }
+            }
         }
 
         protected override void SaveData(UserDTO myDTO) {
@@ -98,6 +111,8 @@ namespace MoneyBank.EntityData
                         foreach (var item in myDTO.BankAccountList) {
                             var itemToAdd = new CMapping<UserBankAccountDTO, tbluserbankaccount>().GetMappingResult(item);
                             tblNew.tbluserbankaccounts.Add(itemToAdd);
+                            //
+                            AddBeginningBalance(myDTO, item);
                         }
                     }
                     if (myDTO.UserInfoList.Count > 0) {
@@ -120,6 +135,24 @@ namespace MoneyBank.EntityData
                     trans.Rollback();
                     throw;
                 }
+            }
+        }
+
+        private void AddBeginningBalance(UserDTO myDTO, UserBankAccountDTO item) {
+            var tbl = _ts.tbltransactions.FirstOrDefault(c=>c.BankAccountNo == item.BankAccountNo);
+            if (tbl == null) {
+                TransactionDTO transItem = new TransactionDTO {
+                    ReferenceTransNo = myDTO.UserId,
+                    BankAccountNo = item.BankAccountNo,
+                    Description = "Beginning Balance",
+                    Added = item.CurrentBalance,
+                    Deducted = 0,
+                    OldBalance = 0,
+                    NewBalance = item.CurrentBalance,
+                    Remarks = $"UserID: {myDTO.UserId}, Desc: Beginning Balance",
+                    UserId = myDTO.UserId
+                };
+                new TransactionData(_ts, _conn).SaveDTO(transItem);
             }
         }
     }

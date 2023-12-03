@@ -26,263 +26,291 @@ namespace MoneyBankV2 {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            panel1 = new Panel();
-            groupBox5 = new GroupBox();
-            btnBankAccount = new FerPROJ.Design.Controls.CButton();
-            groupBox4 = new GroupBox();
-            btnReconcileBank = new FerPROJ.Design.Controls.CButton();
-            groupBox3 = new GroupBox();
-            btnManageReceives = new FerPROJ.Design.Controls.CButton();
-            btnReceiveType = new FerPROJ.Design.Controls.CButton();
-            groupBox2 = new GroupBox();
-            btnManageExpenses = new FerPROJ.Design.Controls.CButton();
-            btnExpenseType = new FerPROJ.Design.Controls.CButton();
-            groupBox1 = new GroupBox();
-            btnBank = new FerPROJ.Design.Controls.CButton();
-            panel1.SuspendLayout();
-            groupBox5.SuspendLayout();
-            groupBox4.SuspendLayout();
-            groupBox3.SuspendLayout();
-            groupBox2.SuspendLayout();
-            groupBox1.SuspendLayout();
-            SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btnBankAccount = new FerPROJ.Design.Controls.CButton();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnReconcileBank = new FerPROJ.Design.Controls.CButton();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnManageReceives = new FerPROJ.Design.Controls.CButton();
+            this.btnReceiveType = new FerPROJ.Design.Controls.CButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnManageExpenses = new FerPROJ.Design.Controls.CButton();
+            this.btnExpenseType = new FerPROJ.Design.Controls.CButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnBankTransfer = new FerPROJ.Design.Controls.CButton();
+            this.btnBank = new FerPROJ.Design.Controls.CButton();
+            this.panel1.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.SuspendLayout();
             // 
             // panel1
             // 
-            panel1.AutoScroll = true;
-            panel1.BackColor = Color.MediumPurple;
-            panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(groupBox5);
-            panel1.Controls.Add(groupBox4);
-            panel1.Controls.Add(groupBox3);
-            panel1.Controls.Add(groupBox2);
-            panel1.Controls.Add(groupBox1);
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(821, 851);
-            panel1.TabIndex = 0;
+            this.panel1.AutoScroll = true;
+            this.panel1.BackColor = System.Drawing.Color.MediumPurple;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.groupBox5);
+            this.panel1.Controls.Add(this.groupBox4);
+            this.panel1.Controls.Add(this.groupBox3);
+            this.panel1.Controls.Add(this.groupBox2);
+            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(704, 738);
+            this.panel1.TabIndex = 0;
             // 
             // groupBox5
             // 
-            groupBox5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            groupBox5.Controls.Add(btnBankAccount);
-            groupBox5.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            groupBox5.ForeColor = Color.White;
-            groupBox5.Location = new Point(22, 649);
-            groupBox5.Name = "groupBox5";
-            groupBox5.Size = new Size(766, 139);
-            groupBox5.TabIndex = 4;
-            groupBox5.TabStop = false;
-            groupBox5.Text = "USER INFORMATION DETAILS";
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox5.Controls.Add(this.btnBankAccount);
+            this.groupBox5.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.ForeColor = System.Drawing.Color.White;
+            this.groupBox5.Location = new System.Drawing.Point(19, 562);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(657, 120);
+            this.groupBox5.TabIndex = 4;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "USER INFORMATION DETAILS";
             // 
             // btnBankAccount
             // 
-            btnBankAccount.BackColor = Color.SpringGreen;
-            btnBankAccount.BackgroundColor = Color.SpringGreen;
-            btnBankAccount.BorderColor = Color.Green;
-            btnBankAccount.BorderRadius = 20;
-            btnBankAccount.BorderSize = 0;
-            btnBankAccount.FlatAppearance.BorderSize = 0;
-            btnBankAccount.FlatStyle = FlatStyle.Flat;
-            btnBankAccount.Font = new Font("Poppins", 9F);
-            btnBankAccount.ForeColor = Color.Black;
-            btnBankAccount.Location = new Point(27, 29);
-            btnBankAccount.Name = "btnBankAccount";
-            btnBankAccount.Size = new Size(187, 40);
-            btnBankAccount.TabIndex = 0;
-            btnBankAccount.Text = "Info and Bank Account";
-            btnBankAccount.TextColor = Color.Black;
-            btnBankAccount.UseVisualStyleBackColor = false;
-            btnBankAccount.Click += btnBankAccount_Click;
+            this.btnBankAccount.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnBankAccount.BackgroundColor = System.Drawing.Color.SpringGreen;
+            this.btnBankAccount.BorderColor = System.Drawing.Color.Green;
+            this.btnBankAccount.BorderRadius = 20;
+            this.btnBankAccount.BorderSize = 0;
+            this.btnBankAccount.FlatAppearance.BorderSize = 0;
+            this.btnBankAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBankAccount.Font = new System.Drawing.Font("Poppins", 9F);
+            this.btnBankAccount.ForeColor = System.Drawing.Color.Black;
+            this.btnBankAccount.Location = new System.Drawing.Point(23, 25);
+            this.btnBankAccount.Name = "btnBankAccount";
+            this.btnBankAccount.Size = new System.Drawing.Size(160, 35);
+            this.btnBankAccount.TabIndex = 0;
+            this.btnBankAccount.Text = "Info and Bank Account";
+            this.btnBankAccount.TextColor = System.Drawing.Color.Black;
+            this.btnBankAccount.UseVisualStyleBackColor = false;
+            this.btnBankAccount.Click += new System.EventHandler(this.btnBankAccount_Click);
             // 
             // groupBox4
             // 
-            groupBox4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            groupBox4.Controls.Add(btnReconcileBank);
-            groupBox4.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            groupBox4.ForeColor = Color.White;
-            groupBox4.Location = new Point(22, 494);
-            groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(766, 139);
-            groupBox4.TabIndex = 3;
-            groupBox4.TabStop = false;
-            groupBox4.Text = "RECONCILE";
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.Controls.Add(this.btnReconcileBank);
+            this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.ForeColor = System.Drawing.Color.White;
+            this.groupBox4.Location = new System.Drawing.Point(19, 428);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(657, 120);
+            this.groupBox4.TabIndex = 3;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "RECONCILE";
             // 
             // btnReconcileBank
             // 
-            btnReconcileBank.BackColor = Color.SpringGreen;
-            btnReconcileBank.BackgroundColor = Color.SpringGreen;
-            btnReconcileBank.BorderColor = Color.Green;
-            btnReconcileBank.BorderRadius = 20;
-            btnReconcileBank.BorderSize = 0;
-            btnReconcileBank.FlatAppearance.BorderSize = 0;
-            btnReconcileBank.FlatStyle = FlatStyle.Flat;
-            btnReconcileBank.Font = new Font("Poppins", 9F);
-            btnReconcileBank.ForeColor = Color.Black;
-            btnReconcileBank.Location = new Point(27, 29);
-            btnReconcileBank.Name = "btnReconcileBank";
-            btnReconcileBank.Size = new Size(150, 40);
-            btnReconcileBank.TabIndex = 0;
-            btnReconcileBank.Text = "Reconcile Bank";
-            btnReconcileBank.TextColor = Color.Black;
-            btnReconcileBank.UseVisualStyleBackColor = false;
+            this.btnReconcileBank.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnReconcileBank.BackgroundColor = System.Drawing.Color.SpringGreen;
+            this.btnReconcileBank.BorderColor = System.Drawing.Color.Green;
+            this.btnReconcileBank.BorderRadius = 20;
+            this.btnReconcileBank.BorderSize = 0;
+            this.btnReconcileBank.FlatAppearance.BorderSize = 0;
+            this.btnReconcileBank.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReconcileBank.Font = new System.Drawing.Font("Poppins", 9F);
+            this.btnReconcileBank.ForeColor = System.Drawing.Color.Black;
+            this.btnReconcileBank.Location = new System.Drawing.Point(23, 25);
+            this.btnReconcileBank.Name = "btnReconcileBank";
+            this.btnReconcileBank.Size = new System.Drawing.Size(129, 35);
+            this.btnReconcileBank.TabIndex = 0;
+            this.btnReconcileBank.Text = "Reconcile Bank";
+            this.btnReconcileBank.TextColor = System.Drawing.Color.Black;
+            this.btnReconcileBank.UseVisualStyleBackColor = false;
             // 
             // groupBox3
             // 
-            groupBox3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            groupBox3.Controls.Add(btnManageReceives);
-            groupBox3.Controls.Add(btnReceiveType);
-            groupBox3.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            groupBox3.ForeColor = Color.White;
-            groupBox3.Location = new Point(22, 339);
-            groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(766, 139);
-            groupBox3.TabIndex = 2;
-            groupBox3.TabStop = false;
-            groupBox3.Text = "RECEIVES";
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.btnManageReceives);
+            this.groupBox3.Controls.Add(this.btnReceiveType);
+            this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.ForeColor = System.Drawing.Color.White;
+            this.groupBox3.Location = new System.Drawing.Point(19, 294);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(657, 120);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "RECEIVES";
             // 
             // btnManageReceives
             // 
-            btnManageReceives.BackColor = Color.SpringGreen;
-            btnManageReceives.BackgroundColor = Color.SpringGreen;
-            btnManageReceives.BorderColor = Color.Green;
-            btnManageReceives.BorderRadius = 20;
-            btnManageReceives.BorderSize = 0;
-            btnManageReceives.FlatAppearance.BorderSize = 0;
-            btnManageReceives.FlatStyle = FlatStyle.Flat;
-            btnManageReceives.Font = new Font("Poppins", 9F);
-            btnManageReceives.ForeColor = Color.Black;
-            btnManageReceives.Location = new Point(200, 29);
-            btnManageReceives.Name = "btnManageReceives";
-            btnManageReceives.Size = new Size(150, 40);
-            btnManageReceives.TabIndex = 2;
-            btnManageReceives.Text = "Manage Receives";
-            btnManageReceives.TextColor = Color.Black;
-            btnManageReceives.UseVisualStyleBackColor = false;
-            btnManageReceives.Click += btnManageReceives_Click;
+            this.btnManageReceives.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnManageReceives.BackgroundColor = System.Drawing.Color.SpringGreen;
+            this.btnManageReceives.BorderColor = System.Drawing.Color.Green;
+            this.btnManageReceives.BorderRadius = 20;
+            this.btnManageReceives.BorderSize = 0;
+            this.btnManageReceives.FlatAppearance.BorderSize = 0;
+            this.btnManageReceives.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManageReceives.Font = new System.Drawing.Font("Poppins", 9F);
+            this.btnManageReceives.ForeColor = System.Drawing.Color.Black;
+            this.btnManageReceives.Location = new System.Drawing.Point(171, 25);
+            this.btnManageReceives.Name = "btnManageReceives";
+            this.btnManageReceives.Size = new System.Drawing.Size(129, 35);
+            this.btnManageReceives.TabIndex = 2;
+            this.btnManageReceives.Text = "Manage Receives";
+            this.btnManageReceives.TextColor = System.Drawing.Color.Black;
+            this.btnManageReceives.UseVisualStyleBackColor = false;
+            this.btnManageReceives.Click += new System.EventHandler(this.btnManageReceives_Click);
             // 
             // btnReceiveType
             // 
-            btnReceiveType.BackColor = Color.SpringGreen;
-            btnReceiveType.BackgroundColor = Color.SpringGreen;
-            btnReceiveType.BorderColor = Color.Green;
-            btnReceiveType.BorderRadius = 20;
-            btnReceiveType.BorderSize = 0;
-            btnReceiveType.FlatAppearance.BorderSize = 0;
-            btnReceiveType.FlatStyle = FlatStyle.Flat;
-            btnReceiveType.Font = new Font("Poppins", 9F);
-            btnReceiveType.ForeColor = Color.Black;
-            btnReceiveType.Location = new Point(27, 29);
-            btnReceiveType.Name = "btnReceiveType";
-            btnReceiveType.Size = new Size(150, 40);
-            btnReceiveType.TabIndex = 0;
-            btnReceiveType.Text = "Receive Type";
-            btnReceiveType.TextColor = Color.Black;
-            btnReceiveType.UseVisualStyleBackColor = false;
-            btnReceiveType.Click += btnReceiveType_Click;
+            this.btnReceiveType.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnReceiveType.BackgroundColor = System.Drawing.Color.SpringGreen;
+            this.btnReceiveType.BorderColor = System.Drawing.Color.Green;
+            this.btnReceiveType.BorderRadius = 20;
+            this.btnReceiveType.BorderSize = 0;
+            this.btnReceiveType.FlatAppearance.BorderSize = 0;
+            this.btnReceiveType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReceiveType.Font = new System.Drawing.Font("Poppins", 9F);
+            this.btnReceiveType.ForeColor = System.Drawing.Color.Black;
+            this.btnReceiveType.Location = new System.Drawing.Point(23, 25);
+            this.btnReceiveType.Name = "btnReceiveType";
+            this.btnReceiveType.Size = new System.Drawing.Size(129, 35);
+            this.btnReceiveType.TabIndex = 0;
+            this.btnReceiveType.Text = "Receive Type";
+            this.btnReceiveType.TextColor = System.Drawing.Color.Black;
+            this.btnReceiveType.UseVisualStyleBackColor = false;
+            this.btnReceiveType.Click += new System.EventHandler(this.btnReceiveType_Click);
             // 
             // groupBox2
             // 
-            groupBox2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            groupBox2.Controls.Add(btnManageExpenses);
-            groupBox2.Controls.Add(btnExpenseType);
-            groupBox2.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            groupBox2.ForeColor = Color.White;
-            groupBox2.Location = new Point(22, 180);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(766, 139);
-            groupBox2.TabIndex = 1;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "EXPENSES";
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.btnManageExpenses);
+            this.groupBox2.Controls.Add(this.btnExpenseType);
+            this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.Location = new System.Drawing.Point(19, 156);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(657, 120);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "EXPENSES";
             // 
             // btnManageExpenses
             // 
-            btnManageExpenses.BackColor = Color.SpringGreen;
-            btnManageExpenses.BackgroundColor = Color.SpringGreen;
-            btnManageExpenses.BorderColor = Color.Green;
-            btnManageExpenses.BorderRadius = 20;
-            btnManageExpenses.BorderSize = 0;
-            btnManageExpenses.FlatAppearance.BorderSize = 0;
-            btnManageExpenses.FlatStyle = FlatStyle.Flat;
-            btnManageExpenses.Font = new Font("Poppins", 9F);
-            btnManageExpenses.ForeColor = Color.Black;
-            btnManageExpenses.Location = new Point(200, 29);
-            btnManageExpenses.Name = "btnManageExpenses";
-            btnManageExpenses.Size = new Size(150, 40);
-            btnManageExpenses.TabIndex = 1;
-            btnManageExpenses.Text = "Manage Expenses";
-            btnManageExpenses.TextColor = Color.Black;
-            btnManageExpenses.UseVisualStyleBackColor = false;
-            btnManageExpenses.Click += btnManageExpenses_Click;
+            this.btnManageExpenses.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnManageExpenses.BackgroundColor = System.Drawing.Color.SpringGreen;
+            this.btnManageExpenses.BorderColor = System.Drawing.Color.Green;
+            this.btnManageExpenses.BorderRadius = 20;
+            this.btnManageExpenses.BorderSize = 0;
+            this.btnManageExpenses.FlatAppearance.BorderSize = 0;
+            this.btnManageExpenses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManageExpenses.Font = new System.Drawing.Font("Poppins", 9F);
+            this.btnManageExpenses.ForeColor = System.Drawing.Color.Black;
+            this.btnManageExpenses.Location = new System.Drawing.Point(171, 25);
+            this.btnManageExpenses.Name = "btnManageExpenses";
+            this.btnManageExpenses.Size = new System.Drawing.Size(129, 35);
+            this.btnManageExpenses.TabIndex = 1;
+            this.btnManageExpenses.Text = "Manage Expenses";
+            this.btnManageExpenses.TextColor = System.Drawing.Color.Black;
+            this.btnManageExpenses.UseVisualStyleBackColor = false;
+            this.btnManageExpenses.Click += new System.EventHandler(this.btnManageExpenses_Click);
             // 
             // btnExpenseType
             // 
-            btnExpenseType.BackColor = Color.SpringGreen;
-            btnExpenseType.BackgroundColor = Color.SpringGreen;
-            btnExpenseType.BorderColor = Color.Green;
-            btnExpenseType.BorderRadius = 20;
-            btnExpenseType.BorderSize = 0;
-            btnExpenseType.FlatAppearance.BorderSize = 0;
-            btnExpenseType.FlatStyle = FlatStyle.Flat;
-            btnExpenseType.Font = new Font("Poppins", 9F);
-            btnExpenseType.ForeColor = Color.Black;
-            btnExpenseType.Location = new Point(27, 29);
-            btnExpenseType.Name = "btnExpenseType";
-            btnExpenseType.Size = new Size(150, 40);
-            btnExpenseType.TabIndex = 0;
-            btnExpenseType.Text = "Expense Type";
-            btnExpenseType.TextColor = Color.Black;
-            btnExpenseType.UseVisualStyleBackColor = false;
-            btnExpenseType.Click += btnExpenseType_Click;
+            this.btnExpenseType.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnExpenseType.BackgroundColor = System.Drawing.Color.SpringGreen;
+            this.btnExpenseType.BorderColor = System.Drawing.Color.Green;
+            this.btnExpenseType.BorderRadius = 20;
+            this.btnExpenseType.BorderSize = 0;
+            this.btnExpenseType.FlatAppearance.BorderSize = 0;
+            this.btnExpenseType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExpenseType.Font = new System.Drawing.Font("Poppins", 9F);
+            this.btnExpenseType.ForeColor = System.Drawing.Color.Black;
+            this.btnExpenseType.Location = new System.Drawing.Point(23, 25);
+            this.btnExpenseType.Name = "btnExpenseType";
+            this.btnExpenseType.Size = new System.Drawing.Size(129, 35);
+            this.btnExpenseType.TabIndex = 0;
+            this.btnExpenseType.Text = "Expense Type";
+            this.btnExpenseType.TextColor = System.Drawing.Color.Black;
+            this.btnExpenseType.UseVisualStyleBackColor = false;
+            this.btnExpenseType.Click += new System.EventHandler(this.btnExpenseType_Click);
             // 
             // groupBox1
             // 
-            groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            groupBox1.Controls.Add(btnBank);
-            groupBox1.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            groupBox1.ForeColor = Color.White;
-            groupBox1.Location = new Point(22, 21);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(766, 139);
-            groupBox1.TabIndex = 0;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "BANK";
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.btnBankTransfer);
+            this.groupBox1.Controls.Add(this.btnBank);
+            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(19, 18);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(657, 120);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "BANK";
+            // 
+            // btnBankTransfer
+            // 
+            this.btnBankTransfer.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnBankTransfer.BackgroundColor = System.Drawing.Color.SpringGreen;
+            this.btnBankTransfer.BorderColor = System.Drawing.Color.Green;
+            this.btnBankTransfer.BorderRadius = 20;
+            this.btnBankTransfer.BorderSize = 0;
+            this.btnBankTransfer.FlatAppearance.BorderSize = 0;
+            this.btnBankTransfer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBankTransfer.Font = new System.Drawing.Font("Poppins", 9F);
+            this.btnBankTransfer.ForeColor = System.Drawing.Color.Black;
+            this.btnBankTransfer.Location = new System.Drawing.Point(171, 25);
+            this.btnBankTransfer.Name = "btnBankTransfer";
+            this.btnBankTransfer.Size = new System.Drawing.Size(129, 35);
+            this.btnBankTransfer.TabIndex = 1;
+            this.btnBankTransfer.Text = "Bank Transfer";
+            this.btnBankTransfer.TextColor = System.Drawing.Color.Black;
+            this.btnBankTransfer.UseVisualStyleBackColor = false;
+            this.btnBankTransfer.Click += new System.EventHandler(this.btnBankTransfer_Click);
             // 
             // btnBank
             // 
-            btnBank.BackColor = Color.SpringGreen;
-            btnBank.BackgroundColor = Color.SpringGreen;
-            btnBank.BorderColor = Color.Green;
-            btnBank.BorderRadius = 20;
-            btnBank.BorderSize = 0;
-            btnBank.FlatAppearance.BorderSize = 0;
-            btnBank.FlatStyle = FlatStyle.Flat;
-            btnBank.Font = new Font("Poppins", 9F);
-            btnBank.ForeColor = Color.Black;
-            btnBank.Location = new Point(27, 29);
-            btnBank.Name = "btnBank";
-            btnBank.Size = new Size(150, 40);
-            btnBank.TabIndex = 0;
-            btnBank.Text = "Bank";
-            btnBank.TextColor = Color.Black;
-            btnBank.UseVisualStyleBackColor = false;
-            btnBank.Click += btnBank_Click;
+            this.btnBank.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnBank.BackgroundColor = System.Drawing.Color.SpringGreen;
+            this.btnBank.BorderColor = System.Drawing.Color.Green;
+            this.btnBank.BorderRadius = 20;
+            this.btnBank.BorderSize = 0;
+            this.btnBank.FlatAppearance.BorderSize = 0;
+            this.btnBank.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBank.Font = new System.Drawing.Font("Poppins", 9F);
+            this.btnBank.ForeColor = System.Drawing.Color.Black;
+            this.btnBank.Location = new System.Drawing.Point(23, 25);
+            this.btnBank.Name = "btnBank";
+            this.btnBank.Size = new System.Drawing.Size(129, 35);
+            this.btnBank.TabIndex = 0;
+            this.btnBank.Text = "Bank";
+            this.btnBank.TextColor = System.Drawing.Color.Black;
+            this.btnBank.UseVisualStyleBackColor = false;
+            this.btnBank.Click += new System.EventHandler(this.btnBank_Click);
             // 
             // ucManagement
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(panel1);
-            Name = "ucManagement";
-            Size = new Size(821, 851);
-            panel1.ResumeLayout(false);
-            groupBox5.ResumeLayout(false);
-            groupBox4.ResumeLayout(false);
-            groupBox3.ResumeLayout(false);
-            groupBox2.ResumeLayout(false);
-            groupBox1.ResumeLayout(false);
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel1);
+            this.Name = "ucManagement";
+            this.Size = new System.Drawing.Size(704, 738);
+            this.panel1.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
@@ -300,5 +328,6 @@ namespace MoneyBankV2 {
         private FerPROJ.Design.Controls.CButton btnBankAccount;
         private FerPROJ.Design.Controls.CButton btnManageExpenses;
         private FerPROJ.Design.Controls.CButton btnManageReceives;
+        private FerPROJ.Design.Controls.CButton btnBankTransfer;
     }
 }

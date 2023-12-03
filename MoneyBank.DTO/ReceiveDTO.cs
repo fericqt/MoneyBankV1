@@ -20,7 +20,10 @@ namespace MoneyBank.DTO {
         public List<ReceiveDetailDTO> ReceiveList = new List<ReceiveDetailDTO>();
 
         public override bool DataValidation() {
-            throw new NotImplementedException();
+            if(Error != null) {
+                return false;
+            }
+            return true;
         }
     }
 }

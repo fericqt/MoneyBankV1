@@ -67,7 +67,7 @@ namespace MoneyBank.Forms {
         }
         private void LoadBank() {
             using (var data = new UserData()) {
-                data.LoadBankById(cmbBankAccount, myDTO.UserId);
+                data.LoadComboBox(cmbBankAccount, myDTO.UserId);
             }
         }
     }

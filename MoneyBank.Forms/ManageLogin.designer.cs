@@ -116,7 +116,6 @@ namespace MoneyBank.Forms {
             this.cTextBoxBasic2.PasswordChar = '*';
             this.cTextBoxBasic2.Size = new System.Drawing.Size(201, 21);
             this.cTextBoxBasic2.TabIndex = 1;
-            this.cTextBoxBasic2.UseSystemPasswordChar = true;
             // 
             // userDTOBindingSource
             // 
@@ -149,7 +148,7 @@ namespace MoneyBank.Forms {
             this.ClientSize = new System.Drawing.Size(628, 381);
             this.HideHeader = true;
             this.Name = "ManageLogin";
-            this.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Padding = new System.Windows.Forms.Padding(5);
             this.Text = "ManageLogin";
             this.basePnl2.ResumeLayout(false);
             this.PanelMain3.ResumeLayout(false);

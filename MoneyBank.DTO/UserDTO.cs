@@ -21,7 +21,8 @@ namespace MoneyBank.DTO
 
         public DateTime? DateLastLogin { get; set; } = DateTime.Now;
         [Required]
-        public string UserLevel { get; set; } 
+        public string UserLevel { get; set; }
+        public string FullName { get; set; }
 
         public List<UserBankDTO> BankList = new List<UserBankDTO>();
         public List<UserInformationDTO> UserInfoList = new List<UserInformationDTO>();

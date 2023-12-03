@@ -26,725 +26,775 @@ namespace MoneyBank.Forms {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageUserBankInfo));
-            panel1 = new Panel();
-            cTextBoxBasic4 = new FerPROJ.Design.Controls.CTextBoxBasic();
-            userDTOBindingSource = new BindingSource(components);
-            cTextBoxBasic3 = new FerPROJ.Design.Controls.CTextBoxBasic();
-            cTextBoxBasic2 = new FerPROJ.Design.Controls.CTextBoxBasic();
-            cTextBoxBasic1 = new FerPROJ.Design.Controls.CTextBoxBasic();
-            cLabelDesc4 = new FerPROJ.Design.Controls.CLabelDesc();
-            cLabelDesc3 = new FerPROJ.Design.Controls.CLabelDesc();
-            cLabelDesc2 = new FerPROJ.Design.Controls.CLabelDesc();
-            cLabelDesc1 = new FerPROJ.Design.Controls.CLabelDesc();
-            panel4 = new Panel();
-            panel7 = new Panel();
-            toolStrip3 = new ToolStrip();
-            tsbAddUserInfo = new ToolStripButton();
-            toolStripSeparator3 = new ToolStripSeparator();
-            tsbRemoveUserInfo = new ToolStripButton();
-            cDatagridview3 = new FerPROJ.Design.Controls.CDatagridview();
-            firstnameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            middlenameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            lastnameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            relationshipDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            userInformationDTOBindingSource = new BindingSource(components);
-            cLabelTitle3 = new FerPROJ.Design.Controls.CLabelTitle();
-            panel2 = new Panel();
-            panel5 = new Panel();
-            cDatagridview1 = new FerPROJ.Design.Controls.CDatagridview();
-            bankNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            bankAccountNoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            bankTypeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            userBankDTOBindingSource = new BindingSource(components);
-            toolStrip1 = new ToolStrip();
-            tsbAddBank = new ToolStripButton();
-            toolStripSeparator1 = new ToolStripSeparator();
-            tsbRemoveBank = new ToolStripButton();
-            cLabelTitle1 = new FerPROJ.Design.Controls.CLabelTitle();
-            panel3 = new Panel();
-            panel6 = new Panel();
-            cDatagridview2 = new FerPROJ.Design.Controls.CDatagridview();
-            userBankAccountDTOBindingSource = new BindingSource(components);
-            toolStrip2 = new ToolStrip();
-            tsbAddBankAccount = new ToolStripButton();
-            toolStripSeparator2 = new ToolStripSeparator();
-            tsbRemoveBankAccount = new ToolStripButton();
-            cLabelTitle2 = new FerPROJ.Design.Controls.CLabelTitle();
-            bankAccountNoDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            bankNameDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            remainingBalanceDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            dateUpdatedDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            basePnl2.SuspendLayout();
-            PanelMain3.SuspendLayout();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)userDTOBindingSource).BeginInit();
-            panel4.SuspendLayout();
-            panel7.SuspendLayout();
-            toolStrip3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)cDatagridview3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)userInformationDTOBindingSource).BeginInit();
-            panel2.SuspendLayout();
-            panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)cDatagridview1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)userBankDTOBindingSource).BeginInit();
-            toolStrip1.SuspendLayout();
-            panel3.SuspendLayout();
-            panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)cDatagridview2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)userBankAccountDTOBindingSource).BeginInit();
-            toolStrip2.SuspendLayout();
-            SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.cTextBoxBasic4 = new FerPROJ.Design.Controls.CTextBoxBasic();
+            this.userDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cTextBoxBasic3 = new FerPROJ.Design.Controls.CTextBoxBasic();
+            this.cTextBoxBasic2 = new FerPROJ.Design.Controls.CTextBoxBasic();
+            this.cTextBoxBasic1 = new FerPROJ.Design.Controls.CTextBoxBasic();
+            this.cLabelDesc4 = new FerPROJ.Design.Controls.CLabelDesc();
+            this.cLabelDesc3 = new FerPROJ.Design.Controls.CLabelDesc();
+            this.cLabelDesc2 = new FerPROJ.Design.Controls.CLabelDesc();
+            this.cLabelDesc1 = new FerPROJ.Design.Controls.CLabelDesc();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.toolStrip3 = new System.Windows.Forms.ToolStrip();
+            this.tsbAddUserInfo = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbRemoveUserInfo = new System.Windows.Forms.ToolStripButton();
+            this.cDatagridview3 = new FerPROJ.Design.Controls.CDatagridview();
+            this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.middlenameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.relationshipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userInformationDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cLabelTitle3 = new FerPROJ.Design.Controls.CLabelTitle();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.cDatagridview1 = new FerPROJ.Design.Controls.CDatagridview();
+            this.bankNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bankAccountNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bankTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userBankDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tsbAddBank = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbRemoveBank = new System.Windows.Forms.ToolStripButton();
+            this.cLabelTitle1 = new FerPROJ.Design.Controls.CLabelTitle();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.cDatagridview2 = new FerPROJ.Design.Controls.CDatagridview();
+            this.bankAccountNoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bankNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.remainingBalanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateUpdatedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userBankAccountDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
+            this.tsbAddBankAccount = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbRemoveBankAccount = new System.Windows.Forms.ToolStripButton();
+            this.cLabelTitle2 = new FerPROJ.Design.Controls.CLabelTitle();
+            this.cTextBoxBasic5 = new FerPROJ.Design.Controls.CTextBoxBasic();
+            this.cLabelDesc5 = new FerPROJ.Design.Controls.CLabelDesc();
+            this.basePnl2.SuspendLayout();
+            this.PanelMain3.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userDTOBindingSource)).BeginInit();
+            this.panel4.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.toolStrip3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cDatagridview3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userInformationDTOBindingSource)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cDatagridview1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBankDTOBindingSource)).BeginInit();
+            this.toolStrip1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cDatagridview2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBankAccountDTOBindingSource)).BeginInit();
+            this.toolStrip2.SuspendLayout();
+            this.SuspendLayout();
             // 
             // basePnl2
             // 
-            basePnl2.Location = new Point(1008, 1);
+            this.basePnl2.Location = new System.Drawing.Point(868, 1);
             // 
             // baseButtonUpdate
             // 
-            baseButtonUpdate.FlatAppearance.BorderSize = 0;
+            this.baseButtonUpdate.FlatAppearance.BorderSize = 0;
             // 
             // baseButtonSave
             // 
-            baseButtonSave.FlatAppearance.BorderSize = 0;
+            this.baseButtonSave.FlatAppearance.BorderSize = 0;
             // 
             // baseButtonCancel
             // 
-            baseButtonCancel.FlatAppearance.BorderSize = 0;
+            this.baseButtonCancel.FlatAppearance.BorderSize = 0;
             // 
             // PanelMain3
             // 
-            PanelMain3.Controls.Add(panel3);
-            PanelMain3.Controls.Add(panel2);
-            PanelMain3.Controls.Add(panel1);
-            PanelMain3.Size = new Size(1282, 487);
+            this.PanelMain3.Controls.Add(this.panel3);
+            this.PanelMain3.Controls.Add(this.panel2);
+            this.PanelMain3.Controls.Add(this.panel1);
+            this.PanelMain3.Size = new System.Drawing.Size(1103, 426);
             // 
             // baseButtonAddNew
             // 
-            baseButtonAddNew.FlatAppearance.BorderSize = 0;
+            this.baseButtonAddNew.FlatAppearance.BorderSize = 0;
             // 
             // panel1
             // 
-            panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(cTextBoxBasic4);
-            panel1.Controls.Add(cTextBoxBasic3);
-            panel1.Controls.Add(cTextBoxBasic2);
-            panel1.Controls.Add(cTextBoxBasic1);
-            panel1.Controls.Add(cLabelDesc4);
-            panel1.Controls.Add(cLabelDesc3);
-            panel1.Controls.Add(cLabelDesc2);
-            panel1.Controls.Add(cLabelDesc1);
-            panel1.Controls.Add(panel4);
-            panel1.Dock = DockStyle.Left;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(514, 487);
-            panel1.TabIndex = 0;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.cTextBoxBasic5);
+            this.panel1.Controls.Add(this.cLabelDesc5);
+            this.panel1.Controls.Add(this.cTextBoxBasic4);
+            this.panel1.Controls.Add(this.cTextBoxBasic3);
+            this.panel1.Controls.Add(this.cTextBoxBasic2);
+            this.panel1.Controls.Add(this.cTextBoxBasic1);
+            this.panel1.Controls.Add(this.cLabelDesc4);
+            this.panel1.Controls.Add(this.cLabelDesc3);
+            this.panel1.Controls.Add(this.cLabelDesc2);
+            this.panel1.Controls.Add(this.cLabelDesc1);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(441, 426);
+            this.panel1.TabIndex = 0;
             // 
             // cTextBoxBasic4
             // 
-            cTextBoxBasic4.BackColor = Color.WhiteSmoke;
-            cTextBoxBasic4.DataBindings.Add(new Binding("Text", userDTOBindingSource, "DateLastLogin", true));
-            cTextBoxBasic4.DefaultForeColor = Color.Black;
-            cTextBoxBasic4.EnterColor = Color.LightGray;
-            cTextBoxBasic4.Font = new Font("Poppins", 8F);
-            cTextBoxBasic4.ForeColor = Color.Black;
-            cTextBoxBasic4.LeaveColor = Color.WhiteSmoke;
-            cTextBoxBasic4.Location = new Point(154, 146);
-            cTextBoxBasic4.Name = "cTextBoxBasic4";
-            cTextBoxBasic4.Size = new Size(289, 23);
-            cTextBoxBasic4.TabIndex = 8;
+            this.cTextBoxBasic4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cTextBoxBasic4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userDTOBindingSource, "DateLastLogin", true));
+            this.cTextBoxBasic4.DefaultForeColor = System.Drawing.Color.Black;
+            this.cTextBoxBasic4.EnterColor = System.Drawing.Color.LightGray;
+            this.cTextBoxBasic4.Font = new System.Drawing.Font("Poppins", 8F);
+            this.cTextBoxBasic4.ForeColor = System.Drawing.Color.Black;
+            this.cTextBoxBasic4.LeaveColor = System.Drawing.Color.WhiteSmoke;
+            this.cTextBoxBasic4.Location = new System.Drawing.Point(145, 158);
+            this.cTextBoxBasic4.Name = "cTextBoxBasic4";
+            this.cTextBoxBasic4.Size = new System.Drawing.Size(248, 23);
+            this.cTextBoxBasic4.TabIndex = 4;
             // 
             // userDTOBindingSource
             // 
-            userDTOBindingSource.DataSource = typeof(DTO.UserDTO);
+            this.userDTOBindingSource.DataSource = typeof(MoneyBank.DTO.UserDTO);
             // 
             // cTextBoxBasic3
             // 
-            cTextBoxBasic3.BackColor = Color.WhiteSmoke;
-            cTextBoxBasic3.DataBindings.Add(new Binding("Text", userDTOBindingSource, "UserLevel", true));
-            cTextBoxBasic3.DefaultForeColor = Color.Black;
-            cTextBoxBasic3.EnterColor = Color.LightGray;
-            cTextBoxBasic3.Font = new Font("Poppins", 8F);
-            cTextBoxBasic3.ForeColor = Color.Black;
-            cTextBoxBasic3.LeaveColor = Color.WhiteSmoke;
-            cTextBoxBasic3.Location = new Point(154, 105);
-            cTextBoxBasic3.Name = "cTextBoxBasic3";
-            cTextBoxBasic3.Size = new Size(289, 23);
-            cTextBoxBasic3.TabIndex = 7;
+            this.cTextBoxBasic3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cTextBoxBasic3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userDTOBindingSource, "UserLevel", true));
+            this.cTextBoxBasic3.DefaultForeColor = System.Drawing.Color.Black;
+            this.cTextBoxBasic3.EnterColor = System.Drawing.Color.LightGray;
+            this.cTextBoxBasic3.Font = new System.Drawing.Font("Poppins", 8F);
+            this.cTextBoxBasic3.ForeColor = System.Drawing.Color.Black;
+            this.cTextBoxBasic3.LeaveColor = System.Drawing.Color.WhiteSmoke;
+            this.cTextBoxBasic3.Location = new System.Drawing.Point(145, 122);
+            this.cTextBoxBasic3.Name = "cTextBoxBasic3";
+            this.cTextBoxBasic3.Size = new System.Drawing.Size(248, 23);
+            this.cTextBoxBasic3.TabIndex = 3;
             // 
             // cTextBoxBasic2
             // 
-            cTextBoxBasic2.BackColor = Color.WhiteSmoke;
-            cTextBoxBasic2.DataBindings.Add(new Binding("Text", userDTOBindingSource, "Username", true));
-            cTextBoxBasic2.DefaultForeColor = Color.Black;
-            cTextBoxBasic2.EnterColor = Color.LightGray;
-            cTextBoxBasic2.Font = new Font("Poppins", 8F);
-            cTextBoxBasic2.ForeColor = Color.Black;
-            cTextBoxBasic2.LeaveColor = Color.WhiteSmoke;
-            cTextBoxBasic2.Location = new Point(154, 69);
-            cTextBoxBasic2.Name = "cTextBoxBasic2";
-            cTextBoxBasic2.Size = new Size(289, 23);
-            cTextBoxBasic2.TabIndex = 6;
+            this.cTextBoxBasic2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cTextBoxBasic2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userDTOBindingSource, "Username", true));
+            this.cTextBoxBasic2.DefaultForeColor = System.Drawing.Color.Black;
+            this.cTextBoxBasic2.EnterColor = System.Drawing.Color.LightGray;
+            this.cTextBoxBasic2.Font = new System.Drawing.Font("Poppins", 8F);
+            this.cTextBoxBasic2.ForeColor = System.Drawing.Color.Black;
+            this.cTextBoxBasic2.LeaveColor = System.Drawing.Color.WhiteSmoke;
+            this.cTextBoxBasic2.Location = new System.Drawing.Point(145, 89);
+            this.cTextBoxBasic2.Name = "cTextBoxBasic2";
+            this.cTextBoxBasic2.Size = new System.Drawing.Size(248, 23);
+            this.cTextBoxBasic2.TabIndex = 2;
             // 
             // cTextBoxBasic1
             // 
-            cTextBoxBasic1.BackColor = Color.WhiteSmoke;
-            cTextBoxBasic1.DataBindings.Add(new Binding("Text", userDTOBindingSource, "UserId", true));
-            cTextBoxBasic1.DefaultForeColor = Color.Black;
-            cTextBoxBasic1.Enabled = false;
-            cTextBoxBasic1.EnterColor = Color.LightGray;
-            cTextBoxBasic1.Font = new Font("Poppins", 8F);
-            cTextBoxBasic1.ForeColor = Color.Black;
-            cTextBoxBasic1.LeaveColor = Color.WhiteSmoke;
-            cTextBoxBasic1.Location = new Point(154, 34);
-            cTextBoxBasic1.Name = "cTextBoxBasic1";
-            cTextBoxBasic1.Size = new Size(289, 23);
-            cTextBoxBasic1.TabIndex = 5;
+            this.cTextBoxBasic1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cTextBoxBasic1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userDTOBindingSource, "UserId", true));
+            this.cTextBoxBasic1.DefaultForeColor = System.Drawing.Color.Black;
+            this.cTextBoxBasic1.Enabled = false;
+            this.cTextBoxBasic1.EnterColor = System.Drawing.Color.LightGray;
+            this.cTextBoxBasic1.Font = new System.Drawing.Font("Poppins", 8F);
+            this.cTextBoxBasic1.ForeColor = System.Drawing.Color.Black;
+            this.cTextBoxBasic1.LeaveColor = System.Drawing.Color.WhiteSmoke;
+            this.cTextBoxBasic1.Location = new System.Drawing.Point(145, 29);
+            this.cTextBoxBasic1.Name = "cTextBoxBasic1";
+            this.cTextBoxBasic1.Size = new System.Drawing.Size(248, 23);
+            this.cTextBoxBasic1.TabIndex = 0;
             // 
             // cLabelDesc4
             // 
-            cLabelDesc4.AutoSize = true;
-            cLabelDesc4.Font = new Font("Poppins", 10F);
-            cLabelDesc4.Location = new Point(23, 144);
-            cLabelDesc4.Name = "cLabelDesc4";
-            cLabelDesc4.Size = new Size(119, 25);
-            cLabelDesc4.TabIndex = 4;
-            cLabelDesc4.Text = "Date Last Login:";
+            this.cLabelDesc4.AutoSize = true;
+            this.cLabelDesc4.Font = new System.Drawing.Font("Poppins", 10F);
+            this.cLabelDesc4.Location = new System.Drawing.Point(20, 156);
+            this.cLabelDesc4.Name = "cLabelDesc4";
+            this.cLabelDesc4.Size = new System.Drawing.Size(119, 25);
+            this.cLabelDesc4.TabIndex = 4;
+            this.cLabelDesc4.Text = "Date Last Login:";
             // 
             // cLabelDesc3
             // 
-            cLabelDesc3.AutoSize = true;
-            cLabelDesc3.Font = new Font("Poppins", 10F);
-            cLabelDesc3.Location = new Point(23, 105);
-            cLabelDesc3.Name = "cLabelDesc3";
-            cLabelDesc3.Size = new Size(77, 25);
-            cLabelDesc3.TabIndex = 3;
-            cLabelDesc3.Text = "UserLevel";
+            this.cLabelDesc3.AutoSize = true;
+            this.cLabelDesc3.Font = new System.Drawing.Font("Poppins", 10F);
+            this.cLabelDesc3.Location = new System.Drawing.Point(20, 122);
+            this.cLabelDesc3.Name = "cLabelDesc3";
+            this.cLabelDesc3.Size = new System.Drawing.Size(77, 25);
+            this.cLabelDesc3.TabIndex = 3;
+            this.cLabelDesc3.Text = "UserLevel";
             // 
             // cLabelDesc2
             // 
-            cLabelDesc2.AutoSize = true;
-            cLabelDesc2.Font = new Font("Poppins", 10F);
-            cLabelDesc2.Location = new Point(23, 69);
-            cLabelDesc2.Name = "cLabelDesc2";
-            cLabelDesc2.Size = new Size(86, 25);
-            cLabelDesc2.TabIndex = 2;
-            cLabelDesc2.Text = "Username:";
+            this.cLabelDesc2.AutoSize = true;
+            this.cLabelDesc2.Font = new System.Drawing.Font("Poppins", 10F);
+            this.cLabelDesc2.Location = new System.Drawing.Point(20, 91);
+            this.cLabelDesc2.Name = "cLabelDesc2";
+            this.cLabelDesc2.Size = new System.Drawing.Size(86, 25);
+            this.cLabelDesc2.TabIndex = 2;
+            this.cLabelDesc2.Text = "Username:";
             // 
             // cLabelDesc1
             // 
-            cLabelDesc1.AutoSize = true;
-            cLabelDesc1.Font = new Font("Poppins", 10F);
-            cLabelDesc1.Location = new Point(23, 34);
-            cLabelDesc1.Name = "cLabelDesc1";
-            cLabelDesc1.Size = new Size(58, 25);
-            cLabelDesc1.TabIndex = 1;
-            cLabelDesc1.Text = "UserID:";
+            this.cLabelDesc1.AutoSize = true;
+            this.cLabelDesc1.Font = new System.Drawing.Font("Poppins", 10F);
+            this.cLabelDesc1.Location = new System.Drawing.Point(20, 29);
+            this.cLabelDesc1.Name = "cLabelDesc1";
+            this.cLabelDesc1.Size = new System.Drawing.Size(58, 25);
+            this.cLabelDesc1.TabIndex = 1;
+            this.cLabelDesc1.Text = "UserID:";
             // 
             // panel4
             // 
-            panel4.BorderStyle = BorderStyle.FixedSingle;
-            panel4.Controls.Add(panel7);
-            panel4.Controls.Add(cLabelTitle3);
-            panel4.Dock = DockStyle.Bottom;
-            panel4.Location = new Point(0, 218);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(512, 267);
-            panel4.TabIndex = 0;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.panel7);
+            this.panel4.Controls.Add(this.cLabelTitle3);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(0, 192);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(439, 232);
+            this.panel4.TabIndex = 0;
             // 
             // panel7
             // 
-            panel7.BorderStyle = BorderStyle.FixedSingle;
-            panel7.Controls.Add(toolStrip3);
-            panel7.Controls.Add(cDatagridview3);
-            panel7.Dock = DockStyle.Bottom;
-            panel7.Location = new Point(0, 38);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(510, 227);
-            panel7.TabIndex = 3;
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.toolStrip3);
+            this.panel7.Controls.Add(this.cDatagridview3);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel7.Location = new System.Drawing.Point(0, 33);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(437, 197);
+            this.panel7.TabIndex = 3;
             // 
             // toolStrip3
             // 
-            toolStrip3.GripStyle = ToolStripGripStyle.Hidden;
-            toolStrip3.Items.AddRange(new ToolStripItem[] { tsbAddUserInfo, toolStripSeparator3, tsbRemoveUserInfo });
-            toolStrip3.Location = new Point(0, 0);
-            toolStrip3.Name = "toolStrip3";
-            toolStrip3.Size = new Size(508, 25);
-            toolStrip3.TabIndex = 1;
-            toolStrip3.Text = "toolStrip3";
+            this.toolStrip3.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbAddUserInfo,
+            this.toolStripSeparator3,
+            this.tsbRemoveUserInfo});
+            this.toolStrip3.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip3.Name = "toolStrip3";
+            this.toolStrip3.Size = new System.Drawing.Size(435, 25);
+            this.toolStrip3.TabIndex = 1;
+            this.toolStrip3.Text = "toolStrip3";
             // 
             // tsbAddUserInfo
             // 
-            tsbAddUserInfo.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            tsbAddUserInfo.Image = (Image)resources.GetObject("tsbAddUserInfo.Image");
-            tsbAddUserInfo.ImageTransparentColor = Color.Magenta;
-            tsbAddUserInfo.Name = "tsbAddUserInfo";
-            tsbAddUserInfo.Size = new Size(23, 22);
-            tsbAddUserInfo.Text = "toolStripButton1";
-            tsbAddUserInfo.Click += tsbAddUserInfo_Click;
+            this.tsbAddUserInfo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbAddUserInfo.Image = ((System.Drawing.Image)(resources.GetObject("tsbAddUserInfo.Image")));
+            this.tsbAddUserInfo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbAddUserInfo.Name = "tsbAddUserInfo";
+            this.tsbAddUserInfo.Size = new System.Drawing.Size(23, 22);
+            this.tsbAddUserInfo.Text = "toolStripButton1";
+            this.tsbAddUserInfo.Click += new System.EventHandler(this.tsbAddUserInfo_Click);
             // 
             // toolStripSeparator3
             // 
-            toolStripSeparator3.Name = "toolStripSeparator3";
-            toolStripSeparator3.Size = new Size(6, 25);
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
             // 
             // tsbRemoveUserInfo
             // 
-            tsbRemoveUserInfo.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            tsbRemoveUserInfo.Image = (Image)resources.GetObject("tsbRemoveUserInfo.Image");
-            tsbRemoveUserInfo.ImageTransparentColor = Color.Magenta;
-            tsbRemoveUserInfo.Name = "tsbRemoveUserInfo";
-            tsbRemoveUserInfo.Size = new Size(23, 22);
-            tsbRemoveUserInfo.Text = "toolStripButton1";
+            this.tsbRemoveUserInfo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbRemoveUserInfo.Image = ((System.Drawing.Image)(resources.GetObject("tsbRemoveUserInfo.Image")));
+            this.tsbRemoveUserInfo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbRemoveUserInfo.Name = "tsbRemoveUserInfo";
+            this.tsbRemoveUserInfo.Size = new System.Drawing.Size(23, 22);
+            this.tsbRemoveUserInfo.Text = "toolStripButton1";
             // 
             // cDatagridview3
             // 
-            cDatagridview3.AllowUserToAddRows = false;
-            cDatagridview3.AllowUserToDeleteRows = false;
-            cDatagridview3.AllowUserToOrderColumns = true;
-            cDatagridview3.AllowUserToResizeRows = false;
-            cDatagridview3.AlternatingRowColor = Color.LightGray;
-            dataGridViewCellStyle9.BackColor = Color.LightGray;
-            cDatagridview3.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
-            cDatagridview3.AutoGenerateColumns = false;
-            cDatagridview3.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            cDatagridview3.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            cDatagridview3.BackgroundColor = Color.FromArgb(240, 240, 240);
-            cDatagridview3.BorderStyle = BorderStyle.None;
-            cDatagridview3.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Custom;
-            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = Color.WhiteSmoke;
-            dataGridViewCellStyle10.Font = new Font("Poppins", 12F);
-            dataGridViewCellStyle10.ForeColor = Color.Black;
-            dataGridViewCellStyle10.SelectionBackColor = Color.WhiteSmoke;
-            dataGridViewCellStyle10.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.True;
-            cDatagridview3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
-            cDatagridview3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            cDatagridview3.Columns.AddRange(new DataGridViewColumn[] { firstnameDataGridViewTextBoxColumn, middlenameDataGridViewTextBoxColumn, lastnameDataGridViewTextBoxColumn, relationshipDataGridViewTextBoxColumn });
-            cDatagridview3.CustomHeaderFontStyle = new Font("Poppins", 12F);
-            cDatagridview3.CustomHeaderForeColor = Color.Black;
-            cDatagridview3.CustomRowFontStyle = new Font("Poppins", 10F);
-            cDatagridview3.DataSource = userInformationDTOBindingSource;
-            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = SystemColors.Window;
-            dataGridViewCellStyle11.Font = new Font("Poppins", 10F);
-            dataGridViewCellStyle11.ForeColor = Color.Black;
-            dataGridViewCellStyle11.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.False;
-            cDatagridview3.DefaultCellStyle = dataGridViewCellStyle11;
-            cDatagridview3.Dock = DockStyle.Bottom;
-            cDatagridview3.EnableHeadersVisualStyles = false;
-            cDatagridview3.HeaderColor = Color.WhiteSmoke;
-            cDatagridview3.Location = new Point(0, 28);
-            cDatagridview3.Name = "cDatagridview3";
-            cDatagridview3.ReadOnly = true;
-            cDatagridview3.RowHeadersVisible = false;
-            dataGridViewCellStyle12.BackColor = Color.WhiteSmoke;
-            dataGridViewCellStyle12.Font = new Font("Poppins", 10F);
-            dataGridViewCellStyle12.ForeColor = Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = Color.FromArgb(128, 128, 255);
-            dataGridViewCellStyle12.SelectionForeColor = Color.White;
-            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.True;
-            cDatagridview3.RowsDefaultCellStyle = dataGridViewCellStyle12;
-            cDatagridview3.SelectionColor = Color.FromArgb(128, 128, 255);
-            cDatagridview3.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            cDatagridview3.Size = new Size(508, 197);
-            cDatagridview3.TabIndex = 0;
+            this.cDatagridview3.AllowUserToAddRows = false;
+            this.cDatagridview3.AllowUserToDeleteRows = false;
+            this.cDatagridview3.AllowUserToOrderColumns = true;
+            this.cDatagridview3.AllowUserToResizeRows = false;
+            this.cDatagridview3.AlternatingRowColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle37.BackColor = System.Drawing.Color.LightGray;
+            this.cDatagridview3.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle37;
+            this.cDatagridview3.AutoGenerateColumns = false;
+            this.cDatagridview3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.cDatagridview3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.cDatagridview3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.cDatagridview3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cDatagridview3.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Custom;
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle38.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle38.Font = new System.Drawing.Font("Poppins", 12F);
+            dataGridViewCellStyle38.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.cDatagridview3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle38;
+            this.cDatagridview3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cDatagridview3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.firstnameDataGridViewTextBoxColumn,
+            this.middlenameDataGridViewTextBoxColumn,
+            this.lastnameDataGridViewTextBoxColumn,
+            this.relationshipDataGridViewTextBoxColumn});
+            this.cDatagridview3.CustomHeaderFontStyle = new System.Drawing.Font("Poppins", 12F);
+            this.cDatagridview3.CustomHeaderForeColor = System.Drawing.Color.Black;
+            this.cDatagridview3.CustomRowFontStyle = new System.Drawing.Font("Poppins", 10F);
+            this.cDatagridview3.DataSource = this.userInformationDTOBindingSource;
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle39.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle39.Font = new System.Drawing.Font("Poppins", 10F);
+            dataGridViewCellStyle39.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.cDatagridview3.DefaultCellStyle = dataGridViewCellStyle39;
+            this.cDatagridview3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.cDatagridview3.EnableHeadersVisualStyles = false;
+            this.cDatagridview3.HeaderColor = System.Drawing.Color.WhiteSmoke;
+            this.cDatagridview3.Location = new System.Drawing.Point(0, 24);
+            this.cDatagridview3.Name = "cDatagridview3";
+            this.cDatagridview3.ReadOnly = true;
+            this.cDatagridview3.RowHeadersVisible = false;
+            dataGridViewCellStyle40.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle40.Font = new System.Drawing.Font("Poppins", 10F);
+            dataGridViewCellStyle40.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle40.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle40.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle40.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.cDatagridview3.RowsDefaultCellStyle = dataGridViewCellStyle40;
+            this.cDatagridview3.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.cDatagridview3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.cDatagridview3.Size = new System.Drawing.Size(435, 171);
+            this.cDatagridview3.TabIndex = 0;
             // 
             // firstnameDataGridViewTextBoxColumn
             // 
-            firstnameDataGridViewTextBoxColumn.DataPropertyName = "Firstname";
-            firstnameDataGridViewTextBoxColumn.HeaderText = "Firstname";
-            firstnameDataGridViewTextBoxColumn.Name = "firstnameDataGridViewTextBoxColumn";
-            firstnameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.firstnameDataGridViewTextBoxColumn.DataPropertyName = "Firstname";
+            this.firstnameDataGridViewTextBoxColumn.HeaderText = "Firstname";
+            this.firstnameDataGridViewTextBoxColumn.Name = "firstnameDataGridViewTextBoxColumn";
+            this.firstnameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // middlenameDataGridViewTextBoxColumn
             // 
-            middlenameDataGridViewTextBoxColumn.DataPropertyName = "Middlename";
-            middlenameDataGridViewTextBoxColumn.HeaderText = "Middlename";
-            middlenameDataGridViewTextBoxColumn.Name = "middlenameDataGridViewTextBoxColumn";
-            middlenameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.middlenameDataGridViewTextBoxColumn.DataPropertyName = "Middlename";
+            this.middlenameDataGridViewTextBoxColumn.HeaderText = "Middlename";
+            this.middlenameDataGridViewTextBoxColumn.Name = "middlenameDataGridViewTextBoxColumn";
+            this.middlenameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // lastnameDataGridViewTextBoxColumn
             // 
-            lastnameDataGridViewTextBoxColumn.DataPropertyName = "Lastname";
-            lastnameDataGridViewTextBoxColumn.HeaderText = "Lastname";
-            lastnameDataGridViewTextBoxColumn.Name = "lastnameDataGridViewTextBoxColumn";
-            lastnameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.lastnameDataGridViewTextBoxColumn.DataPropertyName = "Lastname";
+            this.lastnameDataGridViewTextBoxColumn.HeaderText = "Lastname";
+            this.lastnameDataGridViewTextBoxColumn.Name = "lastnameDataGridViewTextBoxColumn";
+            this.lastnameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // relationshipDataGridViewTextBoxColumn
             // 
-            relationshipDataGridViewTextBoxColumn.DataPropertyName = "Relationship";
-            relationshipDataGridViewTextBoxColumn.HeaderText = "Relationship";
-            relationshipDataGridViewTextBoxColumn.Name = "relationshipDataGridViewTextBoxColumn";
-            relationshipDataGridViewTextBoxColumn.ReadOnly = true;
+            this.relationshipDataGridViewTextBoxColumn.DataPropertyName = "Relationship";
+            this.relationshipDataGridViewTextBoxColumn.HeaderText = "Relationship";
+            this.relationshipDataGridViewTextBoxColumn.Name = "relationshipDataGridViewTextBoxColumn";
+            this.relationshipDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // userInformationDTOBindingSource
             // 
-            userInformationDTOBindingSource.DataSource = typeof(DTO.UserInformationDTO);
+            this.userInformationDTOBindingSource.DataSource = typeof(MoneyBank.DTO.UserInformationDTO);
             // 
             // cLabelTitle3
             // 
-            cLabelTitle3.AutoSize = true;
-            cLabelTitle3.Font = new Font("Poppins", 15F, FontStyle.Bold);
-            cLabelTitle3.Location = new Point(3, 0);
-            cLabelTitle3.Name = "cLabelTitle3";
-            cLabelTitle3.Size = new Size(143, 36);
-            cLabelTitle3.TabIndex = 2;
-            cLabelTitle3.Text = "User Info List";
+            this.cLabelTitle3.AutoSize = true;
+            this.cLabelTitle3.Font = new System.Drawing.Font("Poppins", 15F, System.Drawing.FontStyle.Bold);
+            this.cLabelTitle3.Location = new System.Drawing.Point(3, 0);
+            this.cLabelTitle3.Name = "cLabelTitle3";
+            this.cLabelTitle3.Size = new System.Drawing.Size(143, 36);
+            this.cLabelTitle3.TabIndex = 2;
+            this.cLabelTitle3.Text = "User Info List";
             // 
             // panel2
             // 
-            panel2.BorderStyle = BorderStyle.FixedSingle;
-            panel2.Controls.Add(panel5);
-            panel2.Controls.Add(cLabelTitle1);
-            panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(514, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(768, 212);
-            panel2.TabIndex = 1;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.panel5);
+            this.panel2.Controls.Add(this.cLabelTitle1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(441, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(662, 184);
+            this.panel2.TabIndex = 1;
             // 
             // panel5
             // 
-            panel5.BorderStyle = BorderStyle.FixedSingle;
-            panel5.Controls.Add(cDatagridview1);
-            panel5.Controls.Add(toolStrip1);
-            panel5.Location = new Point(5, 41);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(762, 166);
-            panel5.TabIndex = 1;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.cDatagridview1);
+            this.panel5.Controls.Add(this.toolStrip1);
+            this.panel5.Location = new System.Drawing.Point(4, 36);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(653, 144);
+            this.panel5.TabIndex = 1;
             // 
             // cDatagridview1
             // 
-            cDatagridview1.AllowUserToAddRows = false;
-            cDatagridview1.AllowUserToDeleteRows = false;
-            cDatagridview1.AllowUserToOrderColumns = true;
-            cDatagridview1.AllowUserToResizeRows = false;
-            cDatagridview1.AlternatingRowColor = Color.LightGray;
-            dataGridViewCellStyle5.BackColor = Color.LightGray;
-            cDatagridview1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            cDatagridview1.AutoGenerateColumns = false;
-            cDatagridview1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            cDatagridview1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            cDatagridview1.BackgroundColor = Color.FromArgb(240, 240, 240);
-            cDatagridview1.BorderStyle = BorderStyle.None;
-            cDatagridview1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Custom;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = Color.WhiteSmoke;
-            dataGridViewCellStyle6.Font = new Font("Poppins", 12F);
-            dataGridViewCellStyle6.ForeColor = Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = Color.WhiteSmoke;
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            cDatagridview1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            cDatagridview1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            cDatagridview1.Columns.AddRange(new DataGridViewColumn[] { bankNameDataGridViewTextBoxColumn, bankAccountNoDataGridViewTextBoxColumn, bankTypeDataGridViewTextBoxColumn });
-            cDatagridview1.CustomHeaderFontStyle = new Font("Poppins", 12F);
-            cDatagridview1.CustomHeaderForeColor = Color.Black;
-            cDatagridview1.CustomRowFontStyle = new Font("Poppins", 10F);
-            cDatagridview1.DataSource = userBankDTOBindingSource;
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = SystemColors.Window;
-            dataGridViewCellStyle7.Font = new Font("Poppins", 10F);
-            dataGridViewCellStyle7.ForeColor = Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.False;
-            cDatagridview1.DefaultCellStyle = dataGridViewCellStyle7;
-            cDatagridview1.Dock = DockStyle.Bottom;
-            cDatagridview1.EnableHeadersVisualStyles = false;
-            cDatagridview1.HeaderColor = Color.WhiteSmoke;
-            cDatagridview1.Location = new Point(0, 28);
-            cDatagridview1.Name = "cDatagridview1";
-            cDatagridview1.ReadOnly = true;
-            cDatagridview1.RowHeadersVisible = false;
-            dataGridViewCellStyle8.BackColor = Color.WhiteSmoke;
-            dataGridViewCellStyle8.Font = new Font("Poppins", 10F);
-            dataGridViewCellStyle8.ForeColor = Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = Color.FromArgb(128, 128, 255);
-            dataGridViewCellStyle8.SelectionForeColor = Color.White;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
-            cDatagridview1.RowsDefaultCellStyle = dataGridViewCellStyle8;
-            cDatagridview1.SelectionColor = Color.FromArgb(128, 128, 255);
-            cDatagridview1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            cDatagridview1.Size = new Size(760, 136);
-            cDatagridview1.TabIndex = 1;
+            this.cDatagridview1.AllowUserToAddRows = false;
+            this.cDatagridview1.AllowUserToDeleteRows = false;
+            this.cDatagridview1.AllowUserToOrderColumns = true;
+            this.cDatagridview1.AllowUserToResizeRows = false;
+            this.cDatagridview1.AlternatingRowColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle41.BackColor = System.Drawing.Color.LightGray;
+            this.cDatagridview1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle41;
+            this.cDatagridview1.AutoGenerateColumns = false;
+            this.cDatagridview1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.cDatagridview1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.cDatagridview1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.cDatagridview1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cDatagridview1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Custom;
+            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle42.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle42.Font = new System.Drawing.Font("Poppins", 12F);
+            dataGridViewCellStyle42.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.cDatagridview1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle42;
+            this.cDatagridview1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cDatagridview1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.bankNameDataGridViewTextBoxColumn,
+            this.bankAccountNoDataGridViewTextBoxColumn,
+            this.bankTypeDataGridViewTextBoxColumn});
+            this.cDatagridview1.CustomHeaderFontStyle = new System.Drawing.Font("Poppins", 12F);
+            this.cDatagridview1.CustomHeaderForeColor = System.Drawing.Color.Black;
+            this.cDatagridview1.CustomRowFontStyle = new System.Drawing.Font("Poppins", 10F);
+            this.cDatagridview1.DataSource = this.userBankDTOBindingSource;
+            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle43.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle43.Font = new System.Drawing.Font("Poppins", 10F);
+            dataGridViewCellStyle43.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle43.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle43.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.cDatagridview1.DefaultCellStyle = dataGridViewCellStyle43;
+            this.cDatagridview1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.cDatagridview1.EnableHeadersVisualStyles = false;
+            this.cDatagridview1.HeaderColor = System.Drawing.Color.WhiteSmoke;
+            this.cDatagridview1.Location = new System.Drawing.Point(0, 24);
+            this.cDatagridview1.Name = "cDatagridview1";
+            this.cDatagridview1.ReadOnly = true;
+            this.cDatagridview1.RowHeadersVisible = false;
+            dataGridViewCellStyle44.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle44.Font = new System.Drawing.Font("Poppins", 10F);
+            dataGridViewCellStyle44.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle44.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle44.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.cDatagridview1.RowsDefaultCellStyle = dataGridViewCellStyle44;
+            this.cDatagridview1.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.cDatagridview1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.cDatagridview1.Size = new System.Drawing.Size(651, 118);
+            this.cDatagridview1.TabIndex = 1;
             // 
             // bankNameDataGridViewTextBoxColumn
             // 
-            bankNameDataGridViewTextBoxColumn.DataPropertyName = "BankName";
-            bankNameDataGridViewTextBoxColumn.HeaderText = "BankName";
-            bankNameDataGridViewTextBoxColumn.Name = "bankNameDataGridViewTextBoxColumn";
-            bankNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bankNameDataGridViewTextBoxColumn.DataPropertyName = "BankName";
+            this.bankNameDataGridViewTextBoxColumn.HeaderText = "BankName";
+            this.bankNameDataGridViewTextBoxColumn.Name = "bankNameDataGridViewTextBoxColumn";
+            this.bankNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // bankAccountNoDataGridViewTextBoxColumn
             // 
-            bankAccountNoDataGridViewTextBoxColumn.DataPropertyName = "BankAccountNo";
-            bankAccountNoDataGridViewTextBoxColumn.HeaderText = "BankAccountNo";
-            bankAccountNoDataGridViewTextBoxColumn.Name = "bankAccountNoDataGridViewTextBoxColumn";
-            bankAccountNoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bankAccountNoDataGridViewTextBoxColumn.DataPropertyName = "BankAccountNo";
+            this.bankAccountNoDataGridViewTextBoxColumn.HeaderText = "BankAccountNo";
+            this.bankAccountNoDataGridViewTextBoxColumn.Name = "bankAccountNoDataGridViewTextBoxColumn";
+            this.bankAccountNoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // bankTypeDataGridViewTextBoxColumn
             // 
-            bankTypeDataGridViewTextBoxColumn.DataPropertyName = "BankType";
-            bankTypeDataGridViewTextBoxColumn.HeaderText = "BankType";
-            bankTypeDataGridViewTextBoxColumn.Name = "bankTypeDataGridViewTextBoxColumn";
-            bankTypeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bankTypeDataGridViewTextBoxColumn.DataPropertyName = "BankType";
+            this.bankTypeDataGridViewTextBoxColumn.HeaderText = "BankType";
+            this.bankTypeDataGridViewTextBoxColumn.Name = "bankTypeDataGridViewTextBoxColumn";
+            this.bankTypeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // userBankDTOBindingSource
             // 
-            userBankDTOBindingSource.DataSource = typeof(DTO.UserBankDTO);
+            this.userBankDTOBindingSource.DataSource = typeof(MoneyBank.DTO.UserBankDTO);
             // 
             // toolStrip1
             // 
-            toolStrip1.GripStyle = ToolStripGripStyle.Hidden;
-            toolStrip1.Items.AddRange(new ToolStripItem[] { tsbAddBank, toolStripSeparator1, tsbRemoveBank });
-            toolStrip1.Location = new Point(0, 0);
-            toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(760, 25);
-            toolStrip1.TabIndex = 0;
-            toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbAddBank,
+            this.toolStripSeparator1,
+            this.tsbRemoveBank});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(651, 25);
+            this.toolStrip1.TabIndex = 0;
+            this.toolStrip1.Text = "toolStrip1";
             // 
             // tsbAddBank
             // 
-            tsbAddBank.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            tsbAddBank.Image = (Image)resources.GetObject("tsbAddBank.Image");
-            tsbAddBank.ImageTransparentColor = Color.Magenta;
-            tsbAddBank.Name = "tsbAddBank";
-            tsbAddBank.Size = new Size(23, 22);
-            tsbAddBank.Text = "toolStripButton1";
-            tsbAddBank.Click += tsbAddBank_Click;
+            this.tsbAddBank.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbAddBank.Image = ((System.Drawing.Image)(resources.GetObject("tsbAddBank.Image")));
+            this.tsbAddBank.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbAddBank.Name = "tsbAddBank";
+            this.tsbAddBank.Size = new System.Drawing.Size(23, 22);
+            this.tsbAddBank.Text = "toolStripButton1";
+            this.tsbAddBank.Click += new System.EventHandler(this.tsbAddBank_Click);
             // 
             // toolStripSeparator1
             // 
-            toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(6, 25);
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // tsbRemoveBank
             // 
-            tsbRemoveBank.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            tsbRemoveBank.Image = (Image)resources.GetObject("tsbRemoveBank.Image");
-            tsbRemoveBank.ImageTransparentColor = Color.Magenta;
-            tsbRemoveBank.Name = "tsbRemoveBank";
-            tsbRemoveBank.Size = new Size(23, 22);
-            tsbRemoveBank.Text = "toolStripButton1";
+            this.tsbRemoveBank.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbRemoveBank.Image = ((System.Drawing.Image)(resources.GetObject("tsbRemoveBank.Image")));
+            this.tsbRemoveBank.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbRemoveBank.Name = "tsbRemoveBank";
+            this.tsbRemoveBank.Size = new System.Drawing.Size(23, 22);
+            this.tsbRemoveBank.Text = "toolStripButton1";
             // 
             // cLabelTitle1
             // 
-            cLabelTitle1.AutoSize = true;
-            cLabelTitle1.Font = new Font("Poppins", 15F, FontStyle.Bold);
-            cLabelTitle1.Location = new Point(5, 2);
-            cLabelTitle1.Name = "cLabelTitle1";
-            cLabelTitle1.Size = new Size(106, 36);
-            cLabelTitle1.TabIndex = 0;
-            cLabelTitle1.Text = "Bank List";
+            this.cLabelTitle1.AutoSize = true;
+            this.cLabelTitle1.Font = new System.Drawing.Font("Poppins", 15F, System.Drawing.FontStyle.Bold);
+            this.cLabelTitle1.Location = new System.Drawing.Point(4, 2);
+            this.cLabelTitle1.Name = "cLabelTitle1";
+            this.cLabelTitle1.Size = new System.Drawing.Size(106, 36);
+            this.cLabelTitle1.TabIndex = 0;
+            this.cLabelTitle1.Text = "Bank List";
             // 
             // panel3
             // 
-            panel3.BorderStyle = BorderStyle.FixedSingle;
-            panel3.Controls.Add(panel6);
-            panel3.Controls.Add(cLabelTitle2);
-            panel3.Dock = DockStyle.Bottom;
-            panel3.Location = new Point(514, 218);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(768, 269);
-            panel3.TabIndex = 2;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.panel6);
+            this.panel3.Controls.Add(this.cLabelTitle2);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(441, 193);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(662, 233);
+            this.panel3.TabIndex = 2;
             // 
             // panel6
             // 
-            panel6.BorderStyle = BorderStyle.FixedSingle;
-            panel6.Controls.Add(cDatagridview2);
-            panel6.Controls.Add(toolStrip2);
-            panel6.Location = new Point(6, 39);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(761, 229);
-            panel6.TabIndex = 2;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.cDatagridview2);
+            this.panel6.Controls.Add(this.toolStrip2);
+            this.panel6.Location = new System.Drawing.Point(5, 34);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(653, 199);
+            this.panel6.TabIndex = 2;
             // 
             // cDatagridview2
             // 
-            cDatagridview2.AllowUserToAddRows = false;
-            cDatagridview2.AllowUserToDeleteRows = false;
-            cDatagridview2.AllowUserToOrderColumns = true;
-            cDatagridview2.AllowUserToResizeRows = false;
-            cDatagridview2.AlternatingRowColor = Color.LightGray;
-            dataGridViewCellStyle1.BackColor = Color.LightGray;
-            cDatagridview2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            cDatagridview2.AutoGenerateColumns = false;
-            cDatagridview2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            cDatagridview2.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            cDatagridview2.BackgroundColor = Color.FromArgb(240, 240, 240);
-            cDatagridview2.BorderStyle = BorderStyle.None;
-            cDatagridview2.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Custom;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.WhiteSmoke;
-            dataGridViewCellStyle2.Font = new Font("Poppins", 12F);
-            dataGridViewCellStyle2.ForeColor = Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = Color.WhiteSmoke;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            cDatagridview2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            cDatagridview2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            cDatagridview2.Columns.AddRange(new DataGridViewColumn[] { bankAccountNoDataGridViewTextBoxColumn1, bankNameDataGridViewTextBoxColumn1, remainingBalanceDataGridViewTextBoxColumn, dateUpdatedDataGridViewTextBoxColumn });
-            cDatagridview2.CustomHeaderFontStyle = new Font("Poppins", 12F);
-            cDatagridview2.CustomHeaderForeColor = Color.Black;
-            cDatagridview2.CustomRowFontStyle = new Font("Poppins", 10F);
-            cDatagridview2.DataSource = userBankAccountDTOBindingSource;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Window;
-            dataGridViewCellStyle3.Font = new Font("Poppins", 10F);
-            dataGridViewCellStyle3.ForeColor = Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            cDatagridview2.DefaultCellStyle = dataGridViewCellStyle3;
-            cDatagridview2.Dock = DockStyle.Bottom;
-            cDatagridview2.EnableHeadersVisualStyles = false;
-            cDatagridview2.HeaderColor = Color.WhiteSmoke;
-            cDatagridview2.Location = new Point(0, 28);
-            cDatagridview2.Name = "cDatagridview2";
-            cDatagridview2.ReadOnly = true;
-            cDatagridview2.RowHeadersVisible = false;
-            dataGridViewCellStyle4.BackColor = Color.WhiteSmoke;
-            dataGridViewCellStyle4.Font = new Font("Poppins", 10F);
-            dataGridViewCellStyle4.ForeColor = Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(128, 128, 255);
-            dataGridViewCellStyle4.SelectionForeColor = Color.White;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            cDatagridview2.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            cDatagridview2.SelectionColor = Color.FromArgb(128, 128, 255);
-            cDatagridview2.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            cDatagridview2.Size = new Size(759, 199);
-            cDatagridview2.TabIndex = 1;
-            // 
-            // userBankAccountDTOBindingSource
-            // 
-            userBankAccountDTOBindingSource.DataSource = typeof(DTO.UserBankAccountDTO);
-            // 
-            // toolStrip2
-            // 
-            toolStrip2.GripStyle = ToolStripGripStyle.Hidden;
-            toolStrip2.Items.AddRange(new ToolStripItem[] { tsbAddBankAccount, toolStripSeparator2, tsbRemoveBankAccount });
-            toolStrip2.Location = new Point(0, 0);
-            toolStrip2.Name = "toolStrip2";
-            toolStrip2.Size = new Size(759, 25);
-            toolStrip2.TabIndex = 0;
-            toolStrip2.Text = "toolStrip2";
-            // 
-            // tsbAddBankAccount
-            // 
-            tsbAddBankAccount.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            tsbAddBankAccount.Image = (Image)resources.GetObject("tsbAddBankAccount.Image");
-            tsbAddBankAccount.ImageTransparentColor = Color.Magenta;
-            tsbAddBankAccount.Name = "tsbAddBankAccount";
-            tsbAddBankAccount.Size = new Size(23, 22);
-            tsbAddBankAccount.Text = "toolStripButton1";
-            tsbAddBankAccount.Click += tsbAddBankAccount_Click;
-            // 
-            // toolStripSeparator2
-            // 
-            toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(6, 25);
-            // 
-            // tsbRemoveBankAccount
-            // 
-            tsbRemoveBankAccount.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            tsbRemoveBankAccount.Image = (Image)resources.GetObject("tsbRemoveBankAccount.Image");
-            tsbRemoveBankAccount.ImageTransparentColor = Color.Magenta;
-            tsbRemoveBankAccount.Name = "tsbRemoveBankAccount";
-            tsbRemoveBankAccount.Size = new Size(23, 22);
-            tsbRemoveBankAccount.Text = "toolStripButton1";
-            // 
-            // cLabelTitle2
-            // 
-            cLabelTitle2.AutoSize = true;
-            cLabelTitle2.Font = new Font("Poppins", 15F, FontStyle.Bold);
-            cLabelTitle2.Location = new Point(5, 0);
-            cLabelTitle2.Name = "cLabelTitle2";
-            cLabelTitle2.Size = new Size(196, 36);
-            cLabelTitle2.TabIndex = 1;
-            cLabelTitle2.Text = "Bank Account List";
+            this.cDatagridview2.AllowUserToAddRows = false;
+            this.cDatagridview2.AllowUserToDeleteRows = false;
+            this.cDatagridview2.AllowUserToOrderColumns = true;
+            this.cDatagridview2.AllowUserToResizeRows = false;
+            this.cDatagridview2.AlternatingRowColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle45.BackColor = System.Drawing.Color.LightGray;
+            this.cDatagridview2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle45;
+            this.cDatagridview2.AutoGenerateColumns = false;
+            this.cDatagridview2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.cDatagridview2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.cDatagridview2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.cDatagridview2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cDatagridview2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Custom;
+            dataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle46.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle46.Font = new System.Drawing.Font("Poppins", 12F);
+            dataGridViewCellStyle46.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle46.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle46.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle46.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.cDatagridview2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle46;
+            this.cDatagridview2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cDatagridview2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.bankAccountNoDataGridViewTextBoxColumn1,
+            this.bankNameDataGridViewTextBoxColumn1,
+            this.remainingBalanceDataGridViewTextBoxColumn,
+            this.dateUpdatedDataGridViewTextBoxColumn});
+            this.cDatagridview2.CustomHeaderFontStyle = new System.Drawing.Font("Poppins", 12F);
+            this.cDatagridview2.CustomHeaderForeColor = System.Drawing.Color.Black;
+            this.cDatagridview2.CustomRowFontStyle = new System.Drawing.Font("Poppins", 10F);
+            this.cDatagridview2.DataSource = this.userBankAccountDTOBindingSource;
+            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle47.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle47.Font = new System.Drawing.Font("Poppins", 10F);
+            dataGridViewCellStyle47.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle47.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle47.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.cDatagridview2.DefaultCellStyle = dataGridViewCellStyle47;
+            this.cDatagridview2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.cDatagridview2.EnableHeadersVisualStyles = false;
+            this.cDatagridview2.HeaderColor = System.Drawing.Color.WhiteSmoke;
+            this.cDatagridview2.Location = new System.Drawing.Point(0, 25);
+            this.cDatagridview2.Name = "cDatagridview2";
+            this.cDatagridview2.ReadOnly = true;
+            this.cDatagridview2.RowHeadersVisible = false;
+            dataGridViewCellStyle48.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle48.Font = new System.Drawing.Font("Poppins", 10F);
+            dataGridViewCellStyle48.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle48.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle48.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle48.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.cDatagridview2.RowsDefaultCellStyle = dataGridViewCellStyle48;
+            this.cDatagridview2.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.cDatagridview2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.cDatagridview2.Size = new System.Drawing.Size(651, 172);
+            this.cDatagridview2.TabIndex = 1;
             // 
             // bankAccountNoDataGridViewTextBoxColumn1
             // 
-            bankAccountNoDataGridViewTextBoxColumn1.DataPropertyName = "BankAccountNo";
-            bankAccountNoDataGridViewTextBoxColumn1.HeaderText = "BankAccountNo";
-            bankAccountNoDataGridViewTextBoxColumn1.Name = "bankAccountNoDataGridViewTextBoxColumn1";
-            bankAccountNoDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.bankAccountNoDataGridViewTextBoxColumn1.DataPropertyName = "BankAccountNo";
+            this.bankAccountNoDataGridViewTextBoxColumn1.HeaderText = "BankAccountNo";
+            this.bankAccountNoDataGridViewTextBoxColumn1.Name = "bankAccountNoDataGridViewTextBoxColumn1";
+            this.bankAccountNoDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // bankNameDataGridViewTextBoxColumn1
             // 
-            bankNameDataGridViewTextBoxColumn1.DataPropertyName = "BankName";
-            bankNameDataGridViewTextBoxColumn1.HeaderText = "BankName";
-            bankNameDataGridViewTextBoxColumn1.Name = "bankNameDataGridViewTextBoxColumn1";
-            bankNameDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.bankNameDataGridViewTextBoxColumn1.DataPropertyName = "BankName";
+            this.bankNameDataGridViewTextBoxColumn1.HeaderText = "BankName";
+            this.bankNameDataGridViewTextBoxColumn1.Name = "bankNameDataGridViewTextBoxColumn1";
+            this.bankNameDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // remainingBalanceDataGridViewTextBoxColumn
             // 
-            remainingBalanceDataGridViewTextBoxColumn.DataPropertyName = "RemainingBalance";
-            remainingBalanceDataGridViewTextBoxColumn.HeaderText = "RemainingBalance";
-            remainingBalanceDataGridViewTextBoxColumn.Name = "remainingBalanceDataGridViewTextBoxColumn";
-            remainingBalanceDataGridViewTextBoxColumn.ReadOnly = true;
+            this.remainingBalanceDataGridViewTextBoxColumn.DataPropertyName = "RemainingBalance";
+            this.remainingBalanceDataGridViewTextBoxColumn.HeaderText = "RemainingBalance";
+            this.remainingBalanceDataGridViewTextBoxColumn.Name = "remainingBalanceDataGridViewTextBoxColumn";
+            this.remainingBalanceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dateUpdatedDataGridViewTextBoxColumn
             // 
-            dateUpdatedDataGridViewTextBoxColumn.DataPropertyName = "DateUpdated";
-            dateUpdatedDataGridViewTextBoxColumn.HeaderText = "DateUpdated";
-            dateUpdatedDataGridViewTextBoxColumn.Name = "dateUpdatedDataGridViewTextBoxColumn";
-            dateUpdatedDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dateUpdatedDataGridViewTextBoxColumn.DataPropertyName = "DateUpdated";
+            this.dateUpdatedDataGridViewTextBoxColumn.HeaderText = "DateUpdated";
+            this.dateUpdatedDataGridViewTextBoxColumn.Name = "dateUpdatedDataGridViewTextBoxColumn";
+            this.dateUpdatedDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // userBankAccountDTOBindingSource
+            // 
+            this.userBankAccountDTOBindingSource.DataSource = typeof(MoneyBank.DTO.UserBankAccountDTO);
+            // 
+            // toolStrip2
+            // 
+            this.toolStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbAddBankAccount,
+            this.toolStripSeparator2,
+            this.tsbRemoveBankAccount});
+            this.toolStrip2.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.Size = new System.Drawing.Size(651, 25);
+            this.toolStrip2.TabIndex = 0;
+            this.toolStrip2.Text = "toolStrip2";
+            // 
+            // tsbAddBankAccount
+            // 
+            this.tsbAddBankAccount.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbAddBankAccount.Image = ((System.Drawing.Image)(resources.GetObject("tsbAddBankAccount.Image")));
+            this.tsbAddBankAccount.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbAddBankAccount.Name = "tsbAddBankAccount";
+            this.tsbAddBankAccount.Size = new System.Drawing.Size(23, 22);
+            this.tsbAddBankAccount.Text = "toolStripButton1";
+            this.tsbAddBankAccount.Click += new System.EventHandler(this.tsbAddBankAccount_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // tsbRemoveBankAccount
+            // 
+            this.tsbRemoveBankAccount.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbRemoveBankAccount.Image = ((System.Drawing.Image)(resources.GetObject("tsbRemoveBankAccount.Image")));
+            this.tsbRemoveBankAccount.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbRemoveBankAccount.Name = "tsbRemoveBankAccount";
+            this.tsbRemoveBankAccount.Size = new System.Drawing.Size(23, 22);
+            this.tsbRemoveBankAccount.Text = "toolStripButton1";
+            // 
+            // cLabelTitle2
+            // 
+            this.cLabelTitle2.AutoSize = true;
+            this.cLabelTitle2.Font = new System.Drawing.Font("Poppins", 15F, System.Drawing.FontStyle.Bold);
+            this.cLabelTitle2.Location = new System.Drawing.Point(4, 0);
+            this.cLabelTitle2.Name = "cLabelTitle2";
+            this.cLabelTitle2.Size = new System.Drawing.Size(196, 36);
+            this.cLabelTitle2.TabIndex = 1;
+            this.cLabelTitle2.Text = "Bank Account List";
+            // 
+            // cTextBoxBasic5
+            // 
+            this.cTextBoxBasic5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cTextBoxBasic5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userDTOBindingSource, "FullName", true));
+            this.cTextBoxBasic5.DefaultForeColor = System.Drawing.Color.Black;
+            this.cTextBoxBasic5.EnterColor = System.Drawing.Color.LightGray;
+            this.cTextBoxBasic5.Font = new System.Drawing.Font("Poppins", 8F);
+            this.cTextBoxBasic5.ForeColor = System.Drawing.Color.Black;
+            this.cTextBoxBasic5.LeaveColor = System.Drawing.Color.WhiteSmoke;
+            this.cTextBoxBasic5.Location = new System.Drawing.Point(145, 58);
+            this.cTextBoxBasic5.Name = "cTextBoxBasic5";
+            this.cTextBoxBasic5.Size = new System.Drawing.Size(248, 23);
+            this.cTextBoxBasic5.TabIndex = 1;
+            // 
+            // cLabelDesc5
+            // 
+            this.cLabelDesc5.AutoSize = true;
+            this.cLabelDesc5.Font = new System.Drawing.Font("Poppins", 10F);
+            this.cLabelDesc5.Location = new System.Drawing.Point(20, 58);
+            this.cLabelDesc5.Name = "cLabelDesc5";
+            this.cLabelDesc5.Size = new System.Drawing.Size(57, 25);
+            this.cLabelDesc5.TabIndex = 9;
+            this.cLabelDesc5.Text = "Name:";
             // 
             // ManageUserBankInfo
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1298, 669);
-            Name = "ManageUserBankInfo";
-            Text = "ManageUserBanks";
-            basePnl2.ResumeLayout(false);
-            PanelMain3.ResumeLayout(false);
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)userDTOBindingSource).EndInit();
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
-            panel7.ResumeLayout(false);
-            panel7.PerformLayout();
-            toolStrip3.ResumeLayout(false);
-            toolStrip3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)cDatagridview3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)userInformationDTOBindingSource).EndInit();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)cDatagridview1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)userBankDTOBindingSource).EndInit();
-            toolStrip1.ResumeLayout(false);
-            toolStrip1.PerformLayout();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
-            panel6.ResumeLayout(false);
-            panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)cDatagridview2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)userBankAccountDTOBindingSource).EndInit();
-            toolStrip2.ResumeLayout(false);
-            toolStrip2.PerformLayout();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1113, 580);
+            this.Name = "ManageUserBankInfo";
+            this.Padding = new System.Windows.Forms.Padding(5);
+            this.Text = "ManageUserBanks";
+            this.basePnl2.ResumeLayout(false);
+            this.PanelMain3.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userDTOBindingSource)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.toolStrip3.ResumeLayout(false);
+            this.toolStrip3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cDatagridview3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userInformationDTOBindingSource)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cDatagridview1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBankDTOBindingSource)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cDatagridview2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBankAccountDTOBindingSource)).EndInit();
+            this.toolStrip2.ResumeLayout(false);
+            this.toolStrip2.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
@@ -797,5 +847,7 @@ namespace MoneyBank.Forms {
         private DataGridViewTextBoxColumn bankNameDataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn remainingBalanceDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn dateUpdatedDataGridViewTextBoxColumn;
+        private FerPROJ.Design.Controls.CTextBoxBasic cTextBoxBasic5;
+        private FerPROJ.Design.Controls.CLabelDesc cLabelDesc5;
     }
 }

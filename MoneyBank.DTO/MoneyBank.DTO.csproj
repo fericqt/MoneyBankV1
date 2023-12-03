@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BankDTO.cs" />
+    <Compile Include="BankTransferDTO.cs" />
     <Compile Include="ExpenseDetailDTO.cs" />
     <Compile Include="ExpenseDTO.cs" />
     <Compile Include="ExpenseTypeDTO.cs" />

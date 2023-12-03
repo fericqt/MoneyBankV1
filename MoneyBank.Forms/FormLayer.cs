@@ -115,6 +115,12 @@ namespace MoneyBank.Forms {
                     return frm.CurrentFormResult;
                 }
             }
+            public bool ManageBankTransfer() {
+                using (var frm = new ManageBankTransfer()) {
+                    frm.ShowDialog();
+                    return frm.CurrentFormResult;
+                }
+            }
         }
         public class ListForm {
             public bool ListBanks() {

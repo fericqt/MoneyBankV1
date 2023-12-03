@@ -23,8 +23,11 @@ namespace MoneyBank.EntityData {
         public TransactionData(Conn conn) : base(conn) {
         }
 
-        public IEnumerable<tbltransaction> GetAll() {
-            throw new NotImplementedException();
+        public TransactionData(moneybankEntities ts, Conn conn) : base(ts, conn) {
+        }
+
+        public IEnumerable<tbltransaction> GetAll(string id) {
+            return _ts.tbltransactions.Where(c=>c.UserID ==id);
         }
 
         public tbltransaction GetById(string id) {
@@ -82,6 +85,10 @@ namespace MoneyBank.EntityData {
             tbl.TransNo = GetNewID();
             _ts.tbltransactions.Add(tbl);
             _ts.SaveChanges();
+        }
+
+        public IEnumerable<tbltransaction> GetAll() {
+            throw new NotImplementedException();
         }
     }
 }

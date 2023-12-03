@@ -50,7 +50,7 @@ namespace MoneyBank.EntityData {
         }
 
         public void LoadList(DataGridView dgv, DateTime dateFrom, DateTime dateTo, string SearchValue = "%") {
-            //_conn.FillDGV(dgv, SelectAll(dateFrom, dateTo));
+            _conn.FillDGV(dgv, SelectAll(dateFrom, dateTo));
         }
 
         public void LoadList(DataGridView dgv, string id, DateTime dateFrom, DateTime dateTo, string SearchValue = "%") {
@@ -90,7 +90,7 @@ namespace MoneyBank.EntityData {
                         Remarks = $"RefTrans: {myDTO.ReceiveTransNo}, Desc: {sbDesc.ToString()}",
                         UserId = myDTO.UserId
                     };
-                    new TransactionData(_ts).SaveDTO(transItem);
+                    new TransactionData(_ts, _conn).SaveDTO(transItem);
                     //
                     tblBankAcc.AmountDeducted = 0;
                     tblBankAcc.DateUpdated = DateTime.Now;

@@ -1,4 +1,5 @@
-﻿using FerPROJ.Design.Class;
+﻿using FerPROJ.DBHelper.Class;
+using FerPROJ.Design.Class;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,7 @@ namespace MoneyBank.DTO {
 
         public string BankName { get; set; }
 
-        public string BankAccountNo { get; set; }
+        public string BankAccountNo { get; set; } = CGet.RandomBankNo();
 
         public string BankType { get; set; }
 

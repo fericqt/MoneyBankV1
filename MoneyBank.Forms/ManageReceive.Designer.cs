@@ -128,6 +128,7 @@ namespace MoneyBank.Forms {
             this.tsbAdd.Name = "tsbAdd";
             this.tsbAdd.Size = new System.Drawing.Size(23, 22);
             this.tsbAdd.Text = "toolStripButton1";
+            this.tsbAdd.Click += new System.EventHandler(this.tsbAdd_Click);
             // 
             // tsbRemove
             // 
@@ -360,6 +361,7 @@ namespace MoneyBank.Forms {
             this.llUserID.TabIndex = 10;
             this.llUserID.TabStop = true;
             this.llUserID.Text = "User ID:";
+            this.llUserID.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llUserID_LinkClicked);
             // 
             // ManageReceive
             // 
@@ -367,7 +369,7 @@ namespace MoneyBank.Forms {
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(822, 552);
             this.Name = "ManageReceive";
-            this.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Padding = new System.Windows.Forms.Padding(5);
             this.Text = "ManageReceive";
             this.basePnl2.ResumeLayout(false);
             this.PanelMain3.ResumeLayout(false);
