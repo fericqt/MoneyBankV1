@@ -17,10 +17,12 @@ namespace MoneyBank.Reports {
         public SummaryReport() {
             reportFunctions = new Dictionary<ReportList, MyFunction>();
             reportFunctions.Add(ReportList.UserList, UserList);
+            reportFunctions.Add(ReportList.BankList, BankList);
             reportFunctions.Add(ReportList.BankTransactionByBank, BankTransactionByBank);
         }
         public enum ReportList {
             UserList,
+            BankList,
             BankTransactionByBank
         }
         public void PreviewReport(ReportList reportType) {
@@ -33,12 +35,20 @@ namespace MoneyBank.Reports {
         private ReportDocument GetReport(ReportList reportType) {
             var result = reportFunctions[reportType];
             ReportDocument rpt1 = result();
-            FrmSplasherReport.ShowSplash();
+            if (rpt1 != null) {
+                FrmSplasherReport.ShowSplash();
+            }
             return rpt1;
         }
         private ReportDocument UserList() {
             string sQuery = $"SELECT * FROM tbluser";
             var rpt = new crListOfUsers();
+            rpt.SetDataSource(new Conn().GetDataTable(sQuery));
+            return rpt;
+        }
+        private ReportDocument BankList() {
+            string sQuery = $"SELECT * FROM tblbank";
+            var rpt = new crBank();
             rpt.SetDataSource(new Conn().GetDataTable(sQuery));
             return rpt;
         }

@@ -78,6 +78,7 @@
     <Compile Include="RPT Criteria\ManageReportFilter.Designer.cs">
       <DependentUpon>ManageReportFilter.cs</DependentUpon>
     </Compile>
+    <Compile Include="RPT Model\BankModel.cs" />
     <Compile Include="RPT Model\BankTransactionModel.cs" />
     <Compile Include="RPT Model\ReceiveDetailModel.cs" />
     <Compile Include="RPT Model\ReceiveModel.cs" />
