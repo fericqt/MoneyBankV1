@@ -19,11 +19,13 @@ namespace MoneyBank.Reports {
             reportFunctions.Add(ReportList.UserList, UserList);
             reportFunctions.Add(ReportList.BankList, BankList);
             reportFunctions.Add(ReportList.BankTransactionByBank, BankTransactionByBank);
+            reportFunctions.Add(ReportList.BankBalanceByUserID, BankBalanceByUserID);
         }
         public enum ReportList {
             UserList,
             BankList,
-            BankTransactionByBank
+            BankTransactionByBank,
+            BankBalanceByUserID
         }
         public void PreviewReport(ReportList reportType) {
             ReportDocument report = GetReport(reportType);
@@ -66,6 +68,19 @@ namespace MoneyBank.Reports {
                 }
             }
             return null;
+        }
+        private ReportDocument BankBalanceByUserID() {
+            using (var frm = new ManageReportFilter()) {
+                frm.ShowDialog();
+                if (frm.CurrentFormResult) {
+                    string sQuery = $"SELECT * FROM tbluser tu INNER JOIN viewbankbalance bb ON bb.UserID = tu.UserID " +
+                                    $"INNER JOIN tbluserbankaccount tub ON tub.BankAccountNo = bb.BankAccountNo WHERE bb.UserID = '{frm.Manage_UserID}'";
+                    //
+                    var rpt = new crBankBalanceByUserID();
+                    rpt.SetDataSource(new Conn().GetDataTable(sQuery));
+                    return rpt;
+                }
+            }return null;
         }
 
     }

@@ -22,6 +22,7 @@ namespace MoneyBankV2 {
             reportListBox.Items.Add("--BANK--");
             reportListBox.Items.Add("Registered Banks");
             reportListBox.Items.Add("Bank Transaction By Account");
+            reportListBox.Items.Add("Bank Balance By UserID");
         }
 
         private void reportListBox_MouseDoubleClick(object sender, MouseEventArgs e) {
@@ -37,6 +38,9 @@ namespace MoneyBankV2 {
                     break;
                 case "Registered Banks":
                     new SummaryReport().PreviewReport(SummaryReport.ReportList.BankList);
+                    break;
+                case "Bank Balance By UserID":
+                    new SummaryReport().PreviewReport(SummaryReport.ReportList.BankBalanceByUserID);
                     break;
             }
         }

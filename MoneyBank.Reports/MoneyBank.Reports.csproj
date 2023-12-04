@@ -78,6 +78,7 @@
     <Compile Include="RPT Criteria\ManageReportFilter.Designer.cs">
       <DependentUpon>ManageReportFilter.cs</DependentUpon>
     </Compile>
+    <Compile Include="RPT Model\BankBalanceModel.cs" />
     <Compile Include="RPT Model\BankModel.cs" />
     <Compile Include="RPT Model\BankTransactionModel.cs" />
     <Compile Include="RPT Model\ReceiveDetailModel.cs" />
@@ -87,6 +88,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>crBank.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\crBankBalanceByUserID.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crBankBalanceByUserID.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="RPT\crBankTransaction.cs">
@@ -118,6 +125,10 @@
     <EmbeddedResource Include="RPT\crBank.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crBank.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\crBankBalanceByUserID.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crBankBalanceByUserID.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="RPT\crBankTransaction.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

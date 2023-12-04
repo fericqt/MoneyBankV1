@@ -15,6 +15,10 @@ using System.Windows.Forms;
 namespace MoneyBank.Reports.RPT_Criteria {
     public partial class ManageReportFilter : MyManageFormBase {
         public string Manage_BankAccountNo;
+        public string Manage_UserID;
+        //
+        public bool ShowBank = true;
+        public bool ShowUserID = true;
         public ManageReportFilter() {
             InitializeComponent();
             CurrentFormMode = FormMode.Add;
@@ -22,8 +26,14 @@ namespace MoneyBank.Reports.RPT_Criteria {
         protected override void LoadComponents() {
             switch (CurrentFormMode) {
                 case FormMode.Add:
-                    using (var data = new UserData()) {
-                        data.LoadComboBox(cmbUserID);
+                    if (ShowBank) {
+                        pnlBankName.Visible = true;
+                    }
+                    if (ShowUserID) {
+                        using (var data = new UserData()) {
+                            data.LoadComboBox(cmbUserID);
+                        }
+                        pnlUserID.Visible = true;
                     }
                     break;
 
@@ -39,6 +49,7 @@ namespace MoneyBank.Reports.RPT_Criteria {
         }
         protected override bool OnSaveData() {
             Manage_BankAccountNo = cmbBankName.SelectedValue.ToString();
+            Manage_UserID = cmbUserID.Text;
             return true;
         }
     }

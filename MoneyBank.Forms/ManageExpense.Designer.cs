@@ -26,356 +26,363 @@ namespace MoneyBank.Forms {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageExpense));
-            cLabelDesc1 = new FerPROJ.Design.Controls.CLabelDesc();
-            cLabelDesc3 = new FerPROJ.Design.Controls.CLabelDesc();
-            expenseDTOBindingSource = new BindingSource(components);
-            panel1 = new Panel();
-            cDatagridview1 = new FerPROJ.Design.Controls.CDatagridview();
-            IdTrack = new DataGridViewTextBoxColumn();
-            expenseNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            expenseAmountDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            expenseQuantityDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            remarksDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            expenseTotalDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            expenseDetailDTOBindingSource = new BindingSource(components);
-            toolStrip1 = new ToolStrip();
-            tsbAdd = new ToolStripButton();
-            panel2 = new Panel();
-            cLabelDesc8 = new FerPROJ.Design.Controls.CLabelDesc();
-            cLabelDesc7 = new FerPROJ.Design.Controls.CLabelDesc();
-            cLabelDesc4 = new FerPROJ.Design.Controls.CLabelDesc();
-            cLabelDesc5 = new FerPROJ.Design.Controls.CLabelDesc();
-            cLabelDesc6 = new FerPROJ.Design.Controls.CLabelDesc();
-            cmbBankAccount = new FerPROJ.Design.Controls.CComboBoxBasic();
-            cLabelDesc9 = new FerPROJ.Design.Controls.CLabelDesc();
-            llUserID = new LinkLabel();
-            basePnl2.SuspendLayout();
-            PanelMain3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)expenseDTOBindingSource).BeginInit();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)cDatagridview1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)expenseDetailDTOBindingSource).BeginInit();
-            toolStrip1.SuspendLayout();
-            panel2.SuspendLayout();
-            SuspendLayout();
+            this.cLabelDesc1 = new FerPROJ.Design.Controls.CLabelDesc();
+            this.cLabelDesc3 = new FerPROJ.Design.Controls.CLabelDesc();
+            this.expenseDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.cDatagridview1 = new FerPROJ.Design.Controls.CDatagridview();
+            this.IdTrack = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.expenseNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.expenseAmountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.expenseQuantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.remarksDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.expenseTotalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.expenseDetailDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tsbAdd = new System.Windows.Forms.ToolStripButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.cLabelDesc8 = new FerPROJ.Design.Controls.CLabelDesc();
+            this.cLabelDesc7 = new FerPROJ.Design.Controls.CLabelDesc();
+            this.cLabelDesc4 = new FerPROJ.Design.Controls.CLabelDesc();
+            this.cLabelDesc5 = new FerPROJ.Design.Controls.CLabelDesc();
+            this.cLabelDesc6 = new FerPROJ.Design.Controls.CLabelDesc();
+            this.cmbBankAccount = new FerPROJ.Design.Controls.CComboBoxBasic();
+            this.cLabelDesc9 = new FerPROJ.Design.Controls.CLabelDesc();
+            this.llUserID = new System.Windows.Forms.LinkLabel();
+            this.basePnl2.SuspendLayout();
+            this.PanelMain3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.expenseDTOBindingSource)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cDatagridview1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.expenseDetailDTOBindingSource)).BeginInit();
+            this.toolStrip1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.SuspendLayout();
             // 
             // basePnl2
             // 
-            basePnl2.Location = new Point(665, 1);
+            this.basePnl2.Location = new System.Drawing.Point(574, 1);
             // 
             // baseButtonUpdate
             // 
-            baseButtonUpdate.FlatAppearance.BorderSize = 0;
+            this.baseButtonUpdate.FlatAppearance.BorderSize = 0;
             // 
             // baseButtonSave
             // 
-            baseButtonSave.FlatAppearance.BorderSize = 0;
+            this.baseButtonSave.FlatAppearance.BorderSize = 0;
             // 
             // baseButtonCancel
             // 
-            baseButtonCancel.FlatAppearance.BorderSize = 0;
+            this.baseButtonCancel.FlatAppearance.BorderSize = 0;
             // 
             // PanelMain3
             // 
-            PanelMain3.Controls.Add(llUserID);
-            PanelMain3.Controls.Add(cLabelDesc9);
-            PanelMain3.Controls.Add(cmbBankAccount);
-            PanelMain3.Controls.Add(cLabelDesc6);
-            PanelMain3.Controls.Add(cLabelDesc5);
-            PanelMain3.Controls.Add(cLabelDesc4);
-            PanelMain3.Controls.Add(panel2);
-            PanelMain3.Controls.Add(panel1);
-            PanelMain3.Controls.Add(cLabelDesc3);
-            PanelMain3.Controls.Add(cLabelDesc1);
-            PanelMain3.Size = new Size(939, 440);
+            this.PanelMain3.Controls.Add(this.llUserID);
+            this.PanelMain3.Controls.Add(this.cLabelDesc9);
+            this.PanelMain3.Controls.Add(this.cmbBankAccount);
+            this.PanelMain3.Controls.Add(this.cLabelDesc6);
+            this.PanelMain3.Controls.Add(this.cLabelDesc5);
+            this.PanelMain3.Controls.Add(this.cLabelDesc4);
+            this.PanelMain3.Controls.Add(this.panel2);
+            this.PanelMain3.Controls.Add(this.panel1);
+            this.PanelMain3.Controls.Add(this.cLabelDesc3);
+            this.PanelMain3.Controls.Add(this.cLabelDesc1);
+            this.PanelMain3.Size = new System.Drawing.Size(809, 385);
             // 
             // baseButtonAddNew
             // 
-            baseButtonAddNew.FlatAppearance.BorderSize = 0;
+            this.baseButtonAddNew.FlatAppearance.BorderSize = 0;
             // 
             // cLabelDesc1
             // 
-            cLabelDesc1.AutoSize = true;
-            cLabelDesc1.Font = new Font("Poppins", 10F);
-            cLabelDesc1.Location = new Point(46, 31);
-            cLabelDesc1.Name = "cLabelDesc1";
-            cLabelDesc1.Size = new Size(72, 25);
-            cLabelDesc1.TabIndex = 0;
-            cLabelDesc1.Text = "TransNo:";
+            this.cLabelDesc1.AutoSize = true;
+            this.cLabelDesc1.Font = new System.Drawing.Font("Poppins", 10F);
+            this.cLabelDesc1.Location = new System.Drawing.Point(39, 27);
+            this.cLabelDesc1.Name = "cLabelDesc1";
+            this.cLabelDesc1.Size = new System.Drawing.Size(72, 25);
+            this.cLabelDesc1.TabIndex = 0;
+            this.cLabelDesc1.Text = "TransNo:";
             // 
             // cLabelDesc3
             // 
-            cLabelDesc3.AutoSize = true;
-            cLabelDesc3.Font = new Font("Poppins", 10F);
-            cLabelDesc3.Location = new Point(652, 31);
-            cLabelDesc3.Name = "cLabelDesc3";
-            cLabelDesc3.Size = new Size(125, 25);
-            cLabelDesc3.TabIndex = 2;
-            cLabelDesc3.Text = "Date Reference:";
+            this.cLabelDesc3.AutoSize = true;
+            this.cLabelDesc3.Font = new System.Drawing.Font("Poppins", 10F);
+            this.cLabelDesc3.Location = new System.Drawing.Point(540, 27);
+            this.cLabelDesc3.Name = "cLabelDesc3";
+            this.cLabelDesc3.Size = new System.Drawing.Size(125, 25);
+            this.cLabelDesc3.TabIndex = 2;
+            this.cLabelDesc3.Text = "Date Reference:";
             // 
             // expenseDTOBindingSource
             // 
-            expenseDTOBindingSource.DataSource = typeof(DTO.ExpenseDTO);
+            this.expenseDTOBindingSource.DataSource = typeof(MoneyBank.DTO.ExpenseDTO);
             // 
             // panel1
             // 
-            panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(cDatagridview1);
-            panel1.Controls.Add(toolStrip1);
-            panel1.Location = new Point(46, 113);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(871, 259);
-            panel1.TabIndex = 3;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.cDatagridview1);
+            this.panel1.Controls.Add(this.toolStrip1);
+            this.panel1.Location = new System.Drawing.Point(39, 98);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(747, 225);
+            this.panel1.TabIndex = 3;
             // 
             // cDatagridview1
             // 
-            cDatagridview1.AllowUserToAddRows = false;
-            cDatagridview1.AllowUserToDeleteRows = false;
-            cDatagridview1.AllowUserToOrderColumns = true;
-            cDatagridview1.AllowUserToResizeRows = false;
-            cDatagridview1.AlternatingRowColor = Color.LightGray;
-            dataGridViewCellStyle5.BackColor = Color.LightGray;
-            cDatagridview1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            cDatagridview1.AutoGenerateColumns = false;
-            cDatagridview1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            cDatagridview1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            cDatagridview1.BackgroundColor = Color.FromArgb(240, 240, 240);
-            cDatagridview1.BorderStyle = BorderStyle.None;
-            cDatagridview1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Custom;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = Color.WhiteSmoke;
-            dataGridViewCellStyle6.Font = new Font("Poppins", 12F);
-            dataGridViewCellStyle6.ForeColor = Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = Color.WhiteSmoke;
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            cDatagridview1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            cDatagridview1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            cDatagridview1.Columns.AddRange(new DataGridViewColumn[] { IdTrack, expenseNameDataGridViewTextBoxColumn, expenseAmountDataGridViewTextBoxColumn, expenseQuantityDataGridViewTextBoxColumn, remarksDataGridViewTextBoxColumn, expenseTotalDataGridViewTextBoxColumn });
-            cDatagridview1.CustomHeaderFontStyle = new Font("Poppins", 12F);
-            cDatagridview1.CustomHeaderForeColor = Color.Black;
-            cDatagridview1.CustomRowFontStyle = new Font("Poppins", 10F);
-            cDatagridview1.DataSource = expenseDetailDTOBindingSource;
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = SystemColors.Window;
-            dataGridViewCellStyle7.Font = new Font("Poppins", 10F);
-            dataGridViewCellStyle7.ForeColor = Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.False;
-            cDatagridview1.DefaultCellStyle = dataGridViewCellStyle7;
-            cDatagridview1.Dock = DockStyle.Fill;
-            cDatagridview1.EnableHeadersVisualStyles = false;
-            cDatagridview1.HeaderColor = Color.WhiteSmoke;
-            cDatagridview1.Location = new Point(0, 25);
-            cDatagridview1.Name = "cDatagridview1";
-            cDatagridview1.ReadOnly = true;
-            cDatagridview1.RowHeadersVisible = false;
-            dataGridViewCellStyle8.BackColor = Color.WhiteSmoke;
-            dataGridViewCellStyle8.Font = new Font("Poppins", 10F);
-            dataGridViewCellStyle8.ForeColor = Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = Color.FromArgb(128, 128, 255);
-            dataGridViewCellStyle8.SelectionForeColor = Color.White;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
-            cDatagridview1.RowsDefaultCellStyle = dataGridViewCellStyle8;
-            cDatagridview1.SelectionColor = Color.FromArgb(128, 128, 255);
-            cDatagridview1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            cDatagridview1.Size = new Size(869, 232);
-            cDatagridview1.TabIndex = 1;
+            this.cDatagridview1.AllowUserToAddRows = false;
+            this.cDatagridview1.AllowUserToDeleteRows = false;
+            this.cDatagridview1.AllowUserToOrderColumns = true;
+            this.cDatagridview1.AllowUserToResizeRows = false;
+            this.cDatagridview1.AlternatingRowColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray;
+            this.cDatagridview1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.cDatagridview1.AutoGenerateColumns = false;
+            this.cDatagridview1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.cDatagridview1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.cDatagridview1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.cDatagridview1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cDatagridview1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Custom;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.cDatagridview1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.cDatagridview1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cDatagridview1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IdTrack,
+            this.expenseNameDataGridViewTextBoxColumn,
+            this.expenseAmountDataGridViewTextBoxColumn,
+            this.expenseQuantityDataGridViewTextBoxColumn,
+            this.remarksDataGridViewTextBoxColumn,
+            this.expenseTotalDataGridViewTextBoxColumn});
+            this.cDatagridview1.CustomHeaderFontStyle = new System.Drawing.Font("Poppins", 12F);
+            this.cDatagridview1.CustomHeaderForeColor = System.Drawing.Color.Black;
+            this.cDatagridview1.CustomRowFontStyle = new System.Drawing.Font("Poppins", 10F);
+            this.cDatagridview1.DataSource = this.expenseDetailDTOBindingSource;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins", 10F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.cDatagridview1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.cDatagridview1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cDatagridview1.EnableHeadersVisualStyles = false;
+            this.cDatagridview1.HeaderColor = System.Drawing.Color.WhiteSmoke;
+            this.cDatagridview1.Location = new System.Drawing.Point(0, 25);
+            this.cDatagridview1.Name = "cDatagridview1";
+            this.cDatagridview1.ReadOnly = true;
+            this.cDatagridview1.RowHeadersVisible = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Poppins", 10F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.cDatagridview1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.cDatagridview1.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.cDatagridview1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.cDatagridview1.Size = new System.Drawing.Size(745, 198);
+            this.cDatagridview1.TabIndex = 1;
             // 
             // IdTrack
             // 
-            IdTrack.DataPropertyName = "IdTrack";
-            IdTrack.HeaderText = "IdTrack";
-            IdTrack.Name = "IdTrack";
-            IdTrack.ReadOnly = true;
-            IdTrack.Visible = false;
+            this.IdTrack.DataPropertyName = "IdTrack";
+            this.IdTrack.HeaderText = "IdTrack";
+            this.IdTrack.Name = "IdTrack";
+            this.IdTrack.ReadOnly = true;
+            this.IdTrack.Visible = false;
             // 
             // expenseNameDataGridViewTextBoxColumn
             // 
-            expenseNameDataGridViewTextBoxColumn.DataPropertyName = "ExpenseName";
-            expenseNameDataGridViewTextBoxColumn.HeaderText = "ExpenseName";
-            expenseNameDataGridViewTextBoxColumn.Name = "expenseNameDataGridViewTextBoxColumn";
-            expenseNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.expenseNameDataGridViewTextBoxColumn.DataPropertyName = "ExpenseName";
+            this.expenseNameDataGridViewTextBoxColumn.HeaderText = "ExpenseName";
+            this.expenseNameDataGridViewTextBoxColumn.Name = "expenseNameDataGridViewTextBoxColumn";
+            this.expenseNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // expenseAmountDataGridViewTextBoxColumn
             // 
-            expenseAmountDataGridViewTextBoxColumn.DataPropertyName = "ExpenseAmount";
-            expenseAmountDataGridViewTextBoxColumn.HeaderText = "ExpenseAmount";
-            expenseAmountDataGridViewTextBoxColumn.Name = "expenseAmountDataGridViewTextBoxColumn";
-            expenseAmountDataGridViewTextBoxColumn.ReadOnly = true;
+            this.expenseAmountDataGridViewTextBoxColumn.DataPropertyName = "ExpenseAmount";
+            this.expenseAmountDataGridViewTextBoxColumn.HeaderText = "ExpenseAmount";
+            this.expenseAmountDataGridViewTextBoxColumn.Name = "expenseAmountDataGridViewTextBoxColumn";
+            this.expenseAmountDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // expenseQuantityDataGridViewTextBoxColumn
             // 
-            expenseQuantityDataGridViewTextBoxColumn.DataPropertyName = "ExpenseQuantity";
-            expenseQuantityDataGridViewTextBoxColumn.HeaderText = "ExpenseQuantity";
-            expenseQuantityDataGridViewTextBoxColumn.Name = "expenseQuantityDataGridViewTextBoxColumn";
-            expenseQuantityDataGridViewTextBoxColumn.ReadOnly = true;
+            this.expenseQuantityDataGridViewTextBoxColumn.DataPropertyName = "ExpenseQuantity";
+            this.expenseQuantityDataGridViewTextBoxColumn.HeaderText = "ExpenseQuantity";
+            this.expenseQuantityDataGridViewTextBoxColumn.Name = "expenseQuantityDataGridViewTextBoxColumn";
+            this.expenseQuantityDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // remarksDataGridViewTextBoxColumn
             // 
-            remarksDataGridViewTextBoxColumn.DataPropertyName = "Remarks";
-            remarksDataGridViewTextBoxColumn.HeaderText = "Remarks";
-            remarksDataGridViewTextBoxColumn.Name = "remarksDataGridViewTextBoxColumn";
-            remarksDataGridViewTextBoxColumn.ReadOnly = true;
+            this.remarksDataGridViewTextBoxColumn.DataPropertyName = "Remarks";
+            this.remarksDataGridViewTextBoxColumn.HeaderText = "Remarks";
+            this.remarksDataGridViewTextBoxColumn.Name = "remarksDataGridViewTextBoxColumn";
+            this.remarksDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // expenseTotalDataGridViewTextBoxColumn
             // 
-            expenseTotalDataGridViewTextBoxColumn.DataPropertyName = "ExpenseTotal";
-            expenseTotalDataGridViewTextBoxColumn.HeaderText = "ExpenseTotal";
-            expenseTotalDataGridViewTextBoxColumn.Name = "expenseTotalDataGridViewTextBoxColumn";
-            expenseTotalDataGridViewTextBoxColumn.ReadOnly = true;
+            this.expenseTotalDataGridViewTextBoxColumn.DataPropertyName = "ExpenseTotal";
+            this.expenseTotalDataGridViewTextBoxColumn.HeaderText = "ExpenseTotal";
+            this.expenseTotalDataGridViewTextBoxColumn.Name = "expenseTotalDataGridViewTextBoxColumn";
+            this.expenseTotalDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // expenseDetailDTOBindingSource
             // 
-            expenseDetailDTOBindingSource.DataSource = typeof(DTO.ExpenseDetailDTO);
+            this.expenseDetailDTOBindingSource.DataSource = typeof(MoneyBank.DTO.ExpenseDetailDTO);
             // 
             // toolStrip1
             // 
-            toolStrip1.Items.AddRange(new ToolStripItem[] { tsbAdd });
-            toolStrip1.Location = new Point(0, 0);
-            toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(869, 25);
-            toolStrip1.TabIndex = 0;
-            toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbAdd});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(745, 25);
+            this.toolStrip1.TabIndex = 0;
+            this.toolStrip1.Text = "toolStrip1";
             // 
             // tsbAdd
             // 
-            tsbAdd.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            tsbAdd.Image = (Image)resources.GetObject("tsbAdd.Image");
-            tsbAdd.ImageTransparentColor = Color.Magenta;
-            tsbAdd.Name = "tsbAdd";
-            tsbAdd.Size = new Size(23, 22);
-            tsbAdd.Text = "Add";
-            tsbAdd.Click += tsbAdd_Click;
+            this.tsbAdd.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbAdd.Image = ((System.Drawing.Image)(resources.GetObject("tsbAdd.Image")));
+            this.tsbAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbAdd.Name = "tsbAdd";
+            this.tsbAdd.Size = new System.Drawing.Size(23, 22);
+            this.tsbAdd.Text = "Add";
             // 
             // panel2
             // 
-            panel2.BorderStyle = BorderStyle.FixedSingle;
-            panel2.Controls.Add(cLabelDesc8);
-            panel2.Controls.Add(cLabelDesc7);
-            panel2.Location = new Point(651, 378);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(265, 53);
-            panel2.TabIndex = 4;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.cLabelDesc8);
+            this.panel2.Controls.Add(this.cLabelDesc7);
+            this.panel2.Location = new System.Drawing.Point(558, 328);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(227, 46);
+            this.panel2.TabIndex = 4;
             // 
             // cLabelDesc8
             // 
-            cLabelDesc8.AutoSize = true;
-            cLabelDesc8.DataBindings.Add(new Binding("Text", expenseDTOBindingSource, "TotalExpenseAmount", true));
-            cLabelDesc8.Font = new Font("Poppins", 10F);
-            cLabelDesc8.Location = new Point(96, 13);
-            cLabelDesc8.Name = "cLabelDesc8";
-            cLabelDesc8.Size = new Size(36, 25);
-            cLabelDesc8.TabIndex = 9;
-            cLabelDesc8.Text = "---";
+            this.cLabelDesc8.AutoSize = true;
+            this.cLabelDesc8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.expenseDTOBindingSource, "TotalExpenseAmount", true));
+            this.cLabelDesc8.Font = new System.Drawing.Font("Poppins", 10F);
+            this.cLabelDesc8.Location = new System.Drawing.Point(82, 11);
+            this.cLabelDesc8.Name = "cLabelDesc8";
+            this.cLabelDesc8.Size = new System.Drawing.Size(36, 25);
+            this.cLabelDesc8.TabIndex = 9;
+            this.cLabelDesc8.Text = "---";
             // 
             // cLabelDesc7
             // 
-            cLabelDesc7.AutoSize = true;
-            cLabelDesc7.Font = new Font("Poppins", 10F);
-            cLabelDesc7.Location = new Point(13, 13);
-            cLabelDesc7.Name = "cLabelDesc7";
-            cLabelDesc7.Size = new Size(77, 25);
-            cLabelDesc7.TabIndex = 8;
-            cLabelDesc7.Text = "Net Total:";
+            this.cLabelDesc7.AutoSize = true;
+            this.cLabelDesc7.Font = new System.Drawing.Font("Poppins", 10F);
+            this.cLabelDesc7.Location = new System.Drawing.Point(11, 11);
+            this.cLabelDesc7.Name = "cLabelDesc7";
+            this.cLabelDesc7.Size = new System.Drawing.Size(77, 25);
+            this.cLabelDesc7.TabIndex = 8;
+            this.cLabelDesc7.Text = "Net Total:";
             // 
             // cLabelDesc4
             // 
-            cLabelDesc4.AutoSize = true;
-            cLabelDesc4.DataBindings.Add(new Binding("Text", expenseDTOBindingSource, "ExpenseTransNo", true));
-            cLabelDesc4.Font = new Font("Poppins", 10F);
-            cLabelDesc4.Location = new Point(165, 31);
-            cLabelDesc4.Name = "cLabelDesc4";
-            cLabelDesc4.Size = new Size(36, 25);
-            cLabelDesc4.TabIndex = 5;
-            cLabelDesc4.Text = "---";
+            this.cLabelDesc4.AutoSize = true;
+            this.cLabelDesc4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.expenseDTOBindingSource, "ExpenseTransNo", true));
+            this.cLabelDesc4.Font = new System.Drawing.Font("Poppins", 10F);
+            this.cLabelDesc4.Location = new System.Drawing.Point(153, 27);
+            this.cLabelDesc4.Name = "cLabelDesc4";
+            this.cLabelDesc4.Size = new System.Drawing.Size(36, 25);
+            this.cLabelDesc4.TabIndex = 5;
+            this.cLabelDesc4.Text = "---";
             // 
             // cLabelDesc5
             // 
-            cLabelDesc5.AutoSize = true;
-            cLabelDesc5.DataBindings.Add(new Binding("Text", expenseDTOBindingSource, "UserId", true));
-            cLabelDesc5.Font = new Font("Poppins", 10F);
-            cLabelDesc5.Location = new Point(783, 68);
-            cLabelDesc5.Name = "cLabelDesc5";
-            cLabelDesc5.Size = new Size(36, 25);
-            cLabelDesc5.TabIndex = 6;
-            cLabelDesc5.Text = "---";
+            this.cLabelDesc5.AutoSize = true;
+            this.cLabelDesc5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.expenseDTOBindingSource, "UserId", true));
+            this.cLabelDesc5.Font = new System.Drawing.Font("Poppins", 10F);
+            this.cLabelDesc5.Location = new System.Drawing.Point(671, 59);
+            this.cLabelDesc5.Name = "cLabelDesc5";
+            this.cLabelDesc5.Size = new System.Drawing.Size(36, 25);
+            this.cLabelDesc5.TabIndex = 6;
+            this.cLabelDesc5.Text = "---";
             // 
             // cLabelDesc6
             // 
-            cLabelDesc6.AutoSize = true;
-            cLabelDesc6.DataBindings.Add(new Binding("Text", expenseDTOBindingSource, "DateReference", true));
-            cLabelDesc6.Font = new Font("Poppins", 10F);
-            cLabelDesc6.Location = new Point(783, 31);
-            cLabelDesc6.Name = "cLabelDesc6";
-            cLabelDesc6.Size = new Size(36, 25);
-            cLabelDesc6.TabIndex = 7;
-            cLabelDesc6.Text = "---";
+            this.cLabelDesc6.AutoSize = true;
+            this.cLabelDesc6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.expenseDTOBindingSource, "DateReference", true));
+            this.cLabelDesc6.Font = new System.Drawing.Font("Poppins", 10F);
+            this.cLabelDesc6.Location = new System.Drawing.Point(671, 27);
+            this.cLabelDesc6.Name = "cLabelDesc6";
+            this.cLabelDesc6.Size = new System.Drawing.Size(36, 25);
+            this.cLabelDesc6.TabIndex = 7;
+            this.cLabelDesc6.Text = "---";
             // 
             // cmbBankAccount
             // 
-            cmbBankAccount.DataBindings.Add(new Binding("PropertyTextValue", expenseDTOBindingSource, "BankAccountNo", true));
-            cmbBankAccount.DataBindings.Add(new Binding("SelectedValue", expenseDTOBindingSource, "BankAccountNo", true));
-            cmbBankAccount.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbBankAccount.ForeColor = Color.Black;
-            cmbBankAccount.FormattingEnabled = true;
-            cmbBankAccount.Location = new Point(165, 68);
-            cmbBankAccount.Name = "cmbBankAccount";
-            cmbBankAccount.PropertyText = "";
-            cmbBankAccount.PropertyTextValue = "";
-            cmbBankAccount.Size = new Size(211, 23);
-            cmbBankAccount.TabIndex = 8;
+            this.cmbBankAccount.DataBindings.Add(new System.Windows.Forms.Binding("PropertyTextValue", this.expenseDTOBindingSource, "BankAccountNo", true));
+            this.cmbBankAccount.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.expenseDTOBindingSource, "BankAccountNo", true));
+            this.cmbBankAccount.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBankAccount.ForeColor = System.Drawing.Color.Black;
+            this.cmbBankAccount.FormattingEnabled = true;
+            this.cmbBankAccount.Location = new System.Drawing.Point(158, 59);
+            this.cmbBankAccount.Name = "cmbBankAccount";
+            this.cmbBankAccount.PropertyText = "";
+            this.cmbBankAccount.PropertyTextValue = "";
+            this.cmbBankAccount.Size = new System.Drawing.Size(181, 21);
+            this.cmbBankAccount.TabIndex = 8;
             // 
             // cLabelDesc9
             // 
-            cLabelDesc9.AutoSize = true;
-            cLabelDesc9.Font = new Font("Poppins", 10F);
-            cLabelDesc9.Location = new Point(47, 68);
-            cLabelDesc9.Name = "cLabelDesc9";
-            cLabelDesc9.Size = new Size(112, 25);
-            cLabelDesc9.TabIndex = 9;
-            cLabelDesc9.Text = "Bank Account:";
+            this.cLabelDesc9.AutoSize = true;
+            this.cLabelDesc9.Font = new System.Drawing.Font("Poppins", 10F);
+            this.cLabelDesc9.Location = new System.Drawing.Point(40, 59);
+            this.cLabelDesc9.Name = "cLabelDesc9";
+            this.cLabelDesc9.Size = new System.Drawing.Size(112, 25);
+            this.cLabelDesc9.TabIndex = 9;
+            this.cLabelDesc9.Text = "Bank Account:";
             // 
             // llUserID
             // 
-            llUserID.AutoSize = true;
-            llUserID.Font = new Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            llUserID.Location = new Point(652, 68);
-            llUserID.Name = "llUserID";
-            llUserID.Size = new Size(54, 23);
-            llUserID.TabIndex = 10;
-            llUserID.TabStop = true;
-            llUserID.Text = "User ID";
-            llUserID.LinkClicked += llUserID_LinkClicked;
+            this.llUserID.AutoSize = true;
+            this.llUserID.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llUserID.Location = new System.Drawing.Point(541, 59);
+            this.llUserID.Name = "llUserID";
+            this.llUserID.Size = new System.Drawing.Size(54, 23);
+            this.llUserID.TabIndex = 10;
+            this.llUserID.TabStop = true;
+            this.llUserID.Text = "User ID";
             // 
             // ManageExpense
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(955, 622);
-            HideSaveNew = true;
-            Name = "ManageExpense";
-            Text = "ManageExpense";
-            basePnl2.ResumeLayout(false);
-            PanelMain3.ResumeLayout(false);
-            PanelMain3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)expenseDTOBindingSource).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)cDatagridview1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)expenseDetailDTOBindingSource).EndInit();
-            toolStrip1.ResumeLayout(false);
-            toolStrip1.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(819, 539);
+            this.HideSaveNew = true;
+            this.Name = "ManageExpense";
+            this.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Text = "ManageExpense";
+            this.basePnl2.ResumeLayout(false);
+            this.PanelMain3.ResumeLayout(false);
+            this.PanelMain3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.expenseDTOBindingSource)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cDatagridview1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.expenseDetailDTOBindingSource)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
