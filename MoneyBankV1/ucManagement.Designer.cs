@@ -287,6 +287,7 @@ namespace MoneyBankV2 {
             this.btnBank.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBank.Font = new System.Drawing.Font("Poppins", 9F);
             this.btnBank.ForeColor = System.Drawing.Color.Black;
+            this.btnBank.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBank.Location = new System.Drawing.Point(23, 25);
             this.btnBank.Name = "btnBank";
             this.btnBank.Size = new System.Drawing.Size(129, 35);

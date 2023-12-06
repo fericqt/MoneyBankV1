@@ -57,7 +57,7 @@
             // PanelMain3
             // 
             this.PanelMain3.Controls.Add(this.tableLayoutPanel1);
-            this.PanelMain3.Size = new System.Drawing.Size(488, 128);
+            this.PanelMain3.Size = new System.Drawing.Size(488, 124);
             // 
             // baseButtonAddNew
             // 
@@ -79,7 +79,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(488, 128);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(488, 124);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // pnlBankName
@@ -152,7 +152,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(500, 284);
+            this.ClientSize = new System.Drawing.Size(500, 280);
             this.HideSaveNew = true;
             this.Name = "ManageReportFilter";
             this.OnSaveName = "OK";

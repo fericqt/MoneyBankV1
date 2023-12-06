@@ -26,135 +26,156 @@ namespace MoneyBank.Forms {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            dgvExpenseType = new FerPROJ.Design.Controls.CDatagridview();
-            expenseTypeDTOBindingSource = new BindingSource(components);
-            idTrackDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            dateReferenceDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            expenseNoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            expenseNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            PanelMain4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvExpenseType).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)expenseTypeDTOBindingSource).BeginInit();
-            SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.dgvExpenseType = new FerPROJ.Design.Controls.CDatagridview();
+            this.expenseTypeDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idTrackDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateReferenceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.expenseNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.expenseNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PanelMain4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExpenseType)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.expenseTypeDTOBindingSource)).BeginInit();
+            this.SuspendLayout();
             // 
             // baseButtonSelect
             // 
-            baseButtonSelect.FlatAppearance.BorderSize = 0;
+            this.baseButtonSelect.FlatAppearance.BorderSize = 0;
             // 
             // baseButtonCancel
             // 
-            baseButtonCancel.FlatAppearance.BorderSize = 0;
+            this.baseButtonCancel.FlatAppearance.BorderSize = 0;
             // 
             // PanelMain4
             // 
-            PanelMain4.Controls.Add(dgvExpenseType);
-            PanelMain4.Size = new Size(1017, 460);
-            PanelMain4.Controls.SetChildIndex(dgvExpenseType, 0);
+            this.PanelMain4.Controls.Add(this.dgvExpenseType);
+            this.PanelMain4.Size = new System.Drawing.Size(875, 402);
+            this.PanelMain4.Controls.SetChildIndex(this.dgvExpenseType, 0);
+            // 
+            // SearchTextBox
+            // 
+            this.SearchTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.SearchTextBox.Padding = new System.Windows.Forms.Padding(9, 6, 9, 6);
             // 
             // dgvExpenseType
             // 
-            dgvExpenseType.AllowUserToAddRows = false;
-            dgvExpenseType.AllowUserToDeleteRows = false;
-            dgvExpenseType.AllowUserToOrderColumns = true;
-            dgvExpenseType.AllowUserToResizeRows = false;
-            dgvExpenseType.AlternatingRowColor = Color.LightGray;
-            dataGridViewCellStyle4.BackColor = Color.LightGray;
-            dgvExpenseType.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dgvExpenseType.AutoGenerateColumns = false;
-            dgvExpenseType.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvExpenseType.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dgvExpenseType.BackgroundColor = Color.FromArgb(240, 240, 240);
-            dgvExpenseType.BorderStyle = BorderStyle.None;
-            dgvExpenseType.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Custom;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.WhiteSmoke;
-            dataGridViewCellStyle5.Font = new Font("Poppins", 12F);
-            dataGridViewCellStyle5.ForeColor = Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dgvExpenseType.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            dgvExpenseType.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvExpenseType.Columns.AddRange(new DataGridViewColumn[] { idTrackDataGridViewTextBoxColumn, dateReferenceDataGridViewTextBoxColumn, expenseNoDataGridViewTextBoxColumn, expenseNameDataGridViewTextBoxColumn });
-            dgvExpenseType.CustomHeaderFontStyle = new Font("Poppins", 12F);
-            dgvExpenseType.CustomHeaderForeColor = Color.Black;
-            dgvExpenseType.CustomRowFontStyle = new Font("Poppins", 10F);
-            dgvExpenseType.DataSource = expenseTypeDTOBindingSource;
-            dgvExpenseType.Dock = DockStyle.Fill;
-            dgvExpenseType.EnableHeadersVisualStyles = false;
-            dgvExpenseType.HeaderColor = Color.WhiteSmoke;
-            dgvExpenseType.Location = new Point(0, 47);
-            dgvExpenseType.Name = "dgvExpenseType";
-            dgvExpenseType.ReadOnly = true;
-            dgvExpenseType.RowHeadersVisible = false;
-            dataGridViewCellStyle6.BackColor = Color.WhiteSmoke;
-            dataGridViewCellStyle6.Font = new Font("Poppins", 10F);
-            dataGridViewCellStyle6.ForeColor = Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(128, 128, 255);
-            dataGridViewCellStyle6.SelectionForeColor = Color.White;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            dgvExpenseType.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            dgvExpenseType.SelectionColor = Color.FromArgb(128, 128, 255);
-            dgvExpenseType.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvExpenseType.Size = new Size(1017, 331);
-            dgvExpenseType.TabIndex = 5;
+            this.dgvExpenseType.AllowUserToAddRows = false;
+            this.dgvExpenseType.AllowUserToDeleteRows = false;
+            this.dgvExpenseType.AllowUserToOrderColumns = true;
+            this.dgvExpenseType.AllowUserToResizeRows = false;
+            this.dgvExpenseType.AlternatingRowColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray;
+            this.dgvExpenseType.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvExpenseType.AutoGenerateColumns = false;
+            this.dgvExpenseType.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvExpenseType.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvExpenseType.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.dgvExpenseType.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvExpenseType.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Custom;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvExpenseType.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvExpenseType.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvExpenseType.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idTrackDataGridViewTextBoxColumn,
+            this.dateReferenceDataGridViewTextBoxColumn,
+            this.expenseNoDataGridViewTextBoxColumn,
+            this.expenseNameDataGridViewTextBoxColumn});
+            this.dgvExpenseType.CustomHeaderFontStyle = new System.Drawing.Font("Poppins", 12F);
+            this.dgvExpenseType.CustomHeaderForeColor = System.Drawing.Color.Black;
+            this.dgvExpenseType.CustomRowFontStyle = new System.Drawing.Font("Poppins", 10F);
+            this.dgvExpenseType.DataSource = this.expenseTypeDTOBindingSource;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins", 10F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvExpenseType.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvExpenseType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvExpenseType.EnableHeadersVisualStyles = false;
+            this.dgvExpenseType.HeaderColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvExpenseType.Location = new System.Drawing.Point(0, 41);
+            this.dgvExpenseType.Name = "dgvExpenseType";
+            this.dgvExpenseType.ReadOnly = true;
+            this.dgvExpenseType.RowHeadersVisible = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Poppins", 10F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvExpenseType.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvExpenseType.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.dgvExpenseType.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvExpenseType.Size = new System.Drawing.Size(875, 290);
+            this.dgvExpenseType.TabIndex = 5;
             // 
             // expenseTypeDTOBindingSource
             // 
-            expenseTypeDTOBindingSource.DataSource = typeof(DTO.ExpenseTypeDTO);
+            this.expenseTypeDTOBindingSource.DataSource = typeof(MoneyBank.DTO.ExpenseTypeDTO);
             // 
             // idTrackDataGridViewTextBoxColumn
             // 
-            idTrackDataGridViewTextBoxColumn.DataPropertyName = "IdTrack";
-            idTrackDataGridViewTextBoxColumn.HeaderText = "IdTrack";
-            idTrackDataGridViewTextBoxColumn.Name = "idTrackDataGridViewTextBoxColumn";
-            idTrackDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idTrackDataGridViewTextBoxColumn.DataPropertyName = "IdTrack";
+            this.idTrackDataGridViewTextBoxColumn.HeaderText = "IdTrack";
+            this.idTrackDataGridViewTextBoxColumn.Name = "idTrackDataGridViewTextBoxColumn";
+            this.idTrackDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idTrackDataGridViewTextBoxColumn.Visible = false;
             // 
             // dateReferenceDataGridViewTextBoxColumn
             // 
-            dateReferenceDataGridViewTextBoxColumn.DataPropertyName = "DateReference";
-            dateReferenceDataGridViewTextBoxColumn.HeaderText = "DateReference";
-            dateReferenceDataGridViewTextBoxColumn.Name = "dateReferenceDataGridViewTextBoxColumn";
-            dateReferenceDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dateReferenceDataGridViewTextBoxColumn.DataPropertyName = "DateReference";
+            this.dateReferenceDataGridViewTextBoxColumn.HeaderText = "DateReference";
+            this.dateReferenceDataGridViewTextBoxColumn.Name = "dateReferenceDataGridViewTextBoxColumn";
+            this.dateReferenceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // expenseNoDataGridViewTextBoxColumn
             // 
-            expenseNoDataGridViewTextBoxColumn.DataPropertyName = "ExpenseNo";
-            expenseNoDataGridViewTextBoxColumn.HeaderText = "ExpenseNo";
-            expenseNoDataGridViewTextBoxColumn.Name = "expenseNoDataGridViewTextBoxColumn";
-            expenseNoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.expenseNoDataGridViewTextBoxColumn.DataPropertyName = "ExpenseNo";
+            this.expenseNoDataGridViewTextBoxColumn.HeaderText = "ExpenseNo";
+            this.expenseNoDataGridViewTextBoxColumn.Name = "expenseNoDataGridViewTextBoxColumn";
+            this.expenseNoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // expenseNameDataGridViewTextBoxColumn
             // 
-            expenseNameDataGridViewTextBoxColumn.DataPropertyName = "ExpenseName";
-            expenseNameDataGridViewTextBoxColumn.HeaderText = "ExpenseName";
-            expenseNameDataGridViewTextBoxColumn.Name = "expenseNameDataGridViewTextBoxColumn";
-            expenseNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.expenseNameDataGridViewTextBoxColumn.DataPropertyName = "ExpenseName";
+            this.expenseNameDataGridViewTextBoxColumn.HeaderText = "ExpenseName";
+            this.expenseNameDataGridViewTextBoxColumn.Name = "expenseNameDataGridViewTextBoxColumn";
+            this.expenseNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // FrmExpenseType
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1033, 560);
-            Name = "FrmExpenseType";
-            Text = "FrmExpenseType";
-            PanelMain4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvExpenseType).EndInit();
-            ((System.ComponentModel.ISupportInitialize)expenseTypeDTOBindingSource).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(885, 485);
+            this.Name = "FrmExpenseType";
+            this.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Text = "FrmExpenseType";
+            this.PanelMain4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExpenseType)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.expenseTypeDTOBindingSource)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
 
         private FerPROJ.Design.Controls.CDatagridview dgvExpenseType;
+        private BindingSource expenseTypeDTOBindingSource;
         private DataGridViewTextBoxColumn idTrackDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn dateReferenceDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn expenseNoDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn expenseNameDataGridViewTextBoxColumn;
-        private BindingSource expenseTypeDTOBindingSource;
     }
 }

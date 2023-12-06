@@ -71,5 +71,23 @@ namespace MoneyBank.Forms {
             userInformationDTOBindingSource.ResetBindings(false);
             userBankDTOBindingSource.ResetBindings(false);
         }
+
+        private void tsbRemoveBank_Click(object sender, EventArgs e) {
+            var item = CDGVSetting.GetItemDTO<UserBankDTO>(dgvUserBank);
+            myDTO.BankList.Remove(item);
+            Reset();
+        }
+
+        private void tsbRemoveBankAccount_Click(object sender, EventArgs e) {
+            var item = CDGVSetting.GetItemDTO<UserBankAccountDTO>(dgvUserBankAccount);
+            myDTO.BankAccountList.Remove(item);
+            Reset();
+        }
+
+        private void tsbRemoveUserInfo_Click(object sender, EventArgs e) {
+            var item = CDGVSetting.GetItemDTO<UserInformationDTO>(dgvUserInfo);
+            myDTO.UserInfoList.Remove(item);
+            Reset();
+        }
     }
 }

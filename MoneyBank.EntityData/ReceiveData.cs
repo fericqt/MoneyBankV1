@@ -21,6 +21,12 @@ namespace MoneyBank.EntityData {
         public ReceiveData(moneybankEntities ts) : base(ts) {
         }
 
+        public ReceiveData(Conn conn) : base(conn) {
+        }
+
+        public ReceiveData(moneybankEntities ts, Conn conn) : base(ts, conn) {
+        }
+
         public IEnumerable<tblreceive> GetAll() {
             throw new NotImplementedException();
         }
@@ -58,9 +64,25 @@ namespace MoneyBank.EntityData {
         }
 
         protected override void DeleteData(string id) {
+            ValidateDelete(id);
             var tbl = GetById(id);
-            _ts.tblreceives.Remove(tbl);
-            _ts.SaveChanges();
+            //
+            ExpenseDTO myDTO = new ExpenseDTO();
+            myDTO.ExpenseTransNo = new ExpenseData(_conn).GetNewID();
+            myDTO.UserId = tbl.UserID;
+            myDTO.BankAccountNo = tbl.BankAccountNo;
+            //
+            foreach (var item in tbl.tblreceivedetails) {
+                var itemToAdd = new ExpenseDetailDTO {
+                    ExpenseTransNo = myDTO.ExpenseTransNo,
+                    ExpenseAmount = (decimal)item.ReceiveAmount,
+                    ExpenseName = item.ReceiveItemName,
+                    ExpenseQuantity = (int)item.ReceiveQuantity,
+                    Remarks = $"Cancelled Received. Ref Transo:{tbl.ReceiveTransNo}.\n{item.Remarks}"                   
+                };
+                myDTO.ExpenseList.Add(itemToAdd);
+            }
+            new ExpenseData(_ts, _conn).SaveToDB(myDTO);
         }
 
         protected override void SaveData(ReceiveDTO myDTO) {
@@ -129,6 +151,15 @@ namespace MoneyBank.EntityData {
                     trans.Rollback();
                     throw;
                 }
+            }
+        }
+        public void SaveToDB(ReceiveDTO myDTO) {
+            SaveData(myDTO);
+        }
+        private void ValidateDelete(string id) {
+            var tbl = new ExpenseData(_ts).GetById(id);
+            if (tbl != null) {
+                throw new ArgumentException("Transaction has already been cancelled!");
             }
         }
     }

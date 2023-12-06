@@ -21,6 +21,12 @@ namespace MoneyBank.EntityData {
         public ExpenseData(moneybankEntities ts) : base(ts) {
         }
 
+        public ExpenseData(Conn conn) : base(conn) {
+        }
+
+        public ExpenseData(moneybankEntities ts, Conn conn) : base(ts, conn) {
+        }
+
         public IEnumerable<tblexpense> GetAll() {
             throw new NotImplementedException();
         }
@@ -58,16 +64,32 @@ namespace MoneyBank.EntityData {
         }
 
         protected override void DeleteData(string id) {
+            ValidateDelete(id);
             var tbl = GetById(id);
-            _ts.tblexpenses.Remove(tbl);
-            _ts.SaveChanges();
+            //
+            ReceiveDTO myDTO = new ReceiveDTO();
+            myDTO.ReceiveTransNo = new ReceiveData(_conn).GetNewID();
+            myDTO.UserId = tbl.UserID;
+            myDTO.BankAccountNo = tbl.BankAccountNo;
+            //
+            foreach (var item in tbl.tblexpensedetails) {
+                var itemToAdd = new ReceiveDetailDTO {
+                    ReceiveTransNo = myDTO.ReceiveTransNo,
+                    ReceiveAmount = (decimal)item.ExpenseAmount,
+                    ReceiveItemName = item.ExpenseName,
+                    ReceiveQuantity = (int)item.ExpenseQuantity,
+                    Remarks = $"Cancelled Expense. Ref Transo:{tbl.ExpenseTransNo}.\n{item.Remarks}"
+                };
+                myDTO.ReceiveList.Add(itemToAdd);
+            }           
+            new ReceiveData(_ts, _conn).SaveToDB(myDTO);           
         }
 
         protected override void SaveData(ExpenseDTO myDTO) {
             using (var trans = _ts.Database.BeginTransaction()) {
                 try {
                     var tbl = new CMapping<ExpenseDTO, tblexpense>().GetMappingResult(myDTO);
-                    foreach(var item in myDTO.ExpenseList) {
+                    foreach (var item in myDTO.ExpenseList) {
                         var tbld = new CMapping<ExpenseDetailDTO, tblexpensedetail>().GetMappingResult(item);
                         tbl.tblexpensedetails.Add(tbld);
                     }
@@ -91,7 +113,7 @@ namespace MoneyBank.EntityData {
                         Remarks = $"RefTrans: {myDTO.ExpenseTransNo}, Desc: {sbDesc.ToString()}",
                         UserId = myDTO.UserId
                     };
-                    new TransactionData(_ts,_conn).SaveDTO(transItem);
+                    new TransactionData(_ts, _conn).SaveDTO(transItem);
                     //
                     tblBankAcc.AmountAdded = 0;
                     tblBankAcc.DateUpdated = DateTime.Now;
@@ -102,7 +124,7 @@ namespace MoneyBank.EntityData {
                     _ts.SaveChanges();
                     trans.Commit();
 
-                }catch (Exception) {
+                } catch (Exception) {
                     trans.Rollback();
                     throw;
                 }
@@ -131,6 +153,15 @@ namespace MoneyBank.EntityData {
                     trans.Rollback();
                     throw;
                 }
+            }
+        }
+        public void SaveToDB(ExpenseDTO myDTO) {
+            SaveData(myDTO);
+        }
+        private void ValidateDelete(string id) {
+            var tbl = new ReceiveData(_ts).GetById(id);
+            if (tbl != null) {
+                throw new ArgumentException("Transaction has already been cancelled!");
             }
         }
     }

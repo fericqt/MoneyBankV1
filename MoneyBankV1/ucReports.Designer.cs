@@ -36,17 +36,18 @@ namespace MoneyBankV2 {
             // 
             // panelUCReports
             // 
-            this.panelUCReports.Size = new System.Drawing.Size(230, 452);
+            this.panelUCReports.Size = new System.Drawing.Size(298, 549);
             // 
             // panel1
             // 
+            this.panel1.AutoScroll = true;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.cLabelTitle1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(230, 452);
+            this.panel1.Size = new System.Drawing.Size(298, 549);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -57,7 +58,7 @@ namespace MoneyBankV2 {
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 40);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(228, 410);
+            this.panel2.Size = new System.Drawing.Size(296, 507);
             this.panel2.TabIndex = 1;
             // 
             // reportListBox
@@ -68,7 +69,7 @@ namespace MoneyBankV2 {
             this.reportListBox.ItemHeight = 23;
             this.reportListBox.Location = new System.Drawing.Point(0, 0);
             this.reportListBox.Name = "reportListBox";
-            this.reportListBox.Size = new System.Drawing.Size(226, 408);
+            this.reportListBox.Size = new System.Drawing.Size(294, 505);
             this.reportListBox.TabIndex = 0;
             this.reportListBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.reportListBox_MouseDoubleClick);
             // 
@@ -78,7 +79,7 @@ namespace MoneyBankV2 {
             this.cLabelTitle1.Font = new System.Drawing.Font("Poppins", 15F, System.Drawing.FontStyle.Bold);
             this.cLabelTitle1.Location = new System.Drawing.Point(0, 0);
             this.cLabelTitle1.Name = "cLabelTitle1";
-            this.cLabelTitle1.Size = new System.Drawing.Size(228, 40);
+            this.cLabelTitle1.Size = new System.Drawing.Size(296, 40);
             this.cLabelTitle1.TabIndex = 0;
             this.cLabelTitle1.Text = "Reports";
             this.cLabelTitle1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -89,7 +90,7 @@ namespace MoneyBankV2 {
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Name = "ucReports";
-            this.Size = new System.Drawing.Size(230, 452);
+            this.Size = new System.Drawing.Size(298, 549);
             this.Controls.SetChildIndex(this.panelUCReports, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.panel1.ResumeLayout(false);

@@ -35,6 +35,9 @@
   <PropertyGroup>
     <StartupObject>MoneyBankV1.Program</StartupObject>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>MoneyBankLogo.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework">
       <HintPath>..\..\GLOBAL DLL\EntityFramework.dll</HintPath>
@@ -156,6 +159,9 @@
       <Project>{5c0eb1f5-e16d-4642-b894-d526b015fe23}</Project>
       <Name>MoneyBank.Reports</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MoneyBankLogo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

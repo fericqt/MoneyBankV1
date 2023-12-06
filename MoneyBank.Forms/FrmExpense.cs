@@ -1,4 +1,5 @@
-﻿using MoneyBank.Base.Forms;
+﻿using FerPROJ.Design.Class;
+using MoneyBank.Base.Forms;
 using MoneyBank.EntityData;
 using System;
 using System.Collections.Generic;
@@ -22,6 +23,14 @@ namespace MoneyBank.Forms {
         }
         protected override bool AddNewItem() {
             return new FormLayer.ManageForm().ManageExpense("", FerPROJ.Design.Forms.FrmManage.FormMode.Add);
+        }
+        protected override bool DeleteItem() {
+            if(CDGVSetting.GetSelectedValue(dgvExpense, expenseTransNoDataGridViewTextBoxColumn.Index, out string sout)) {
+                using (var data = new ExpenseData()) {
+                    data.Delete(sout);
+                    return true;
+                }
+            }return false;
         }
     }
 }

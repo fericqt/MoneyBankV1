@@ -35,12 +35,16 @@ namespace MoneyBank.Forms {
             this.userDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cTextBoxBasic1 = new FerPROJ.Design.Controls.CTextBoxBasic();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.pbUsername = new System.Windows.Forms.PictureBox();
+            this.pbPassword = new System.Windows.Forms.PictureBox();
             this.basePnl2.SuspendLayout();
             this.PanelMain3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userDTOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUsername)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPassword)).BeginInit();
             this.SuspendLayout();
             // 
             // basePnl2
@@ -93,6 +97,8 @@ namespace MoneyBank.Forms {
             // panel2
             // 
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.Controls.Add(this.pbPassword);
+            this.panel2.Controls.Add(this.pbUsername);
             this.panel2.Controls.Add(this.cTextBoxBasic2);
             this.panel2.Controls.Add(this.cTextBoxBasic1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
@@ -110,11 +116,11 @@ namespace MoneyBank.Forms {
             this.cTextBoxBasic2.Font = new System.Drawing.Font("Poppins", 8F);
             this.cTextBoxBasic2.ForeColor = System.Drawing.Color.Black;
             this.cTextBoxBasic2.LeaveColor = System.Drawing.Color.WhiteSmoke;
-            this.cTextBoxBasic2.Location = new System.Drawing.Point(15, 116);
+            this.cTextBoxBasic2.Location = new System.Drawing.Point(49, 128);
             this.cTextBoxBasic2.Multiline = true;
             this.cTextBoxBasic2.Name = "cTextBoxBasic2";
             this.cTextBoxBasic2.PasswordChar = '*';
-            this.cTextBoxBasic2.Size = new System.Drawing.Size(201, 21);
+            this.cTextBoxBasic2.Size = new System.Drawing.Size(167, 21);
             this.cTextBoxBasic2.TabIndex = 1;
             // 
             // userDTOBindingSource
@@ -130,16 +136,38 @@ namespace MoneyBank.Forms {
             this.cTextBoxBasic1.Font = new System.Drawing.Font("Poppins", 8F);
             this.cTextBoxBasic1.ForeColor = System.Drawing.Color.Black;
             this.cTextBoxBasic1.LeaveColor = System.Drawing.Color.WhiteSmoke;
-            this.cTextBoxBasic1.Location = new System.Drawing.Point(15, 90);
+            this.cTextBoxBasic1.Location = new System.Drawing.Point(49, 103);
             this.cTextBoxBasic1.Multiline = true;
             this.cTextBoxBasic1.Name = "cTextBoxBasic1";
-            this.cTextBoxBasic1.Size = new System.Drawing.Size(201, 21);
+            this.cTextBoxBasic1.Size = new System.Drawing.Size(167, 21);
             this.cTextBoxBasic1.TabIndex = 0;
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
             this.errorProvider1.DataSource = this.userDTOBindingSource;
+            // 
+            // pbUsername
+            // 
+            this.pbUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.pbUsername.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbUsername.BackgroundImage")));
+            this.pbUsername.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbUsername.Location = new System.Drawing.Point(19, 103);
+            this.pbUsername.Name = "pbUsername";
+            this.pbUsername.Size = new System.Drawing.Size(28, 21);
+            this.pbUsername.TabIndex = 2;
+            this.pbUsername.TabStop = false;
+            // 
+            // pbPassword
+            // 
+            this.pbPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.pbPassword.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbPassword.BackgroundImage")));
+            this.pbPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbPassword.Location = new System.Drawing.Point(19, 128);
+            this.pbPassword.Name = "pbPassword";
+            this.pbPassword.Size = new System.Drawing.Size(28, 21);
+            this.pbPassword.TabIndex = 3;
+            this.pbPassword.TabStop = false;
             // 
             // ManageLogin
             // 
@@ -157,6 +185,8 @@ namespace MoneyBank.Forms {
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userDTOBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUsername)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPassword)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -170,5 +200,7 @@ namespace MoneyBank.Forms {
         private ErrorProvider errorProvider1;
         private FerPROJ.Design.Controls.CTextBoxBasic cTextBoxBasic2;
         private FerPROJ.Design.Controls.CTextBoxBasic cTextBoxBasic1;
+        private PictureBox pbUsername;
+        private PictureBox pbPassword;
     }
 }

@@ -1,4 +1,5 @@
-﻿using MoneyBank.Base.Forms;
+﻿using FerPROJ.Design.Class;
+using MoneyBank.Base.Forms;
 using MoneyBank.DTO;
 using MoneyBank.EntityData;
 using System;
@@ -69,6 +70,12 @@ namespace MoneyBank.Forms {
             using (var data = new UserData()) {
                 data.LoadComboBox(cmbBankAccount, myDTO.UserId);
             }
+        }
+
+        private void tsbRemove_Click(object sender, EventArgs e) {
+            var item = CDGVSetting.GetItemDTO<ExpenseDetailDTO>(dgvExpenseDetails);
+            myDTO.ExpenseList.Remove(item);
+            Reset();
         }
     }
 }

@@ -36,7 +36,7 @@ namespace MoneyBank.Forms {
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbAdd = new System.Windows.Forms.ToolStripButton();
             this.tsbRemove = new System.Windows.Forms.ToolStripButton();
-            this.cDatagridview1 = new FerPROJ.Design.Controls.CDatagridview();
+            this.dgvReceiveDetails = new FerPROJ.Design.Controls.CDatagridview();
             this.receiveItemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.receiveAmountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.receiveQuantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,11 +55,13 @@ namespace MoneyBank.Forms {
             this.cLabelDesc8 = new FerPROJ.Design.Controls.CLabelDesc();
             this.cLabelDesc9 = new FerPROJ.Design.Controls.CLabelDesc();
             this.llUserID = new System.Windows.Forms.LinkLabel();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.basePnl2.SuspendLayout();
             this.PanelMain3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cDatagridview1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReceiveDetails)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.receiveDetailDTOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.receiveDTOBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
@@ -103,7 +105,7 @@ namespace MoneyBank.Forms {
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.toolStrip1);
-            this.panel1.Controls.Add(this.cDatagridview1);
+            this.panel1.Controls.Add(this.dgvReceiveDetails);
             this.panel1.Location = new System.Drawing.Point(21, 94);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(769, 229);
@@ -111,8 +113,11 @@ namespace MoneyBank.Forms {
             // 
             // toolStrip1
             // 
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripSeparator1,
             this.tsbAdd,
+            this.toolStripSeparator2,
             this.tsbRemove});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -138,22 +143,23 @@ namespace MoneyBank.Forms {
             this.tsbRemove.Name = "tsbRemove";
             this.tsbRemove.Size = new System.Drawing.Size(23, 22);
             this.tsbRemove.Text = "toolStripButton1";
+            this.tsbRemove.Click += new System.EventHandler(this.tsbRemove_Click);
             // 
-            // cDatagridview1
+            // dgvReceiveDetails
             // 
-            this.cDatagridview1.AllowUserToAddRows = false;
-            this.cDatagridview1.AllowUserToDeleteRows = false;
-            this.cDatagridview1.AllowUserToOrderColumns = true;
-            this.cDatagridview1.AllowUserToResizeRows = false;
-            this.cDatagridview1.AlternatingRowColor = System.Drawing.Color.LightGray;
+            this.dgvReceiveDetails.AllowUserToAddRows = false;
+            this.dgvReceiveDetails.AllowUserToDeleteRows = false;
+            this.dgvReceiveDetails.AllowUserToOrderColumns = true;
+            this.dgvReceiveDetails.AllowUserToResizeRows = false;
+            this.dgvReceiveDetails.AlternatingRowColor = System.Drawing.Color.LightGray;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray;
-            this.cDatagridview1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.cDatagridview1.AutoGenerateColumns = false;
-            this.cDatagridview1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.cDatagridview1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.cDatagridview1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.cDatagridview1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cDatagridview1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Custom;
+            this.dgvReceiveDetails.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvReceiveDetails.AutoGenerateColumns = false;
+            this.dgvReceiveDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvReceiveDetails.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvReceiveDetails.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.dgvReceiveDetails.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvReceiveDetails.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Custom;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins", 12F);
@@ -161,18 +167,18 @@ namespace MoneyBank.Forms {
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.cDatagridview1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.cDatagridview1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.cDatagridview1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvReceiveDetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvReceiveDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReceiveDetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.receiveItemNameDataGridViewTextBoxColumn,
             this.receiveAmountDataGridViewTextBoxColumn,
             this.receiveQuantityDataGridViewTextBoxColumn,
             this.remarksDataGridViewTextBoxColumn,
             this.receiveAmountTotalDataGridViewTextBoxColumn});
-            this.cDatagridview1.CustomHeaderFontStyle = new System.Drawing.Font("Poppins", 12F);
-            this.cDatagridview1.CustomHeaderForeColor = System.Drawing.Color.Black;
-            this.cDatagridview1.CustomRowFontStyle = new System.Drawing.Font("Poppins", 10F);
-            this.cDatagridview1.DataSource = this.receiveDetailDTOBindingSource;
+            this.dgvReceiveDetails.CustomHeaderFontStyle = new System.Drawing.Font("Poppins", 12F);
+            this.dgvReceiveDetails.CustomHeaderForeColor = System.Drawing.Color.Black;
+            this.dgvReceiveDetails.CustomRowFontStyle = new System.Drawing.Font("Poppins", 10F);
+            this.dgvReceiveDetails.DataSource = this.receiveDetailDTOBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins", 10F);
@@ -180,25 +186,25 @@ namespace MoneyBank.Forms {
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.cDatagridview1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.cDatagridview1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.cDatagridview1.EnableHeadersVisualStyles = false;
-            this.cDatagridview1.HeaderColor = System.Drawing.Color.WhiteSmoke;
-            this.cDatagridview1.Location = new System.Drawing.Point(0, 24);
-            this.cDatagridview1.Name = "cDatagridview1";
-            this.cDatagridview1.ReadOnly = true;
-            this.cDatagridview1.RowHeadersVisible = false;
+            this.dgvReceiveDetails.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvReceiveDetails.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvReceiveDetails.EnableHeadersVisualStyles = false;
+            this.dgvReceiveDetails.HeaderColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvReceiveDetails.Location = new System.Drawing.Point(0, 24);
+            this.dgvReceiveDetails.Name = "dgvReceiveDetails";
+            this.dgvReceiveDetails.ReadOnly = true;
+            this.dgvReceiveDetails.RowHeadersVisible = false;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Poppins", 10F);
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.cDatagridview1.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.cDatagridview1.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.cDatagridview1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.cDatagridview1.Size = new System.Drawing.Size(767, 203);
-            this.cDatagridview1.TabIndex = 0;
+            this.dgvReceiveDetails.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvReceiveDetails.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.dgvReceiveDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvReceiveDetails.Size = new System.Drawing.Size(767, 203);
+            this.dgvReceiveDetails.TabIndex = 0;
             // 
             // receiveItemNameDataGridViewTextBoxColumn
             // 
@@ -363,6 +369,16 @@ namespace MoneyBank.Forms {
             this.llUserID.Text = "User ID:";
             this.llUserID.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llUserID_LinkClicked);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
             // ManageReceive
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -378,7 +394,7 @@ namespace MoneyBank.Forms {
             this.panel1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cDatagridview1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReceiveDetails)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.receiveDetailDTOBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.receiveDTOBindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -399,7 +415,7 @@ namespace MoneyBank.Forms {
         private FerPROJ.Design.Controls.CLabelDesc cLabelDesc6;
         private FerPROJ.Design.Controls.CLabelDesc cLabelDesc8;
         private FerPROJ.Design.Controls.CLabelDesc cLabelDesc9;
-        private FerPROJ.Design.Controls.CDatagridview cDatagridview1;
+        private FerPROJ.Design.Controls.CDatagridview dgvReceiveDetails;
         private BindingSource receiveDetailDTOBindingSource;
         private BindingSource receiveDTOBindingSource;
         private ToolStrip toolStrip1;
@@ -411,5 +427,7 @@ namespace MoneyBank.Forms {
         private DataGridViewTextBoxColumn remarksDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn receiveAmountTotalDataGridViewTextBoxColumn;
         private LinkLabel llUserID;
+        private ToolStripSeparator toolStripSeparator1;
+        private ToolStripSeparator toolStripSeparator2;
     }
 }

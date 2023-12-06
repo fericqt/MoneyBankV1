@@ -30,120 +30,123 @@ namespace MoneyBankV2
         ///  the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            panel1 = new Panel();
-            ucReports1 = new ucReports();
-            tableLayoutPanel1 = new TableLayoutPanel();
-            panel2 = new Panel();
-            ucManagement1 = new ucManagement();
-            panel3 = new Panel();
-            ucTransactionList1 = new ucTransactionList();
-            dbPanel1.SuspendLayout();
-            dbPanel8.SuspendLayout();
-            panel1.SuspendLayout();
-            tableLayoutPanel1.SuspendLayout();
-            panel2.SuspendLayout();
-            panel3.SuspendLayout();
-            SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.ucReports1 = new MoneyBankV2.ucReports();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.ucManagement1 = new MoneyBankV2.ucManagement();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.ucTransactionList1 = new MoneyBankV2.ucTransactionList();
+            this.dbPanel1.SuspendLayout();
+            this.dbPanel8.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.SuspendLayout();
             // 
             // dbPanel1
             // 
-            dbPanel1.Size = new Size(874, 509);
+            this.dbPanel1.Size = new System.Drawing.Size(749, 441);
             // 
             // dbPanel6
             // 
-            dbPanel6.Location = new Point(0, 405);
+            this.dbPanel6.Location = new System.Drawing.Point(0, 350);
             // 
             // dbPanel3
             // 
-            dbPanel3.Size = new Size(233, 307);
+            this.dbPanel3.Size = new System.Drawing.Size(200, 265);
             // 
             // dbPanel8
             // 
-            dbPanel8.Controls.Add(tableLayoutPanel1);
-            dbPanel8.Controls.Add(panel1);
-            dbPanel8.Size = new Size(637, 507);
+            this.dbPanel8.Controls.Add(this.tableLayoutPanel1);
+            this.dbPanel8.Controls.Add(this.panel1);
+            this.dbPanel8.Size = new System.Drawing.Size(545, 439);
             // 
             // panel1
             // 
-            panel1.Controls.Add(ucReports1);
-            panel1.Dock = DockStyle.Right;
-            panel1.Location = new Point(437, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(200, 507);
-            panel1.TabIndex = 0;
+            this.panel1.Controls.Add(this.ucReports1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(374, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(171, 439);
+            this.panel1.TabIndex = 0;
             // 
             // ucReports1
             // 
-            ucReports1.Dock = DockStyle.Fill;
-            ucReports1.Location = new Point(0, 0);
-            ucReports1.Name = "ucReports1";
-            ucReports1.Size = new Size(200, 507);
-            ucReports1.TabIndex = 0;
+            this.ucReports1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucReports1.Location = new System.Drawing.Point(0, 0);
+            this.ucReports1.Name = "ucReports1";
+            this.ucReports1.Size = new System.Drawing.Size(171, 439);
+            this.ucReports1.TabIndex = 0;
             // 
             // tableLayoutPanel1
             // 
-            tableLayoutPanel1.ColumnCount = 1;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Controls.Add(panel2, 0, 0);
-            tableLayoutPanel1.Controls.Add(panel3, 0, 1);
-            tableLayoutPanel1.Dock = DockStyle.Fill;
-            tableLayoutPanel1.Location = new Point(0, 0);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 2;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(437, 507);
-            tableLayoutPanel1.TabIndex = 1;
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel3, 0, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(374, 439);
+            this.tableLayoutPanel1.TabIndex = 1;
             // 
             // panel2
             // 
-            panel2.Controls.Add(ucManagement1);
-            panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(3, 3);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(431, 247);
-            panel2.TabIndex = 0;
+            this.panel2.Controls.Add(this.ucManagement1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(368, 213);
+            this.panel2.TabIndex = 0;
             // 
             // ucManagement1
             // 
-            ucManagement1.Dock = DockStyle.Fill;
-            ucManagement1.Location = new Point(0, 0);
-            ucManagement1.Name = "ucManagement1";
-            ucManagement1.Size = new Size(431, 247);
-            ucManagement1.TabIndex = 0;
+            this.ucManagement1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucManagement1.Location = new System.Drawing.Point(0, 0);
+            this.ucManagement1.Name = "ucManagement1";
+            this.ucManagement1.Size = new System.Drawing.Size(368, 213);
+            this.ucManagement1.TabIndex = 0;
             // 
             // panel3
             // 
-            panel3.Controls.Add(ucTransactionList1);
-            panel3.Dock = DockStyle.Fill;
-            panel3.Location = new Point(3, 256);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(431, 248);
-            panel3.TabIndex = 1;
+            this.panel3.Controls.Add(this.ucTransactionList1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(3, 222);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(368, 214);
+            this.panel3.TabIndex = 1;
             // 
             // ucTransactionList1
             // 
-            ucTransactionList1.Dock = DockStyle.Fill;
-            ucTransactionList1.Location = new Point(0, 0);
-            ucTransactionList1.Name = "ucTransactionList1";
-            ucTransactionList1.Size = new Size(431, 248);
-            ucTransactionList1.TabIndex = 0;
+            this.ucTransactionList1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucTransactionList1.Location = new System.Drawing.Point(0, 0);
+            this.ucTransactionList1.Name = "ucTransactionList1";
+            this.ucTransactionList1.Size = new System.Drawing.Size(368, 214);
+            this.ucTransactionList1.TabIndex = 0;
             // 
             // Dashboard
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(874, 509);
-            Location = new Point(0, 0);
-            Name = "Dashboard";
-            Text = "Dashboard";
-            dbPanel1.ResumeLayout(false);
-            dbPanel8.ResumeLayout(false);
-            panel1.ResumeLayout(false);
-            tableLayoutPanel1.ResumeLayout(false);
-            panel2.ResumeLayout(false);
-            panel3.ResumeLayout(false);
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(749, 441);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Location = new System.Drawing.Point(0, 0);
+            this.Name = "Dashboard";
+            this.Text = "Dashboard";
+            this.dbPanel1.ResumeLayout(false);
+            this.dbPanel8.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

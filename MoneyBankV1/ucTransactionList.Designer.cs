@@ -26,251 +26,267 @@ namespace MoneyBankV2 {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucTransactionList));
-            panel1 = new Panel();
-            tabControl1 = new TabControl();
-            tpTransactions = new TabPage();
-            dgvTransaction = new FerPROJ.Design.Controls.CDatagridview();
-            transactionDTOBindingSource = new BindingSource(components);
-            toolStrip1 = new ToolStrip();
-            rsbRefresh = new ToolStripButton();
-            idTrackDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            dateReferenceDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            transNoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            userIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            referenceTransNoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            bankAccountNoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            descriptionDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            addedDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            deductedDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            oldBalanceDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            newBalanceDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            remarksDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            panel1.SuspendLayout();
-            tabControl1.SuspendLayout();
-            tpTransactions.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvTransaction).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)transactionDTOBindingSource).BeginInit();
-            toolStrip1.SuspendLayout();
-            SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tpTransactions = new System.Windows.Forms.TabPage();
+            this.dgvTransaction = new FerPROJ.Design.Controls.CDatagridview();
+            this.idTrackDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateReferenceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.transNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.referenceTransNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bankAccountNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deductedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.oldBalanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.newBalanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.remarksDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.transactionDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.rsbRefresh = new System.Windows.Forms.ToolStripButton();
+            this.panel1.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tpTransactions.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTransaction)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transactionDTOBindingSource)).BeginInit();
+            this.toolStrip1.SuspendLayout();
+            this.SuspendLayout();
             // 
             // panel1
             // 
-            panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(tabControl1);
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(775, 477);
-            panel1.TabIndex = 0;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.tabControl1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(664, 413);
+            this.panel1.TabIndex = 0;
             // 
             // tabControl1
             // 
-            tabControl1.Controls.Add(tpTransactions);
-            tabControl1.Dock = DockStyle.Fill;
-            tabControl1.Location = new Point(0, 0);
-            tabControl1.Name = "tabControl1";
-            tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(773, 475);
-            tabControl1.TabIndex = 0;
+            this.tabControl1.Controls.Add(this.tpTransactions);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(662, 411);
+            this.tabControl1.TabIndex = 0;
             // 
             // tpTransactions
             // 
-            tpTransactions.Controls.Add(dgvTransaction);
-            tpTransactions.Controls.Add(toolStrip1);
-            tpTransactions.Font = new Font("Poppins Medium", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            tpTransactions.Location = new Point(4, 24);
-            tpTransactions.Name = "tpTransactions";
-            tpTransactions.Padding = new Padding(3);
-            tpTransactions.Size = new Size(765, 447);
-            tpTransactions.TabIndex = 0;
-            tpTransactions.Text = "Transaction List";
-            tpTransactions.UseVisualStyleBackColor = true;
+            this.tpTransactions.Controls.Add(this.dgvTransaction);
+            this.tpTransactions.Controls.Add(this.toolStrip1);
+            this.tpTransactions.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tpTransactions.Location = new System.Drawing.Point(4, 37);
+            this.tpTransactions.Name = "tpTransactions";
+            this.tpTransactions.Padding = new System.Windows.Forms.Padding(3);
+            this.tpTransactions.Size = new System.Drawing.Size(654, 370);
+            this.tpTransactions.TabIndex = 0;
+            this.tpTransactions.Text = "Transaction List";
+            this.tpTransactions.UseVisualStyleBackColor = true;
             // 
             // dgvTransaction
             // 
-            dgvTransaction.AllowUserToAddRows = false;
-            dgvTransaction.AllowUserToDeleteRows = false;
-            dgvTransaction.AllowUserToOrderColumns = true;
-            dgvTransaction.AllowUserToResizeRows = false;
-            dgvTransaction.AlternatingRowColor = Color.LightGray;
-            dataGridViewCellStyle1.BackColor = Color.LightGray;
-            dgvTransaction.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dgvTransaction.AutoGenerateColumns = false;
-            dgvTransaction.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dgvTransaction.BackgroundColor = Color.FromArgb(240, 240, 240);
-            dgvTransaction.BorderStyle = BorderStyle.None;
-            dgvTransaction.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Custom;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.WhiteSmoke;
-            dataGridViewCellStyle2.Font = new Font("Poppins Medium", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = Color.WhiteSmoke;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvTransaction.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dgvTransaction.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvTransaction.Columns.AddRange(new DataGridViewColumn[] { idTrackDataGridViewTextBoxColumn, dateReferenceDataGridViewTextBoxColumn, transNoDataGridViewTextBoxColumn, userIdDataGridViewTextBoxColumn, referenceTransNoDataGridViewTextBoxColumn, bankAccountNoDataGridViewTextBoxColumn, descriptionDataGridViewTextBoxColumn, addedDataGridViewTextBoxColumn, deductedDataGridViewTextBoxColumn, oldBalanceDataGridViewTextBoxColumn, newBalanceDataGridViewTextBoxColumn, remarksDataGridViewTextBoxColumn });
-            dgvTransaction.CustomHeaderFontStyle = new Font("Poppins Medium", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dgvTransaction.CustomHeaderForeColor = Color.Black;
-            dgvTransaction.CustomRowFontStyle = new Font("Poppins", 10F);
-            dgvTransaction.DataSource = transactionDTOBindingSource;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Window;
-            dataGridViewCellStyle3.Font = new Font("Poppins", 10F);
-            dataGridViewCellStyle3.ForeColor = Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgvTransaction.DefaultCellStyle = dataGridViewCellStyle3;
-            dgvTransaction.Dock = DockStyle.Fill;
-            dgvTransaction.EnableHeadersVisualStyles = false;
-            dgvTransaction.HeaderColor = Color.WhiteSmoke;
-            dgvTransaction.Location = new Point(3, 28);
-            dgvTransaction.Name = "dgvTransaction";
-            dgvTransaction.ReadOnly = true;
-            dgvTransaction.RowHeadersVisible = false;
-            dataGridViewCellStyle4.BackColor = Color.WhiteSmoke;
-            dataGridViewCellStyle4.Font = new Font("Poppins", 10F);
-            dataGridViewCellStyle4.ForeColor = Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(128, 128, 255);
-            dataGridViewCellStyle4.SelectionForeColor = Color.White;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgvTransaction.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            dgvTransaction.SelectionColor = Color.FromArgb(128, 128, 255);
-            dgvTransaction.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvTransaction.Size = new Size(759, 416);
-            dgvTransaction.TabIndex = 0;
-            // 
-            // transactionDTOBindingSource
-            // 
-            transactionDTOBindingSource.DataSource = typeof(MoneyBank.DTO.TransactionDTO);
-            // 
-            // toolStrip1
-            // 
-            toolStrip1.Items.AddRange(new ToolStripItem[] { rsbRefresh });
-            toolStrip1.Location = new Point(3, 3);
-            toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(759, 25);
-            toolStrip1.TabIndex = 1;
-            toolStrip1.Text = "toolStrip1";
-            // 
-            // rsbRefresh
-            // 
-            rsbRefresh.Image = (Image)resources.GetObject("rsbRefresh.Image");
-            rsbRefresh.ImageTransparentColor = Color.Magenta;
-            rsbRefresh.Name = "rsbRefresh";
-            rsbRefresh.Size = new Size(93, 22);
-            rsbRefresh.Text = "Refresh Data";
-            rsbRefresh.Click += rsbRefresh_Click;
+            this.dgvTransaction.AllowUserToAddRows = false;
+            this.dgvTransaction.AllowUserToDeleteRows = false;
+            this.dgvTransaction.AllowUserToOrderColumns = true;
+            this.dgvTransaction.AllowUserToResizeRows = false;
+            this.dgvTransaction.AlternatingRowColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray;
+            this.dgvTransaction.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvTransaction.AutoGenerateColumns = false;
+            this.dgvTransaction.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvTransaction.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.dgvTransaction.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvTransaction.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Custom;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTransaction.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvTransaction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTransaction.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idTrackDataGridViewTextBoxColumn,
+            this.dateReferenceDataGridViewTextBoxColumn,
+            this.transNoDataGridViewTextBoxColumn,
+            this.userIdDataGridViewTextBoxColumn,
+            this.referenceTransNoDataGridViewTextBoxColumn,
+            this.bankAccountNoDataGridViewTextBoxColumn,
+            this.descriptionDataGridViewTextBoxColumn,
+            this.addedDataGridViewTextBoxColumn,
+            this.deductedDataGridViewTextBoxColumn,
+            this.oldBalanceDataGridViewTextBoxColumn,
+            this.newBalanceDataGridViewTextBoxColumn,
+            this.remarksDataGridViewTextBoxColumn});
+            this.dgvTransaction.CustomHeaderFontStyle = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvTransaction.CustomHeaderForeColor = System.Drawing.Color.Black;
+            this.dgvTransaction.CustomRowFontStyle = new System.Drawing.Font("Poppins", 10F);
+            this.dgvTransaction.DataSource = this.transactionDTOBindingSource;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins", 10F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTransaction.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvTransaction.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvTransaction.EnableHeadersVisualStyles = false;
+            this.dgvTransaction.HeaderColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvTransaction.Location = new System.Drawing.Point(3, 28);
+            this.dgvTransaction.Name = "dgvTransaction";
+            this.dgvTransaction.ReadOnly = true;
+            this.dgvTransaction.RowHeadersVisible = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Poppins", 10F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTransaction.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvTransaction.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.dgvTransaction.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvTransaction.Size = new System.Drawing.Size(648, 339);
+            this.dgvTransaction.TabIndex = 0;
             // 
             // idTrackDataGridViewTextBoxColumn
             // 
-            idTrackDataGridViewTextBoxColumn.DataPropertyName = "IdTrack";
-            idTrackDataGridViewTextBoxColumn.HeaderText = "IdTrack";
-            idTrackDataGridViewTextBoxColumn.Name = "idTrackDataGridViewTextBoxColumn";
-            idTrackDataGridViewTextBoxColumn.ReadOnly = true;
-            idTrackDataGridViewTextBoxColumn.Visible = false;
+            this.idTrackDataGridViewTextBoxColumn.DataPropertyName = "IdTrack";
+            this.idTrackDataGridViewTextBoxColumn.HeaderText = "IdTrack";
+            this.idTrackDataGridViewTextBoxColumn.Name = "idTrackDataGridViewTextBoxColumn";
+            this.idTrackDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idTrackDataGridViewTextBoxColumn.Visible = false;
             // 
             // dateReferenceDataGridViewTextBoxColumn
             // 
-            dateReferenceDataGridViewTextBoxColumn.DataPropertyName = "DateReference";
-            dateReferenceDataGridViewTextBoxColumn.HeaderText = "DateReference";
-            dateReferenceDataGridViewTextBoxColumn.Name = "dateReferenceDataGridViewTextBoxColumn";
-            dateReferenceDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dateReferenceDataGridViewTextBoxColumn.DataPropertyName = "DateReference";
+            this.dateReferenceDataGridViewTextBoxColumn.HeaderText = "DateReference";
+            this.dateReferenceDataGridViewTextBoxColumn.Name = "dateReferenceDataGridViewTextBoxColumn";
+            this.dateReferenceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // transNoDataGridViewTextBoxColumn
             // 
-            transNoDataGridViewTextBoxColumn.DataPropertyName = "TransNo";
-            transNoDataGridViewTextBoxColumn.HeaderText = "TransNo";
-            transNoDataGridViewTextBoxColumn.Name = "transNoDataGridViewTextBoxColumn";
-            transNoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.transNoDataGridViewTextBoxColumn.DataPropertyName = "TransNo";
+            this.transNoDataGridViewTextBoxColumn.HeaderText = "TransNo";
+            this.transNoDataGridViewTextBoxColumn.Name = "transNoDataGridViewTextBoxColumn";
+            this.transNoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // userIdDataGridViewTextBoxColumn
             // 
-            userIdDataGridViewTextBoxColumn.DataPropertyName = "UserId";
-            userIdDataGridViewTextBoxColumn.HeaderText = "UserId";
-            userIdDataGridViewTextBoxColumn.Name = "userIdDataGridViewTextBoxColumn";
-            userIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.userIdDataGridViewTextBoxColumn.DataPropertyName = "UserId";
+            this.userIdDataGridViewTextBoxColumn.HeaderText = "UserId";
+            this.userIdDataGridViewTextBoxColumn.Name = "userIdDataGridViewTextBoxColumn";
+            this.userIdDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // referenceTransNoDataGridViewTextBoxColumn
             // 
-            referenceTransNoDataGridViewTextBoxColumn.DataPropertyName = "ReferenceTransNo";
-            referenceTransNoDataGridViewTextBoxColumn.HeaderText = "ReferenceTransNo";
-            referenceTransNoDataGridViewTextBoxColumn.Name = "referenceTransNoDataGridViewTextBoxColumn";
-            referenceTransNoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.referenceTransNoDataGridViewTextBoxColumn.DataPropertyName = "ReferenceTransNo";
+            this.referenceTransNoDataGridViewTextBoxColumn.HeaderText = "ReferenceTransNo";
+            this.referenceTransNoDataGridViewTextBoxColumn.Name = "referenceTransNoDataGridViewTextBoxColumn";
+            this.referenceTransNoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // bankAccountNoDataGridViewTextBoxColumn
             // 
-            bankAccountNoDataGridViewTextBoxColumn.DataPropertyName = "BankAccountNo";
-            bankAccountNoDataGridViewTextBoxColumn.HeaderText = "BankAccountNo";
-            bankAccountNoDataGridViewTextBoxColumn.Name = "bankAccountNoDataGridViewTextBoxColumn";
-            bankAccountNoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bankAccountNoDataGridViewTextBoxColumn.DataPropertyName = "BankAccountNo";
+            this.bankAccountNoDataGridViewTextBoxColumn.HeaderText = "BankAccountNo";
+            this.bankAccountNoDataGridViewTextBoxColumn.Name = "bankAccountNoDataGridViewTextBoxColumn";
+            this.bankAccountNoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // descriptionDataGridViewTextBoxColumn
             // 
-            descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
-            descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
-            descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
-            descriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // addedDataGridViewTextBoxColumn
             // 
-            addedDataGridViewTextBoxColumn.DataPropertyName = "Added";
-            addedDataGridViewTextBoxColumn.HeaderText = "Added";
-            addedDataGridViewTextBoxColumn.Name = "addedDataGridViewTextBoxColumn";
-            addedDataGridViewTextBoxColumn.ReadOnly = true;
+            this.addedDataGridViewTextBoxColumn.DataPropertyName = "Added";
+            this.addedDataGridViewTextBoxColumn.HeaderText = "Added";
+            this.addedDataGridViewTextBoxColumn.Name = "addedDataGridViewTextBoxColumn";
+            this.addedDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // deductedDataGridViewTextBoxColumn
             // 
-            deductedDataGridViewTextBoxColumn.DataPropertyName = "Deducted";
-            deductedDataGridViewTextBoxColumn.HeaderText = "Deducted";
-            deductedDataGridViewTextBoxColumn.Name = "deductedDataGridViewTextBoxColumn";
-            deductedDataGridViewTextBoxColumn.ReadOnly = true;
+            this.deductedDataGridViewTextBoxColumn.DataPropertyName = "Deducted";
+            this.deductedDataGridViewTextBoxColumn.HeaderText = "Deducted";
+            this.deductedDataGridViewTextBoxColumn.Name = "deductedDataGridViewTextBoxColumn";
+            this.deductedDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // oldBalanceDataGridViewTextBoxColumn
             // 
-            oldBalanceDataGridViewTextBoxColumn.DataPropertyName = "OldBalance";
-            oldBalanceDataGridViewTextBoxColumn.HeaderText = "OldBalance";
-            oldBalanceDataGridViewTextBoxColumn.Name = "oldBalanceDataGridViewTextBoxColumn";
-            oldBalanceDataGridViewTextBoxColumn.ReadOnly = true;
+            this.oldBalanceDataGridViewTextBoxColumn.DataPropertyName = "OldBalance";
+            this.oldBalanceDataGridViewTextBoxColumn.HeaderText = "OldBalance";
+            this.oldBalanceDataGridViewTextBoxColumn.Name = "oldBalanceDataGridViewTextBoxColumn";
+            this.oldBalanceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // newBalanceDataGridViewTextBoxColumn
             // 
-            newBalanceDataGridViewTextBoxColumn.DataPropertyName = "NewBalance";
-            newBalanceDataGridViewTextBoxColumn.HeaderText = "NewBalance";
-            newBalanceDataGridViewTextBoxColumn.Name = "newBalanceDataGridViewTextBoxColumn";
-            newBalanceDataGridViewTextBoxColumn.ReadOnly = true;
+            this.newBalanceDataGridViewTextBoxColumn.DataPropertyName = "NewBalance";
+            this.newBalanceDataGridViewTextBoxColumn.HeaderText = "NewBalance";
+            this.newBalanceDataGridViewTextBoxColumn.Name = "newBalanceDataGridViewTextBoxColumn";
+            this.newBalanceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // remarksDataGridViewTextBoxColumn
             // 
-            remarksDataGridViewTextBoxColumn.DataPropertyName = "Remarks";
-            remarksDataGridViewTextBoxColumn.HeaderText = "Remarks";
-            remarksDataGridViewTextBoxColumn.Name = "remarksDataGridViewTextBoxColumn";
-            remarksDataGridViewTextBoxColumn.ReadOnly = true;
+            this.remarksDataGridViewTextBoxColumn.DataPropertyName = "Remarks";
+            this.remarksDataGridViewTextBoxColumn.HeaderText = "Remarks";
+            this.remarksDataGridViewTextBoxColumn.Name = "remarksDataGridViewTextBoxColumn";
+            this.remarksDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // transactionDTOBindingSource
+            // 
+            this.transactionDTOBindingSource.DataSource = typeof(MoneyBank.DTO.TransactionDTO);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.rsbRefresh});
+            this.toolStrip1.Location = new System.Drawing.Point(3, 3);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(648, 25);
+            this.toolStrip1.TabIndex = 1;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // rsbRefresh
+            // 
+            this.rsbRefresh.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.rsbRefresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.rsbRefresh.Image = ((System.Drawing.Image)(resources.GetObject("rsbRefresh.Image")));
+            this.rsbRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.rsbRefresh.Name = "rsbRefresh";
+            this.rsbRefresh.Size = new System.Drawing.Size(23, 22);
+            this.rsbRefresh.Text = "Refresh Data";
             // 
             // ucTransactionList
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(panel1);
-            Name = "ucTransactionList";
-            Size = new Size(775, 477);
-            Load += ucTransactionList_Load;
-            panel1.ResumeLayout(false);
-            tabControl1.ResumeLayout(false);
-            tpTransactions.ResumeLayout(false);
-            tpTransactions.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvTransaction).EndInit();
-            ((System.ComponentModel.ISupportInitialize)transactionDTOBindingSource).EndInit();
-            toolStrip1.ResumeLayout(false);
-            toolStrip1.PerformLayout();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel1);
+            this.Name = "ucTransactionList";
+            this.Size = new System.Drawing.Size(664, 413);
+            this.panel1.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            this.tpTransactions.ResumeLayout(false);
+            this.tpTransactions.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTransaction)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transactionDTOBindingSource)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion

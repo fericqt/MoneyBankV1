@@ -56,6 +56,8 @@ namespace MoneyBank.Reports {
         }
         private ReportDocument BankTransactionByBank() {
             using (var frm = new ManageReportFilter()) {
+                frm.ShowBank = true;
+                frm.ShowUserID = true;
                 frm.ShowDialog();
                 if (frm.CurrentFormResult) {
                     string sQuery = $"SELECT * FROM tbltransactions tblt INNER JOIN tbluserbank tblu ON tblt.BankAccountNo = tblu.BankAccountNo " +
@@ -71,6 +73,7 @@ namespace MoneyBank.Reports {
         }
         private ReportDocument BankBalanceByUserID() {
             using (var frm = new ManageReportFilter()) {
+                frm.ShowUserID = true;
                 frm.ShowDialog();
                 if (frm.CurrentFormResult) {
                     string sQuery = $"SELECT * FROM tbluser tu INNER JOIN viewbankbalance bb ON bb.UserID = tu.UserID " +
@@ -80,7 +83,8 @@ namespace MoneyBank.Reports {
                     rpt.SetDataSource(new Conn().GetDataTable(sQuery));
                     return rpt;
                 }
-            }return null;
+            }
+            return null;
         }
 
     }

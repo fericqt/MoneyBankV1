@@ -81,5 +81,11 @@ namespace MoneyBank.Forms {
                 data.LoadComboBox(cmbBank, myDTO.UserId);
             }
         }
+
+        private void tsbRemove_Click(object sender, EventArgs e) {
+            var item = CDGVSetting.GetItemDTO<ReceiveDetailDTO>(dgvReceiveDetails);
+            myDTO.ReceiveList.Remove(item);
+            Reset();
+        }
     }
 }

@@ -92,10 +92,14 @@ namespace MoneyBank.EntityData {
                     var tblFromBank = tblFrom.tbluserbankaccounts.FirstOrDefault(c => c.BankAccountNo == myDTO.BankAccountNoFrom);
                     var tblToBank = tblTo.tbluserbankaccounts.FirstOrDefault(c => c.BankAccountNo == myDTO.BankAccountNoTo);
                     //
+                    var tblFromBankEndingNo = tblFromBank.BankAccountNo.Substring((tblFromBank.BankAccountNo.Length - 4), 4);
+                    var tblToBankEndingNo = tblToBank.BankAccountNo.Substring((tblToBank.BankAccountNo.Length - 4), 4);
+                    //
                     var bankFrom = new TransactionDTO {
                         ReferenceTransNo = GetBankTransferID(),
                         BankAccountNo = myDTO.BankAccountNoFrom,
-                        Description = $"Transfer To {tblTo.FullName} using {tblFromBank.BankName} amounting of {myDTO.Amount}",
+                        Description = $"Transfer To {tblTo.FullName} using {tblFromBank.BankName} ending no. of {tblFromBankEndingNo}" +
+                                      $"from your {tblFromBank.BankName} ending no. of {tblFromBankEndingNo} amounting of {myDTO.Amount}",
                         Added = 0,
                         Deducted = -myDTO.Amount,
                         OldBalance = (decimal)tblFromBank.RemainingBalance,
@@ -108,11 +112,12 @@ namespace MoneyBank.EntityData {
                     var bankTo = new TransactionDTO {
                         ReferenceTransNo = GetBankTransferID(),
                         BankAccountNo = myDTO.BankAccountNoTo,
-                        Description = $"Received from {tblFrom.FullName} using {tblToBank.BankName} amounting of {myDTO.Amount}",
+                        Description = $"Received from {tblFrom.FullName} using {tblFromBank.BankName} ending no. of {tblFromBankEndingNo} " +
+                                      $"To your {tblToBank.BankName} ending no of {tblToBankEndingNo} amounting of {myDTO.Amount}",
                         Added = myDTO.Amount,
                         Deducted = 0,
-                        OldBalance = (decimal)tblFromBank.RemainingBalance,
-                        NewBalance = (decimal)tblFromBank.RemainingBalance + myDTO.Amount,
+                        OldBalance = (decimal)tblToBank.RemainingBalance,
+                        NewBalance = (decimal)tblToBank.RemainingBalance + myDTO.Amount,
                         Remarks = myDTO.Remarks,
                         UserId = myDTO.UserIDTo
                     };
