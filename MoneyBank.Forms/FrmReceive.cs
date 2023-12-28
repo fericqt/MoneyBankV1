@@ -22,7 +22,7 @@ namespace MoneyBank.Forms {
         }
         protected override void RefreshData() {
             using (var data = new ReceiveData()) {
-                data.LoadList(dgvReceive, dateFrom, dateTo);
+                data.LoadList(dgvReceive, dateFrom, dateTo, searchValue);
             }
         }
         protected override bool UpdateItem() {

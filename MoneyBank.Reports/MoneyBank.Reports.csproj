@@ -81,6 +81,8 @@
     <Compile Include="RPT Model\BankBalanceModel.cs" />
     <Compile Include="RPT Model\BankModel.cs" />
     <Compile Include="RPT Model\BankTransactionModel.cs" />
+    <Compile Include="RPT Model\ExpenseDetailModel.cs" />
+    <Compile Include="RPT Model\ExpenseModel.cs" />
     <Compile Include="RPT Model\ReceiveDetailModel.cs" />
     <Compile Include="RPT Model\ReceiveModel.cs" />
     <Compile Include="RPT Model\UserModel.cs" />
@@ -102,6 +104,12 @@
       <DependentUpon>crBankTransaction.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="RPT\crExpenseSummary.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crExpenseSummary.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="RPT\crListOfUsers.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -112,6 +120,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>crReceive.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\crReceiveSummary.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crReceiveSummary.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="SummaryReport.cs" />
@@ -134,6 +148,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crBankTransaction.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="RPT\crExpenseSummary.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crExpenseSummary.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="RPT\crListOfUsers.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crListOfUsers.cs</LastGenOutput>
@@ -141,6 +159,10 @@
     <EmbeddedResource Include="RPT\crReceive.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crReceive.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\crReceiveSummary.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crReceiveSummary.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

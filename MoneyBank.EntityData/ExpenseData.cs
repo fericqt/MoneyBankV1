@@ -48,7 +48,7 @@ namespace MoneyBank.EntityData {
         }
 
         public void LoadList(DataGridView dgv, string SearchValue = "%") {
-            _conn.FillDGV(dgv, SelectAll());
+            _conn.FillDGV(dgv, SelectAll<ExpenseDTO>(SearchValue));
         }
 
         public void LoadList(DataGridView dgv, string id, string SearchValue = "%") {

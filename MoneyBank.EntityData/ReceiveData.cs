@@ -48,7 +48,7 @@ namespace MoneyBank.EntityData {
         }
 
         public void LoadList(DataGridView dgv, string SearchValue = "%") {
-            _conn.FillDGV(dgv, SelectAll());
+            _conn.FillDGV(dgv, SelectAll<ReceiveDTO>(SearchValue));
         }
 
         public void LoadList(DataGridView dgv, string id, string SearchValue = "%") {
@@ -56,7 +56,7 @@ namespace MoneyBank.EntityData {
         }
 
         public void LoadList(DataGridView dgv, DateTime dateFrom, DateTime dateTo, string SearchValue = "%") {
-            _conn.FillDGV(dgv, SelectAll(dateFrom, dateTo));
+            _conn.FillDGV(dgv, SelectAll<ReceiveDTO>(dateFrom, dateTo, SearchValue));
         }
 
         public void LoadList(DataGridView dgv, string id, DateTime dateFrom, DateTime dateTo, string SearchValue = "%") {

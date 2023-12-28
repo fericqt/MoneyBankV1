@@ -23,6 +23,14 @@ namespace MoneyBankV2 {
             reportListBox.Items.Add("Registered Banks");
             reportListBox.Items.Add("Bank Transaction By Account");
             reportListBox.Items.Add("Bank Balance By UserID");
+            reportListBox.Items.Add(" ");
+            reportListBox.Items.Add("--EXPENSES--");
+            reportListBox.Items.Add("Expenses");
+            reportListBox.Items.Add("Expenses By Date");
+            reportListBox.Items.Add(" ");
+            reportListBox.Items.Add("--RECEIVES--");
+            reportListBox.Items.Add("Receives");
+            reportListBox.Items.Add("Receives By Date");
         }
 
         private void reportListBox_MouseDoubleClick(object sender, MouseEventArgs e) {
@@ -41,6 +49,18 @@ namespace MoneyBankV2 {
                     break;
                 case "Bank Balance By UserID":
                     new SummaryReport().PreviewReport(SummaryReport.ReportList.BankBalanceByUserID);
+                    break;
+                case "Expenses":
+                    new SummaryReport().PreviewReport(SummaryReport.ReportList.Expenses);
+                    break;
+                case "Receives":
+                    new SummaryReport().PreviewReport(SummaryReport.ReportList.Receives);
+                    break;
+                case "Expenses By Date":
+                    new SummaryReport().PreviewReport(SummaryReport.ReportList.ExpensesByDate);
+                    break;
+                case "Receives By Date":
+                    new SummaryReport().PreviewReport(SummaryReport.ReportList.ReceivesByDate);
                     break;
             }
         }

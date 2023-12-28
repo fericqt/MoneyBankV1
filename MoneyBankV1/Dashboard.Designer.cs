@@ -38,7 +38,9 @@ namespace MoneyBankV2
             this.ucManagement1 = new MoneyBankV2.ucManagement();
             this.panel3 = new System.Windows.Forms.Panel();
             this.ucTransactionList1 = new MoneyBankV2.ucTransactionList();
+            this.ucReminder1 = new MoneyBankV1.ucReminder();
             this.dbPanel1.SuspendLayout();
+            this.dbPanel3.SuspendLayout();
             this.dbPanel8.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -56,6 +58,7 @@ namespace MoneyBankV2
             // 
             // dbPanel3
             // 
+            this.dbPanel3.Controls.Add(this.ucReminder1);
             this.dbPanel3.Size = new System.Drawing.Size(200, 265);
             // 
             // dbPanel8
@@ -130,6 +133,14 @@ namespace MoneyBankV2
             this.ucTransactionList1.Size = new System.Drawing.Size(368, 214);
             this.ucTransactionList1.TabIndex = 0;
             // 
+            // ucReminder1
+            // 
+            this.ucReminder1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucReminder1.Location = new System.Drawing.Point(0, 0);
+            this.ucReminder1.Name = "ucReminder1";
+            this.ucReminder1.Size = new System.Drawing.Size(198, 263);
+            this.ucReminder1.TabIndex = 0;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -140,6 +151,7 @@ namespace MoneyBankV2
             this.Name = "Dashboard";
             this.Text = "Dashboard";
             this.dbPanel1.ResumeLayout(false);
+            this.dbPanel3.ResumeLayout(false);
             this.dbPanel8.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -157,5 +169,6 @@ namespace MoneyBankV2
         private ucManagement ucManagement1;
         private ucTransactionList ucTransactionList1;
         private ucReports ucReports1;
+        private MoneyBankV1.ucReminder ucReminder1;
     }
 }

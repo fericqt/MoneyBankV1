@@ -42,7 +42,7 @@ namespace MoneyBank.EntityData {
         }
 
         public void LoadList(DataGridView dgv, string SearchValue = "%") {
-            _conn.FillDGV(dgv, SelectAll($"WHERE ExpenseName LIKE '%{SearchValue}%'"));
+            _conn.FillDGV(dgv, SelectAll<ExpenseTypeDTO>(SearchValue));
         }
 
         public void LoadList(DataGridView dgv, string id, string SearchValue = "%") {

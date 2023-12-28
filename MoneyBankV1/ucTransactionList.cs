@@ -12,7 +12,7 @@ using System.Windows.Forms;
 namespace MoneyBankV2 {
     public partial class ucTransactionList : UserControl {
         public ucTransactionList() {
-            InitializeComponent();
+            InitializeComponent();           
         }
         private void ucTransactionList_Load(object sender, EventArgs e) {
             using (var data = new TransactionData()) {

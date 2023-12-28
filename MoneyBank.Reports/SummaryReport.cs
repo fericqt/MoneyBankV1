@@ -1,5 +1,6 @@
 ﻿using CrystalDecisions.CrystalReports.Engine;
 using FerPROJ.DBHelper.CRUD;
+using FerPROJ.DBHelper.Query;
 using FerPROJ.Design.Class;
 using FerPROJ.Design.Forms;
 using MoneyBank.Reports.RPT;
@@ -9,6 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace MoneyBank.Reports {
     public class SummaryReport {
@@ -20,12 +22,20 @@ namespace MoneyBank.Reports {
             reportFunctions.Add(ReportList.BankList, BankList);
             reportFunctions.Add(ReportList.BankTransactionByBank, BankTransactionByBank);
             reportFunctions.Add(ReportList.BankBalanceByUserID, BankBalanceByUserID);
+            reportFunctions.Add(ReportList.Expenses, Expenses);
+            reportFunctions.Add(ReportList.Receives, Receives);
+            reportFunctions.Add(ReportList.ExpensesByDate, ExpensesByDate);
+            reportFunctions.Add(ReportList.ReceivesByDate, ReceivesByDate);
         }
         public enum ReportList {
             UserList,
             BankList,
             BankTransactionByBank,
-            BankBalanceByUserID
+            BankBalanceByUserID,
+            Expenses,
+            ExpensesByDate,
+            Receives,
+            ReceivesByDate
         }
         public void PreviewReport(ReportList reportType) {
             ReportDocument report = GetReport(reportType);
@@ -58,6 +68,7 @@ namespace MoneyBank.Reports {
             using (var frm = new ManageReportFilter()) {
                 frm.ShowBank = true;
                 frm.ShowUserID = true;
+                frm.CurrentFormMode = FrmManage2.FormMode.Add;
                 frm.ShowDialog();
                 if (frm.CurrentFormResult) {
                     string sQuery = $"SELECT * FROM tbltransactions tblt INNER JOIN tbluserbank tblu ON tblt.BankAccountNo = tblu.BankAccountNo " +
@@ -74,6 +85,7 @@ namespace MoneyBank.Reports {
         private ReportDocument BankBalanceByUserID() {
             using (var frm = new ManageReportFilter()) {
                 frm.ShowUserID = true;
+                frm.CurrentFormMode = FrmManage2.FormMode.Add;
                 frm.ShowDialog();
                 if (frm.CurrentFormResult) {
                     string sQuery = $"SELECT * FROM tbluser tu INNER JOIN viewbankbalance bb ON bb.UserID = tu.UserID " +
@@ -81,6 +93,60 @@ namespace MoneyBank.Reports {
                     //
                     var rpt = new crBankBalanceByUserID();
                     rpt.SetDataSource(new Conn().GetDataTable(sQuery));
+                    return rpt;
+                }
+            }
+            return null;
+        }
+        private ReportDocument Expenses() {
+            string sQuery = $"SELECT * FROM tblexpense tble INNER JOIN tbluserbank tblu ON tble.BankAccountNo = tblu.BankAccountNo";
+            string sQueryD = $"SELECT * FROM tblexpensedetails";
+            //
+            var rpt = new crExpenseSummary();
+            rpt.SetDataSource(new Conn().GetDataTable(sQuery));
+            rpt.OpenSubreport("1").SetDataSource(new Conn().GetDataTable(sQueryD));
+            return rpt;
+        }
+        private ReportDocument ExpensesByDate() {
+            using (var frm = new ManageReportFilter()) {
+                frm.ShowDate = true;
+                frm.CurrentFormMode = FrmManage2.FormMode.Add;
+                frm.ShowDialog();
+                if (frm.CurrentFormResult) {
+                    string sQuery = $"SELECT * FROM tblexpense tble INNER JOIN tbluserbank tblu ON tble.BankAccountNo = tblu.BankAccountNo " +
+                                    $"WHERE {MySQLQueryHelper.GetDateRange(frm.Manage_DateFrom, frm.Manage_DateTo, "tble.DateReference")}";
+                    string sQueryD = $"SELECT * FROM tblexpensedetails WHERE {MySQLQueryHelper.GetDateRange(frm.Manage_DateFrom, frm.Manage_DateTo)}";
+                    //
+                    var rpt = new crExpenseSummary();
+                    rpt.SetDataSource(new Conn().GetDataTable(sQuery));
+                    rpt.OpenSubreport("1").SetDataSource(new Conn().GetDataTable(sQueryD));
+                    return rpt;
+                }
+            }
+            return null;
+        }
+        private ReportDocument Receives() {
+            string sQuery = $"SELECT * FROM tblreceive tble INNER JOIN tbluserbank tblu ON tble.BankAccountNo = tblu.BankAccountNo";
+            string sQueryD = $"SELECT * FROM tblreceivedetails";
+            //
+            var rpt = new crReceiveSummary();
+            rpt.SetDataSource(new Conn().GetDataTable(sQuery));
+            rpt.OpenSubreport("1").SetDataSource(new Conn().GetDataTable(sQueryD));
+            return rpt;
+        }
+        private ReportDocument ReceivesByDate() {
+            using (var frm = new ManageReportFilter()) {
+                frm.ShowDate = true;
+                frm.CurrentFormMode = FrmManage2.FormMode.Add;
+                frm.ShowDialog();
+                if (frm.CurrentFormResult) {
+                    string sQuery = $"SELECT * FROM tblreceive tble INNER JOIN tbluserbank tblu ON tble.BankAccountNo = tblu.BankAccountNo " +
+                            $"WHERE {MySQLQueryHelper.GetDateRange(frm.Manage_DateFrom, frm.Manage_DateTo, "tble.DateReference")}";
+                    string sQueryD = $"SELECT * FROM tblreceivedetails WHERE {MySQLQueryHelper.GetDateRange(frm.Manage_DateFrom, frm.Manage_DateTo)}";
+                    //
+                    var rpt = new crReceiveSummary();
+                    rpt.SetDataSource(new Conn().GetDataTable(sQuery));
+                    rpt.OpenSubreport("1").SetDataSource(new Conn().GetDataTable(sQueryD));
                     return rpt;
                 }
             }
