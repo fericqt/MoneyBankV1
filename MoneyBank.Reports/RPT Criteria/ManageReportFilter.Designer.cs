@@ -348,7 +348,7 @@
             this.pnlOthers.TabIndex = 3;
             this.pnlOthers.Visible = false;
             // 
-            // ManageReportFilter2
+            // ManageReportFilter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -356,8 +356,9 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(584, 402);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.FormDescription = "Generate Report";
             this.HideSaveNew = true;
-            this.Name = "ManageReportFilter2";
+            this.Name = "ManageReportFilter";
             this.OnSaveName = "Generate";
             this.OnSaveNewName = "Generate";
             this.Text = "ManageReportFilter2";

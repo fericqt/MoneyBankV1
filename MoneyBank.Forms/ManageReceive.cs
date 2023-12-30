@@ -32,10 +32,7 @@ namespace MoneyBank.Forms {
                     using (var data = new ReceiveData()) {
                         var tbl = data.GetById(Manage_IdTrack);
                         myDTO = new CMapping<tblreceive, ReceiveDTO>().GetMappingResult(tbl);
-                        foreach (var item in tbl.tblreceivedetails) {
-                            var itemToAdd = new CMapping<tblreceivedetail, ReceiveDetailDTO>().GetMappingResult(item);
-                            myDTO.ReceiveList.Add(itemToAdd);
-                        }
+                        myDTO.ReceiveList = new CMappingList<tblreceivedetail, ReceiveDetailDTO>().GetMappingResultList(tbl.tblreceivedetails);
                     }
                     break;
             }
