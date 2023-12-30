@@ -107,7 +107,7 @@ namespace MoneyBank.EntityData {
                         Remarks = myDTO.Remarks,
                         UserId = myDTO.UserIDFrom
                     };
-                    new TransactionData(_ts, _conn).SaveDTO(bankFrom);
+                    new TransactionData(_ts).SaveDTO(bankFrom);
                     //
                     var bankTo = new TransactionDTO {
                         ReferenceTransNo = GetBankTransferID(),
@@ -121,7 +121,7 @@ namespace MoneyBank.EntityData {
                         Remarks = myDTO.Remarks,
                         UserId = myDTO.UserIDTo
                     };
-                    new TransactionData(_ts, _conn).SaveDTO(bankTo);
+                    new TransactionData(_ts).SaveDTO(bankTo);
                     //
                     tblFromBank.AmountDeducted = -myDTO.Amount;
                     tblFromBank.DateUpdated = DateTime.Now;

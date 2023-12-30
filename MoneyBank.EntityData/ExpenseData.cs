@@ -24,9 +24,6 @@ namespace MoneyBank.EntityData {
         public ExpenseData(Conn conn) : base(conn) {
         }
 
-        public ExpenseData(moneybankEntities ts, Conn conn) : base(ts, conn) {
-        }
-
         public IEnumerable<tblexpense> GetAll() {
             throw new NotImplementedException();
         }
@@ -82,18 +79,14 @@ namespace MoneyBank.EntityData {
                 };
                 myDTO.ReceiveList.Add(itemToAdd);
             }           
-            new ReceiveData(_ts, _conn).SaveToDB(myDTO);           
+            new ReceiveData(_ts).SaveToDB(myDTO);           
         }
 
         protected override void SaveData(ExpenseDTO myDTO) {
             using (var trans = _ts.Database.BeginTransaction()) {
                 try {
                     var tbl = new CMapping<ExpenseDTO, tblexpense>().GetMappingResult(myDTO);
-                    foreach (var item in myDTO.ExpenseList) {
-                        var tbld = new CMapping<ExpenseDetailDTO, tblexpensedetail>().GetMappingResult(item);
-                        tbl.tblexpensedetails.Add(tbld);
-                    }
-                    //
+                    tbl.tblexpensedetails = new CMappingList<ExpenseDetailDTO, tblexpensedetail>().GetMappingResultList(myDTO.ExpenseList);
                     //
                     var tblu = new UserData(_ts).GetById(myDTO.UserId);
                     var tblBankAcc = tblu.tbluserbankaccounts.FirstOrDefault(c => c.BankAccountNo == myDTO.BankAccountNo);
@@ -113,7 +106,7 @@ namespace MoneyBank.EntityData {
                         Remarks = $"RefTrans: {myDTO.ExpenseTransNo}, Desc: {sbDesc.ToString()}",
                         UserId = myDTO.UserId
                     };
-                    new TransactionData(_ts, _conn).SaveDTO(transItem);
+                    new TransactionData(_ts).SaveDTO(transItem);
                     //
                     tblBankAcc.AmountAdded = 0;
                     tblBankAcc.DateUpdated = DateTime.Now;

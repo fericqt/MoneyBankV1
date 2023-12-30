@@ -24,9 +24,6 @@ namespace MoneyBank.EntityData {
         public ReceiveData(Conn conn) : base(conn) {
         }
 
-        public ReceiveData(moneybankEntities ts, Conn conn) : base(ts, conn) {
-        }
-
         public IEnumerable<tblreceive> GetAll() {
             throw new NotImplementedException();
         }
@@ -82,17 +79,14 @@ namespace MoneyBank.EntityData {
                 };
                 myDTO.ExpenseList.Add(itemToAdd);
             }
-            new ExpenseData(_ts, _conn).SaveToDB(myDTO);
+            new ExpenseData(_ts).SaveToDB(myDTO);
         }
 
         protected override void SaveData(ReceiveDTO myDTO) {
             using (var trans = _ts.Database.BeginTransaction()) {
                 try {
                     var tbl = new CMapping<ReceiveDTO, tblreceive>().GetMappingResult(myDTO);
-                    foreach(var item in myDTO.ReceiveList) {
-                        var itemToAdd = new CMapping<ReceiveDetailDTO, tblreceivedetail>().GetMappingResult(item);
-                        tbl.tblreceivedetails.Add(itemToAdd);
-                    }
+                    tbl.tblreceivedetails = new CMappingList<ReceiveDetailDTO, tblreceivedetail>().GetMappingResultList(myDTO.ReceiveList);
                     //
                     var tblu = new UserData(_ts).GetById(myDTO.UserId);
                     var tblBankAcc = tblu.tbluserbankaccounts.FirstOrDefault(c => c.BankAccountNo == myDTO.BankAccountNo);

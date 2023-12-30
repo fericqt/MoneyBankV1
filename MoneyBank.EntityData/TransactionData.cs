@@ -23,9 +23,6 @@ namespace MoneyBank.EntityData {
         public TransactionData(Conn conn) : base(conn) {
         }
 
-        public TransactionData(moneybankEntities ts, Conn conn) : base(ts, conn) {
-        }
-
         public IEnumerable<tbltransaction> GetAll(string id) {
             return _ts.tbltransactions.Where(c=>c.UserID ==id);
         }

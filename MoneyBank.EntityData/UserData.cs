@@ -23,9 +23,6 @@ namespace MoneyBank.EntityData {
         public UserData(Conn conn) : base(conn) {
         }
 
-        public UserData(moneybankEntities ts, Conn conn) : base(ts, conn) {
-        }
-
         public IEnumerable<tbluser> GetAll() {
             throw new NotImplementedException();
         }
@@ -102,24 +99,16 @@ namespace MoneyBank.EntityData {
                     var tblNew = new CMapping<UserDTO, tbluser>().GetMappingResult(myDTO);
 
                     if (myDTO.BankList.Count > 0) {
-                        foreach (var item in myDTO.BankList) {
-                            var itemToAdd = new CMapping<UserBankDTO, tbluserbank>().GetMappingResult(item);
-                            tblNew.tbluserbanks.Add(itemToAdd);
-                        }
+                        tblNew.tbluserbanks = new CMappingList<UserBankDTO, tbluserbank>().GetMappingResultList(myDTO.BankList);
                     }
                     if (myDTO.BankAccountList.Count > 0) {
+                        tblNew.tbluserbankaccounts = new CMappingList<UserBankAccountDTO, tbluserbankaccount>().GetMappingResultList(myDTO.BankAccountList);
                         foreach (var item in myDTO.BankAccountList) {
-                            var itemToAdd = new CMapping<UserBankAccountDTO, tbluserbankaccount>().GetMappingResult(item);
-                            tblNew.tbluserbankaccounts.Add(itemToAdd);
-                            //
                             AddBeginningBalance(myDTO, item);
                         }
                     }
                     if (myDTO.UserInfoList.Count > 0) {
-                        foreach (var item in myDTO.UserInfoList) {
-                            var itemToAdd = new CMapping<UserInformationDTO, tbluserinformation>().GetMappingResult(item);
-                            tblNew.tbluserinformations.Add(itemToAdd);
-                        }
+                        tblNew.tbluserinformations = new CMappingList<UserInformationDTO, tbluserinformation>().GetMappingResultList(myDTO.UserInfoList);
                     }
                     //
                     _ts.tblusers.Add(tblNew);
@@ -152,7 +141,7 @@ namespace MoneyBank.EntityData {
                     Remarks = $"UserID: {myDTO.UserId}, Desc: Beginning Balance",
                     UserId = myDTO.UserId
                 };
-                new TransactionData(_ts, _conn).SaveDTO(transItem);
+                new TransactionData(_ts).SaveDTO(transItem);
             }
         }
     }
