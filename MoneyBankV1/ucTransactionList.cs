@@ -1,4 +1,5 @@
-﻿using MoneyBank.EntityData;
+﻿using FerPROJ.Design.Class;
+using MoneyBank.EntityData;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,7 +13,9 @@ using System.Windows.Forms;
 namespace MoneyBankV2 {
     public partial class ucTransactionList : UserControl {
         public ucTransactionList() {
-            InitializeComponent();           
+            InitializeComponent();          
+            dgvTransaction.SetWrapMode(DataGridViewTriState.False);
+            dgvTransaction.SetColumnSizing();
         }
         private void ucTransactionList_Load(object sender, EventArgs e) {
             using (var data = new TransactionData()) {

@@ -27,12 +27,12 @@ namespace MoneyBank.Forms {
 
         }
         protected override bool UpdateItem() {
-            if (CDGVSetting.GetSelectedValue(dgvBanks, bankSwiftcodeDataGridViewTextBoxColumn.Index, out string sout)) {
+            if (dgvBanks.GetSelectedValue(bankSwiftcodeDataGridViewTextBoxColumn.Index, out string sout)) {
                 return new FormLayer.ManageForm().ManageBank(sout, FerPROJ.Design.Forms.FrmManage.FormMode.Update);
             }return false;
         }
         protected override bool DeleteItem() {
-            if (CDGVSetting.GetSelectedValue(dgvBanks, bankSwiftcodeDataGridViewTextBoxColumn.Index, out string sout)) {
+            if (dgvBanks.GetSelectedValue(bankSwiftcodeDataGridViewTextBoxColumn.Index, out string sout)) {
                 using (var data = new BankData()) {
                     data.Delete(sout);
                     return true;

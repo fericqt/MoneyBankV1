@@ -25,7 +25,7 @@ namespace MoneyBank.Forms {
             return new FormLayer.ManageForm().ManageExpense("", FerPROJ.Design.Forms.FrmManage.FormMode.Add);
         }
         protected override bool DeleteItem() {
-            if(CDGVSetting.GetSelectedValue(dgvExpense, expenseTransNoDataGridViewTextBoxColumn.Index, out string sout)) {
+            if(dgvExpense.GetSelectedValue(expenseTransNoDataGridViewTextBoxColumn.Index, out string sout)) {
                 using (var data = new ExpenseData()) {
                     data.Delete(sout);
                     return true;

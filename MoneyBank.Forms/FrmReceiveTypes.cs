@@ -25,13 +25,13 @@ namespace MoneyBank.Forms {
             return new FormLayer.ManageForm().ManageReceiveType("", FerPROJ.Design.Forms.FrmManage.FormMode.Add);
         }
         protected override bool UpdateItem() {
-            if(CDGVSetting.GetSelectedValue(dgvReceiveTypes, receiveNoDataGridViewTextBoxColumn.Index, out string sout)) {
+            if(dgvReceiveTypes.GetSelectedValue(receiveNoDataGridViewTextBoxColumn.Index, out string sout)) {
                 return new FormLayer.ManageForm().ManageReceiveType(sout, FerPROJ.Design.Forms.FrmManage.FormMode.Update);
             }
             return false;
         }
         protected override bool DeleteItem() {
-            if (CDGVSetting.GetSelectedValue(dgvReceiveTypes, receiveNoDataGridViewTextBoxColumn.Index, out string sout)) {
+            if (dgvReceiveTypes.GetSelectedValue(receiveNoDataGridViewTextBoxColumn.Index, out string sout)) {
                 using (var data = new ReceiveTypeData()) {
                     data.Delete(sout);
                     return true;

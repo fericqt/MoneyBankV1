@@ -80,7 +80,7 @@ namespace MoneyBank.Forms {
         }
 
         private void tsbRemove_Click(object sender, EventArgs e) {
-            var item = CDGVSetting.GetItemDTO<ReceiveDetailDTO>(dgvReceiveDetails);
+            var item = dgvReceiveDetails.GetItemDTO<ReceiveDetailDTO>();
             myDTO.ReceiveList.Remove(item);
             Reset();
         }

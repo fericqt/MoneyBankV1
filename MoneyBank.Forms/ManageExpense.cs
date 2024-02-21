@@ -73,7 +73,7 @@ namespace MoneyBank.Forms {
         }
 
         private void tsbRemove_Click(object sender, EventArgs e) {
-            var item = CDGVSetting.GetItemDTO<ExpenseDetailDTO>(dgvExpenseDetails);
+            var item = dgvExpenseDetails.GetItemDTO<ExpenseDetailDTO>();
             myDTO.ExpenseList.Remove(item);
             Reset();
         }

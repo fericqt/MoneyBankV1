@@ -73,19 +73,19 @@ namespace MoneyBank.Forms {
         }
 
         private void tsbRemoveBank_Click(object sender, EventArgs e) {
-            var item = CDGVSetting.GetItemDTO<UserBankDTO>(dgvUserBank);
+            var item = dgvUserBank.GetItemDTO<UserBankDTO>();
             myDTO.BankList.Remove(item);
             Reset();
         }
 
         private void tsbRemoveBankAccount_Click(object sender, EventArgs e) {
-            var item = CDGVSetting.GetItemDTO<UserBankAccountDTO>(dgvUserBankAccount);
+            var item = dgvUserBankAccount.GetItemDTO<UserBankAccountDTO>();
             myDTO.BankAccountList.Remove(item);
             Reset();
         }
 
         private void tsbRemoveUserInfo_Click(object sender, EventArgs e) {
-            var item = CDGVSetting.GetItemDTO<UserInformationDTO>(dgvUserInfo);
+            var item = dgvUserInfo.GetItemDTO<UserInformationDTO>();
             myDTO.UserInfoList.Remove(item);
             Reset();
         }

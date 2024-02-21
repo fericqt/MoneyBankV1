@@ -22,13 +22,13 @@ namespace MoneyBank.Forms {
             }
         }
         protected override bool UpdateItem() {
-            if (CDGVSetting.GetSelectedValue(dgvUsers, userIdDataGridViewTextBoxColumn.Index, out string sout)) {
+            if (dgvUsers.GetSelectedValue(userIdDataGridViewTextBoxColumn.Index, out string sout)) {
                 return new FormLayer.ManageForm().ManageBankInfo(sout, FerPROJ.Design.Forms.FrmManage.FormMode.Update);
             }
             return false;
         }
         protected override bool DeleteItem() {
-            if (CDGVSetting.GetSelectedValue(dgvUsers, userIdDataGridViewTextBoxColumn.Index, out string sout)) {
+            if (dgvUsers.GetSelectedValue(userIdDataGridViewTextBoxColumn.Index, out string sout)) {
                 using (var data = new UserData()) {
                     data.Delete(sout);
                     return true;
@@ -40,7 +40,7 @@ namespace MoneyBank.Forms {
             return new FormLayer.ManageForm().ManageUser("", FerPROJ.Design.Forms.FrmManage.FormMode.Add);
         }
         protected override bool GetSelectedData() {
-            if (CDGVSetting.GetSelectedValue(dgvUsers, userIdDataGridViewTextBoxColumn.Index, out string sout)) {
+            if (dgvUsers.GetSelectedValue(userIdDataGridViewTextBoxColumn.Index, out string sout)) {
                 Form_IdTrack = sout;
                 return true;
             }
