@@ -56,6 +56,9 @@ namespace MoneyBank.EntityData {
         public void LoadList(DataGridView dgv, string id, DateTime dateFrom, DateTime dateTo, string SearchValue = "%") {
             throw new NotImplementedException();
         }
+        public void LoadList(DataGridView dgv, DateTime dateFrom, DateTime dateTo) {
+            throw new NotImplementedException();
+        }
 
         protected override void DeleteData(string id) {
             var tbl = GetById(id);

@@ -78,6 +78,9 @@
     <Compile Include="tblbank.cs">
       <DependentUpon>MoneyBank.tt</DependentUpon>
     </Compile>
+    <Compile Include="tblbanktransfer.cs">
+      <DependentUpon>MoneyBank.tt</DependentUpon>
+    </Compile>
     <Compile Include="tblexpense.cs">
       <DependentUpon>MoneyBank.tt</DependentUpon>
     </Compile>

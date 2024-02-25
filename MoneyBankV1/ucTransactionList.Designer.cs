@@ -27,20 +27,15 @@ namespace MoneyBankV2 {
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucTransactionList));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucTransactionList));
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpTransactions = new System.Windows.Forms.TabPage();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.rsbRefresh = new System.Windows.Forms.ToolStripButton();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgvTransaction = new FerPROJ.Design.Controls.CDatagridview();
-            this.transactionDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cToolstrip1 = new FerPROJ.Design.Controls.CToolstrip();
             this.idTrackDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateReferenceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.transNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,23 +48,40 @@ namespace MoneyBankV2 {
             this.oldBalanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.newBalanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.remarksDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.transactionDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.rsbRefresh = new System.Windows.Forms.ToolStripButton();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.cToolstrip1 = new FerPROJ.Design.Controls.CToolstrip();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dtpTo = new System.Windows.Forms.DateTimePicker();
+            this.dtpFrom = new System.Windows.Forms.DateTimePicker();
+            this.cLabelDesc3 = new FerPROJ.Design.Controls.CLabelDesc();
+            this.cLabelDesc2 = new FerPROJ.Design.Controls.CLabelDesc();
+            this.searchCTextBoxBasic = new FerPROJ.Design.Controls.CTextBoxBasic();
+            this.cLabelDesc1 = new FerPROJ.Design.Controls.CLabelDesc();
+            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
+            this.previewTransactionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cancelTransactionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tpTransactions.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransaction)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.transactionDTOBindingSource)).BeginInit();
+            this.toolStrip1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.tabControl1);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(664, 413);
+            this.panel1.Size = new System.Drawing.Size(772, 473);
             this.panel1.TabIndex = 0;
             // 
             // tabControl1
@@ -78,10 +90,10 @@ namespace MoneyBankV2 {
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Location = new System.Drawing.Point(0, 90);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(662, 411);
+            this.tabControl1.Size = new System.Drawing.Size(770, 381);
             this.tabControl1.TabIndex = 0;
             // 
             // tpTransactions
@@ -92,43 +104,10 @@ namespace MoneyBankV2 {
             this.tpTransactions.Location = new System.Drawing.Point(4, 32);
             this.tpTransactions.Name = "tpTransactions";
             this.tpTransactions.Padding = new System.Windows.Forms.Padding(3);
-            this.tpTransactions.Size = new System.Drawing.Size(654, 375);
+            this.tpTransactions.Size = new System.Drawing.Size(762, 345);
             this.tpTransactions.TabIndex = 0;
             this.tpTransactions.Text = "Transaction List";
             this.tpTransactions.UseVisualStyleBackColor = true;
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.rsbRefresh});
-            this.toolStrip1.Location = new System.Drawing.Point(3, 3);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(648, 25);
-            this.toolStrip1.TabIndex = 1;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // rsbRefresh
-            // 
-            this.rsbRefresh.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.rsbRefresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.rsbRefresh.Image = ((System.Drawing.Image)(resources.GetObject("rsbRefresh.Image")));
-            this.rsbRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.rsbRefresh.Name = "rsbRefresh";
-            this.rsbRefresh.Size = new System.Drawing.Size(23, 22);
-            this.rsbRefresh.Text = "Refresh Data";
-            this.rsbRefresh.Click += new System.EventHandler(this.rsbRefresh_Click);
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.cToolstrip1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 32);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(654, 375);
-            this.tabPage1.TabIndex = 1;
-            this.tabPage1.Text = "Receive List";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // dgvTransaction
             // 
@@ -194,21 +173,8 @@ namespace MoneyBankV2 {
             this.dgvTransaction.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvTransaction.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.dgvTransaction.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTransaction.Size = new System.Drawing.Size(648, 344);
+            this.dgvTransaction.Size = new System.Drawing.Size(756, 314);
             this.dgvTransaction.TabIndex = 0;
-            // 
-            // transactionDTOBindingSource
-            // 
-            this.transactionDTOBindingSource.DataSource = typeof(MoneyBank.DTO.TransactionDTO);
-            // 
-            // cToolstrip1
-            // 
-            this.cToolstrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.cToolstrip1.Location = new System.Drawing.Point(3, 3);
-            this.cToolstrip1.Name = "cToolstrip1";
-            this.cToolstrip1.Size = new System.Drawing.Size(648, 25);
-            this.cToolstrip1.TabIndex = 0;
-            this.cToolstrip1.Text = "cToolstrip1";
             // 
             // idTrackDataGridViewTextBoxColumn
             // 
@@ -295,24 +261,176 @@ namespace MoneyBankV2 {
             this.remarksDataGridViewTextBoxColumn.Name = "remarksDataGridViewTextBoxColumn";
             this.remarksDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // transactionDTOBindingSource
+            // 
+            this.transactionDTOBindingSource.DataSource = typeof(MoneyBank.DTO.TransactionDTO);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.rsbRefresh,
+            this.toolStripSplitButton1});
+            this.toolStrip1.Location = new System.Drawing.Point(3, 3);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(756, 25);
+            this.toolStrip1.TabIndex = 1;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // rsbRefresh
+            // 
+            this.rsbRefresh.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.rsbRefresh.Image = ((System.Drawing.Image)(resources.GetObject("rsbRefresh.Image")));
+            this.rsbRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.rsbRefresh.Name = "rsbRefresh";
+            this.rsbRefresh.Size = new System.Drawing.Size(93, 22);
+            this.rsbRefresh.Text = "Refresh Data";
+            this.rsbRefresh.Click += new System.EventHandler(this.rsbRefresh_Click);
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.cToolstrip1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 32);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(762, 345);
+            this.tabPage1.TabIndex = 1;
+            this.tabPage1.Text = "Receive List";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // cToolstrip1
+            // 
+            this.cToolstrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.cToolstrip1.Location = new System.Drawing.Point(3, 3);
+            this.cToolstrip1.Name = "cToolstrip1";
+            this.cToolstrip1.Size = new System.Drawing.Size(756, 25);
+            this.cToolstrip1.TabIndex = 0;
+            this.cToolstrip1.Text = "cToolstrip1";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel2.Controls.Add(this.dtpTo);
+            this.panel2.Controls.Add(this.dtpFrom);
+            this.panel2.Controls.Add(this.cLabelDesc3);
+            this.panel2.Controls.Add(this.cLabelDesc2);
+            this.panel2.Controls.Add(this.searchCTextBoxBasic);
+            this.panel2.Controls.Add(this.cLabelDesc1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(770, 90);
+            this.panel2.TabIndex = 1;
+            // 
+            // dtpTo
+            // 
+            this.dtpTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpTo.Location = new System.Drawing.Point(633, 50);
+            this.dtpTo.Name = "dtpTo";
+            this.dtpTo.Size = new System.Drawing.Size(110, 20);
+            this.dtpTo.TabIndex = 5;
+            this.dtpTo.ValueChanged += new System.EventHandler(this.dtpFrom_ValueChanged);
+            // 
+            // dtpFrom
+            // 
+            this.dtpFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFrom.Location = new System.Drawing.Point(633, 22);
+            this.dtpFrom.Name = "dtpFrom";
+            this.dtpFrom.Size = new System.Drawing.Size(110, 20);
+            this.dtpFrom.TabIndex = 4;
+            this.dtpFrom.ValueChanged += new System.EventHandler(this.dtpFrom_ValueChanged);
+            // 
+            // cLabelDesc3
+            // 
+            this.cLabelDesc3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cLabelDesc3.AutoSize = true;
+            this.cLabelDesc3.Font = new System.Drawing.Font("Poppins", 10F);
+            this.cLabelDesc3.Location = new System.Drawing.Point(540, 49);
+            this.cLabelDesc3.Name = "cLabelDesc3";
+            this.cLabelDesc3.Size = new System.Drawing.Size(69, 25);
+            this.cLabelDesc3.TabIndex = 3;
+            this.cLabelDesc3.Text = "Date To:";
+            // 
+            // cLabelDesc2
+            // 
+            this.cLabelDesc2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cLabelDesc2.AutoSize = true;
+            this.cLabelDesc2.Font = new System.Drawing.Font("Poppins", 10F);
+            this.cLabelDesc2.Location = new System.Drawing.Point(540, 21);
+            this.cLabelDesc2.Name = "cLabelDesc2";
+            this.cLabelDesc2.Size = new System.Drawing.Size(87, 25);
+            this.cLabelDesc2.TabIndex = 2;
+            this.cLabelDesc2.Text = "Date From:";
+            // 
+            // searchCTextBoxBasic
+            // 
+            this.searchCTextBoxBasic.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.searchCTextBoxBasic.DefaultForeColor = System.Drawing.Color.Black;
+            this.searchCTextBoxBasic.EnterColor = System.Drawing.Color.LightGray;
+            this.searchCTextBoxBasic.Font = new System.Drawing.Font("Poppins", 8F);
+            this.searchCTextBoxBasic.ForeColor = System.Drawing.Color.Black;
+            this.searchCTextBoxBasic.LeaveColor = System.Drawing.Color.WhiteSmoke;
+            this.searchCTextBoxBasic.Location = new System.Drawing.Point(41, 44);
+            this.searchCTextBoxBasic.Name = "searchCTextBoxBasic";
+            this.searchCTextBoxBasic.Size = new System.Drawing.Size(243, 23);
+            this.searchCTextBoxBasic.TabIndex = 1;
+            this.searchCTextBoxBasic.KeyDown += new System.Windows.Forms.KeyEventHandler(this.searchCTextBoxBasic_KeyDown);
+            // 
+            // cLabelDesc1
+            // 
+            this.cLabelDesc1.AutoSize = true;
+            this.cLabelDesc1.Font = new System.Drawing.Font("Poppins", 10F);
+            this.cLabelDesc1.Location = new System.Drawing.Point(17, 16);
+            this.cLabelDesc1.Name = "cLabelDesc1";
+            this.cLabelDesc1.Size = new System.Drawing.Size(64, 25);
+            this.cLabelDesc1.TabIndex = 0;
+            this.cLabelDesc1.Text = "Search:";
+            // 
+            // toolStripSplitButton1
+            // 
+            this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.previewTransactionToolStripMenuItem,
+            this.cancelTransactionToolStripMenuItem});
+            this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
+            this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
+            this.toolStripSplitButton1.Size = new System.Drawing.Size(145, 22);
+            this.toolStripSplitButton1.Text = "Manage Transaction";
+            // 
+            // previewTransactionToolStripMenuItem
+            // 
+            this.previewTransactionToolStripMenuItem.Name = "previewTransactionToolStripMenuItem";
+            this.previewTransactionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.previewTransactionToolStripMenuItem.Text = "Preview Transaction";
+            // 
+            // cancelTransactionToolStripMenuItem
+            // 
+            this.cancelTransactionToolStripMenuItem.Name = "cancelTransactionToolStripMenuItem";
+            this.cancelTransactionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cancelTransactionToolStripMenuItem.Text = "Cancel Transaction";
+            // 
             // ucTransactionList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Name = "ucTransactionList";
-            this.Size = new System.Drawing.Size(664, 413);
+            this.Size = new System.Drawing.Size(772, 473);
             this.Load += new System.EventHandler(this.ucTransactionList_Load);
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tpTransactions.ResumeLayout(false);
             this.tpTransactions.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTransaction)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transactionDTOBindingSource)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTransaction)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.transactionDTOBindingSource)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -340,5 +458,15 @@ namespace MoneyBankV2 {
         private DataGridViewTextBoxColumn oldBalanceDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn newBalanceDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn remarksDataGridViewTextBoxColumn;
+        private Panel panel2;
+        private FerPROJ.Design.Controls.CTextBoxBasic searchCTextBoxBasic;
+        private FerPROJ.Design.Controls.CLabelDesc cLabelDesc1;
+        private DateTimePicker dtpTo;
+        private DateTimePicker dtpFrom;
+        private FerPROJ.Design.Controls.CLabelDesc cLabelDesc3;
+        private FerPROJ.Design.Controls.CLabelDesc cLabelDesc2;
+        private ToolStripSplitButton toolStripSplitButton1;
+        private ToolStripMenuItem previewTransactionToolStripMenuItem;
+        private ToolStripMenuItem cancelTransactionToolStripMenuItem;
     }
 }

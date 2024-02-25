@@ -16,6 +16,21 @@
           <Property Name="BankLocation" Type="varchar" MaxLength="50" />
           <Property Name="BankProvider" Type="varchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="tblbanktransfer">
+          <Key>
+            <PropertyRef Name="IdTrack" />
+          </Key>
+          <Property Name="IdTrack" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TransNo" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="UserIDFrom" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="BankAccountNoFrom" Type="varchar" MaxLength="145" Nullable="false" />
+          <Property Name="UserIDTo" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="BankAccountNoTo" Type="varchar" MaxLength="145" Nullable="false" />
+          <Property Name="Remarks" Type="longtext" />
+          <Property Name="Amount" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="Status" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="DateReference" Type="datetime" Precision="0" Nullable="false" />
+        </EntityType>
         <EntityType Name="tblexpense">
           <Key>
             <PropertyRef Name="ExpenseTransNo" />
@@ -241,6 +256,7 @@
         </Association>
         <EntityContainer Name="moneybankEntityStoreContainer">
           <EntitySet Name="tblbank" EntityType="Self.tblbank" Schema="moneybank" store:Type="Tables" />
+          <EntitySet Name="tblbanktransfer" EntityType="Self.tblbanktransfer" Schema="moneybank" store:Type="Tables" />
           <EntitySet Name="tblexpense" EntityType="Self.tblexpense" Schema="moneybank" store:Type="Tables" />
           <EntitySet Name="tblexpensedetails" EntityType="Self.tblexpensedetails" Schema="moneybank" store:Type="Tables" />
           <EntitySet Name="tblexpensetype" EntityType="Self.tblexpensetype" Schema="moneybank" store:Type="Tables" />
@@ -558,7 +574,23 @@
             <End Role="tbluser" EntitySet="tblusers" />
             <End Role="tbluserinformation" EntitySet="tbluserinformations" />
           </AssociationSet>
+          <EntitySet Name="tblbanktransfers" EntityType="moneybankEntity.tblbanktransfer" />
         </EntityContainer>
+        <EntityType Name="tblbanktransfer">
+          <Key>
+            <PropertyRef Name="IdTrack" />
+          </Key>
+          <Property Name="IdTrack" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TransNo" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="UserIDFrom" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="BankAccountNoFrom" Type="String" Nullable="false" MaxLength="145" FixedLength="false" Unicode="false" />
+          <Property Name="UserIDTo" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="BankAccountNoTo" Type="String" Nullable="false" MaxLength="145" FixedLength="false" Unicode="false" />
+          <Property Name="Remarks" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+          <Property Name="Amount" Type="Decimal" Nullable="false" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="DateReference" Type="DateTime" Nullable="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -744,6 +776,22 @@
                 <ScalarProperty Name="Middlename" ColumnName="Middlename" />
                 <ScalarProperty Name="Lastname" ColumnName="Lastname" />
                 <ScalarProperty Name="Relationship" ColumnName="Relationship" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblbanktransfers">
+            <EntityTypeMapping TypeName="moneybankEntity.tblbanktransfer">
+              <MappingFragment StoreEntitySet="tblbanktransfer">
+                <ScalarProperty Name="DateReference" ColumnName="DateReference" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="BankAccountNoTo" ColumnName="BankAccountNoTo" />
+                <ScalarProperty Name="UserIDTo" ColumnName="UserIDTo" />
+                <ScalarProperty Name="BankAccountNoFrom" ColumnName="BankAccountNoFrom" />
+                <ScalarProperty Name="UserIDFrom" ColumnName="UserIDFrom" />
+                <ScalarProperty Name="TransNo" ColumnName="TransNo" />
+                <ScalarProperty Name="IdTrack" ColumnName="IdTrack" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

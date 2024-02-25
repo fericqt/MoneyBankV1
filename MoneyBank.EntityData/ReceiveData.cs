@@ -156,5 +156,9 @@ namespace MoneyBank.EntityData {
                 throw new ArgumentException("Transaction has already been cancelled!");
             }
         }
+
+        public void LoadList(DataGridView dgv, DateTime dateFrom, DateTime dateTo) {
+            throw new NotImplementedException();
+        }
     }
 }

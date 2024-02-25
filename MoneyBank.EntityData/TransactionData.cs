@@ -47,7 +47,7 @@ namespace MoneyBank.EntityData {
         }
 
         public void LoadList(DataGridView dgv, string SearchValue = "%") {
-            _conn.FillDGV(dgv, SelectAll());
+            _conn.FillDGV(dgv, SelectAll<TransactionDTO>(SearchValue)+OrderBy("DateReference", CEnum.Sort.DESC));
         }
 
         public void LoadList(DataGridView dgv, string id, string SearchValue = "%") {
@@ -55,11 +55,14 @@ namespace MoneyBank.EntityData {
         }
 
         public void LoadList(DataGridView dgv, DateTime dateFrom, DateTime dateTo, string SearchValue = "%") {
-            throw new NotImplementedException();
+            _conn.FillDGV(dgv, SelectAll<TransactionDTO>(dateFrom, dateTo, SearchValue)+OrderBy());
         }
 
         public void LoadList(DataGridView dgv, string id, DateTime dateFrom, DateTime dateTo, string SearchValue = "%") {
             throw new NotImplementedException();
+        }
+        public void LoadList(DataGridView dgv, DateTime dateFrom, DateTime dateTo) {
+            _conn.FillDGV(dgv, SelectAll(dateFrom, dateTo)+OrderBy());
         }
 
         protected override void DeleteData(string id) {

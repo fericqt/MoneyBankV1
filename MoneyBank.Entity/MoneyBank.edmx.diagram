@@ -24,6 +24,7 @@
         <AssociationConnector Association="moneybankEntity.FK_tbluserbank_1" ManuallyRouted="false" />
         <AssociationConnector Association="moneybankEntity.FK_tbluserbankaccount_1" ManuallyRouted="false" />
         <AssociationConnector Association="moneybankEntity.FK_tbluserinformation_1" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="moneybankEntity.tblbanktransfer" Width="1.5" PointX="3.375" PointY="11.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

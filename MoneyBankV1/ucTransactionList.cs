@@ -18,13 +18,36 @@ namespace MoneyBankV2 {
             dgvTransaction.SetColumnSizing();
         }
         private void ucTransactionList_Load(object sender, EventArgs e) {
-            using (var data = new TransactionData()) {
-                data.LoadList(dgvTransaction);
-            }
+            RefreshData();
         }
 
         private void rsbRefresh_Click(object sender, EventArgs e) {
-            ucTransactionList_Load(sender, e);  
+            RefreshData();
+        }
+        private void RefreshData() {
+            using (var data = new TransactionData()) {
+                data.LoadList(dgvTransaction, searchCTextBoxBasic.Text);
+            }
+        }
+        private void RefreshDataSearch() {
+            using (var data = new TransactionData()) {
+                data.LoadList(dgvTransaction, dtpFrom.Value, dtpTo.Value, searchCTextBoxBasic.Text);
+            }
+        }
+        private void RefreshDataDate() {
+            using (var data = new TransactionData()) {
+                data.LoadList(dgvTransaction, dtpFrom.Value, dtpTo.Value);
+            }
+        }
+
+        private void searchCTextBoxBasic_KeyDown(object sender, KeyEventArgs e) {
+            if(e.KeyCode == Keys.Enter) {
+                RefreshDataSearch();
+            }
+        }
+
+        private void dtpFrom_ValueChanged(object sender, EventArgs e) {
+            RefreshDataDate();
         }
     }
 }

@@ -14,7 +14,7 @@ namespace MoneyBank.Entity
     using System.Data.Entity.Infrastructure;
     
     public partial class moneybankEntities : DbContext
-    {   
+    {    
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
@@ -34,5 +34,6 @@ namespace MoneyBank.Entity
         public virtual DbSet<tbluserbank> tbluserbanks { get; set; }
         public virtual DbSet<tbluserbankaccount> tbluserbankaccounts { get; set; }
         public virtual DbSet<tbluserinformation> tbluserinformations { get; set; }
+        public virtual DbSet<tblbanktransfer> tblbanktransfers { get; set; }
     }
 }

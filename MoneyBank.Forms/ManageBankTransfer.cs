@@ -58,8 +58,8 @@ namespace MoneyBank.Forms {
             }
         }
         protected override bool OnSaveData() {
-            using (var data = new BankData()) {
-                data.BankTransfer(myDTO);
+            using (var data = new BankTransferData()) {
+                data.SaveDTO(myDTO);
                 return true;
             }
         }

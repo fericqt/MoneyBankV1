@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BankData.cs" />
+    <Compile Include="BankTransferData.cs" />
     <Compile Include="ExpenseData.cs" />
     <Compile Include="ExpenseTypeData.cs" />
     <Compile Include="ReceiveData.cs" />
