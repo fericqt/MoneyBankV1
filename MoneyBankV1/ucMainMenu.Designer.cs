@@ -26,7 +26,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.linkLabel13 = new System.Windows.Forms.LinkLabel();
+            this.LnkLblCreateDatabaseClass = new System.Windows.Forms.LinkLabel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.LnkLblBankAccount = new System.Windows.Forms.LinkLabel();
             this.LnkLblBankTransfer = new System.Windows.Forms.LinkLabel();
@@ -88,7 +88,7 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.linkLabel13);
+            this.groupBox5.Controls.Add(this.LnkLblCreateDatabaseClass);
             this.groupBox5.Font = new System.Drawing.Font("Javanese Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.ForeColor = System.Drawing.Color.White;
             this.groupBox5.Location = new System.Drawing.Point(3, 594);
@@ -98,17 +98,18 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Others";
             // 
-            // linkLabel13
+            // LnkLblCreateDatabaseClass
             // 
-            this.linkLabel13.AutoSize = true;
-            this.linkLabel13.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel13.LinkColor = System.Drawing.Color.Yellow;
-            this.linkLabel13.Location = new System.Drawing.Point(15, 32);
-            this.linkLabel13.Name = "linkLabel13";
-            this.linkLabel13.Size = new System.Drawing.Size(66, 23);
-            this.linkLabel13.TabIndex = 6;
-            this.linkLabel13.TabStop = true;
-            this.linkLabel13.Text = "Manage";
+            this.LnkLblCreateDatabaseClass.AutoSize = true;
+            this.LnkLblCreateDatabaseClass.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LnkLblCreateDatabaseClass.LinkColor = System.Drawing.Color.Yellow;
+            this.LnkLblCreateDatabaseClass.Location = new System.Drawing.Point(15, 32);
+            this.LnkLblCreateDatabaseClass.Name = "LnkLblCreateDatabaseClass";
+            this.LnkLblCreateDatabaseClass.Size = new System.Drawing.Size(155, 23);
+            this.LnkLblCreateDatabaseClass.TabIndex = 6;
+            this.LnkLblCreateDatabaseClass.TabStop = true;
+            this.LnkLblCreateDatabaseClass.Text = "Manage Create Class";
+            this.LnkLblCreateDatabaseClass.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkLblCreateDatabaseClass_LinkClicked);
             // 
             // groupBox4
             // 
@@ -334,6 +335,6 @@
         private System.Windows.Forms.LinkLabel LnkLblExpenseType;
         private System.Windows.Forms.LinkLabel LnkLblReceiveTransaction;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.LinkLabel linkLabel13;
+        private System.Windows.Forms.LinkLabel LnkLblCreateDatabaseClass;
     }
 }

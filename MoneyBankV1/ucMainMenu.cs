@@ -1,4 +1,5 @@
-﻿using MoneyBank.Forms;
+﻿using FerPROJ.DBHelper.Generate;
+using MoneyBank.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -45,6 +46,12 @@ namespace MoneyBankV1 {
 
         private void LnkLblBankAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
             new FormLayer.ListForm().ListUsers(out string sout);
+        }
+
+        private void LnkLblCreateDatabaseClass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+            using (var frm = new ManageCreateTableClass()) {
+                frm.ShowDialog();
+            }
         }
     }
 }
