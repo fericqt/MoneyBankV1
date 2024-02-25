@@ -27,15 +27,20 @@ namespace MoneyBankV2 {
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucTransactionList));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucTransactionList));
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpTransactions = new System.Windows.Forms.TabPage();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.rsbRefresh = new System.Windows.Forms.ToolStripButton();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgvTransaction = new FerPROJ.Design.Controls.CDatagridview();
+            this.transactionDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cToolstrip1 = new FerPROJ.Design.Controls.CToolstrip();
             this.idTrackDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateReferenceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.transNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,18 +53,13 @@ namespace MoneyBankV2 {
             this.oldBalanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.newBalanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.remarksDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.transactionDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.rsbRefresh = new System.Windows.Forms.ToolStripButton();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.cToolstrip1 = new FerPROJ.Design.Controls.CToolstrip();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tpTransactions.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTransaction)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.transactionDTOBindingSource)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTransaction)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transactionDTOBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -77,7 +77,7 @@ namespace MoneyBankV2 {
             this.tabControl1.Controls.Add(this.tpTransactions);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -89,13 +89,46 @@ namespace MoneyBankV2 {
             this.tpTransactions.Controls.Add(this.dgvTransaction);
             this.tpTransactions.Controls.Add(this.toolStrip1);
             this.tpTransactions.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tpTransactions.Location = new System.Drawing.Point(4, 37);
+            this.tpTransactions.Location = new System.Drawing.Point(4, 32);
             this.tpTransactions.Name = "tpTransactions";
             this.tpTransactions.Padding = new System.Windows.Forms.Padding(3);
-            this.tpTransactions.Size = new System.Drawing.Size(654, 370);
+            this.tpTransactions.Size = new System.Drawing.Size(654, 375);
             this.tpTransactions.TabIndex = 0;
             this.tpTransactions.Text = "Transaction List";
             this.tpTransactions.UseVisualStyleBackColor = true;
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.rsbRefresh});
+            this.toolStrip1.Location = new System.Drawing.Point(3, 3);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(648, 25);
+            this.toolStrip1.TabIndex = 1;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // rsbRefresh
+            // 
+            this.rsbRefresh.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.rsbRefresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.rsbRefresh.Image = ((System.Drawing.Image)(resources.GetObject("rsbRefresh.Image")));
+            this.rsbRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.rsbRefresh.Name = "rsbRefresh";
+            this.rsbRefresh.Size = new System.Drawing.Size(23, 22);
+            this.rsbRefresh.Text = "Refresh Data";
+            this.rsbRefresh.Click += new System.EventHandler(this.rsbRefresh_Click);
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.cToolstrip1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 32);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(654, 375);
+            this.tabPage1.TabIndex = 1;
+            this.tabPage1.Text = "Receive List";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // dgvTransaction
             // 
@@ -113,7 +146,7 @@ namespace MoneyBankV2 {
             this.dgvTransaction.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Custom;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -133,13 +166,13 @@ namespace MoneyBankV2 {
             this.oldBalanceDataGridViewTextBoxColumn,
             this.newBalanceDataGridViewTextBoxColumn,
             this.remarksDataGridViewTextBoxColumn});
-            this.dgvTransaction.CustomHeaderFontStyle = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvTransaction.CustomHeaderFontStyle = new System.Drawing.Font("Poppins Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvTransaction.CustomHeaderForeColor = System.Drawing.Color.Black;
             this.dgvTransaction.CustomRowFontStyle = new System.Drawing.Font("Poppins", 10F);
             this.dgvTransaction.DataSource = this.transactionDTOBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins", 10F);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -161,8 +194,21 @@ namespace MoneyBankV2 {
             this.dgvTransaction.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvTransaction.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.dgvTransaction.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTransaction.Size = new System.Drawing.Size(648, 339);
+            this.dgvTransaction.Size = new System.Drawing.Size(648, 344);
             this.dgvTransaction.TabIndex = 0;
+            // 
+            // transactionDTOBindingSource
+            // 
+            this.transactionDTOBindingSource.DataSource = typeof(MoneyBank.DTO.TransactionDTO);
+            // 
+            // cToolstrip1
+            // 
+            this.cToolstrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.cToolstrip1.Location = new System.Drawing.Point(3, 3);
+            this.cToolstrip1.Name = "cToolstrip1";
+            this.cToolstrip1.Size = new System.Drawing.Size(648, 25);
+            this.cToolstrip1.TabIndex = 0;
+            this.cToolstrip1.Text = "cToolstrip1";
             // 
             // idTrackDataGridViewTextBoxColumn
             // 
@@ -196,7 +242,7 @@ namespace MoneyBankV2 {
             // referenceTransNoDataGridViewTextBoxColumn
             // 
             this.referenceTransNoDataGridViewTextBoxColumn.DataPropertyName = "ReferenceTransNo";
-            this.referenceTransNoDataGridViewTextBoxColumn.HeaderText = "ReferenceTransNo";
+            this.referenceTransNoDataGridViewTextBoxColumn.HeaderText = "Ref. TransNo";
             this.referenceTransNoDataGridViewTextBoxColumn.Name = "referenceTransNoDataGridViewTextBoxColumn";
             this.referenceTransNoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -249,52 +295,6 @@ namespace MoneyBankV2 {
             this.remarksDataGridViewTextBoxColumn.Name = "remarksDataGridViewTextBoxColumn";
             this.remarksDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // transactionDTOBindingSource
-            // 
-            this.transactionDTOBindingSource.DataSource = typeof(MoneyBank.DTO.TransactionDTO);
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.rsbRefresh});
-            this.toolStrip1.Location = new System.Drawing.Point(3, 3);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(648, 25);
-            this.toolStrip1.TabIndex = 1;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // rsbRefresh
-            // 
-            this.rsbRefresh.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.rsbRefresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.rsbRefresh.Image = ((System.Drawing.Image)(resources.GetObject("rsbRefresh.Image")));
-            this.rsbRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.rsbRefresh.Name = "rsbRefresh";
-            this.rsbRefresh.Size = new System.Drawing.Size(23, 22);
-            this.rsbRefresh.Text = "Refresh Data";
-            this.rsbRefresh.Click += new System.EventHandler(this.rsbRefresh_Click);
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.cToolstrip1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 37);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(654, 370);
-            this.tabPage1.TabIndex = 1;
-            this.tabPage1.Text = "Receive List";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // cToolstrip1
-            // 
-            this.cToolstrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.cToolstrip1.Location = new System.Drawing.Point(3, 3);
-            this.cToolstrip1.Name = "cToolstrip1";
-            this.cToolstrip1.Size = new System.Drawing.Size(648, 25);
-            this.cToolstrip1.TabIndex = 0;
-            this.cToolstrip1.Text = "cToolstrip1";
-            // 
             // ucTransactionList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -307,12 +307,12 @@ namespace MoneyBankV2 {
             this.tabControl1.ResumeLayout(false);
             this.tpTransactions.ResumeLayout(false);
             this.tpTransactions.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTransaction)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.transactionDTOBindingSource)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTransaction)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transactionDTOBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -326,6 +326,8 @@ namespace MoneyBankV2 {
         private FerPROJ.Design.Controls.CDatagridview dgvTransaction;
         private ToolStrip toolStrip1;
         private ToolStripButton rsbRefresh;
+        private TabPage tabPage1;
+        private FerPROJ.Design.Controls.CToolstrip cToolstrip1;
         private DataGridViewTextBoxColumn idTrackDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn dateReferenceDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn transNoDataGridViewTextBoxColumn;
@@ -338,7 +340,5 @@ namespace MoneyBankV2 {
         private DataGridViewTextBoxColumn oldBalanceDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn newBalanceDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn remarksDataGridViewTextBoxColumn;
-        private TabPage tabPage1;
-        private FerPROJ.Design.Controls.CToolstrip cToolstrip1;
     }
 }

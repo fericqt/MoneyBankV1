@@ -20,7 +20,7 @@ namespace MoneyBankV1 {
             if (new FormLayer.ManageForm().ManageLogin()) {
                 //
                 FrmSplasher.ShowSplash();
-                Application.Run(new Dashboard());
+                Application.Run(new MainForm());
             }
         }
     }
