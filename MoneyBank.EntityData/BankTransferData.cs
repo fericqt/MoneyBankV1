@@ -87,7 +87,7 @@ namespace MoneyBank.EntityData {
                         ReferenceTransNo = tbl.TransNo,
                         BankAccountNo = myDTO.BankAccountNoFrom,
                         Description = $"Transfer To {tblTo.FullName} using {tblFromBank.BankName} ending no. of {tblFromBankEndingNo} " +
-                                      $"From your {tblFromBank.BankName} ending no. of {tblFromBankEndingNo} amounting of {myDTO.Amount}",
+                                      $"From {tblFromBank.BankName} ending no. of {tblFromBankEndingNo} amounting of {myDTO.Amount}",
                         Added = 0,
                         Deducted = -myDTO.Amount,
                         OldBalance = (decimal)tblFromBank.RemainingBalance,
@@ -101,7 +101,7 @@ namespace MoneyBank.EntityData {
                         ReferenceTransNo = tbl.TransNo,
                         BankAccountNo = myDTO.BankAccountNoTo,
                         Description = $"Received from {tblFrom.FullName} using {tblFromBank.BankName} ending no. of {tblFromBankEndingNo} " +
-                                      $"To your {tblToBank.BankName} ending no of {tblToBankEndingNo} amounting of {myDTO.Amount}",
+                                      $"To {tblToBank.BankName} ending no of {tblToBankEndingNo} amounting of {myDTO.Amount}",
                         Added = myDTO.Amount,
                         Deducted = 0,
                         OldBalance = (decimal)tblToBank.RemainingBalance,
