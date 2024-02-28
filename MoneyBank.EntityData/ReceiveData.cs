@@ -45,7 +45,7 @@ namespace MoneyBank.EntityData {
         }
 
         public void LoadList(DataGridView dgv, string SearchValue = "%") {
-            _conn.FillDGV(dgv, SelectAll<ReceiveDTO>(SearchValue));
+            _conn.FillDGV(dgv, SelectAll<ReceiveDTO>(SearchValue) + Status());
         }
 
         public void LoadList(DataGridView dgv, string id, string SearchValue = "%") {
@@ -53,7 +53,7 @@ namespace MoneyBank.EntityData {
         }
 
         public void LoadList(DataGridView dgv, DateTime dateFrom, DateTime dateTo, string SearchValue = "%") {
-            _conn.FillDGV(dgv, SelectAll<ReceiveDTO>(dateFrom, dateTo, SearchValue));
+            _conn.FillDGV(dgv, SelectAll<ReceiveDTO>(dateFrom, dateTo, SearchValue) + Status());
         }
 
         public void LoadList(DataGridView dgv, string id, DateTime dateFrom, DateTime dateTo, string SearchValue = "%") {
@@ -61,25 +61,47 @@ namespace MoneyBank.EntityData {
         }
 
         protected override void DeleteData(string id) {
-            ValidateDelete(id);
-            var tbl = GetById(id);
-            //
-            ExpenseDTO myDTO = new ExpenseDTO();
-            myDTO.ExpenseTransNo = new ExpenseData(_conn).GetNewID();
-            myDTO.UserId = tbl.UserID;
-            myDTO.BankAccountNo = tbl.BankAccountNo;
-            //
-            foreach (var item in tbl.tblreceivedetails) {
-                var itemToAdd = new ExpenseDetailDTO {
-                    ExpenseTransNo = myDTO.ExpenseTransNo,
-                    ExpenseAmount = (decimal)item.ReceiveAmount,
-                    ExpenseName = item.ReceiveItemName,
-                    ExpenseQuantity = (int)item.ReceiveQuantity,
-                    Remarks = $"Cancelled Received. Ref Transo:{tbl.ReceiveTransNo}.\n{item.Remarks}"                   
-                };
-                myDTO.ExpenseList.Add(itemToAdd);
+            using (var trans = _ts.Database.BeginTransaction()) {
+                try {
+                    var tbl = GetById(id);
+                    ValidateDelete(tbl);
+                    tbl.Status = CEnum.Status.CANCELLED.ToString();
+                    //
+                    var tblu = new UserData(_ts).GetById(tbl.UserID);
+                    var tblBankAcc = tblu.tbluserbankaccounts.FirstOrDefault(c => c.BankAccountNo == tbl.BankAccountNo);
+                    //
+                    StringBuilder sbDesc = new StringBuilder();
+                    foreach (var item in tbl.tblreceivedetails) {
+                        sbDesc.Append($"{item.ReceiveItemName}. {item.Remarks}, ");
+                    }
+                    var transItem = new TransactionDTO {
+                        ReferenceTransNo = tbl.ReceiveTransNo,
+                        BankAccountNo = tbl.BankAccountNo,
+                        Description = sbDesc.ToString(),
+                        Added = 0,
+                        Deducted = -(decimal)tbl.TotalReceiveAmount,
+                        OldBalance = (decimal)tblBankAcc.RemainingBalance,
+                        NewBalance = (decimal)(tblBankAcc.RemainingBalance - tbl.TotalReceiveAmount),
+                        Remarks = "Cancelled Received Transaction",
+                        UserId = tbl.UserID,
+                    };
+                    new TransactionData(_ts).SaveDTO(transItem);
+                    //
+                    tblBankAcc.AmountAdded = 0;
+                    tblBankAcc.DateUpdated = DateTime.Now;
+                    tblBankAcc.AmountDeducted = -tbl.TotalReceiveAmount;
+                    tblBankAcc.CurrentBalance = tblBankAcc.RemainingBalance;
+                    tblBankAcc.RemainingBalance = tblBankAcc.RemainingBalance - tbl.TotalReceiveAmount;
+                    //
+                    _ts.SaveChanges();
+                    trans.Commit();
+
+                } catch (Exception) {
+                    trans.Rollback();
+                    throw;
+                }
+
             }
-            new ExpenseData(_ts).SaveToDB(myDTO);
         }
 
         protected override void SaveData(ReceiveDTO myDTO) {
@@ -92,7 +114,7 @@ namespace MoneyBank.EntityData {
                     var tblBankAcc = tblu.tbluserbankaccounts.FirstOrDefault(c => c.BankAccountNo == myDTO.BankAccountNo);
                     //
                     StringBuilder sbDesc = new StringBuilder();
-                    foreach(var item in myDTO.ReceiveList) { 
+                    foreach (var item in myDTO.ReceiveList) {
                         sbDesc.Append($"{item.ReceiveItemName}. {item.Remarks}, ");
                     }
                     TransactionDTO transItem = new TransactionDTO {
@@ -150,9 +172,8 @@ namespace MoneyBank.EntityData {
         public void SaveToDB(ReceiveDTO myDTO) {
             SaveData(myDTO);
         }
-        private void ValidateDelete(string id) {
-            var tbl = new ExpenseData(_ts).GetById(id);
-            if (tbl != null) {
+        private void ValidateDelete(tblreceive tbl) {
+            if (tbl.Status == CEnum.Status.CANCELLED.ToString()) {
                 throw new ArgumentException("Transaction has already been cancelled!");
             }
         }

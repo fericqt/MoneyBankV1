@@ -16,6 +16,7 @@ namespace MoneyBank.DTO {
         public string BankAccountNo { get; set; }
 
         public decimal TotalReceiveAmount => ReceiveList.Sum(c => c.ReceiveAmountTotal);
+        public string Status => CEnum.Status.ACTIVE.ToString();
 
         public List<ReceiveDetailDTO> ReceiveList = new List<ReceiveDetailDTO>();
 

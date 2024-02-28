@@ -16,7 +16,7 @@ namespace MoneyBank.DTO {
         public string BankAccountNoTo { get; set; }
         public string Remarks { get; set; }
         public decimal Amount { get; set; }
-        public string Status { get; set; } = CEnum.Status.ACTIVE.ToString();
+        public string Status => CEnum.Status.ACTIVE.ToString();
         public DateTime DateReference => DateTime.Now;
         public decimal RemainingBalance { get; set; }
 

@@ -23,6 +23,7 @@ namespace MoneyBank.DTO
         [Required]
         public string UserLevel { get; set; }
         public string FullName { get; set; }
+        public string Status => CEnum.Status.ACTIVE.ToString();
 
         public List<UserBankDTO> BankList = new List<UserBankDTO>();
         public List<UserInformationDTO> UserInfoList = new List<UserInformationDTO>();

@@ -25,6 +25,7 @@ namespace MoneyBank.Entity
         public string UserID { get; set; }
         public string BankAccountNo { get; set; }
         public Nullable<decimal> TotalReceiveAmount { get; set; }
+        public string Status { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tblreceivedetail> tblreceivedetails { get; set; }

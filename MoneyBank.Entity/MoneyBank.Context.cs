@@ -14,7 +14,7 @@ namespace MoneyBank.Entity
     using System.Data.Entity.Infrastructure;
     
     public partial class moneybankEntities : DbContext
-    {    
+    {   
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

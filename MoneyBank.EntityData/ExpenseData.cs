@@ -45,7 +45,8 @@ namespace MoneyBank.EntityData {
         }
 
         public void LoadList(DataGridView dgv, string SearchValue = "%") {
-            _conn.FillDGV(dgv, SelectAll<ExpenseDTO>(SearchValue));
+            string sSelect = SelectAll<ExpenseDTO>(SearchValue) + Status();
+            _conn.FillDGV(dgv, sSelect);
         }
 
         public void LoadList(DataGridView dgv, string id, string SearchValue = "%") {
@@ -64,25 +65,48 @@ namespace MoneyBank.EntityData {
         }
 
         protected override void DeleteData(string id) {
-            ValidateDelete(id);
-            var tbl = GetById(id);
-            //
-            ReceiveDTO myDTO = new ReceiveDTO();
-            myDTO.ReceiveTransNo = new ReceiveData(_conn).GetNewID();
-            myDTO.UserId = tbl.UserID;
-            myDTO.BankAccountNo = tbl.BankAccountNo;
-            //
-            foreach (var item in tbl.tblexpensedetails) {
-                var itemToAdd = new ReceiveDetailDTO {
-                    ReceiveTransNo = myDTO.ReceiveTransNo,
-                    ReceiveAmount = (decimal)item.ExpenseAmount,
-                    ReceiveItemName = item.ExpenseName,
-                    ReceiveQuantity = (int)item.ExpenseQuantity,
-                    Remarks = $"Cancelled Expense. Ref Transo:{tbl.ExpenseTransNo}.\n{item.Remarks}"
-                };
-                myDTO.ReceiveList.Add(itemToAdd);
-            }           
-            new ReceiveData(_ts).SaveToDB(myDTO);           
+            using (var trans = _ts.Database.BeginTransaction()) {
+                try {
+                    var tbl = GetById(id);
+                    ValidateDelete(tbl);
+                    tbl.Status = CEnum.Status.CANCELLED.ToString();
+                    //
+                    var tblu = new UserData(_ts).GetById(tbl.UserID);
+                    var tblBankAcc = tblu.tbluserbankaccounts.FirstOrDefault(c => c.BankAccountNo == tbl.BankAccountNo);
+                    //
+                    StringBuilder sbDesc = new StringBuilder();
+                    foreach (var item in tbl.tblexpensedetails) {
+                        sbDesc.Append($"{item.ExpenseName}. {item.Remarks}, ");
+                    }
+                    var transItem = new TransactionDTO {
+                        ReferenceTransNo = tbl.ExpenseTransNo,
+                        BankAccountNo = tbl.BankAccountNo,
+                        Description = sbDesc.ToString(),
+                        Added = (decimal)tbl.TotalExpenseAmount,
+                        Deducted = 0,
+                        OldBalance = (decimal)tblBankAcc.RemainingBalance,
+                        NewBalance = (decimal)(tblBankAcc.RemainingBalance + tbl.TotalExpenseAmount),
+                        Remarks = "Cancelled Expense Transaction",
+                        UserId = tbl.UserID,
+                    };
+                    new TransactionData(_ts).SaveDTO(transItem);
+                    //
+                    tblBankAcc.AmountDeducted = 0;
+                    tblBankAcc.DateUpdated = DateTime.Now;
+                    tblBankAcc.AmountAdded = tbl.TotalExpenseAmount;
+                    tblBankAcc.CurrentBalance = tblBankAcc.RemainingBalance;
+                    tblBankAcc.RemainingBalance = tblBankAcc.RemainingBalance + tbl.TotalExpenseAmount;
+                    //
+                    _ts.SaveChanges();
+                    trans.Commit();
+
+
+                }
+                catch(Exception) {
+                    trans.Rollback();
+                    throw;
+                }
+            }
         }
 
         protected override void SaveData(ExpenseDTO myDTO) {
@@ -154,9 +178,8 @@ namespace MoneyBank.EntityData {
         public void SaveToDB(ExpenseDTO myDTO) {
             SaveData(myDTO);
         }
-        private void ValidateDelete(string id) {
-            var tbl = new ReceiveData(_ts).GetById(id);
-            if (tbl != null) {
+        private void ValidateDelete(tblexpense tbl) {
+            if (tbl.Status == CEnum.Status.CANCELLED.ToString()) {
                 throw new ArgumentException("Transaction has already been cancelled!");
             }
         }

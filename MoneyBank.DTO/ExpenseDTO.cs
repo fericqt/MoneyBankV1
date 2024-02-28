@@ -14,6 +14,7 @@ namespace MoneyBank.DTO {
         public string ExpenseTransNo { get; set; } 
 
         public string BankAccountNo { get; set; }
+        public string Status => CEnum.Status.ACTIVE.ToString();
 
         public decimal TotalExpenseAmount => ExpenseList.Sum(c=>c.ExpenseTotal);
         public List<ExpenseDetailDTO> ExpenseList = new List<ExpenseDetailDTO>();

@@ -25,6 +25,7 @@ namespace MoneyBank.Entity
         public string ExpenseTransNo { get; set; }
         public string BankAccountNo { get; set; }
         public Nullable<decimal> TotalExpenseAmount { get; set; }
+        public string Status { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tblexpensedetail> tblexpensedetails { get; set; }

@@ -40,6 +40,7 @@
           <Property Name="ExpenseTransNo" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="BankAccountNo" Type="varchar" MaxLength="20" />
           <Property Name="TotalExpenseAmount" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="Status" Type="varchar" MaxLength="45" Nullable="false" />
         </EntityType>
         <EntityType Name="tblexpensedetails">
           <Key>
@@ -82,6 +83,7 @@
           <Property Name="UserID" Type="varchar" MaxLength="255" />
           <Property Name="BankAccountNo" Type="varchar" MaxLength="20" />
           <Property Name="TotalReceiveAmount" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="Status" Type="varchar" MaxLength="45" Nullable="false" />
         </EntityType>
         <EntityType Name="tblreceivedetails">
           <Key>
@@ -149,6 +151,7 @@
           <Property Name="DateLastLogin" Type="datetime" Precision="0" />
           <Property Name="UserLevel" Type="varchar" MaxLength="45" Nullable="false" />
           <Property Name="FullName" Type="varchar" MaxLength="245" Nullable="false" />
+          <Property Name="Status" Type="varchar" MaxLength="45" Nullable="false" />
         </EntityType>
         <EntityType Name="tbluserbank">
           <Key>
@@ -316,6 +319,7 @@
           <Property Name="BankAccountNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="TotalExpenseAmount" Type="Decimal" />
           <NavigationProperty Name="tblexpensedetails" Relationship="Self.FK_tblexpensedetails_1" FromRole="tblexpense" ToRole="tblexpensedetails" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="tblexpensedetail">
           <Key>
@@ -360,6 +364,7 @@
           <Property Name="BankAccountNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="TotalReceiveAmount" Type="Decimal" />
           <NavigationProperty Name="tblreceivedetails" Relationship="Self.FK_tblreceivedetails_1" FromRole="tblreceive" ToRole="tblreceivedetails" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="tblreceivedetail">
           <Key>
@@ -431,6 +436,7 @@
           <NavigationProperty Name="tbluserbankaccounts" Relationship="Self.FK_tbluserbankaccount_1" FromRole="tbluser" ToRole="tbluserbankaccount" />
           <NavigationProperty Name="tbluserinformations" Relationship="Self.FK_tbluserinformation_1" FromRole="tbluser" ToRole="tbluserinformation" />
           <Property Name="FullName" Type="String" Nullable="false" MaxLength="245" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="tbluserbank">
           <Key>
@@ -612,6 +618,7 @@
           <EntitySetMapping Name="tblexpenses">
             <EntityTypeMapping TypeName="moneybankEntity.tblexpense">
               <MappingFragment StoreEntitySet="tblexpense">
+                <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="DateReference" ColumnName="DateReference" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
                 <ScalarProperty Name="ExpenseTransNo" ColumnName="ExpenseTransNo" />
@@ -658,6 +665,7 @@
           <EntitySetMapping Name="tblreceives">
             <EntityTypeMapping TypeName="moneybankEntity.tblreceive">
               <MappingFragment StoreEntitySet="tblreceive">
+                <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="DateReference" ColumnName="DateReference" />
                 <ScalarProperty Name="ReceiveTransNo" ColumnName="ReceiveTransNo" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
@@ -728,6 +736,7 @@
           <EntitySetMapping Name="tblusers">
             <EntityTypeMapping TypeName="moneybankEntity.tbluser">
               <MappingFragment StoreEntitySet="tbluser">
+                <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="FullName" ColumnName="FullName" />
                 <ScalarProperty Name="DateReference" ColumnName="DateReference" />
                 <ScalarProperty Name="Username" ColumnName="Username" />
