@@ -33,7 +33,7 @@ namespace MoneyBank.Forms {
         protected override bool DeleteItem() {
             if (dgvReceiveTypes.GetSelectedValue(receiveNoDataGridViewTextBoxColumn.Index, out string sout)) {
                 using (var data = new ReceiveTypeData()) {
-                    data.Delete(sout);
+                    data.Delete(sout.ToInt());
                     return true;
                 }
             }

@@ -23,7 +23,7 @@ namespace MoneyBank.Forms {
             switch (CurrentFormMode) {
                 case FormMode.Add:
                     using (var data = new ExpenseData()) {
-                        myDTO.ExpenseTransNo = data.GetNewID();
+                        myDTO.TransNo = data.GetNewID();
                     }
                     break;
                 case FormMode.Update:
@@ -35,7 +35,6 @@ namespace MoneyBank.Forms {
 
         private void tsbAdd_Click(object sender, EventArgs e) {
             var item = new ExpenseDetailDTO();
-            item.ExpenseTransNo = myDTO.ExpenseTransNo;
             if (new FormLayer.ManageForm().ManageExpenseDetails(item, FormMode.Add)) {
                 myDTO.ExpenseList.Add(item);
             }
@@ -61,14 +60,14 @@ namespace MoneyBank.Forms {
 
         private void llUserID_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
             if(new FormLayer.ListForm().ListUsers(out string sout)) {
-                myDTO.UserId = sout;
+                myDTO.UserID = sout;
             }
             LoadBank();
             Reset();
         }
         private void LoadBank() {
             using (var data = new UserData()) {
-                data.LoadComboBox(cmbBankAccount, myDTO.UserId);
+                data.LoadComboBox(cmbBankAccount, myDTO.UserID);
             }
         }
 

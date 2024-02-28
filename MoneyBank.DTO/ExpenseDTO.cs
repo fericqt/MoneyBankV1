@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace MoneyBank.DTO {
     public class ExpenseDTO : CValidator {
-        public DateTime? DateReference { get; set; } = DateTime.Now;
-
-        public string UserId { get; set; } = CStaticVariable.UserID;
-
-        public string ExpenseTransNo { get; set; } 
-
+        public System.DateTime DateReference => DateTime.Now;
+        public string UserID { get; set; }
         public string BankAccountNo { get; set; }
+        public string TransNo { get; set; }
+        public decimal TotalAmount => ExpenseList.Sum(c => c.Amount);
+        public string Remarks { get; set; }
+        //public string CancelledBy { get; set; }
+        //public string CancelledDate { get; set; }
+        //public string CancelledRemarks { get; set; }
         public string Status => CEnum.Status.ACTIVE.ToString();
-
-        public decimal TotalExpenseAmount => ExpenseList.Sum(c=>c.ExpenseTotal);
         public List<ExpenseDetailDTO> ExpenseList = new List<ExpenseDetailDTO>();
         public override bool DataValidation() {
             throw new NotImplementedException();

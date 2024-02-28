@@ -24,7 +24,7 @@ namespace MoneyBank.Forms {
             switch (CurrentFormMode) {
                 case FormMode.Add:
                     using (var data = new ReceiveData()) {
-                        myDTO.ReceiveTransNo = data.GetNewID();
+                        myDTO.TransNo = data.GetNewID();
                     }
                     LoadBank();
                     break;
@@ -42,7 +42,6 @@ namespace MoneyBank.Forms {
 
         private void tsbAdd_Click(object sender, EventArgs e) {
             var item = new ReceiveDetailDTO();
-            item.ReceiveTransNo = myDTO.ReceiveTransNo;
             if (new FormLayer.ManageForm().ManageReceiveDetails(item, FormMode.Add)) {
                 myDTO.ReceiveList.Add(item);
             }
@@ -55,7 +54,7 @@ namespace MoneyBank.Forms {
         protected override bool OnSaveData() {
             using (var data = new ReceiveData()) {
                 data.SaveDTO(myDTO);
-                new TransactionReport().PreviewReport(TransactionReport.ReportList.ReceiveTransaction, myDTO.ReceiveTransNo);
+                new TransactionReport().PreviewReport(TransactionReport.ReportList.ReceiveTransaction, myDTO.TransNo);
                 return true;
             }
         }
@@ -68,14 +67,14 @@ namespace MoneyBank.Forms {
 
         private void llUserID_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
             if (new FormLayer.ListForm().ListUsers(out string sout)) {
-                myDTO.UserId = sout;
+                myDTO.UserID = sout;
             }
             LoadBank();
             Reset();
         }
         private void LoadBank() {
             using (var data = new UserData()) {
-                data.LoadComboBox(cmbBank, myDTO.UserId);
+                data.LoadComboBox(cmbBank, myDTO.UserID);
             }
         }
 

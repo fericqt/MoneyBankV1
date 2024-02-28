@@ -7,4 +7,15 @@
 -->
 <GenericObjectDataSource DisplayName="ExpenseDetailDTO" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
    <TypeInfo>MoneyBank.DTO.ExpenseDetailDTO, MoneyBank.DTO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
+   <TypeUISetting>
+      <PropertyUISettings>
+         <PropertyUISetting Name="Amount">
+            <ControlSettings>
+               <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <BindableControlInfo Name="CLabelDesc" Type="FerPROJ.Design.Controls.CLabelDesc" AssemblyName="FerPROJ.Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" AssemblyCodeBase="file:///C:/WorkingFolder/C# Projects 2019/FerPROJ.Design/FerPROJ.Design/obj/Debug/FerPROJ.Design.dll" Frameworks=".NETFramework,Version=v4.8.1" />
+               </ControlSetting>
+            </ControlSettings>
+         </PropertyUISetting>
+      </PropertyUISettings>
+   </TypeUISetting>
 </GenericObjectDataSource>

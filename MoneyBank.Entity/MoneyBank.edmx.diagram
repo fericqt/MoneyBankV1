@@ -4,14 +4,10 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="5128af22241e4a1fa5e9ba86cc0feb4e" Name="Diagram1">
+      <Diagram DiagramId="5128af22241e4a1fa5e9ba86cc0feb4e" Name="Diagram1" ZoomLevel="101">
         <EntityTypeShape EntityType="moneybankEntity.tblbank" Width="1.5" PointX="5.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="moneybankEntity.tblexpense" Width="1.5" PointX="5.75" PointY="5.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="moneybankEntity.tblexpensedetail" Width="1.5" PointX="8" PointY="5" IsExpanded="true" />
         <EntityTypeShape EntityType="moneybankEntity.tblexpensetype" Width="1.5" PointX="7.75" PointY="8.75" IsExpanded="true" />
         <EntityTypeShape EntityType="moneybankEntity.tbllog" Width="1.5" PointX="9.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="moneybankEntity.tblreceive" Width="1.5" PointX="5.75" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="moneybankEntity.tblreceivedetail" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="moneybankEntity.tblreceivetype" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="moneybankEntity.tblreconcile" Width="1.5" PointX="10.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="moneybankEntity.tbltransaction" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
@@ -19,12 +15,16 @@
         <EntityTypeShape EntityType="moneybankEntity.tbluserbank" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="moneybankEntity.tbluserbankaccount" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
         <EntityTypeShape EntityType="moneybankEntity.tbluserinformation" Width="1.5" PointX="3" PointY="8.25" IsExpanded="true" />
-        <AssociationConnector Association="moneybankEntity.FK_tblexpensedetails_1" ManuallyRouted="false" />
-        <AssociationConnector Association="moneybankEntity.FK_tblreceivedetails_1" ManuallyRouted="false" />
         <AssociationConnector Association="moneybankEntity.FK_tbluserbank_1" ManuallyRouted="false" />
         <AssociationConnector Association="moneybankEntity.FK_tbluserbankaccount_1" ManuallyRouted="false" />
         <AssociationConnector Association="moneybankEntity.FK_tbluserinformation_1" ManuallyRouted="false" />
         <EntityTypeShape EntityType="moneybankEntity.tblbanktransfer" Width="1.5" PointX="3.375" PointY="11.75" />
+        <EntityTypeShape EntityType="moneybankEntity.tblexpense" Width="1.5" PointX="10.375" PointY="12" />
+        <EntityTypeShape EntityType="moneybankEntity.tblexpensedetail" Width="1.5" PointX="12.625" PointY="12.375" />
+        <EntityTypeShape EntityType="moneybankEntity.tblreceive" Width="1.5" PointX="5.375" PointY="12" />
+        <EntityTypeShape EntityType="moneybankEntity.tblreceivedetail" Width="1.5" PointX="7.625" PointY="12.375" />
+        <AssociationConnector Association="moneybankEntity.FK_tblexpensedetails_1" />
+        <AssociationConnector Association="moneybankEntity.FK_tblreceivedetails_1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

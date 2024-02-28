@@ -29,7 +29,7 @@ namespace MoneyBank.EntityData {
         }
 
         public tblreceive GetById(string id) {
-            return _ts.tblreceives.FirstOrDefault(c => c.ReceiveTransNo == id);
+            return _ts.tblreceives.FirstOrDefault(c => c.TransNo == id);
         }
 
         public string GetNewID() {
@@ -66,22 +66,25 @@ namespace MoneyBank.EntityData {
                     var tbl = GetById(id);
                     ValidateDelete(tbl);
                     tbl.Status = CEnum.Status.CANCELLED.ToString();
+                    tbl.CancelledBy = CStaticVariable.UserID;
+                    tbl.CancelledDate = DateTime.Now;
+                    tbl.CancelledRemarks = "";
                     //
                     var tblu = new UserData(_ts).GetById(tbl.UserID);
                     var tblBankAcc = tblu.tbluserbankaccounts.FirstOrDefault(c => c.BankAccountNo == tbl.BankAccountNo);
                     //
                     StringBuilder sbDesc = new StringBuilder();
                     foreach (var item in tbl.tblreceivedetails) {
-                        sbDesc.Append($"{item.ReceiveItemName}. {item.Remarks}, ");
+                        sbDesc.Append($"{item.Description}, ");
                     }
                     var transItem = new TransactionDTO {
-                        ReferenceTransNo = tbl.ReceiveTransNo,
+                        ReferenceTransNo = tbl.TransNo,
                         BankAccountNo = tbl.BankAccountNo,
                         Description = sbDesc.ToString(),
                         Added = 0,
-                        Deducted = -(decimal)tbl.TotalReceiveAmount,
+                        Deducted = -(decimal)tbl.TotalAmount,
                         OldBalance = (decimal)tblBankAcc.RemainingBalance,
-                        NewBalance = (decimal)(tblBankAcc.RemainingBalance - tbl.TotalReceiveAmount),
+                        NewBalance = (decimal)(tblBankAcc.RemainingBalance - tbl.TotalAmount),
                         Remarks = "Cancelled Received Transaction",
                         UserId = tbl.UserID,
                     };
@@ -89,9 +92,9 @@ namespace MoneyBank.EntityData {
                     //
                     tblBankAcc.AmountAdded = 0;
                     tblBankAcc.DateUpdated = DateTime.Now;
-                    tblBankAcc.AmountDeducted = -tbl.TotalReceiveAmount;
+                    tblBankAcc.AmountDeducted = -tbl.TotalAmount;
                     tblBankAcc.CurrentBalance = tblBankAcc.RemainingBalance;
-                    tblBankAcc.RemainingBalance = tblBankAcc.RemainingBalance - tbl.TotalReceiveAmount;
+                    tblBankAcc.RemainingBalance = tblBankAcc.RemainingBalance - tbl.TotalAmount;
                     //
                     _ts.SaveChanges();
                     trans.Commit();
@@ -110,31 +113,31 @@ namespace MoneyBank.EntityData {
                     var tbl = new CMapping<ReceiveDTO, tblreceive>().GetMappingResult(myDTO);
                     tbl.tblreceivedetails = new CMappingList<ReceiveDetailDTO, tblreceivedetail>().GetMappingResultList(myDTO.ReceiveList);
                     //
-                    var tblu = new UserData(_ts).GetById(myDTO.UserId);
+                    var tblu = new UserData(_ts).GetById(myDTO.UserID);
                     var tblBankAcc = tblu.tbluserbankaccounts.FirstOrDefault(c => c.BankAccountNo == myDTO.BankAccountNo);
                     //
                     StringBuilder sbDesc = new StringBuilder();
                     foreach (var item in myDTO.ReceiveList) {
-                        sbDesc.Append($"{item.ReceiveItemName}. {item.Remarks}, ");
+                        sbDesc.Append($"{item.Description}, ");
                     }
                     TransactionDTO transItem = new TransactionDTO {
-                        ReferenceTransNo = myDTO.ReceiveTransNo,
+                        ReferenceTransNo = myDTO.TransNo,
                         BankAccountNo = myDTO.BankAccountNo,
                         Description = sbDesc.ToString(),
-                        Added = (decimal)myDTO.TotalReceiveAmount,
+                        Added = (decimal)myDTO.TotalAmount,
                         Deducted = 0,
                         OldBalance = (decimal)tblBankAcc.RemainingBalance,
-                        NewBalance = (decimal)(tblBankAcc.RemainingBalance + myDTO.TotalReceiveAmount),
-                        Remarks = $"RefTrans: {myDTO.ReceiveTransNo}, Desc: {sbDesc.ToString()}",
-                        UserId = myDTO.UserId
+                        NewBalance = (decimal)(tblBankAcc.RemainingBalance + myDTO.TotalAmount),
+                        Remarks = myDTO.Remarks,
+                        UserId = myDTO.UserID
                     };
                     new TransactionData(_ts).SaveDTO(transItem);
                     //
                     tblBankAcc.AmountDeducted = 0;
                     tblBankAcc.DateUpdated = DateTime.Now;
-                    tblBankAcc.AmountAdded = myDTO.TotalReceiveAmount;
+                    tblBankAcc.AmountAdded = myDTO.TotalAmount;
                     tblBankAcc.CurrentBalance = tblBankAcc.RemainingBalance;
-                    tblBankAcc.RemainingBalance = tblBankAcc.RemainingBalance + myDTO.TotalReceiveAmount;
+                    tblBankAcc.RemainingBalance = tblBankAcc.RemainingBalance + myDTO.TotalAmount;
                     //
                     _ts.tblreceives.Add(tbl);
                     _ts.SaveChanges();

@@ -27,20 +27,24 @@ namespace MoneyBank.Forms {
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageExpense));
             this.cLabelDesc1 = new FerPROJ.Design.Controls.CLabelDesc();
             this.cLabelDesc3 = new FerPROJ.Design.Controls.CLabelDesc();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvExpenseDetails = new FerPROJ.Design.Controls.CDatagridview();
-            this.IdTrack = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.expenseDetailDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbAdd = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbRemove = new System.Windows.Forms.ToolStripButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cLabelDesc8 = new FerPROJ.Design.Controls.CLabelDesc();
+            this.expenseDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cLabelDesc7 = new FerPROJ.Design.Controls.CLabelDesc();
             this.cLabelDesc4 = new FerPROJ.Design.Controls.CLabelDesc();
             this.cLabelDesc5 = new FerPROJ.Design.Controls.CLabelDesc();
@@ -48,24 +52,20 @@ namespace MoneyBank.Forms {
             this.cmbBankAccount = new FerPROJ.Design.Controls.CComboBoxBasic();
             this.cLabelDesc9 = new FerPROJ.Design.Controls.CLabelDesc();
             this.llUserID = new System.Windows.Forms.LinkLabel();
-            this.expenseDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.expenseNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.expenseAmountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.expenseQuantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.remarksDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.expenseTotalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.expenseDetailDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tsbRemove = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.idTrackDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.transNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qtyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.basePnl2.SuspendLayout();
             this.PanelMain3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExpenseDetails)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.expenseDetailDTOBindingSource)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.expenseDTOBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.expenseDetailDTOBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // basePnl2
@@ -139,42 +139,42 @@ namespace MoneyBank.Forms {
             this.dgvExpenseDetails.AllowUserToOrderColumns = true;
             this.dgvExpenseDetails.AllowUserToResizeRows = false;
             this.dgvExpenseDetails.AlternatingRowColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray;
-            this.dgvExpenseDetails.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.LightGray;
+            this.dgvExpenseDetails.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvExpenseDetails.AutoGenerateColumns = false;
             this.dgvExpenseDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvExpenseDetails.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvExpenseDetails.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.dgvExpenseDetails.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvExpenseDetails.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Custom;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvExpenseDetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Poppins", 12F);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvExpenseDetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvExpenseDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvExpenseDetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IdTrack,
-            this.expenseNameDataGridViewTextBoxColumn,
-            this.expenseAmountDataGridViewTextBoxColumn,
-            this.expenseQuantityDataGridViewTextBoxColumn,
-            this.remarksDataGridViewTextBoxColumn,
-            this.expenseTotalDataGridViewTextBoxColumn});
+            this.idTrackDataGridViewTextBoxColumn,
+            this.transNoDataGridViewTextBoxColumn,
+            this.descriptionDataGridViewTextBoxColumn,
+            this.qtyDataGridViewTextBoxColumn,
+            this.priceDataGridViewTextBoxColumn,
+            this.amountDataGridViewTextBoxColumn});
             this.dgvExpenseDetails.CustomHeaderFontStyle = new System.Drawing.Font("Poppins", 12F);
             this.dgvExpenseDetails.CustomHeaderForeColor = System.Drawing.Color.Black;
             this.dgvExpenseDetails.CustomRowFontStyle = new System.Drawing.Font("Poppins", 10F);
             this.dgvExpenseDetails.DataSource = this.expenseDetailDTOBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins", 10F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvExpenseDetails.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Poppins", 10F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvExpenseDetails.DefaultCellStyle = dataGridViewCellStyle11;
             this.dgvExpenseDetails.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvExpenseDetails.EnableHeadersVisualStyles = false;
             this.dgvExpenseDetails.HeaderColor = System.Drawing.Color.WhiteSmoke;
@@ -182,25 +182,21 @@ namespace MoneyBank.Forms {
             this.dgvExpenseDetails.Name = "dgvExpenseDetails";
             this.dgvExpenseDetails.ReadOnly = true;
             this.dgvExpenseDetails.RowHeadersVisible = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Poppins", 10F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvExpenseDetails.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Poppins", 10F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvExpenseDetails.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvExpenseDetails.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.dgvExpenseDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvExpenseDetails.Size = new System.Drawing.Size(745, 198);
             this.dgvExpenseDetails.TabIndex = 1;
             // 
-            // IdTrack
+            // expenseDetailDTOBindingSource
             // 
-            this.IdTrack.DataPropertyName = "IdTrack";
-            this.IdTrack.HeaderText = "IdTrack";
-            this.IdTrack.Name = "IdTrack";
-            this.IdTrack.ReadOnly = true;
-            this.IdTrack.Visible = false;
+            this.expenseDetailDTOBindingSource.DataSource = typeof(MoneyBank.DTO.ExpenseDetailDTO);
             // 
             // toolStrip1
             // 
@@ -216,6 +212,11 @@ namespace MoneyBank.Forms {
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
             // tsbAdd
             // 
             this.tsbAdd.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -225,6 +226,21 @@ namespace MoneyBank.Forms {
             this.tsbAdd.Size = new System.Drawing.Size(23, 22);
             this.tsbAdd.Text = "Add";
             this.tsbAdd.Click += new System.EventHandler(this.tsbAdd_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // tsbRemove
+            // 
+            this.tsbRemove.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbRemove.Image = ((System.Drawing.Image)(resources.GetObject("tsbRemove.Image")));
+            this.tsbRemove.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbRemove.Name = "tsbRemove";
+            this.tsbRemove.Size = new System.Drawing.Size(23, 22);
+            this.tsbRemove.Text = "Remove";
+            this.tsbRemove.Click += new System.EventHandler(this.tsbRemove_Click);
             // 
             // panel2
             // 
@@ -239,13 +255,17 @@ namespace MoneyBank.Forms {
             // cLabelDesc8
             // 
             this.cLabelDesc8.AutoSize = true;
-            this.cLabelDesc8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.expenseDTOBindingSource, "TotalExpenseAmount", true));
+            this.cLabelDesc8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.expenseDTOBindingSource, "TotalAmount", true));
             this.cLabelDesc8.Font = new System.Drawing.Font("Poppins", 10F);
             this.cLabelDesc8.Location = new System.Drawing.Point(82, 11);
             this.cLabelDesc8.Name = "cLabelDesc8";
             this.cLabelDesc8.Size = new System.Drawing.Size(36, 25);
             this.cLabelDesc8.TabIndex = 9;
             this.cLabelDesc8.Text = "---";
+            // 
+            // expenseDTOBindingSource
+            // 
+            this.expenseDTOBindingSource.DataSource = typeof(MoneyBank.DTO.ExpenseDTO);
             // 
             // cLabelDesc7
             // 
@@ -260,7 +280,7 @@ namespace MoneyBank.Forms {
             // cLabelDesc4
             // 
             this.cLabelDesc4.AutoSize = true;
-            this.cLabelDesc4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.expenseDTOBindingSource, "ExpenseTransNo", true));
+            this.cLabelDesc4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.expenseDTOBindingSource, "TransNo", true));
             this.cLabelDesc4.Font = new System.Drawing.Font("Poppins", 10F);
             this.cLabelDesc4.Location = new System.Drawing.Point(153, 27);
             this.cLabelDesc4.Name = "cLabelDesc4";
@@ -325,68 +345,49 @@ namespace MoneyBank.Forms {
             this.llUserID.TabStop = true;
             this.llUserID.Text = "User ID";
             // 
-            // expenseDTOBindingSource
+            // idTrackDataGridViewTextBoxColumn
             // 
-            this.expenseDTOBindingSource.DataSource = typeof(MoneyBank.DTO.ExpenseDTO);
+            this.idTrackDataGridViewTextBoxColumn.DataPropertyName = "IdTrack";
+            this.idTrackDataGridViewTextBoxColumn.HeaderText = "IdTrack";
+            this.idTrackDataGridViewTextBoxColumn.Name = "idTrackDataGridViewTextBoxColumn";
+            this.idTrackDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idTrackDataGridViewTextBoxColumn.Visible = false;
             // 
-            // expenseNameDataGridViewTextBoxColumn
+            // transNoDataGridViewTextBoxColumn
             // 
-            this.expenseNameDataGridViewTextBoxColumn.DataPropertyName = "ExpenseName";
-            this.expenseNameDataGridViewTextBoxColumn.HeaderText = "ExpenseName";
-            this.expenseNameDataGridViewTextBoxColumn.Name = "expenseNameDataGridViewTextBoxColumn";
-            this.expenseNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.transNoDataGridViewTextBoxColumn.DataPropertyName = "TransNo";
+            this.transNoDataGridViewTextBoxColumn.HeaderText = "TransNo";
+            this.transNoDataGridViewTextBoxColumn.Name = "transNoDataGridViewTextBoxColumn";
+            this.transNoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.transNoDataGridViewTextBoxColumn.Visible = false;
             // 
-            // expenseAmountDataGridViewTextBoxColumn
+            // descriptionDataGridViewTextBoxColumn
             // 
-            this.expenseAmountDataGridViewTextBoxColumn.DataPropertyName = "ExpenseAmount";
-            this.expenseAmountDataGridViewTextBoxColumn.HeaderText = "ExpenseAmount";
-            this.expenseAmountDataGridViewTextBoxColumn.Name = "expenseAmountDataGridViewTextBoxColumn";
-            this.expenseAmountDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // expenseQuantityDataGridViewTextBoxColumn
+            // qtyDataGridViewTextBoxColumn
             // 
-            this.expenseQuantityDataGridViewTextBoxColumn.DataPropertyName = "ExpenseQuantity";
-            this.expenseQuantityDataGridViewTextBoxColumn.HeaderText = "ExpenseQuantity";
-            this.expenseQuantityDataGridViewTextBoxColumn.Name = "expenseQuantityDataGridViewTextBoxColumn";
-            this.expenseQuantityDataGridViewTextBoxColumn.ReadOnly = true;
+            this.qtyDataGridViewTextBoxColumn.DataPropertyName = "Qty";
+            this.qtyDataGridViewTextBoxColumn.HeaderText = "Qty";
+            this.qtyDataGridViewTextBoxColumn.Name = "qtyDataGridViewTextBoxColumn";
+            this.qtyDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // remarksDataGridViewTextBoxColumn
+            // priceDataGridViewTextBoxColumn
             // 
-            this.remarksDataGridViewTextBoxColumn.DataPropertyName = "Remarks";
-            this.remarksDataGridViewTextBoxColumn.HeaderText = "Remarks";
-            this.remarksDataGridViewTextBoxColumn.Name = "remarksDataGridViewTextBoxColumn";
-            this.remarksDataGridViewTextBoxColumn.ReadOnly = true;
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // expenseTotalDataGridViewTextBoxColumn
+            // amountDataGridViewTextBoxColumn
             // 
-            this.expenseTotalDataGridViewTextBoxColumn.DataPropertyName = "ExpenseTotal";
-            this.expenseTotalDataGridViewTextBoxColumn.HeaderText = "ExpenseTotal";
-            this.expenseTotalDataGridViewTextBoxColumn.Name = "expenseTotalDataGridViewTextBoxColumn";
-            this.expenseTotalDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // expenseDetailDTOBindingSource
-            // 
-            this.expenseDetailDTOBindingSource.DataSource = typeof(MoneyBank.DTO.ExpenseDetailDTO);
-            // 
-            // tsbRemove
-            // 
-            this.tsbRemove.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbRemove.Image = ((System.Drawing.Image)(resources.GetObject("tsbRemove.Image")));
-            this.tsbRemove.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbRemove.Name = "tsbRemove";
-            this.tsbRemove.Size = new System.Drawing.Size(23, 22);
-            this.tsbRemove.Text = "Remove";
-            this.tsbRemove.Click += new System.EventHandler(this.tsbRemove_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
+            this.amountDataGridViewTextBoxColumn.HeaderText = "Amount";
+            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
+            this.amountDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // ManageExpense
             // 
@@ -403,12 +404,12 @@ namespace MoneyBank.Forms {
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExpenseDetails)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.expenseDetailDTOBindingSource)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.expenseDTOBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.expenseDetailDTOBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -430,7 +431,6 @@ namespace MoneyBank.Forms {
         private BindingSource expenseDTOBindingSource;
         private FerPROJ.Design.Controls.CLabelDesc cLabelDesc9;
         private FerPROJ.Design.Controls.CComboBoxBasic cmbBankAccount;
-        private DataGridViewTextBoxColumn IdTrack;
         private DataGridViewTextBoxColumn expenseNameDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn expenseAmountDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn expenseQuantityDataGridViewTextBoxColumn;
@@ -440,5 +440,11 @@ namespace MoneyBank.Forms {
         private ToolStripSeparator toolStripSeparator2;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripButton tsbRemove;
+        private DataGridViewTextBoxColumn idTrackDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn transNoDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn qtyDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
     }
 }

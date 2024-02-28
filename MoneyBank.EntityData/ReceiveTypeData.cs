@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MoneyBank.EntityData {
-    public class ReceiveTypeData : BaseDBEntity<moneybankEntities, Conn, ReceiveTypeDTO, string>, IEntityData<tblreceivetype, string> {
+    public class ReceiveTypeData : BaseDBEntity<moneybankEntities, Conn, ReceiveTypeDTO, int>, IEntityData<tblreceivetype, int> {
         public ReceiveTypeData() {
         }
 
@@ -25,8 +25,8 @@ namespace MoneyBank.EntityData {
             throw new NotImplementedException();
         }
 
-        public tblreceivetype GetById(string id) {
-            return _ts.tblreceivetypes.FirstOrDefault(c => c.ReceiveNo == id);
+        public tblreceivetype GetById(int id) {
+            return _ts.tblreceivetypes.FirstOrDefault(c => c.IdTrack == id);
         }
 
         public string GetNewID() {
@@ -34,7 +34,7 @@ namespace MoneyBank.EntityData {
         }
 
         public void LoadComboBox(ComboBox cmb) {
-            _conn.FillComboBox(cmb, "ReceiveType", "ReceiveNo", SelectAll());
+            _conn.FillComboBox(cmb, "ReceiveType", SelectAll());
         }
 
         public void LoadComboBox(CComboBox cmb) {
@@ -42,7 +42,7 @@ namespace MoneyBank.EntityData {
         }
 
         public void LoadList(DataGridView dgv, string SearchValue = "%") {
-            _conn.FillDGV(dgv, SelectAll<ReceiveDTO>(SearchValue));
+            _conn.FillDGV(dgv, SelectAll<ReceiveTypeDTO>(SearchValue));
         }
 
         public void LoadList(DataGridView dgv, string id, string SearchValue = "%") {
@@ -60,7 +60,7 @@ namespace MoneyBank.EntityData {
             throw new NotImplementedException();
         }
 
-        protected override void DeleteData(string id) {
+        protected override void DeleteData(int id) {
             var tbl = GetById(id);
             _ts.tblreceivetypes.Remove(tbl);
             _ts.SaveChanges();
@@ -68,7 +68,6 @@ namespace MoneyBank.EntityData {
 
         protected override void SaveData(ReceiveTypeDTO myDTO) {
             var tbl = new CMapping<ReceiveTypeDTO, tblreceivetype>().GetMappingResult(myDTO);
-            tbl.ReceiveNo = GetNewID();
             _ts.tblreceivetypes.Add(tbl);
             _ts.SaveChanges();
         }

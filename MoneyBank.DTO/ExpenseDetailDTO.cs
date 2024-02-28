@@ -8,20 +8,12 @@ using System.Threading.Tasks;
 namespace MoneyBank.DTO {
     public class ExpenseDetailDTO : CValidator {
         public int IdTrack { get; set; }
-
-        public DateTime DateReference { get; set; } = DateTime.Now;
-
-        public string ExpenseTransNo { get; set; }
-
-        public string ExpenseName { get; set; }
-
-        public decimal ExpenseAmount { get; set; } = 0;
-
-        public int ExpenseQuantity { get; set; } = 0;
-
-        public string Remarks { get; set; }
-
-        public decimal ExpenseTotal => (decimal)(ExpenseQuantity * ExpenseAmount);
+        public string TransNo { get; set; }
+        public string Description { get; set; }
+        public int Qty { get; set; }
+        public decimal Amount => Price * Qty;
+        public decimal Price { get; set; }
+        public string ExpenseType { get; set; }
         public override bool DataValidation() {
             if(Error != null) {
                 return false;

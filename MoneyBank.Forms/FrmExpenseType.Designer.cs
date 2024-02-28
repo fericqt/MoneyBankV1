@@ -33,13 +33,14 @@ namespace MoneyBank.Forms {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvExpenseType = new FerPROJ.Design.Controls.CDatagridview();
             this.expenseTypeDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.expenseTypeDTOBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.idTrackDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateReferenceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.expenseNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.expenseNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateReferenceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PanelMain4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExpenseType)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.expenseTypeDTOBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.expenseTypeDTOBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // baseButtonSelect
@@ -58,8 +59,9 @@ namespace MoneyBank.Forms {
             // 
             // SearchTextBox
             // 
-            this.SearchTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.SearchTextBox.Margin = new System.Windows.Forms.Padding(3);
             this.SearchTextBox.Padding = new System.Windows.Forms.Padding(9, 6, 9, 6);
+            this.SearchTextBox.Size = new System.Drawing.Size(305, 31);
             // 
             // dgvExpenseType
             // 
@@ -87,13 +89,12 @@ namespace MoneyBank.Forms {
             this.dgvExpenseType.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvExpenseType.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idTrackDataGridViewTextBoxColumn,
-            this.dateReferenceDataGridViewTextBoxColumn,
-            this.expenseNoDataGridViewTextBoxColumn,
-            this.expenseNameDataGridViewTextBoxColumn});
+            this.expenseNameDataGridViewTextBoxColumn,
+            this.dateReferenceDataGridViewTextBoxColumn});
             this.dgvExpenseType.CustomHeaderFontStyle = new System.Drawing.Font("Poppins", 12F);
             this.dgvExpenseType.CustomHeaderForeColor = System.Drawing.Color.Black;
             this.dgvExpenseType.CustomRowFontStyle = new System.Drawing.Font("Poppins", 10F);
-            this.dgvExpenseType.DataSource = this.expenseTypeDTOBindingSource;
+            this.dgvExpenseType.DataSource = this.expenseTypeDTOBindingSource1;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins", 10F);
@@ -125,27 +126,16 @@ namespace MoneyBank.Forms {
             // 
             this.expenseTypeDTOBindingSource.DataSource = typeof(MoneyBank.DTO.ExpenseTypeDTO);
             // 
+            // expenseTypeDTOBindingSource1
+            // 
+            this.expenseTypeDTOBindingSource1.DataSource = typeof(MoneyBank.DTO.ExpenseTypeDTO);
+            // 
             // idTrackDataGridViewTextBoxColumn
             // 
             this.idTrackDataGridViewTextBoxColumn.DataPropertyName = "IdTrack";
             this.idTrackDataGridViewTextBoxColumn.HeaderText = "IdTrack";
             this.idTrackDataGridViewTextBoxColumn.Name = "idTrackDataGridViewTextBoxColumn";
             this.idTrackDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idTrackDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // dateReferenceDataGridViewTextBoxColumn
-            // 
-            this.dateReferenceDataGridViewTextBoxColumn.DataPropertyName = "DateReference";
-            this.dateReferenceDataGridViewTextBoxColumn.HeaderText = "DateReference";
-            this.dateReferenceDataGridViewTextBoxColumn.Name = "dateReferenceDataGridViewTextBoxColumn";
-            this.dateReferenceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // expenseNoDataGridViewTextBoxColumn
-            // 
-            this.expenseNoDataGridViewTextBoxColumn.DataPropertyName = "ExpenseNo";
-            this.expenseNoDataGridViewTextBoxColumn.HeaderText = "ExpenseNo";
-            this.expenseNoDataGridViewTextBoxColumn.Name = "expenseNoDataGridViewTextBoxColumn";
-            this.expenseNoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // expenseNameDataGridViewTextBoxColumn
             // 
@@ -154,17 +144,25 @@ namespace MoneyBank.Forms {
             this.expenseNameDataGridViewTextBoxColumn.Name = "expenseNameDataGridViewTextBoxColumn";
             this.expenseNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // dateReferenceDataGridViewTextBoxColumn
+            // 
+            this.dateReferenceDataGridViewTextBoxColumn.DataPropertyName = "DateReference";
+            this.dateReferenceDataGridViewTextBoxColumn.HeaderText = "DateReference";
+            this.dateReferenceDataGridViewTextBoxColumn.Name = "dateReferenceDataGridViewTextBoxColumn";
+            this.dateReferenceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // FrmExpenseType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(885, 485);
             this.Name = "FrmExpenseType";
-            this.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Padding = new System.Windows.Forms.Padding(5);
             this.Text = "FrmExpenseType";
             this.PanelMain4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvExpenseType)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.expenseTypeDTOBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.expenseTypeDTOBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -173,9 +171,10 @@ namespace MoneyBank.Forms {
 
         private FerPROJ.Design.Controls.CDatagridview dgvExpenseType;
         private BindingSource expenseTypeDTOBindingSource;
-        private DataGridViewTextBoxColumn idTrackDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn dateReferenceDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn expenseNoDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn idTrackDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn expenseNameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn dateReferenceDataGridViewTextBoxColumn;
+        private BindingSource expenseTypeDTOBindingSource1;
     }
 }

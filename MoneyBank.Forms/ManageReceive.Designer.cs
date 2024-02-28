@@ -34,14 +34,11 @@ namespace MoneyBank.Forms {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbAdd = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbRemove = new System.Windows.Forms.ToolStripButton();
             this.dgvReceiveDetails = new FerPROJ.Design.Controls.CDatagridview();
-            this.receiveItemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.receiveAmountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.receiveQuantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.remarksDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.receiveAmountTotalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.receiveDetailDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cLabelDesc1 = new FerPROJ.Design.Controls.CLabelDesc();
             this.cLabelDesc2 = new FerPROJ.Design.Controls.CLabelDesc();
@@ -55,8 +52,12 @@ namespace MoneyBank.Forms {
             this.cLabelDesc8 = new FerPROJ.Design.Controls.CLabelDesc();
             this.cLabelDesc9 = new FerPROJ.Design.Controls.CLabelDesc();
             this.llUserID = new System.Windows.Forms.LinkLabel();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.idTrackDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.transNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qtyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.basePnl2.SuspendLayout();
             this.PanelMain3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -125,6 +126,11 @@ namespace MoneyBank.Forms {
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
             // tsbAdd
             // 
             this.tsbAdd.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -134,6 +140,11 @@ namespace MoneyBank.Forms {
             this.tsbAdd.Size = new System.Drawing.Size(23, 22);
             this.tsbAdd.Text = "toolStripButton1";
             this.tsbAdd.Click += new System.EventHandler(this.tsbAdd_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // tsbRemove
             // 
@@ -170,11 +181,12 @@ namespace MoneyBank.Forms {
             this.dgvReceiveDetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvReceiveDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReceiveDetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.receiveItemNameDataGridViewTextBoxColumn,
-            this.receiveAmountDataGridViewTextBoxColumn,
-            this.receiveQuantityDataGridViewTextBoxColumn,
-            this.remarksDataGridViewTextBoxColumn,
-            this.receiveAmountTotalDataGridViewTextBoxColumn});
+            this.idTrackDataGridViewTextBoxColumn,
+            this.transNoDataGridViewTextBoxColumn,
+            this.descriptionDataGridViewTextBoxColumn,
+            this.priceDataGridViewTextBoxColumn,
+            this.qtyDataGridViewTextBoxColumn,
+            this.amountDataGridViewTextBoxColumn});
             this.dgvReceiveDetails.CustomHeaderFontStyle = new System.Drawing.Font("Poppins", 12F);
             this.dgvReceiveDetails.CustomHeaderForeColor = System.Drawing.Color.Black;
             this.dgvReceiveDetails.CustomRowFontStyle = new System.Drawing.Font("Poppins", 10F);
@@ -206,41 +218,6 @@ namespace MoneyBank.Forms {
             this.dgvReceiveDetails.Size = new System.Drawing.Size(767, 203);
             this.dgvReceiveDetails.TabIndex = 0;
             // 
-            // receiveItemNameDataGridViewTextBoxColumn
-            // 
-            this.receiveItemNameDataGridViewTextBoxColumn.DataPropertyName = "ReceiveItemName";
-            this.receiveItemNameDataGridViewTextBoxColumn.HeaderText = "ReceiveItemName";
-            this.receiveItemNameDataGridViewTextBoxColumn.Name = "receiveItemNameDataGridViewTextBoxColumn";
-            this.receiveItemNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // receiveAmountDataGridViewTextBoxColumn
-            // 
-            this.receiveAmountDataGridViewTextBoxColumn.DataPropertyName = "ReceiveAmount";
-            this.receiveAmountDataGridViewTextBoxColumn.HeaderText = "ReceiveAmount";
-            this.receiveAmountDataGridViewTextBoxColumn.Name = "receiveAmountDataGridViewTextBoxColumn";
-            this.receiveAmountDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // receiveQuantityDataGridViewTextBoxColumn
-            // 
-            this.receiveQuantityDataGridViewTextBoxColumn.DataPropertyName = "ReceiveQuantity";
-            this.receiveQuantityDataGridViewTextBoxColumn.HeaderText = "ReceiveQuantity";
-            this.receiveQuantityDataGridViewTextBoxColumn.Name = "receiveQuantityDataGridViewTextBoxColumn";
-            this.receiveQuantityDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // remarksDataGridViewTextBoxColumn
-            // 
-            this.remarksDataGridViewTextBoxColumn.DataPropertyName = "Remarks";
-            this.remarksDataGridViewTextBoxColumn.HeaderText = "Remarks";
-            this.remarksDataGridViewTextBoxColumn.Name = "remarksDataGridViewTextBoxColumn";
-            this.remarksDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // receiveAmountTotalDataGridViewTextBoxColumn
-            // 
-            this.receiveAmountTotalDataGridViewTextBoxColumn.DataPropertyName = "ReceiveAmountTotal";
-            this.receiveAmountTotalDataGridViewTextBoxColumn.HeaderText = "ReceiveAmountTotal";
-            this.receiveAmountTotalDataGridViewTextBoxColumn.Name = "receiveAmountTotalDataGridViewTextBoxColumn";
-            this.receiveAmountTotalDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // receiveDetailDTOBindingSource
             // 
             this.receiveDetailDTOBindingSource.DataSource = typeof(MoneyBank.DTO.ReceiveDetailDTO);
@@ -258,7 +235,7 @@ namespace MoneyBank.Forms {
             // cLabelDesc2
             // 
             this.cLabelDesc2.AutoSize = true;
-            this.cLabelDesc2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.receiveDTOBindingSource, "ReceiveTransNo", true));
+            this.cLabelDesc2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.receiveDTOBindingSource, "TransNo", true));
             this.cLabelDesc2.Font = new System.Drawing.Font("Poppins", 10F);
             this.cLabelDesc2.Location = new System.Drawing.Point(134, 24);
             this.cLabelDesc2.Name = "cLabelDesc2";
@@ -339,7 +316,7 @@ namespace MoneyBank.Forms {
             // cLabelDesc8
             // 
             this.cLabelDesc8.AutoSize = true;
-            this.cLabelDesc8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.receiveDTOBindingSource, "TotalReceiveAmount", true));
+            this.cLabelDesc8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.receiveDTOBindingSource, "TotalAmount", true));
             this.cLabelDesc8.Font = new System.Drawing.Font("Poppins", 10F);
             this.cLabelDesc8.Location = new System.Drawing.Point(62, 17);
             this.cLabelDesc8.Name = "cLabelDesc8";
@@ -369,15 +346,49 @@ namespace MoneyBank.Forms {
             this.llUserID.Text = "User ID:";
             this.llUserID.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llUserID_LinkClicked);
             // 
-            // toolStripSeparator1
+            // idTrackDataGridViewTextBoxColumn
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.idTrackDataGridViewTextBoxColumn.DataPropertyName = "IdTrack";
+            this.idTrackDataGridViewTextBoxColumn.HeaderText = "IdTrack";
+            this.idTrackDataGridViewTextBoxColumn.Name = "idTrackDataGridViewTextBoxColumn";
+            this.idTrackDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idTrackDataGridViewTextBoxColumn.Visible = false;
             // 
-            // toolStripSeparator2
+            // transNoDataGridViewTextBoxColumn
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.transNoDataGridViewTextBoxColumn.DataPropertyName = "TransNo";
+            this.transNoDataGridViewTextBoxColumn.HeaderText = "TransNo";
+            this.transNoDataGridViewTextBoxColumn.Name = "transNoDataGridViewTextBoxColumn";
+            this.transNoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.transNoDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // qtyDataGridViewTextBoxColumn
+            // 
+            this.qtyDataGridViewTextBoxColumn.DataPropertyName = "Qty";
+            this.qtyDataGridViewTextBoxColumn.HeaderText = "Qty";
+            this.qtyDataGridViewTextBoxColumn.Name = "qtyDataGridViewTextBoxColumn";
+            this.qtyDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // amountDataGridViewTextBoxColumn
+            // 
+            this.amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
+            this.amountDataGridViewTextBoxColumn.HeaderText = "Amount";
+            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
+            this.amountDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // ManageReceive
             // 
@@ -429,5 +440,11 @@ namespace MoneyBank.Forms {
         private LinkLabel llUserID;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripSeparator toolStripSeparator2;
+        private DataGridViewTextBoxColumn idTrackDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn transNoDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn qtyDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
     }
 }

@@ -15,13 +15,12 @@ namespace MoneyBank.Entity
     public partial class tblreceivedetail
     {
         public int IdTrack { get; set; }
-        public Nullable<System.DateTime> DateReference { get; set; }
-        public string ReceiveTransNo { get; set; }
-        public string ReceiveItemName { get; set; }
-        public Nullable<decimal> ReceiveAmount { get; set; }
-        public Nullable<int> ReceiveQuantity { get; set; }
-        public string Remarks { get; set; }
-        public decimal ReceiveAmountTotal { get; set; }
+        public string TransNo { get; set; }
+        public string Description { get; set; }
+        public decimal Amount { get; set; }
+        public int Qty { get; set; }
+        public decimal Price { get; set; }
+        public string ReceiveType { get; set; }
     
         public virtual tblreceive tblreceive { get; set; }
     }

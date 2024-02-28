@@ -16,7 +16,6 @@ namespace MoneyBank.Entity
     {
         public int IdTrack { get; set; }
         public Nullable<System.DateTime> DateReference { get; set; }
-        public string ExpenseNo { get; set; }
         public string ExpenseName { get; set; }
     }
 }

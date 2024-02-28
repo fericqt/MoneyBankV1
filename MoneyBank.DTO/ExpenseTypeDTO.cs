@@ -8,11 +8,7 @@ using System.Threading.Tasks;
 namespace MoneyBank.DTO {
     public class ExpenseTypeDTO : CValidator {
         public int IdTrack { get; set; }
-
-        public DateTime? DateReference { get; set; } = DateTime.Now;
-
-        public string ExpenseNo { get; set; }
-
+        public DateTime DateReference { get; set; } = DateTime.Now;
         public string ExpenseName { get; set; }
         public override bool DataValidation() {
             throw new NotImplementedException();

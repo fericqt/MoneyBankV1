@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MoneyBank.EntityData {
-    public class ExpenseTypeData : BaseDBEntity<moneybankEntities, Conn, ExpenseTypeDTO, string>, IEntityData<tblexpensetype, string> {
+    public class ExpenseTypeData : BaseDBEntity<moneybankEntities, Conn, ExpenseTypeDTO, int>, IEntityData<tblexpensetype, int> {
         public ExpenseTypeData() {
         }
 
@@ -25,8 +25,8 @@ namespace MoneyBank.EntityData {
             throw new NotImplementedException();
         }
 
-        public tblexpensetype GetById(string id) {
-            return _ts.tblexpensetypes.FirstOrDefault(c => c.ExpenseNo == id);
+        public tblexpensetype GetById(int id) {
+            return _ts.tblexpensetypes.FirstOrDefault(c => c.IdTrack == id);
         }
 
         public string GetNewID() {
@@ -34,7 +34,7 @@ namespace MoneyBank.EntityData {
         }
 
         public void LoadComboBox(ComboBox cmb) {
-            _conn.FillComboBox(cmb, "ExpenseName", "ExpenseNo", SelectAll());
+            _conn.FillComboBox(cmb, "ExpenseName", SelectAll());
         }
 
         public void LoadComboBox(CComboBox cmb) {
@@ -60,7 +60,7 @@ namespace MoneyBank.EntityData {
             throw new NotImplementedException();
         }
 
-        protected override void DeleteData(string id) {
+        protected override void DeleteData(int id) {
             var tbl = GetById(id);
             _ts.tblexpensetypes.Remove(tbl);
             _ts.SaveChanges();
@@ -68,7 +68,6 @@ namespace MoneyBank.EntityData {
 
         protected override void SaveData(ExpenseTypeDTO myDTO) {
             var tbl = new CMapping<ExpenseTypeDTO, tblexpensetype>().GetMappingResult(myDTO);
-            tbl.ExpenseNo = GetNewID();
             _ts.tblexpensetypes.Add(tbl);
             _ts.SaveChanges();
         }

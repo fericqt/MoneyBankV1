@@ -34,9 +34,8 @@ namespace MoneyBank.Forms {
             this.dgvReceiveTypes = new FerPROJ.Design.Controls.CDatagridview();
             this.receiveTypeDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idTrackDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateReferenceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.receiveNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.receiveTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateReferenceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PanelMain4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReceiveTypes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.receiveTypeDTOBindingSource)).BeginInit();
@@ -58,8 +57,9 @@ namespace MoneyBank.Forms {
             // 
             // SearchTextBox
             // 
-            this.SearchTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.SearchTextBox.Margin = new System.Windows.Forms.Padding(3);
             this.SearchTextBox.Padding = new System.Windows.Forms.Padding(9, 6, 9, 6);
+            this.SearchTextBox.Size = new System.Drawing.Size(305, 31);
             // 
             // dgvReceiveTypes
             // 
@@ -87,9 +87,8 @@ namespace MoneyBank.Forms {
             this.dgvReceiveTypes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReceiveTypes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idTrackDataGridViewTextBoxColumn,
-            this.dateReferenceDataGridViewTextBoxColumn,
-            this.receiveNoDataGridViewTextBoxColumn,
-            this.receiveTypeDataGridViewTextBoxColumn});
+            this.receiveTypeDataGridViewTextBoxColumn,
+            this.dateReferenceDataGridViewTextBoxColumn});
             this.dgvReceiveTypes.CustomHeaderFontStyle = new System.Drawing.Font("Poppins", 12F);
             this.dgvReceiveTypes.CustomHeaderForeColor = System.Drawing.Color.Black;
             this.dgvReceiveTypes.CustomRowFontStyle = new System.Drawing.Font("Poppins", 10F);
@@ -131,21 +130,6 @@ namespace MoneyBank.Forms {
             this.idTrackDataGridViewTextBoxColumn.HeaderText = "IdTrack";
             this.idTrackDataGridViewTextBoxColumn.Name = "idTrackDataGridViewTextBoxColumn";
             this.idTrackDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idTrackDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // dateReferenceDataGridViewTextBoxColumn
-            // 
-            this.dateReferenceDataGridViewTextBoxColumn.DataPropertyName = "DateReference";
-            this.dateReferenceDataGridViewTextBoxColumn.HeaderText = "DateReference";
-            this.dateReferenceDataGridViewTextBoxColumn.Name = "dateReferenceDataGridViewTextBoxColumn";
-            this.dateReferenceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // receiveNoDataGridViewTextBoxColumn
-            // 
-            this.receiveNoDataGridViewTextBoxColumn.DataPropertyName = "ReceiveNo";
-            this.receiveNoDataGridViewTextBoxColumn.HeaderText = "ReceiveNo";
-            this.receiveNoDataGridViewTextBoxColumn.Name = "receiveNoDataGridViewTextBoxColumn";
-            this.receiveNoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // receiveTypeDataGridViewTextBoxColumn
             // 
@@ -154,13 +138,20 @@ namespace MoneyBank.Forms {
             this.receiveTypeDataGridViewTextBoxColumn.Name = "receiveTypeDataGridViewTextBoxColumn";
             this.receiveTypeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // dateReferenceDataGridViewTextBoxColumn
+            // 
+            this.dateReferenceDataGridViewTextBoxColumn.DataPropertyName = "DateReference";
+            this.dateReferenceDataGridViewTextBoxColumn.HeaderText = "DateReference";
+            this.dateReferenceDataGridViewTextBoxColumn.Name = "dateReferenceDataGridViewTextBoxColumn";
+            this.dateReferenceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // FrmReceiveTypes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(874, 465);
             this.Name = "FrmReceiveTypes";
-            this.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Padding = new System.Windows.Forms.Padding(5);
             this.Text = "FrmReceiveTypes";
             this.PanelMain4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReceiveTypes)).EndInit();
@@ -172,10 +163,10 @@ namespace MoneyBank.Forms {
         #endregion
 
         private FerPROJ.Design.Controls.CDatagridview dgvReceiveTypes;
-        private BindingSource receiveTypeDTOBindingSource;
-        private DataGridViewTextBoxColumn idTrackDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn dateReferenceDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn receiveNoDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn idTrackDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn receiveTypeDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn dateReferenceDataGridViewTextBoxColumn;
+        private BindingSource receiveTypeDTOBindingSource;
     }
 }

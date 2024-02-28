@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace MoneyBank.DTO {
     public class ReceiveDTO : CValidator {
-        public DateTime? DateReference { get; set; } = DateTime.Now;
-
-        public string ReceiveTransNo { get; set; } 
-
-        public string UserId { get; set; } = CStaticVariable.UserID;
-
+        public System.DateTime DateReference => DateTime.Now;
+        public string UserID { get; set; }
         public string BankAccountNo { get; set; }
-
-        public decimal TotalReceiveAmount => ReceiveList.Sum(c => c.ReceiveAmountTotal);
+        public string TransNo { get; set; }
+        public decimal TotalAmount => ReceiveList.Sum(c => c.Amount);
+        public string Remarks { get; set; }
+        //public string CancelledBy { get; set; }
+        //public string CancelledDate { get; set; }
+        //public string CancelledRemarks { get; set; }
         public string Status => CEnum.Status.ACTIVE.ToString();
 
         public List<ReceiveDetailDTO> ReceiveList = new List<ReceiveDetailDTO>();

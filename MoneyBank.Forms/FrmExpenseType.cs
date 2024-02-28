@@ -33,7 +33,7 @@ namespace MoneyBank.Forms {
         protected override bool DeleteItem() {
             if (dgvExpenseType.GetSelectedValue(expenseNoDataGridViewTextBoxColumn.Index, out string sout)) {
                 using (var data = new ExpenseTypeData()) {
-                    data.Delete(sout);
+                    data.Delete(sout.ToInt());
                     return true;
                 }
             }

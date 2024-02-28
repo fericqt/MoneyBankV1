@@ -14,19 +14,16 @@ namespace MoneyBank.Entity
     using System.Data.Entity.Infrastructure;
     
     public partial class moneybankEntities : DbContext
-    {   
+    {
+  
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
         }
     
         public virtual DbSet<tblbank> tblbanks { get; set; }
-        public virtual DbSet<tblexpense> tblexpenses { get; set; }
-        public virtual DbSet<tblexpensedetail> tblexpensedetails { get; set; }
         public virtual DbSet<tblexpensetype> tblexpensetypes { get; set; }
         public virtual DbSet<tbllog> tbllogs { get; set; }
-        public virtual DbSet<tblreceive> tblreceives { get; set; }
-        public virtual DbSet<tblreceivedetail> tblreceivedetails { get; set; }
         public virtual DbSet<tblreceivetype> tblreceivetypes { get; set; }
         public virtual DbSet<tblreconcile> tblreconciles { get; set; }
         public virtual DbSet<tbltransaction> tbltransactions { get; set; }
@@ -35,5 +32,9 @@ namespace MoneyBank.Entity
         public virtual DbSet<tbluserbankaccount> tbluserbankaccounts { get; set; }
         public virtual DbSet<tbluserinformation> tbluserinformations { get; set; }
         public virtual DbSet<tblbanktransfer> tblbanktransfers { get; set; }
+        public virtual DbSet<tblexpense> tblexpenses { get; set; }
+        public virtual DbSet<tblexpensedetail> tblexpensedetails { get; set; }
+        public virtual DbSet<tblreceive> tblreceives { get; set; }
+        public virtual DbSet<tblreceivedetail> tblreceivedetails { get; set; }
     }
 }

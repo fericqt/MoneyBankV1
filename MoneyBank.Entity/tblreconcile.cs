@@ -16,14 +16,13 @@ namespace MoneyBank.Entity
     {
         public int IdTrack { get; set; }
         public Nullable<System.DateTime> DateReference { get; set; }
-        public string ReconcileTransNo { get; set; }
         public string UserID { get; set; }
         public string BankAccountNo { get; set; }
-        public Nullable<decimal> AddedAmount { get; set; }
-        public Nullable<decimal> DeductedAmount { get; set; }
-        public Nullable<decimal> BalanceAmount { get; set; }
         public Nullable<decimal> BeginingBalance { get; set; }
         public Nullable<decimal> EndingBalance { get; set; }
         public string Remarks { get; set; }
+        public string TransNo { get; set; }
+        public string ReferenceTransNo { get; set; }
+        public string Status { get; set; }
     }
 }

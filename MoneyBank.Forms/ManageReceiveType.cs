@@ -25,7 +25,7 @@ namespace MoneyBank.Forms {
                     break;
                 case FormMode.Update:
                     using (var data = new ReceiveTypeData()) {
-                        myDTO = new CMapping<tblreceivetype, ReceiveTypeDTO>().GetMappingResult(data.GetById(Manage_IdTrack));
+                        myDTO = new CMapping<tblreceivetype, ReceiveTypeDTO>().GetMappingResult(data.GetById(Manage_IdTrack.ToInt()));
                     }
                     break;
             }
