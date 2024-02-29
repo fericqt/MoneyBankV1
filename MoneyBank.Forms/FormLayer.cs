@@ -10,16 +10,16 @@ namespace MoneyBank.Forms {
     public class FormLayer {
 
         public class ManageForm {
-            public bool ManageUser(string id, FormMode formMode) {
-                using (var frm = new ManageUser()) {
-                    frm.Manage_IdTrack = id;
-                    frm.CurrentFormMode = formMode;
+            public bool ManageLogin() {
+                using (var frm = new ManageLogin()) {
                     frm.ShowDialog();
                     return frm.CurrentFormResult;
                 }
             }
-            public bool ManageLogin() {
-                using (var frm = new ManageLogin()) {
+            public bool ManageUser(string id, FormMode formMode) {
+                using (var frm = new ManageUser()) {
+                    frm.Manage_IdTrack = id;
+                    frm.CurrentFormMode = formMode;
                     frm.ShowDialog();
                     return frm.CurrentFormResult;
                 }

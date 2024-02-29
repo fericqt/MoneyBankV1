@@ -16,6 +16,20 @@
                </ControlSetting>
             </ControlSettings>
          </PropertyUISetting>
+         <PropertyUISetting Name="Username">
+            <ControlSettings>
+               <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <BindableControlInfo Name="CTextBoxBasic" Type="FerPROJ.Design.Controls.CTextBoxBasic" AssemblyName="FerPROJ.Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" AssemblyCodeBase="file:///C:/WorkingFolder/C# Projects 2019/FerPROJ.Design/FerPROJ.Design/obj/Debug/FerPROJ.Design.dll" Frameworks=".NETFramework,Version=v4.8.1" />
+               </ControlSetting>
+            </ControlSettings>
+         </PropertyUISetting>
+         <PropertyUISetting Name="Password">
+            <ControlSettings>
+               <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <BindableControlInfo Name="CTextBoxBasic" Type="FerPROJ.Design.Controls.CTextBoxBasic" AssemblyName="FerPROJ.Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" AssemblyCodeBase="file:///C:/WorkingFolder/C# Projects 2019/FerPROJ.Design/FerPROJ.Design/obj/Debug/FerPROJ.Design.dll" Frameworks=".NETFramework,Version=v4.8.1" />
+               </ControlSetting>
+            </ControlSettings>
+         </PropertyUISetting>
       </PropertyUISettings>
    </TypeUISetting>
 </GenericObjectDataSource>

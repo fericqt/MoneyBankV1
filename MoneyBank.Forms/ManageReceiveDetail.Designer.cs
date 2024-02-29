@@ -54,6 +54,7 @@ namespace MoneyBank.Forms {
             // baseButtonSave
             // 
             this.baseButtonSave.FlatAppearance.BorderSize = 0;
+            this.baseButtonSave.TabIndex = 0;
             // 
             // baseButtonCancel
             // 
@@ -71,7 +72,7 @@ namespace MoneyBank.Forms {
             this.PanelMain3.Controls.Add(this.cTextBoxBasic3);
             this.PanelMain3.Controls.Add(this.cLabelDesc3);
             this.PanelMain3.Controls.Add(this.cLabelDesc1);
-            this.PanelMain3.Size = new System.Drawing.Size(470, 204);
+            this.PanelMain3.Size = new System.Drawing.Size(470, 244);
             // 
             // baseButtonAddNew
             // 
@@ -100,7 +101,7 @@ namespace MoneyBank.Forms {
             this.cTextBoxBasic3.Font = new System.Drawing.Font("Poppins", 8F);
             this.cTextBoxBasic3.ForeColor = System.Drawing.Color.Black;
             this.cTextBoxBasic3.LeaveColor = System.Drawing.Color.WhiteSmoke;
-            this.cTextBoxBasic3.Location = new System.Drawing.Point(273, 96);
+            this.cTextBoxBasic3.Location = new System.Drawing.Point(273, 125);
             this.cTextBoxBasic3.Name = "cTextBoxBasic3";
             this.cTextBoxBasic3.Size = new System.Drawing.Size(157, 23);
             this.cTextBoxBasic3.TabIndex = 5;
@@ -109,7 +110,7 @@ namespace MoneyBank.Forms {
             // 
             this.cLabelDesc3.AutoSize = true;
             this.cLabelDesc3.Font = new System.Drawing.Font("Poppins", 10F);
-            this.cLabelDesc3.Location = new System.Drawing.Point(44, 96);
+            this.cLabelDesc3.Location = new System.Drawing.Point(44, 125);
             this.cLabelDesc3.Name = "cLabelDesc3";
             this.cLabelDesc3.Size = new System.Drawing.Size(39, 25);
             this.cLabelDesc3.TabIndex = 4;
@@ -124,7 +125,7 @@ namespace MoneyBank.Forms {
             this.cTextBoxBasic4.Font = new System.Drawing.Font("Poppins", 8F);
             this.cTextBoxBasic4.ForeColor = System.Drawing.Color.Black;
             this.cTextBoxBasic4.LeaveColor = System.Drawing.Color.WhiteSmoke;
-            this.cTextBoxBasic4.Location = new System.Drawing.Point(273, 125);
+            this.cTextBoxBasic4.Location = new System.Drawing.Point(273, 154);
             this.cTextBoxBasic4.Name = "cTextBoxBasic4";
             this.cTextBoxBasic4.Size = new System.Drawing.Size(157, 23);
             this.cTextBoxBasic4.TabIndex = 7;
@@ -133,7 +134,7 @@ namespace MoneyBank.Forms {
             // 
             this.cLabelDesc4.AutoSize = true;
             this.cLabelDesc4.Font = new System.Drawing.Font("Poppins", 10F);
-            this.cLabelDesc4.Location = new System.Drawing.Point(44, 125);
+            this.cLabelDesc4.Location = new System.Drawing.Point(44, 154);
             this.cLabelDesc4.Name = "cLabelDesc4";
             this.cLabelDesc4.Size = new System.Drawing.Size(70, 25);
             this.cLabelDesc4.TabIndex = 6;
@@ -143,7 +144,7 @@ namespace MoneyBank.Forms {
             // 
             this.cLabelDesc5.AutoSize = true;
             this.cLabelDesc5.Font = new System.Drawing.Font("Poppins", 10F);
-            this.cLabelDesc5.Location = new System.Drawing.Point(44, 162);
+            this.cLabelDesc5.Location = new System.Drawing.Point(44, 188);
             this.cLabelDesc5.Name = "cLabelDesc5";
             this.cLabelDesc5.Size = new System.Drawing.Size(49, 25);
             this.cLabelDesc5.TabIndex = 8;
@@ -160,7 +161,7 @@ namespace MoneyBank.Forms {
             this.cmbReceiveName.PropertyText = "";
             this.cmbReceiveName.PropertyTextValue = "";
             this.cmbReceiveName.Size = new System.Drawing.Size(271, 21);
-            this.cmbReceiveName.TabIndex = 10;
+            this.cmbReceiveName.TabIndex = 1;
             // 
             // descriptionCTextBoxBasic
             // 
@@ -174,8 +175,8 @@ namespace MoneyBank.Forms {
             this.descriptionCTextBoxBasic.Location = new System.Drawing.Point(159, 47);
             this.descriptionCTextBoxBasic.Multiline = true;
             this.descriptionCTextBoxBasic.Name = "descriptionCTextBoxBasic";
-            this.descriptionCTextBoxBasic.Size = new System.Drawing.Size(271, 43);
-            this.descriptionCTextBoxBasic.TabIndex = 11;
+            this.descriptionCTextBoxBasic.Size = new System.Drawing.Size(271, 72);
+            this.descriptionCTextBoxBasic.TabIndex = 3;
             // 
             // cLabelDesc2
             // 
@@ -184,24 +185,24 @@ namespace MoneyBank.Forms {
             this.cLabelDesc2.Location = new System.Drawing.Point(44, 47);
             this.cLabelDesc2.Name = "cLabelDesc2";
             this.cLabelDesc2.Size = new System.Drawing.Size(93, 25);
-            this.cLabelDesc2.TabIndex = 12;
+            this.cLabelDesc2.TabIndex = 2;
             this.cLabelDesc2.Text = "Description:";
             // 
             // amountCLabelDesc
             // 
             this.amountCLabelDesc.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.receiveDetailDTOBindingSource, "Amount", true));
             this.amountCLabelDesc.Font = new System.Drawing.Font("Poppins", 10F);
-            this.amountCLabelDesc.Location = new System.Drawing.Point(273, 162);
+            this.amountCLabelDesc.Location = new System.Drawing.Point(273, 191);
             this.amountCLabelDesc.Name = "amountCLabelDesc";
             this.amountCLabelDesc.Size = new System.Drawing.Size(157, 23);
-            this.amountCLabelDesc.TabIndex = 13;
+            this.amountCLabelDesc.TabIndex = 9;
             this.amountCLabelDesc.Text = "cLabelDesc6";
             // 
             // ManageReceiveDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 358);
+            this.ClientSize = new System.Drawing.Size(480, 398);
             this.Name = "ManageReceiveDetail";
             this.Padding = new System.Windows.Forms.Padding(5);
             this.Text = "ManageReceiveDetails";

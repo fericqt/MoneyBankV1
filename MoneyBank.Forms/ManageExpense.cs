@@ -2,6 +2,7 @@
 using MoneyBank.Base.Forms;
 using MoneyBank.DTO;
 using MoneyBank.EntityData;
+using MoneyBank.Reports;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -50,6 +51,7 @@ namespace MoneyBank.Forms {
         protected override bool OnSaveData() {
             using (var data = new ExpenseData()) {
                 data.SaveDTO(myDTO);
+                new TransactionReport().PreviewReport(TransactionReport.ReportList.ExpenseTransaction, myDTO.TransNo);
                 return true;
             }
         }

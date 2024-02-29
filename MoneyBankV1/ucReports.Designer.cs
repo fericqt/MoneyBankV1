@@ -75,7 +75,7 @@ namespace MoneyBankV2 {
             // 
             // cLabelTitle1
             // 
-            this.cLabelTitle1.BackColor = System.Drawing.Color.DarkBlue;
+            this.cLabelTitle1.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.cLabelTitle1.Dock = System.Windows.Forms.DockStyle.Top;
             this.cLabelTitle1.Font = new System.Drawing.Font("Poppins", 15F, System.Drawing.FontStyle.Bold);
             this.cLabelTitle1.ForeColor = System.Drawing.Color.White;

@@ -45,7 +45,7 @@ namespace MoneyBank.Forms {
             // 
             // basePnl2
             // 
-            this.basePnl2.Location = new System.Drawing.Point(209, 1);
+            this.basePnl2.Location = new System.Drawing.Point(239, 1);
             // 
             // baseButtonUpdate
             // 
@@ -54,6 +54,7 @@ namespace MoneyBank.Forms {
             // baseButtonSave
             // 
             this.baseButtonSave.FlatAppearance.BorderSize = 0;
+            this.baseButtonSave.TabIndex = 0;
             // 
             // baseButtonCancel
             // 
@@ -71,7 +72,8 @@ namespace MoneyBank.Forms {
             this.PanelMain3.Controls.Add(this.cTextBoxBasic1);
             this.PanelMain3.Controls.Add(this.cmbExpenseName);
             this.PanelMain3.Controls.Add(this.cLabelDesc1);
-            this.PanelMain3.Size = new System.Drawing.Size(444, 229);
+            this.PanelMain3.Size = new System.Drawing.Size(474, 229);
+            this.PanelMain3.TabIndex = 0;
             // 
             // baseButtonAddNew
             // 
@@ -81,10 +83,10 @@ namespace MoneyBank.Forms {
             // 
             this.cLabelDesc1.AutoSize = true;
             this.cLabelDesc1.Font = new System.Drawing.Font("Poppins", 10F);
-            this.cLabelDesc1.Location = new System.Drawing.Point(34, 25);
+            this.cLabelDesc1.Location = new System.Drawing.Point(41, 10);
             this.cLabelDesc1.Name = "cLabelDesc1";
             this.cLabelDesc1.Size = new System.Drawing.Size(110, 25);
-            this.cLabelDesc1.TabIndex = 2;
+            this.cLabelDesc1.TabIndex = 0;
             this.cLabelDesc1.Text = "Expense Type:";
             // 
             // cmbExpenseName
@@ -93,12 +95,12 @@ namespace MoneyBank.Forms {
             this.cmbExpenseName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbExpenseName.ForeColor = System.Drawing.Color.Black;
             this.cmbExpenseName.FormattingEnabled = true;
-            this.cmbExpenseName.Location = new System.Drawing.Point(176, 27);
+            this.cmbExpenseName.Location = new System.Drawing.Point(183, 13);
             this.cmbExpenseName.Name = "cmbExpenseName";
             this.cmbExpenseName.PropertyText = "";
             this.cmbExpenseName.PropertyTextValue = "";
             this.cmbExpenseName.Size = new System.Drawing.Size(237, 21);
-            this.cmbExpenseName.TabIndex = 3;
+            this.cmbExpenseName.TabIndex = 1;
             // 
             // expenseDetailDTOBindingSource
             // 
@@ -113,30 +115,30 @@ namespace MoneyBank.Forms {
             this.cTextBoxBasic1.Font = new System.Drawing.Font("Poppins", 8F);
             this.cTextBoxBasic1.ForeColor = System.Drawing.Color.Black;
             this.cTextBoxBasic1.LeaveColor = System.Drawing.Color.WhiteSmoke;
-            this.cTextBoxBasic1.Location = new System.Drawing.Point(176, 54);
+            this.cTextBoxBasic1.Location = new System.Drawing.Point(183, 44);
             this.cTextBoxBasic1.Multiline = true;
             this.cTextBoxBasic1.Name = "cTextBoxBasic1";
             this.cTextBoxBasic1.Size = new System.Drawing.Size(237, 67);
-            this.cTextBoxBasic1.TabIndex = 4;
+            this.cTextBoxBasic1.TabIndex = 3;
             // 
             // cLabelDesc2
             // 
             this.cLabelDesc2.AutoSize = true;
             this.cLabelDesc2.Font = new System.Drawing.Font("Poppins", 10F);
-            this.cLabelDesc2.Location = new System.Drawing.Point(34, 54);
+            this.cLabelDesc2.Location = new System.Drawing.Point(41, 37);
             this.cLabelDesc2.Name = "cLabelDesc2";
             this.cLabelDesc2.Size = new System.Drawing.Size(93, 25);
-            this.cLabelDesc2.TabIndex = 5;
+            this.cLabelDesc2.TabIndex = 2;
             this.cLabelDesc2.Text = "Description:";
             // 
             // cLabelDesc3
             // 
             this.cLabelDesc3.AutoSize = true;
             this.cLabelDesc3.Font = new System.Drawing.Font("Poppins", 10F);
-            this.cLabelDesc3.Location = new System.Drawing.Point(34, 125);
+            this.cLabelDesc3.Location = new System.Drawing.Point(41, 114);
             this.cLabelDesc3.Name = "cLabelDesc3";
             this.cLabelDesc3.Size = new System.Drawing.Size(39, 25);
-            this.cLabelDesc3.TabIndex = 6;
+            this.cLabelDesc3.TabIndex = 4;
             this.cLabelDesc3.Text = "Qty:";
             // 
             // cTextBoxBasic2
@@ -148,10 +150,10 @@ namespace MoneyBank.Forms {
             this.cTextBoxBasic2.Font = new System.Drawing.Font("Poppins", 8F);
             this.cTextBoxBasic2.ForeColor = System.Drawing.Color.Black;
             this.cTextBoxBasic2.LeaveColor = System.Drawing.Color.WhiteSmoke;
-            this.cTextBoxBasic2.Location = new System.Drawing.Point(276, 127);
+            this.cTextBoxBasic2.Location = new System.Drawing.Point(283, 117);
             this.cTextBoxBasic2.Name = "cTextBoxBasic2";
             this.cTextBoxBasic2.Size = new System.Drawing.Size(137, 23);
-            this.cTextBoxBasic2.TabIndex = 7;
+            this.cTextBoxBasic2.TabIndex = 5;
             // 
             // cTextBoxBasic3
             // 
@@ -162,46 +164,46 @@ namespace MoneyBank.Forms {
             this.cTextBoxBasic3.Font = new System.Drawing.Font("Poppins", 8F);
             this.cTextBoxBasic3.ForeColor = System.Drawing.Color.Black;
             this.cTextBoxBasic3.LeaveColor = System.Drawing.Color.WhiteSmoke;
-            this.cTextBoxBasic3.Location = new System.Drawing.Point(276, 156);
+            this.cTextBoxBasic3.Location = new System.Drawing.Point(283, 146);
             this.cTextBoxBasic3.Name = "cTextBoxBasic3";
             this.cTextBoxBasic3.Size = new System.Drawing.Size(137, 23);
-            this.cTextBoxBasic3.TabIndex = 9;
+            this.cTextBoxBasic3.TabIndex = 7;
             // 
             // cLabelDesc4
             // 
             this.cLabelDesc4.AutoSize = true;
             this.cLabelDesc4.Font = new System.Drawing.Font("Poppins", 10F);
-            this.cLabelDesc4.Location = new System.Drawing.Point(34, 156);
+            this.cLabelDesc4.Location = new System.Drawing.Point(41, 145);
             this.cLabelDesc4.Name = "cLabelDesc4";
             this.cLabelDesc4.Size = new System.Drawing.Size(70, 25);
-            this.cLabelDesc4.TabIndex = 8;
+            this.cLabelDesc4.TabIndex = 6;
             this.cLabelDesc4.Text = "Amount:";
             // 
             // cLabelDesc5
             // 
             this.cLabelDesc5.AutoSize = true;
             this.cLabelDesc5.Font = new System.Drawing.Font("Poppins", 10F);
-            this.cLabelDesc5.Location = new System.Drawing.Point(34, 192);
+            this.cLabelDesc5.Location = new System.Drawing.Point(41, 181);
             this.cLabelDesc5.Name = "cLabelDesc5";
             this.cLabelDesc5.Size = new System.Drawing.Size(108, 25);
-            this.cLabelDesc5.TabIndex = 10;
+            this.cLabelDesc5.TabIndex = 8;
             this.cLabelDesc5.Text = "Total Amount:";
             // 
             // amountCLabelDesc
             // 
             this.amountCLabelDesc.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.expenseDetailDTOBindingSource, "Amount", true));
             this.amountCLabelDesc.Font = new System.Drawing.Font("Poppins", 10F);
-            this.amountCLabelDesc.Location = new System.Drawing.Point(313, 192);
+            this.amountCLabelDesc.Location = new System.Drawing.Point(320, 182);
             this.amountCLabelDesc.Name = "amountCLabelDesc";
             this.amountCLabelDesc.Size = new System.Drawing.Size(100, 23);
-            this.amountCLabelDesc.TabIndex = 11;
+            this.amountCLabelDesc.TabIndex = 9;
             this.amountCLabelDesc.Text = "cLabelDesc6";
             // 
             // ManageExpenseDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(454, 383);
+            this.ClientSize = new System.Drawing.Size(484, 383);
             this.Name = "ManageExpenseDetail";
             this.Padding = new System.Windows.Forms.Padding(5);
             this.Text = "ManageExpenseDetail";

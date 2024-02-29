@@ -30,7 +30,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.OrangeRed;
+            this.panel1.BackColor = System.Drawing.Color.Navy;
             this.panel1.Controls.Add(this.cLabelTitle1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -40,13 +40,14 @@
             // 
             // cLabelTitle1
             // 
+            this.cLabelTitle1.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.cLabelTitle1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cLabelTitle1.Dock = System.Windows.Forms.DockStyle.Top;
             this.cLabelTitle1.Font = new System.Drawing.Font("Poppins", 15F, System.Drawing.FontStyle.Bold);
             this.cLabelTitle1.ForeColor = System.Drawing.Color.White;
             this.cLabelTitle1.Location = new System.Drawing.Point(0, 0);
             this.cLabelTitle1.Name = "cLabelTitle1";
-            this.cLabelTitle1.Size = new System.Drawing.Size(254, 52);
+            this.cLabelTitle1.Size = new System.Drawing.Size(254, 42);
             this.cLabelTitle1.TabIndex = 0;
             this.cLabelTitle1.Text = "Reminder";
             this.cLabelTitle1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 
 namespace MoneyBank.Reports.RPT_Model {
     internal class ExpenseModel {
-        public DateTime DateReference { get; set; }
+        public System.DateTime DateReference { get; set; }
         public string UserID { get; set; }
-        public string ExpenseTransNo { get; set; }
         public string BankAccountNo { get; set; }
-        public decimal TotalExpenseAmount { get; set; }
-        public string BankName { get; set; }
-        public string BankType { get; set; }
+        public string TransNo { get; set; }
+        public decimal TotalAmount { get; set; }
+        public string Remarks { get; set; }
+        public string CancelledBy { get; set; }
+        public string CancelledDate { get; set; }
+        public string CancelledRemarks { get; set; }
+        public string Status { get; set;}
     }
 }

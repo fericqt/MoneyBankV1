@@ -123,14 +123,14 @@ namespace MoneyBank.EntityData {
                     //
                     StringBuilder sbDesc = new StringBuilder();
                     foreach (var item in myDTO.ExpenseList) {
-                        sbDesc.Append($"{item.Description}, ");
+                        sbDesc.Append($"{item.ExpenseType} - {item.Description}, ");
                     }
                     TransactionDTO transItem = new TransactionDTO {
                         ReferenceTransNo = myDTO.TransNo,
                         BankAccountNo = myDTO.BankAccountNo,
                         Description = sbDesc.ToString(),
                         Added = 0,
-                        Deducted = -(decimal)myDTO.TotalAmount,
+                        Deducted = -myDTO.TotalAmount,
                         OldBalance = (decimal)tblBankAcc.RemainingBalance,
                         NewBalance = (decimal)(tblBankAcc.RemainingBalance - myDTO.TotalAmount),
                         Remarks = myDTO.Remarks,
@@ -163,10 +163,7 @@ namespace MoneyBank.EntityData {
             using (var trans = _ts.Database.BeginTransaction()) {
                 try {
                     var tbl = new CMapping<ExpenseDTO, tblexpense>().GetMappingResult(myDTO);
-                    foreach (var item in myDTO.ExpenseList) {
-                        var tbld = new CMapping<ExpenseDetailDTO, tblexpensedetail>().GetMappingResult(item);
-                        tbl.tblexpensedetails.Add(tbld);
-                    }
+                    tbl.tblexpensedetails = new CMappingList<ExpenseDetailDTO, tblexpensedetail>().GetMappingResultList(myDTO.ExpenseList);
                     //
                     _ts.tblexpenses.AddOrUpdate(tbl);
                     _ts.SaveChanges();

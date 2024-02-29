@@ -7,12 +7,11 @@ using System.Threading.Tasks;
 namespace MoneyBank.Reports.RPT_Model {
     internal class ReceiveDetailModel {
         public int IdTrack { get; set; }
-        public DateTime DateReference { get; set; }
-        public string ReceiveTransNo { get; set; }
-        public string ReceiveItemName { get; set; }
-        public decimal ReceiveAmount { get; set; }
-        public int ReceiveQuantity { get; set; }
-        public string Remarks { get; set; }
-        public decimal ReceiveAmountTotal { get; set; }
+        public string TransNo { get; set; }
+        public string Description { get; set; }
+        public decimal Amount { get; set; }
+        public int Qty { get; set; }
+        public decimal Price { get; set; }
+        public string ReceiveType { get; set; }
     }
 }

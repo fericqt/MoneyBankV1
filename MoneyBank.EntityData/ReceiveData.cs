@@ -118,13 +118,13 @@ namespace MoneyBank.EntityData {
                     //
                     StringBuilder sbDesc = new StringBuilder();
                     foreach (var item in myDTO.ReceiveList) {
-                        sbDesc.Append($"{item.Description}, ");
+                        sbDesc.Append($"{item.ReceiveType} - {item.Description}, ");
                     }
                     TransactionDTO transItem = new TransactionDTO {
                         ReferenceTransNo = myDTO.TransNo,
                         BankAccountNo = myDTO.BankAccountNo,
                         Description = sbDesc.ToString(),
-                        Added = (decimal)myDTO.TotalAmount,
+                        Added = myDTO.TotalAmount,
                         Deducted = 0,
                         OldBalance = (decimal)tblBankAcc.RemainingBalance,
                         NewBalance = (decimal)(tblBankAcc.RemainingBalance + myDTO.TotalAmount),
@@ -158,10 +158,7 @@ namespace MoneyBank.EntityData {
             using (var trans = _ts.Database.BeginTransaction()) {
                 try {
                     var tbl = new CMapping<ReceiveDTO, tblreceive>().GetMappingResult(myDTO);
-                    foreach (var item in myDTO.ReceiveList) {
-                        var itemToAdd = new CMapping<ReceiveDetailDTO, tblreceivedetail>().GetMappingResult(item);
-                        tbl.tblreceivedetails.Add(itemToAdd);
-                    }
+                    tbl.tblreceivedetails = new CMappingList<ReceiveDetailDTO, tblreceivedetail>().GetMappingResultList(myDTO.ReceiveList);
                     //
                     _ts.tblreceives.AddOrUpdate(tbl);
                     _ts.SaveChanges();

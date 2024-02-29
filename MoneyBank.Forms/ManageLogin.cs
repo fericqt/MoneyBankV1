@@ -27,9 +27,8 @@ namespace MoneyBank.Forms {
                 case FormMode.Add:
                     break;
             }
-
             userDTOBindingSource.DataSource = myDTO;
-        }
+       }
         protected override bool OnSaveData() {
             using (var ex = new moneybankEntities()) {
                 var tbl = ex.tblusers.FirstOrDefault(c => c.Username == myDTO.Username && c.Password == myDTO.Password);

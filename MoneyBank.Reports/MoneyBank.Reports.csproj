@@ -116,6 +116,12 @@
       <DependentUpon>crListOfUsers.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="RPT\crExpense.cs">
+      <DependentUpon>crExpense.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="RPT\crReceive.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -155,6 +161,10 @@
     <EmbeddedResource Include="RPT\crListOfUsers.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crListOfUsers.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\crExpense.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crExpense.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="RPT\crReceive.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
