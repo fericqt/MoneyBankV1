@@ -26,7 +26,6 @@ namespace MoneyBank.Forms {
                     using (var data = new ReceiveData()) {
                         myDTO.TransNo = data.GetNewID();
                     }
-                    LoadBank();
                     break;
                 case FormMode.Update:
                     using (var data = new ReceiveData()) {
@@ -36,6 +35,7 @@ namespace MoneyBank.Forms {
                     }
                     break;
             }
+            LoadBank();
             receiveDTOBindingSource.DataSource = myDTO;
             receiveDetailDTOBindingSource.DataSource = myDTO.ReceiveList;
         }

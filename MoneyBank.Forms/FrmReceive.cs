@@ -26,13 +26,13 @@ namespace MoneyBank.Forms {
             }
         }
         protected override bool UpdateItem() {
-            if(dgvReceive.GetSelectedValue(receiveTransNoDataGridViewTextBoxColumn.Index, out string sout)) {
+            if(dgvReceive.GetSelectedValue(transNoDataGridViewTextBoxColumn.Index, out string sout)) {
                 return new FormLayer.ManageForm().ManageReceive(sout, FerPROJ.Design.Forms.FrmManage.FormMode.Update);
             }
             return false;
         }
         protected override bool DeleteItem() {
-            if (dgvReceive.GetSelectedValue(receiveTransNoDataGridViewTextBoxColumn.Index, out string sout)) {
+            if (dgvReceive.GetSelectedValue(transNoDataGridViewTextBoxColumn.Index, out string sout)) {
                 using (var data = new ReceiveData()) {
                     data.Delete(sout);
                     return true;
@@ -41,7 +41,7 @@ namespace MoneyBank.Forms {
             return false;
         }
         protected override void ViewItem() {
-            if (dgvReceive.GetSelectedValue(receiveTransNoDataGridViewTextBoxColumn.Index, out string sout)) {
+            if (dgvReceive.GetSelectedValue(transNoDataGridViewTextBoxColumn.Index, out string sout)) {
                 new TransactionReport().PreviewReport(TransactionReport.ReportList.ReceiveTransaction, sout);
             }
         }

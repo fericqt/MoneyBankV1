@@ -32,6 +32,8 @@
             this.ucReminder1 = new MoneyBankV1.ucReminder();
             this.panel5 = new System.Windows.Forms.Panel();
             this.ucTransactionList1 = new MoneyBankV2.ucTransactionList();
+            this.cLabelTitle1 = new FerPROJ.Design.Controls.CLabelTitle();
+            this.pnlMainTop.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -41,6 +43,7 @@
             // 
             // pnlMainTop
             // 
+            this.pnlMainTop.Controls.Add(this.cLabelTitle1);
             this.pnlMainTop.Size = new System.Drawing.Size(966, 96);
             // 
             // panel1
@@ -124,6 +127,18 @@
             this.ucTransactionList1.Size = new System.Drawing.Size(532, 402);
             this.ucTransactionList1.TabIndex = 0;
             // 
+            // cLabelTitle1
+            // 
+            this.cLabelTitle1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cLabelTitle1.Font = new System.Drawing.Font("Poppins Black", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cLabelTitle1.ForeColor = System.Drawing.Color.White;
+            this.cLabelTitle1.Location = new System.Drawing.Point(0, 0);
+            this.cLabelTitle1.Name = "cLabelTitle1";
+            this.cLabelTitle1.Size = new System.Drawing.Size(964, 94);
+            this.cLabelTitle1.TabIndex = 0;
+            this.cLabelTitle1.Text = "Bank Management Information System";
+            this.cLabelTitle1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -139,6 +154,7 @@
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.panel2, 0);
             this.Controls.SetChildIndex(this.panel5, 0);
+            this.pnlMainTop.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -159,5 +175,6 @@
         private ucReminder ucReminder1;
         private System.Windows.Forms.Panel panel5;
         private MoneyBankV2.ucTransactionList ucTransactionList1;
+        private FerPROJ.Design.Controls.CLabelTitle cLabelTitle1;
     }
 }
