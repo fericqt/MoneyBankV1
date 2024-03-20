@@ -31,19 +31,19 @@ namespace MoneyBank.Forms {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.passwordCTextBoxBasic = new FerPROJ.Design.Controls.CTextBoxBasic();
+            this.userDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usernameCTextBoxBasic = new FerPROJ.Design.Controls.CTextBoxBasic();
             this.pbPassword = new System.Windows.Forms.PictureBox();
             this.pbUsername = new System.Windows.Forms.PictureBox();
-            this.userDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.usernameCTextBoxBasic = new FerPROJ.Design.Controls.CTextBoxBasic();
-            this.passwordCTextBoxBasic = new FerPROJ.Design.Controls.CTextBoxBasic();
             this.basePnl2.SuspendLayout();
             this.PanelMain3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userDTOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsername)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userDTOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,6 +108,42 @@ namespace MoneyBank.Forms {
             this.panel2.Size = new System.Drawing.Size(257, 300);
             this.panel2.TabIndex = 0;
             // 
+            // passwordCTextBoxBasic
+            // 
+            this.passwordCTextBoxBasic.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.passwordCTextBoxBasic.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userDTOBindingSource, "Password", true));
+            this.passwordCTextBoxBasic.DefaultForeColor = System.Drawing.Color.Black;
+            this.passwordCTextBoxBasic.EnterColor = System.Drawing.Color.LightGray;
+            this.passwordCTextBoxBasic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.passwordCTextBoxBasic.ForeColor = System.Drawing.Color.Black;
+            this.passwordCTextBoxBasic.LeaveColor = System.Drawing.Color.WhiteSmoke;
+            this.passwordCTextBoxBasic.Location = new System.Drawing.Point(53, 134);
+            this.passwordCTextBoxBasic.Multiline = true;
+            this.passwordCTextBoxBasic.Name = "passwordCTextBoxBasic";
+            this.passwordCTextBoxBasic.PasswordChar = '*';
+            this.passwordCTextBoxBasic.Size = new System.Drawing.Size(175, 25);
+            this.passwordCTextBoxBasic.TabIndex = 5;
+            this.passwordCTextBoxBasic.UseSystemPasswordChar = true;
+            // 
+            // userDTOBindingSource
+            // 
+            this.userDTOBindingSource.DataSource = typeof(MoneyBank.DTO.UserDTO);
+            // 
+            // usernameCTextBoxBasic
+            // 
+            this.usernameCTextBoxBasic.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.usernameCTextBoxBasic.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userDTOBindingSource, "Username", true));
+            this.usernameCTextBoxBasic.DefaultForeColor = System.Drawing.Color.Black;
+            this.usernameCTextBoxBasic.EnterColor = System.Drawing.Color.LightGray;
+            this.usernameCTextBoxBasic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.usernameCTextBoxBasic.ForeColor = System.Drawing.Color.Black;
+            this.usernameCTextBoxBasic.LeaveColor = System.Drawing.Color.WhiteSmoke;
+            this.usernameCTextBoxBasic.Location = new System.Drawing.Point(53, 102);
+            this.usernameCTextBoxBasic.Multiline = true;
+            this.usernameCTextBoxBasic.Name = "usernameCTextBoxBasic";
+            this.usernameCTextBoxBasic.Size = new System.Drawing.Size(175, 25);
+            this.usernameCTextBoxBasic.TabIndex = 4;
+            // 
             // pbPassword
             // 
             this.pbPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
@@ -130,44 +166,10 @@ namespace MoneyBank.Forms {
             this.pbUsername.TabIndex = 2;
             this.pbUsername.TabStop = false;
             // 
-            // userDTOBindingSource
-            // 
-            this.userDTOBindingSource.DataSource = typeof(MoneyBank.DTO.UserDTO);
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
             this.errorProvider1.DataSource = this.userDTOBindingSource;
-            // 
-            // usernameCTextBoxBasic
-            // 
-            this.usernameCTextBoxBasic.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.usernameCTextBoxBasic.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userDTOBindingSource, "Username", true));
-            this.usernameCTextBoxBasic.DefaultForeColor = System.Drawing.Color.Black;
-            this.usernameCTextBoxBasic.EnterColor = System.Drawing.Color.LightGray;
-            this.usernameCTextBoxBasic.Font = new System.Drawing.Font("Poppins", 8F);
-            this.usernameCTextBoxBasic.ForeColor = System.Drawing.Color.Black;
-            this.usernameCTextBoxBasic.LeaveColor = System.Drawing.Color.WhiteSmoke;
-            this.usernameCTextBoxBasic.Location = new System.Drawing.Point(53, 102);
-            this.usernameCTextBoxBasic.Multiline = true;
-            this.usernameCTextBoxBasic.Name = "usernameCTextBoxBasic";
-            this.usernameCTextBoxBasic.Size = new System.Drawing.Size(175, 25);
-            this.usernameCTextBoxBasic.TabIndex = 4;
-            // 
-            // passwordCTextBoxBasic
-            // 
-            this.passwordCTextBoxBasic.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.passwordCTextBoxBasic.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userDTOBindingSource, "Password", true));
-            this.passwordCTextBoxBasic.DefaultForeColor = System.Drawing.Color.Black;
-            this.passwordCTextBoxBasic.EnterColor = System.Drawing.Color.LightGray;
-            this.passwordCTextBoxBasic.Font = new System.Drawing.Font("Poppins", 8F);
-            this.passwordCTextBoxBasic.ForeColor = System.Drawing.Color.Black;
-            this.passwordCTextBoxBasic.LeaveColor = System.Drawing.Color.WhiteSmoke;
-            this.passwordCTextBoxBasic.Location = new System.Drawing.Point(53, 134);
-            this.passwordCTextBoxBasic.Multiline = true;
-            this.passwordCTextBoxBasic.Name = "passwordCTextBoxBasic";
-            this.passwordCTextBoxBasic.Size = new System.Drawing.Size(175, 25);
-            this.passwordCTextBoxBasic.TabIndex = 5;
             // 
             // ManageLogin
             // 
@@ -183,9 +185,9 @@ namespace MoneyBank.Forms {
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userDTOBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsername)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userDTOBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
