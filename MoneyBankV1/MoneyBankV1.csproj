@@ -147,7 +147,6 @@
     <EmbeddedResource Include="ucTransactionList.resx">
       <DependentUpon>ucTransactionList.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="GLOBAL DLL\CrystalReport\CR13SP34MSI64_0-80007712.MSI" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -201,7 +200,6 @@
     <Content Include="GLOBAL DLL\CrystalDecisions.ReportSource.dll" />
     <Content Include="GLOBAL DLL\CrystalDecisions.Shared.dll" />
     <Content Include="GLOBAL DLL\CrystalDecisions.Windows.Forms.dll" />
-    <Content Include="GLOBAL DLL\CrystalReport\CRforVS6413SP34_0-80007712.EXE" />
     <Content Include="GLOBAL DLL\EntityFramework.dll" />
     <Content Include="GLOBAL DLL\EntityFramework.SqlServer.dll" />
     <Content Include="GLOBAL DLL\EPPlus.dll" />
