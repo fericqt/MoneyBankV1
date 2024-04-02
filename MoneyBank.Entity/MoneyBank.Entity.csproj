@@ -118,6 +118,9 @@
     <Compile Include="tbluserinformation.cs">
       <DependentUpon>MoneyBank.tt</DependentUpon>
     </Compile>
+    <Compile Include="tblversion.cs">
+      <DependentUpon>MoneyBank.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

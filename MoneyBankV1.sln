@@ -21,6 +21,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyBankV1", "MoneyBankV1\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyBank.Reports", "MoneyBank.Reports\MoneyBank.Reports.csproj", "{5C0EB1F5-E16D-4642-B894-D526B015FE23}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{167BCE77-6A6B-425E-86C2-501486895F91}"
+	ProjectSection(SolutionItems) = preProject
+		SystemVersion.cs = SystemVersion.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

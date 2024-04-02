@@ -2,6 +2,7 @@
 using MoneyBank.Base.Forms;
 using MoneyBank.DTO;
 using MoneyBank.Entity;
+using MoneyBank.EntityData;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,6 +34,15 @@ namespace MoneyBank.Forms {
             using (var ex = new moneybankEntities()) {
                 var tbl = ex.tblusers.FirstOrDefault(c => c.Username == myDTO.Username && c.Password == myDTO.Password);
                 if (tbl != null) {
+                    var tblv = new VersionData(ex).GetById(1);
+                    string[] parts = tblv.Version.Split('.');
+                    string vResult = string.Join(".", parts.Select(p => int.Parse(p).ToString()));
+                    //
+                    if (CStaticVariable.Version != vResult)
+                    {
+                        CShowMessage.Info("New version is available!");
+                        return false;
+                    }
                     CStaticVariable.Username = tbl.Username;
                     CStaticVariable.UserLevel = tbl.UserLevel;
                     CStaticVariable.UserID = tbl.UserID;

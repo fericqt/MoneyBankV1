@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="moneybankEntity.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="moneybankEntity.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="tblbank">
           <Key>
             <PropertyRef Name="IdTrack" />
@@ -194,6 +194,16 @@
           <Property Name="Lastname" Type="varchar" MaxLength="50" />
           <Property Name="Relationship" Type="varchar" MaxLength="45" Nullable="false" />
         </EntityType>
+        <EntityType Name="tblversion">
+          <Key>
+            <PropertyRef Name="IdTrack" />
+          </Key>
+          <Property Name="IdTrack" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NewUpdates" Type="longtext" />
+          <Property Name="OldUpdates" Type="longtext" />
+          <Property Name="Version" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="DateUpdated" Type="datetime" Precision="0" />
+        </EntityType>
         <Association Name="FK_tblexpensedetails_1">
           <End Role="tblexpense" Type="Self.tblexpense" Multiplicity="1">
             <OnDelete Action="Cascade" />
@@ -280,6 +290,7 @@
           <EntitySet Name="tbluserbank" EntityType="Self.tbluserbank" Schema="moneybank" store:Type="Tables" />
           <EntitySet Name="tbluserbankaccount" EntityType="Self.tbluserbankaccount" Schema="moneybank" store:Type="Tables" />
           <EntitySet Name="tbluserinformation" EntityType="Self.tbluserinformation" Schema="moneybank" store:Type="Tables" />
+          <EntitySet Name="tblversion" EntityType="Self.tblversion" Schema="moneybank" store:Type="Tables" />
           <AssociationSet Name="FK_tblexpensedetails_1" Association="Self.FK_tblexpensedetails_1">
             <End Role="tblexpense" EntitySet="tblexpense" />
             <End Role="tblexpensedetails" EntitySet="tblexpensedetails" />
@@ -509,6 +520,7 @@
             <End Role="tblreceive" EntitySet="tblreceives" />
             <End Role="tblreceivedetail" EntitySet="tblreceivedetails" />
           </AssociationSet>
+          <EntitySet Name="tblversions" EntityType="moneybankEntity.tblversion" />
         </EntityContainer>
         <EntityType Name="tblbanktransfer">
           <Key>
@@ -611,6 +623,16 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="tblversion">
+          <Key>
+            <PropertyRef Name="IdTrack" />
+          </Key>
+          <Property Name="IdTrack" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NewUpdates" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+          <Property Name="OldUpdates" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+          <Property Name="Version" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DateUpdated" Type="DateTime" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -817,6 +839,17 @@
                 <ScalarProperty Name="Amount" ColumnName="Amount" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="TransNo" ColumnName="TransNo" />
+                <ScalarProperty Name="IdTrack" ColumnName="IdTrack" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblversions">
+            <EntityTypeMapping TypeName="moneybankEntity.tblversion">
+              <MappingFragment StoreEntitySet="tblversion">
+                <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="OldUpdates" ColumnName="OldUpdates" />
+                <ScalarProperty Name="NewUpdates" ColumnName="NewUpdates" />
                 <ScalarProperty Name="IdTrack" ColumnName="IdTrack" />
               </MappingFragment>
             </EntityTypeMapping>

@@ -41,6 +41,7 @@
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.LnkLblManageUser = new System.Windows.Forms.LinkLabel();
+            this.LnkLblVersion = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -88,6 +89,7 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.LnkLblVersion);
             this.groupBox5.Controls.Add(this.LnkLblCreateDatabaseClass);
             this.groupBox5.Font = new System.Drawing.Font("Javanese Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.ForeColor = System.Drawing.Color.White;
@@ -101,11 +103,11 @@
             // LnkLblCreateDatabaseClass
             // 
             this.LnkLblCreateDatabaseClass.AutoSize = true;
-            this.LnkLblCreateDatabaseClass.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LnkLblCreateDatabaseClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LnkLblCreateDatabaseClass.LinkColor = System.Drawing.Color.Yellow;
             this.LnkLblCreateDatabaseClass.Location = new System.Drawing.Point(15, 32);
             this.LnkLblCreateDatabaseClass.Name = "LnkLblCreateDatabaseClass";
-            this.LnkLblCreateDatabaseClass.Size = new System.Drawing.Size(155, 23);
+            this.LnkLblCreateDatabaseClass.Size = new System.Drawing.Size(156, 16);
             this.LnkLblCreateDatabaseClass.TabIndex = 6;
             this.LnkLblCreateDatabaseClass.TabStop = true;
             this.LnkLblCreateDatabaseClass.Text = "Manage Create Class";
@@ -128,11 +130,11 @@
             // LnkLblBankAccount
             // 
             this.LnkLblBankAccount.AutoSize = true;
-            this.LnkLblBankAccount.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LnkLblBankAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LnkLblBankAccount.LinkColor = System.Drawing.Color.Yellow;
             this.LnkLblBankAccount.Location = new System.Drawing.Point(15, 78);
             this.LnkLblBankAccount.Name = "LnkLblBankAccount";
-            this.LnkLblBankAccount.Size = new System.Drawing.Size(164, 23);
+            this.LnkLblBankAccount.Size = new System.Drawing.Size(161, 16);
             this.LnkLblBankAccount.TabIndex = 8;
             this.LnkLblBankAccount.TabStop = true;
             this.LnkLblBankAccount.Text = "Manage Bank Account";
@@ -141,11 +143,11 @@
             // LnkLblBankTransfer
             // 
             this.LnkLblBankTransfer.AutoSize = true;
-            this.LnkLblBankTransfer.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LnkLblBankTransfer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LnkLblBankTransfer.LinkColor = System.Drawing.Color.Yellow;
             this.LnkLblBankTransfer.Location = new System.Drawing.Point(15, 55);
             this.LnkLblBankTransfer.Name = "LnkLblBankTransfer";
-            this.LnkLblBankTransfer.Size = new System.Drawing.Size(165, 23);
+            this.LnkLblBankTransfer.Size = new System.Drawing.Size(164, 16);
             this.LnkLblBankTransfer.TabIndex = 7;
             this.LnkLblBankTransfer.TabStop = true;
             this.LnkLblBankTransfer.Text = "Manage Bank Transfer";
@@ -154,11 +156,11 @@
             // LnkLblBankType
             // 
             this.LnkLblBankType.AutoSize = true;
-            this.LnkLblBankType.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LnkLblBankType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LnkLblBankType.LinkColor = System.Drawing.Color.Yellow;
             this.LnkLblBankType.Location = new System.Drawing.Point(15, 32);
             this.LnkLblBankType.Name = "LnkLblBankType";
-            this.LnkLblBankType.Size = new System.Drawing.Size(140, 23);
+            this.LnkLblBankType.Size = new System.Drawing.Size(142, 16);
             this.LnkLblBankType.TabIndex = 6;
             this.LnkLblBankType.TabStop = true;
             this.LnkLblBankType.Text = "Manage Bank Type";
@@ -180,11 +182,11 @@
             // LnkLblExpenseTransaction
             // 
             this.LnkLblExpenseTransaction.AutoSize = true;
-            this.LnkLblExpenseTransaction.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LnkLblExpenseTransaction.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LnkLblExpenseTransaction.LinkColor = System.Drawing.Color.Yellow;
             this.LnkLblExpenseTransaction.Location = new System.Drawing.Point(15, 63);
             this.LnkLblExpenseTransaction.Name = "LnkLblExpenseTransaction";
-            this.LnkLblExpenseTransaction.Size = new System.Drawing.Size(171, 23);
+            this.LnkLblExpenseTransaction.Size = new System.Drawing.Size(175, 16);
             this.LnkLblExpenseTransaction.TabIndex = 5;
             this.LnkLblExpenseTransaction.TabStop = true;
             this.LnkLblExpenseTransaction.Text = "Manage Expense Trans.";
@@ -193,11 +195,11 @@
             // LnkLblExpenseType
             // 
             this.LnkLblExpenseType.AutoSize = true;
-            this.LnkLblExpenseType.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LnkLblExpenseType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LnkLblExpenseType.LinkColor = System.Drawing.Color.Yellow;
             this.LnkLblExpenseType.Location = new System.Drawing.Point(15, 40);
             this.LnkLblExpenseType.Name = "LnkLblExpenseType";
-            this.LnkLblExpenseType.Size = new System.Drawing.Size(161, 23);
+            this.LnkLblExpenseType.Size = new System.Drawing.Size(167, 16);
             this.LnkLblExpenseType.TabIndex = 4;
             this.LnkLblExpenseType.TabStop = true;
             this.LnkLblExpenseType.Text = "Manage Expense Type";
@@ -219,11 +221,11 @@
             // LnkLblReceiveTransaction
             // 
             this.LnkLblReceiveTransaction.AutoSize = true;
-            this.LnkLblReceiveTransaction.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LnkLblReceiveTransaction.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LnkLblReceiveTransaction.LinkColor = System.Drawing.Color.Yellow;
             this.LnkLblReceiveTransaction.Location = new System.Drawing.Point(14, 63);
             this.LnkLblReceiveTransaction.Name = "LnkLblReceiveTransaction";
-            this.LnkLblReceiveTransaction.Size = new System.Drawing.Size(167, 23);
+            this.LnkLblReceiveTransaction.Size = new System.Drawing.Size(173, 16);
             this.LnkLblReceiveTransaction.TabIndex = 4;
             this.LnkLblReceiveTransaction.TabStop = true;
             this.LnkLblReceiveTransaction.Text = "Manage Receive Trans.";
@@ -232,11 +234,11 @@
             // LnkLblReceiveTypes
             // 
             this.LnkLblReceiveTypes.AutoSize = true;
-            this.LnkLblReceiveTypes.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LnkLblReceiveTypes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LnkLblReceiveTypes.LinkColor = System.Drawing.Color.Yellow;
             this.LnkLblReceiveTypes.Location = new System.Drawing.Point(15, 40);
             this.LnkLblReceiveTypes.Name = "LnkLblReceiveTypes";
-            this.LnkLblReceiveTypes.Size = new System.Drawing.Size(157, 23);
+            this.LnkLblReceiveTypes.Size = new System.Drawing.Size(165, 16);
             this.LnkLblReceiveTypes.TabIndex = 3;
             this.LnkLblReceiveTypes.TabStop = true;
             this.LnkLblReceiveTypes.Text = "Manage Receive Type";
@@ -259,11 +261,11 @@
             // linkLabel3
             // 
             this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel3.LinkColor = System.Drawing.Color.Yellow;
             this.linkLabel3.Location = new System.Drawing.Point(14, 74);
             this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(159, 23);
+            this.linkLabel3.Size = new System.Drawing.Size(163, 16);
             this.linkLabel3.TabIndex = 2;
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "Manage User Blocklist";
@@ -271,11 +273,11 @@
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel2.LinkColor = System.Drawing.Color.Yellow;
             this.linkLabel2.Location = new System.Drawing.Point(14, 51);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(150, 23);
+            this.linkLabel2.Size = new System.Drawing.Size(155, 16);
             this.linkLabel2.TabIndex = 1;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Manage User Access";
@@ -283,15 +285,28 @@
             // LnkLblManageUser
             // 
             this.LnkLblManageUser.AutoSize = true;
-            this.LnkLblManageUser.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LnkLblManageUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LnkLblManageUser.LinkColor = System.Drawing.Color.Yellow;
             this.LnkLblManageUser.Location = new System.Drawing.Point(15, 28);
             this.LnkLblManageUser.Name = "LnkLblManageUser";
-            this.LnkLblManageUser.Size = new System.Drawing.Size(99, 23);
+            this.LnkLblManageUser.Size = new System.Drawing.Size(100, 16);
             this.LnkLblManageUser.TabIndex = 0;
             this.LnkLblManageUser.TabStop = true;
             this.LnkLblManageUser.Text = "Manage User";
             this.LnkLblManageUser.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkLblManageUser_LinkClicked);
+            // 
+            // LnkLblVersion
+            // 
+            this.LnkLblVersion.AutoSize = true;
+            this.LnkLblVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LnkLblVersion.LinkColor = System.Drawing.Color.Yellow;
+            this.LnkLblVersion.Location = new System.Drawing.Point(14, 60);
+            this.LnkLblVersion.Name = "LnkLblVersion";
+            this.LnkLblVersion.Size = new System.Drawing.Size(120, 16);
+            this.LnkLblVersion.TabIndex = 7;
+            this.LnkLblVersion.TabStop = true;
+            this.LnkLblVersion.Text = "Manage Version";
+            this.LnkLblVersion.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkLblVersion_LinkClicked);
             // 
             // ucMainMenu
             // 
@@ -336,5 +351,6 @@
         private System.Windows.Forms.LinkLabel LnkLblReceiveTransaction;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.LinkLabel LnkLblCreateDatabaseClass;
+        private System.Windows.Forms.LinkLabel LnkLblVersion;
     }
 }

@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\WorkingFolder\C# Projects 2019\MoneyBankV1\MoneyBank.Entity\MoneyBank.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\C# Projects\MoneyBankV1\MoneyBank.Entity\MoneyBank.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

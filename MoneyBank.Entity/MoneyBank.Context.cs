@@ -15,7 +15,6 @@ namespace MoneyBank.Entity
     
     public partial class moneybankEntities : DbContext
     {
-  
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
@@ -36,5 +35,6 @@ namespace MoneyBank.Entity
         public virtual DbSet<tblexpensedetail> tblexpensedetails { get; set; }
         public virtual DbSet<tblreceive> tblreceives { get; set; }
         public virtual DbSet<tblreceivedetail> tblreceivedetails { get; set; }
+        public virtual DbSet<tblversion> tblversions { get; set; }
     }
 }

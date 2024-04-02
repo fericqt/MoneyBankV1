@@ -25,6 +25,7 @@
         <EntityTypeShape EntityType="moneybankEntity.tblreceivedetail" Width="1.5" PointX="7.625" PointY="12.375" />
         <AssociationConnector Association="moneybankEntity.FK_tblexpensedetails_1" />
         <AssociationConnector Association="moneybankEntity.FK_tblreceivedetails_1" />
+        <EntityTypeShape EntityType="moneybankEntity.tblversion" Width="1.5" PointX="5.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

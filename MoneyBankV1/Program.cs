@@ -19,8 +19,8 @@ namespace MoneyBankV1 {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            CStaticVariable.Version = Assembly.GetExecutingAssembly().GetName().Version.ToString();
             if (new FormLayer.ManageForm().ManageLogin()) {
-                CStaticVariable.Version = Assembly.GetExecutingAssembly().GetName().Version.ToString();
                 //
                 FrmSplasher.ShowSplash();
                 Application.Run(new Main());

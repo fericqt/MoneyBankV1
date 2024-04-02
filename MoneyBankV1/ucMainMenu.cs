@@ -53,5 +53,10 @@ namespace MoneyBankV1 {
                 frm.ShowDialog();
             }
         }
+
+        private void LnkLblVersion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            new FormLayer.ManageForm().ManageVersion();
+        }
     }
 }
