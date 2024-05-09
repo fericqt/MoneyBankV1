@@ -32,19 +32,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AutoMapper">
-      <HintPath>..\..\GLOBAL DLL\AutoMapper.dll</HintPath>
+      <HintPath>..\..\MyDLL\AutoMapper.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework">
-      <HintPath>..\..\GLOBAL DLL\EntityFramework.dll</HintPath>
+      <HintPath>..\..\MyDLL\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\..\GLOBAL DLL\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\..\MyDLL\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data">
-      <HintPath>..\..\GLOBAL DLL\MySql.Data.dll</HintPath>
+      <HintPath>..\..\MyDLL\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data.Entity.EF6">
-      <HintPath>..\..\GLOBAL DLL\MySql.Data.Entity.EF6.dll</HintPath>
+      <HintPath>..\..\MyDLL\MySql.Data.Entity.EF6.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
