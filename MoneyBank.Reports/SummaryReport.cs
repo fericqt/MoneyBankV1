@@ -115,11 +115,12 @@ namespace MoneyBank.Reports {
                 if (frm.CurrentFormResult) {
                     string sQuery = $"SELECT * FROM tblexpense tble INNER JOIN tbluserbank tblu ON tble.BankAccountNo = tblu.BankAccountNo " +
                                     $"WHERE {MySQLQueryHelper.GetDateRange(frm.Manage_DateFrom, frm.Manage_DateTo, "tble.DateReference")}";
-                    string sQueryD = $"SELECT * FROM tblexpensedetails WHERE {MySQLQueryHelper.GetDateRange(frm.Manage_DateFrom, frm.Manage_DateTo)}";
+                    string sQueryD = $"SELECT * FROM tblexpensedetails";
                     //
-                    var rpt = new crExpenseSummary();
+                    var rpt = new crExpenseByDate();
                     rpt.SetDataSource(new Conn().GetDataTable(sQuery));
                     rpt.OpenSubreport("1").SetDataSource(new Conn().GetDataTable(sQueryD));
+                    rpt.SetParameterValue("DateRange", MySQLQueryHelper.GetDateRangeWord(frm.Manage_DateFrom, frm.Manage_DateTo));
                     return rpt;
                 }
             }
@@ -142,11 +143,12 @@ namespace MoneyBank.Reports {
                 if (frm.CurrentFormResult) {
                     string sQuery = $"SELECT * FROM tblreceive tble INNER JOIN tbluserbank tblu ON tble.BankAccountNo = tblu.BankAccountNo " +
                             $"WHERE {MySQLQueryHelper.GetDateRange(frm.Manage_DateFrom, frm.Manage_DateTo, "tble.DateReference")}";
-                    string sQueryD = $"SELECT * FROM tblreceivedetails WHERE {MySQLQueryHelper.GetDateRange(frm.Manage_DateFrom, frm.Manage_DateTo)}";
+                    string sQueryD = $"SELECT * FROM tblreceivedetails";
                     //
-                    var rpt = new crReceiveSummary();
+                    var rpt = new crReceiveByDate();
                     rpt.SetDataSource(new Conn().GetDataTable(sQuery));
                     rpt.OpenSubreport("1").SetDataSource(new Conn().GetDataTable(sQueryD));
+                    rpt.SetParameterValue("DateRange", MySQLQueryHelper.GetDateRangeWord(frm.Manage_DateFrom, frm.Manage_DateTo));
                     return rpt;
                 }
             }

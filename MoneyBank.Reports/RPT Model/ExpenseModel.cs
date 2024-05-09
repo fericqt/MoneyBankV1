@@ -8,13 +8,13 @@ namespace MoneyBank.Reports.RPT_Model {
     internal class ExpenseModel {
         public System.DateTime DateReference { get; set; }
         public string UserID { get; set; }
-        public string BankAccountNo { get; set; }
         public string TransNo { get; set; }
+        public string BankAccountNo { get; set; }
         public decimal TotalAmount { get; set; }
+        public string Status { get; set; }
         public string Remarks { get; set; }
         public string CancelledBy { get; set; }
-        public string CancelledDate { get; set; }
+        public System.DateTime CancelledDate { get; set; }
         public string CancelledRemarks { get; set; }
-        public string Status { get; set;}
     }
 }
