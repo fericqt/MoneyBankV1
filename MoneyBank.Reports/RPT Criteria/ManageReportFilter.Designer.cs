@@ -61,7 +61,7 @@
             // 
             // basePnl2
             // 
-            this.basePnl2.Location = new System.Drawing.Point(335, 1);
+            this.basePnl2.Location = new System.Drawing.Point(297, 1);
             // 
             // baseButtonUpdate
             // 
@@ -91,20 +91,20 @@
             // cLabelDesc1
             // 
             this.cLabelDesc1.AutoSize = true;
-            this.cLabelDesc1.Font = new System.Drawing.Font("Poppins", 10F);
+            this.cLabelDesc1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cLabelDesc1.Location = new System.Drawing.Point(21, 16);
             this.cLabelDesc1.Name = "cLabelDesc1";
-            this.cLabelDesc1.Size = new System.Drawing.Size(87, 25);
+            this.cLabelDesc1.Size = new System.Drawing.Size(78, 17);
             this.cLabelDesc1.TabIndex = 1;
             this.cLabelDesc1.Text = "Date From:";
             // 
             // cLabelDesc2
             // 
             this.cLabelDesc2.AutoSize = true;
-            this.cLabelDesc2.Font = new System.Drawing.Font("Poppins", 10F);
+            this.cLabelDesc2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cLabelDesc2.Location = new System.Drawing.Point(21, 53);
             this.cLabelDesc2.Name = "cLabelDesc2";
-            this.cLabelDesc2.Size = new System.Drawing.Size(69, 25);
+            this.cLabelDesc2.Size = new System.Drawing.Size(63, 17);
             this.cLabelDesc2.TabIndex = 3;
             this.cLabelDesc2.Text = "Date To:";
             // 
@@ -149,10 +149,10 @@
             // cLabelDesc4
             // 
             this.cLabelDesc4.AutoSize = true;
-            this.cLabelDesc4.Font = new System.Drawing.Font("Poppins", 10F);
+            this.cLabelDesc4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cLabelDesc4.Location = new System.Drawing.Point(21, 19);
             this.cLabelDesc4.Name = "cLabelDesc4";
-            this.cLabelDesc4.Size = new System.Drawing.Size(95, 25);
+            this.cLabelDesc4.Size = new System.Drawing.Size(85, 17);
             this.cLabelDesc4.TabIndex = 1;
             this.cLabelDesc4.Text = "Bank Name:";
             // 
@@ -195,10 +195,10 @@
             // cLabelDesc3
             // 
             this.cLabelDesc3.AutoSize = true;
-            this.cLabelDesc3.Font = new System.Drawing.Font("Poppins", 10F);
+            this.cLabelDesc3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cLabelDesc3.Location = new System.Drawing.Point(21, 19);
             this.cLabelDesc3.Name = "cLabelDesc3";
-            this.cLabelDesc3.Size = new System.Drawing.Size(62, 25);
+            this.cLabelDesc3.Size = new System.Drawing.Size(59, 17);
             this.cLabelDesc3.TabIndex = 1;
             this.cLabelDesc3.Text = "User ID:";
             // 
@@ -224,9 +224,9 @@
             this.flowLayoutPanel1.Controls.Add(this.pnlUsername);
             this.flowLayoutPanel1.Controls.Add(this.pnlOthers);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(7, 84);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(7, 7);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(570, 240);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(532, 205);
             this.flowLayoutPanel1.TabIndex = 7;
             // 
             // pnlDateRange
@@ -237,49 +237,53 @@
             this.pnlDateRange.Controls.Add(this.dtpDateF);
             this.pnlDateRange.Location = new System.Drawing.Point(3, 3);
             this.pnlDateRange.Name = "pnlDateRange";
-            this.pnlDateRange.Size = new System.Drawing.Size(281, 141);
+            this.pnlDateRange.Size = new System.Drawing.Size(243, 107);
             this.pnlDateRange.TabIndex = 0;
             this.pnlDateRange.Visible = false;
             // 
             // cLabelDesc6
             // 
             this.cLabelDesc6.AutoSize = true;
-            this.cLabelDesc6.Font = new System.Drawing.Font("Poppins", 10F);
-            this.cLabelDesc6.Location = new System.Drawing.Point(13, 69);
+            this.cLabelDesc6.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F);
+            this.cLabelDesc6.Location = new System.Drawing.Point(13, 54);
             this.cLabelDesc6.Name = "cLabelDesc6";
-            this.cLabelDesc6.Size = new System.Drawing.Size(87, 25);
+            this.cLabelDesc6.Size = new System.Drawing.Size(61, 17);
             this.cLabelDesc6.TabIndex = 3;
             this.cLabelDesc6.Text = "Date From:";
             // 
             // dtpDateT
             // 
-            this.dtpDateT.Location = new System.Drawing.Point(56, 97);
+            this.dtpDateT.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDateT.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDateT.Location = new System.Drawing.Point(56, 74);
             this.dtpDateT.Name = "dtpDateT";
-            this.dtpDateT.Size = new System.Drawing.Size(169, 20);
+            this.dtpDateT.Size = new System.Drawing.Size(169, 22);
             this.dtpDateT.TabIndex = 2;
             // 
             // cLabelDesc5
             // 
             this.cLabelDesc5.AutoSize = true;
-            this.cLabelDesc5.Font = new System.Drawing.Font("Poppins", 10F);
+            this.cLabelDesc5.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F);
             this.cLabelDesc5.Location = new System.Drawing.Point(13, 9);
             this.cLabelDesc5.Name = "cLabelDesc5";
-            this.cLabelDesc5.Size = new System.Drawing.Size(87, 25);
+            this.cLabelDesc5.Size = new System.Drawing.Size(61, 17);
             this.cLabelDesc5.TabIndex = 1;
             this.cLabelDesc5.Text = "Date From:";
             // 
             // dtpDateF
             // 
-            this.dtpDateF.Location = new System.Drawing.Point(56, 37);
+            this.dtpDateF.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F);
+            this.dtpDateF.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDateF.Location = new System.Drawing.Point(56, 29);
             this.dtpDateF.Name = "dtpDateF";
-            this.dtpDateF.Size = new System.Drawing.Size(169, 20);
+            this.dtpDateF.Size = new System.Drawing.Size(169, 22);
             this.dtpDateF.TabIndex = 0;
             // 
             // pnlUserBank
             // 
             this.pnlUserBank.Controls.Add(this.cLabelDesc8);
             this.pnlUserBank.Controls.Add(this.cmbBankUser);
-            this.pnlUserBank.Location = new System.Drawing.Point(290, 3);
+            this.pnlUserBank.Location = new System.Drawing.Point(252, 3);
             this.pnlUserBank.Name = "pnlUserBank";
             this.pnlUserBank.Size = new System.Drawing.Size(275, 83);
             this.pnlUserBank.TabIndex = 2;
@@ -288,10 +292,10 @@
             // cLabelDesc8
             // 
             this.cLabelDesc8.AutoSize = true;
-            this.cLabelDesc8.Font = new System.Drawing.Font("Poppins", 10F);
+            this.cLabelDesc8.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F);
             this.cLabelDesc8.Location = new System.Drawing.Point(17, 9);
             this.cLabelDesc8.Name = "cLabelDesc8";
-            this.cLabelDesc8.Size = new System.Drawing.Size(49, 25);
+            this.cLabelDesc8.Size = new System.Drawing.Size(36, 17);
             this.cLabelDesc8.TabIndex = 3;
             this.cLabelDesc8.Text = "Bank:";
             // 
@@ -300,7 +304,7 @@
             this.cmbBankUser.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBankUser.ForeColor = System.Drawing.Color.Black;
             this.cmbBankUser.FormattingEnabled = true;
-            this.cmbBankUser.Location = new System.Drawing.Point(60, 36);
+            this.cmbBankUser.Location = new System.Drawing.Point(60, 29);
             this.cmbBankUser.Name = "cmbBankUser";
             this.cmbBankUser.PropertyText = "";
             this.cmbBankUser.PropertyTextValue = "";
@@ -311,19 +315,19 @@
             // 
             this.pnlUsername.Controls.Add(this.cLabelDesc7);
             this.pnlUsername.Controls.Add(this.cmbUsername);
-            this.pnlUsername.Location = new System.Drawing.Point(3, 150);
+            this.pnlUsername.Location = new System.Drawing.Point(3, 116);
             this.pnlUsername.Name = "pnlUsername";
-            this.pnlUsername.Size = new System.Drawing.Size(281, 81);
+            this.pnlUsername.Size = new System.Drawing.Size(243, 81);
             this.pnlUsername.TabIndex = 1;
             this.pnlUsername.Visible = false;
             // 
             // cLabelDesc7
             // 
             this.cLabelDesc7.AutoSize = true;
-            this.cLabelDesc7.Font = new System.Drawing.Font("Poppins", 10F);
+            this.cLabelDesc7.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F);
             this.cLabelDesc7.Location = new System.Drawing.Point(13, 10);
             this.cLabelDesc7.Name = "cLabelDesc7";
-            this.cLabelDesc7.Size = new System.Drawing.Size(86, 25);
+            this.cLabelDesc7.Size = new System.Drawing.Size(60, 17);
             this.cLabelDesc7.TabIndex = 1;
             this.cLabelDesc7.Text = "Username:";
             // 
@@ -342,7 +346,7 @@
             // 
             // pnlOthers
             // 
-            this.pnlOthers.Location = new System.Drawing.Point(290, 150);
+            this.pnlOthers.Location = new System.Drawing.Point(252, 116);
             this.pnlOthers.Name = "pnlOthers";
             this.pnlOthers.Size = new System.Drawing.Size(275, 81);
             this.pnlOthers.TabIndex = 3;
@@ -354,9 +358,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(584, 402);
+            this.ClientSize = new System.Drawing.Size(546, 290);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormDescription = "Generate Report";
+            this.HideHeader = true;
             this.HideSaveNew = true;
             this.Name = "ManageReportFilter";
             this.OnSaveName = "Generate";

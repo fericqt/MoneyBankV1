@@ -114,7 +114,7 @@ namespace MoneyBank.Forms {
             this.passwordCTextBoxBasic.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userDTOBindingSource, "Password", true));
             this.passwordCTextBoxBasic.DefaultForeColor = System.Drawing.Color.Black;
             this.passwordCTextBoxBasic.EnterColor = System.Drawing.Color.LightGray;
-            this.passwordCTextBoxBasic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.passwordCTextBoxBasic.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordCTextBoxBasic.ForeColor = System.Drawing.Color.Black;
             this.passwordCTextBoxBasic.LeaveColor = System.Drawing.Color.WhiteSmoke;
             this.passwordCTextBoxBasic.Location = new System.Drawing.Point(53, 134);
@@ -123,7 +123,6 @@ namespace MoneyBank.Forms {
             this.passwordCTextBoxBasic.PasswordChar = '*';
             this.passwordCTextBoxBasic.Size = new System.Drawing.Size(175, 25);
             this.passwordCTextBoxBasic.TabIndex = 5;
-            this.passwordCTextBoxBasic.UseSystemPasswordChar = true;
             // 
             // userDTOBindingSource
             // 
@@ -135,7 +134,7 @@ namespace MoneyBank.Forms {
             this.usernameCTextBoxBasic.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userDTOBindingSource, "Username", true));
             this.usernameCTextBoxBasic.DefaultForeColor = System.Drawing.Color.Black;
             this.usernameCTextBoxBasic.EnterColor = System.Drawing.Color.LightGray;
-            this.usernameCTextBoxBasic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.usernameCTextBoxBasic.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameCTextBoxBasic.ForeColor = System.Drawing.Color.Black;
             this.usernameCTextBoxBasic.LeaveColor = System.Drawing.Color.WhiteSmoke;
             this.usernameCTextBoxBasic.Location = new System.Drawing.Point(53, 102);
